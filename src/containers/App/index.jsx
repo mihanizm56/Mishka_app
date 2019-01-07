@@ -4,7 +4,7 @@ import { Router } from "../../router";
 import { loginRequest, signOutFirebase, loadingApp, changeRangeMin, changeRangeMax } from "../../actions";
 import { registerApp } from "../../helpers";
 
-import { Reostat } from "../../components";
+//import { Reostat } from "../../components";
 
 class App extends Component {
 	componentDidMount() {

@@ -13,9 +13,7 @@
     "react-scripts": "2.1.1",
     "redux": "^4.0.1",
     "redux-form": "^8.1.0",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
-    "rheostat": "^3.0.2"
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,6 +31,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "redux-logger": "^3.0.6",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "enzyme-to-json": "^3.3.4",
