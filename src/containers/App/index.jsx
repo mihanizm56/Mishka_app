@@ -13,8 +13,8 @@ class App extends Component {
 	}
 
 	render() {
-		console.log("test state");
-		console.log(this.props);
+		// console.log("test state");
+		// console.log(this.props);
 		const {
 			loginState,
 			userSignIn,
@@ -37,13 +37,13 @@ class App extends Component {
 					userSignIn={userSignIn}
 					
 				/> */}
-				<Reostat
+				{/* <Reostat
 					shopItems={shopItems}
 					changeMaxFilterValue={changeMaxFilterValue}
 					changeMinFilterValue={changeMinFilterValue}
 					minValue={itemsFilters.rangeMin}
 					maxValue={itemsFilters.rangeMax}
-				/>
+				/> */}
 			</>
 		);
 	}

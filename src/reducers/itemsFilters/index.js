@@ -1,10 +1,8 @@
 import { changeRangeMinValue, changeRangeMaxValue, changeSelectedFilter, changeSearchFilter } from "../../constants";
-import { shopItemsToSell } from "../shopItems";
-import { findTopPrice } from "../../helpers";
 
 const initialState = {
-	rangeMin: 0,
-	rangeMax: findTopPrice(shopItemsToSell),
+	rangeMin: null,
+	rangeMax: null,
 	selectedFilter: null,
 	searchFilter: null,
 };
@@ -12,8 +10,6 @@ const initialState = {
 export const itemsFilters = (state = initialState, action) => {
 	switch (action.type) {
 		case changeRangeMinValue:
-			console.log("///////////");
-			console.log(action.payload);
 			return { ...state, rangeMin: action.payload };
 		case changeRangeMaxValue:
 			return { ...state, rangeMax: action.payload };

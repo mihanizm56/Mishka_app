@@ -32,7 +32,6 @@ export function signOutLocal() {
 }
 
 export function changeRangeMin(number) {
-	console.log(`test changeRange, min value = ${number}`);
 	return {
 		type: changeRangeMinValue,
 		payload: number,
@@ -40,7 +39,6 @@ export function changeRangeMin(number) {
 }
 
 export function changeRangeMax(number) {
-	console.log(`test changeRange, max value = ${number}`);
 	return {
 		type: changeRangeMaxValue,
 		payload: number,
