@@ -6,6 +6,7 @@ import {
 	appIsLoading,
 	appHasLoaded,
 	changeSelectedFilter,
+	changeSearchFilter,
 } from "../constants";
 import firebase from "firebase";
 
@@ -58,6 +59,13 @@ export function changeRangeMax(number) {
 	return {
 		type: changeRangeMaxValue,
 		payload: number,
+	};
+}
+
+export function changeSearchField(value) {
+	return {
+		type: changeSearchFilter,
+		payload: value,
 	};
 }
 

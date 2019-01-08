@@ -4,7 +4,7 @@ const initialState = {
 	rangeMin: null,
 	rangeMax: null,
 	selectedFilter: "",
-	searchFilter: null,
+	searchFilter: "",
 };
 
 export const itemsFilters = (state = initialState, action) => {

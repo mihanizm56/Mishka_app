@@ -1,8 +1,17 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Router } from "../../router";
-import { loginRequest, signOutFirebase, loadingApp, changeRangeMin, changeRangeMax, selectFilter } from "../../actions";
+import {
+	loginRequest,
+	signOutFirebase,
+	loadingApp,
+	changeRangeMin,
+	changeRangeMax,
+	selectFilter,
+	changeSearchField,
+} from "../../actions";
 import { registerApp } from "../../helpers";
+import { SearchField } from "../../components";
 
 class App extends Component {
 	componentDidMount() {
@@ -24,10 +33,12 @@ class App extends Component {
 			itemsFilters,
 			shopItems,
 			changeTypeOfSort,
+			changeSearchFilter,
 		} = this.props;
 		const userIsLoggedIn = loginState.login || localStorage.login === "true";
 		return (
 			<>
+				<SearchField callback={changeSearchFilter} />
 				<button onClick={() => userIsLoggedIn && userSignOut()}>Выйти</button>
 				<Router
 					appToLoad={appToLoad}
@@ -68,6 +79,9 @@ const mapDispatchToProps = dispatch => {
 		},
 		changeTypeOfSort(value) {
 			dispatch(selectFilter(value));
+		},
+		changeSearchFilter(value) {
+			dispatch(changeSearchField(value));
 		},
 	};
 };
