@@ -1,3 +1,5 @@
+// @flow
+
 import {
 	loginSuccess,
 	signOut,
@@ -9,6 +11,8 @@ import {
 	changeSearchFilter,
 } from "../constants";
 import firebase from "firebase";
+
+export type ACReturns = { type: string, payload: string };
 
 export function loginCorrect() {
 	console.log("test loginSuccess");
