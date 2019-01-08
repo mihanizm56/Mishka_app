@@ -1,6 +1,6 @@
 import React from "react";
 
-export const FormComponent = ({ input, type, label, meta: { error, touched } }) => (
+export const FormTextField = ({ input, type, label, meta: { error, touched } }) => (
 	<label>
 		{label}:
 		<div>

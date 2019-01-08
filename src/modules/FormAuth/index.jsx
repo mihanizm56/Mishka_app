@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
-import { FormComponent } from "../../components";
+import { FormTextField } from "../../components";
 import { Redirect } from "react-router-dom";
 
 class FormAuthComponent extends Component {
@@ -20,8 +20,8 @@ class FormAuthComponent extends Component {
 		) : (
 			<>
 				<form className="form" onSubmit={handleSubmit(this.signInUser)}>
-					<Field component={FormComponent} label="мыло" type="text" name="email" />
-					<Field component={FormComponent} label="пароль" type="password" name="password" />
+					<Field component={FormTextField} label="мыло" type="text" name="email" />
+					<Field component={FormTextField} label="пароль" type="password" name="password" />
 					<button type="submit">Отправить</button>
 				</form>
 			</>

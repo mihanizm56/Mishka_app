@@ -1,15 +1,38 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { MainPage, HiddenPage } from "../modules";
+import { CatalogPage, HiddenPage } from "../modules";
 import FormAuth from "../modules/FormAuth";
 import { ErrorComponent } from "../components";
 
-export const Router = ({ parameter, userSignIn, userSignOut, isLoading, appToLoad }) => {
-	//console.log(`Router parameter = ${parameter}`);
+export const Router = ({
+	parameter,
+	userSignIn,
+	userSignOut,
+	isLoading,
+	appToLoad,
+	changeMinFilterValue,
+	changeMaxFilterValue,
+	itemsFilters,
+	shopItems,
+	changeTypeOfSort,
+}) => {
 	return (
 		<Switch>
-			<Route exact path="/" render={() => <MainPage />} />
-			<Route exact path="/mainpage" render={() => <MainPage />} />
+			{/* <Route exact path="/" render={() => <CatalogPage />} /> */}
+			<Route
+				exact
+				// path="/catalog"
+				path="/"
+				render={() => (
+					<CatalogPage
+						changeMinFilterValue={changeMinFilterValue}
+						changeMaxFilterValue={changeMaxFilterValue}
+						itemsFilters={itemsFilters}
+						shopItems={shopItems}
+						changeTypeOfSort={changeTypeOfSort}
+					/>
+				)}
+			/>
 			<Route exact path="/hiddenpage" render={() => <HiddenPage login={parameter} />} />
 			<Route
 				exact

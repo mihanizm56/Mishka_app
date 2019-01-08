@@ -3,7 +3,7 @@ import { changeRangeMinValue, changeRangeMaxValue, changeSelectedFilter, changeS
 const initialState = {
 	rangeMin: null,
 	rangeMax: null,
-	selectedFilter: null,
+	selectedFilter: "",
 	searchFilter: null,
 };
 

@@ -1,4 +1,12 @@
-import { loginSuccess, signOut, changeRangeMinValue, changeRangeMaxValue } from "../constants";
+import {
+	loginSuccess,
+	signOut,
+	changeRangeMinValue,
+	changeRangeMaxValue,
+	appIsLoading,
+	appHasLoaded,
+	changeSelectedFilter,
+} from "../constants";
 import firebase from "firebase";
 
 export function loginCorrect() {
@@ -12,14 +20,22 @@ export function loginCorrect() {
 export function loadingApp() {
 	console.log("test loadingApp");
 	return {
-		type: "APP_IS_LOADING",
+		type: appIsLoading,
+	};
+}
+
+export function selectFilter(value) {
+	console.log("test selectedFilter");
+	return {
+		type: changeSelectedFilter,
+		payload: value,
 	};
 }
 
 export function loadingAppDone() {
 	console.log("test loadingAppDone");
 	return {
-		type: "APP_HAS_LOADED",
+		type: appHasLoaded,
 	};
 }
 

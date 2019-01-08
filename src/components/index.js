@@ -1,4 +1,5 @@
 export * from "./Paragraph";
 export * from "./ErrorComponent";
-export * from "./FormComponent";
+export * from "./FormMultiselect";
+export * from "./FormTextField";
 export * from "./Reostat";

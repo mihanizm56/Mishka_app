@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Router } from "../../router";
-import { loginRequest, signOutFirebase, loadingApp, changeRangeMin, changeRangeMax } from "../../actions";
+import { loginRequest, signOutFirebase, loadingApp, changeRangeMin, changeRangeMax, selectFilter } from "../../actions";
 import { registerApp } from "../../helpers";
-
-//import { Reostat } from "../../components";
 
 class App extends Component {
 	componentDidMount() {
@@ -13,8 +11,8 @@ class App extends Component {
 	}
 
 	render() {
-		// console.log("test state");
-		// console.log(this.props);
+		console.log("test App props");
+		console.log(this.props);
 		const {
 			loginState,
 			userSignIn,
@@ -22,28 +20,26 @@ class App extends Component {
 			appToLoad,
 			userSignOut,
 			changeMinFilterValue,
+			changeMaxFilterValue,
 			itemsFilters,
 			shopItems,
-			changeMaxFilterValue
+			changeTypeOfSort,
 		} = this.props;
 		const userIsLoggedIn = loginState.login || localStorage.login === "true";
 		return (
 			<>
-				{/* <button onClick={() => userIsLoggedIn && userSignOut()}>Выйти</button>
+				<button onClick={() => userIsLoggedIn && userSignOut()}>Выйти</button>
 				<Router
 					appToLoad={appToLoad}
 					isLoading={appLoading.loading}
 					parameter={userIsLoggedIn}
 					userSignIn={userSignIn}
-					
-				/> */}
-				{/* <Reostat
-					shopItems={shopItems}
-					changeMaxFilterValue={changeMaxFilterValue}
 					changeMinFilterValue={changeMinFilterValue}
-					minValue={itemsFilters.rangeMin}
-					maxValue={itemsFilters.rangeMax}
-				/> */}
+					changeMaxFilterValue={changeMaxFilterValue}
+					itemsFilters={itemsFilters}
+					shopItems={shopItems}
+					changeTypeOfSort={changeTypeOfSort}
+				/>
 			</>
 		);
 	}
@@ -69,6 +65,9 @@ const mapDispatchToProps = dispatch => {
 		},
 		changeMaxFilterValue(number) {
 			dispatch(changeRangeMax(number));
+		},
+		changeTypeOfSort(value) {
+			dispatch(selectFilter(value));
 		},
 	};
 };

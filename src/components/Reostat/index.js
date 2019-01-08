@@ -20,8 +20,7 @@ type handleSliderType = {
 	ACMax: (number: number) => ACReturns,
 };
 
-const handleSlider = (props: handleSliderType) => {
-	const { value, ACMin, ACMax } = props;
+const handleSlider = (value: handleSliderType.value, ACMin: handleSliderType.ACMin, ACMax: handleSliderType.ACMax) => {
 	const minValue = value[0];
 	const maxValue = value[1];
 	if (value[0]) {
