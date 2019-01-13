@@ -1,1 +1,2 @@
-export * from "./itemHare";
+export * from "./icons";
+export * from "./pictures";

@@ -1,8 +1,8 @@
 // @flow
 
-import { hareSmallImage } from "../../images";
-import { hareMiddleImage } from "../../images";
-import { hareBigImage } from "../../images";
+import { hareSmallImage } from "../../images/pictures";
+import { hareMiddleImage } from "../../images/pictures";
+import { hareBigImage } from "../../images/pictures";
 
 export const getSmallImage = (name: string) => {
 	console.log(`test getSmallImage, image-name=${name}`);
