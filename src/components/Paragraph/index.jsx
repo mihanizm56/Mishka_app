@@ -1,3 +1,14 @@
-import React from "react";
+// @flow
+import React, { Node } from "react";
+import { pure } from "recompose";
 
-export const Paragraph = ({ text }) => <p text="Hello MainPage !">{text}</p>;
+type ParagraphProps = {
+	text: string,
+};
+
+const ParagraphComponent = (props: ParagraphProps): Node => {
+	const { text } = props;
+	return <p text="Hello MainPage !">{text}</p>;
+};
+
+export const Paragraph = pure(ParagraphComponent);

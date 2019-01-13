@@ -5,14 +5,10 @@ import "rc-tooltip/assets/bootstrap.css";
 import "./reostat.css";
 import Slider from "rc-slider";
 import { findTopPrice } from "../../helpers";
+import { ACReturns } from "../../actions";
 
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const Range = createSliderWithTooltip(Slider.Range);
-
-type ACReturns = {
-	type: string,
-	payload: number,
-};
 
 type handleSliderType = {
 	value: Array<number>,

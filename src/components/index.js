@@ -5,3 +5,4 @@ export * from "./FormTextField";
 export * from "./Reostat";
 export * from "./ImageForCatalog";
 export * from "./ImageComponent";
+export * from "./SearchField";

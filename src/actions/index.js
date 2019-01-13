@@ -1,3 +1,5 @@
+// @flow
+
 import {
 	loginSuccess,
 	signOut,
@@ -6,8 +8,11 @@ import {
 	appIsLoading,
 	appHasLoaded,
 	changeSelectedFilter,
+	changeSearchFilter,
 } from "../constants";
 import firebase from "firebase";
+
+export type ACReturns = { type: string, payload: string };
 
 export function loginCorrect() {
 	console.log("test loginSuccess");
@@ -58,6 +63,13 @@ export function changeRangeMax(number) {
 	return {
 		type: changeRangeMaxValue,
 		payload: number,
+	};
+}
+
+export function changeSearchField(value) {
+	return {
+		type: changeSearchFilter,
+		payload: value,
 	};
 }
 
