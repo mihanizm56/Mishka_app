@@ -1,7 +1,7 @@
 import React from "react";
 import { Paragraph } from "../../components";
 import { Link } from "react-router-dom";
-import { Reostat, FormMultiselect } from "../../components";
+import { Reostat, FormMultiselect, ImageForCatalog } from "../../components";
 
 export const CatalogPage = ({
 	changeMinFilterValue,
@@ -10,7 +10,7 @@ export const CatalogPage = ({
 	shopItems,
 	changeTypeOfSort,
 }) => {
-	console.log("MainPage");
+	console.log("CatalogPage");
 	return (
 		<div className="catalog-wrapper">
 			<Paragraph text="Hello InitPage !" />
@@ -21,6 +21,7 @@ export const CatalogPage = ({
 				minValue={itemsFilters.rangeMin}
 				maxValue={itemsFilters.rangeMax}
 			/>
+			<ImageForCatalog image="hare" />
 			<FormMultiselect nameOfSortType={itemsFilters.selectedFilter} changeTypeOfSort={changeTypeOfSort} />
 			<Link to="/hiddenpage">To hidden page</Link>
 		</div>

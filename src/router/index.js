@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { CatalogPage, HiddenPage } from "../modules";
+import { CatalogPage, HiddenPage, MainPage } from "../modules";
 import FormAuth from "../modules/FormAuth";
 import { ErrorComponent } from "../components";
 
@@ -19,10 +19,10 @@ export const Router = ({
 	return (
 		<Switch>
 			{/* <Route exact path="/" render={() => <CatalogPage />} /> */}
+			<Route exact path="/" render={() => <MainPage />} />
 			<Route
 				exact
-				// path="/catalog"
-				path="/"
+				path="/catalog"
 				render={() => (
 					<CatalogPage
 						changeMinFilterValue={changeMinFilterValue}
