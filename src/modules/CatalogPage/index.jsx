@@ -1,5 +1,5 @@
 import React from "react";
-import { Paragraph } from "../../components";
+import { BoldParagraph } from "../../components";
 import { Link } from "react-router-dom";
 import { Reostat, FormMultiselect, ImageForCatalog } from "../../components";
 
@@ -13,7 +13,7 @@ export const CatalogPage = ({
 	console.log("CatalogPage");
 	return (
 		<div className="catalog-wrapper">
-			<Paragraph text="Hello CatalogPage !" />
+			<BoldParagraph text="Hello CatalogPage !" />
 			<Reostat
 				shopItems={shopItems}
 				changeMaxFilterValue={changeMaxFilterValue}
