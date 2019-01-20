@@ -2,7 +2,7 @@
 import React from "react";
 import "./ImageForCatalog.css";
 import MediaQuery from "react-responsive";
-import { ImageComponent } from "..";
+import { ImageComponent } from "../";
 import { getSmallImage, getMiddleImage, getBigImage } from "../../helpers";
 
 type ImageForCatalogProps = {

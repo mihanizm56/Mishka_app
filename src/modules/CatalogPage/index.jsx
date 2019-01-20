@@ -13,7 +13,7 @@ export const CatalogPage = ({
 	console.log("CatalogPage");
 	return (
 		<div className="catalog-wrapper">
-			<Paragraph text="Hello InitPage !" />
+			<Paragraph text="Hello CatalogPage !" />
 			<Reostat
 				shopItems={shopItems}
 				changeMaxFilterValue={changeMaxFilterValue}
@@ -21,7 +21,7 @@ export const CatalogPage = ({
 				minValue={itemsFilters.rangeMin}
 				maxValue={itemsFilters.rangeMax}
 			/>
-			<ImageForCatalog image="hare" />
+			<ImageForCatalog image="big-basket" />
 			<FormMultiselect nameOfSortType={itemsFilters.selectedFilter} changeTypeOfSort={changeTypeOfSort} />
 			<Link to="/hiddenpage">To hidden page</Link>
 		</div>
