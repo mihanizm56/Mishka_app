@@ -1,6 +1,6 @@
 // @flow
 import React, { Node } from "react";
-import { Paragraph } from "../";
+import { Paragraph } from "..";
 import "./BoldParagraph.css";
 
 type BoldParagraphProps = {

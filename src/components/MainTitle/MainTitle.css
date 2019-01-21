@@ -1,0 +1,11 @@
+.main-title{
+    font-size: 48.797px;
+    font-family: "Verdana-Bold";
+    color: rgb(35, 31, 32);
+    line-height: 1.14;
+    transform: matrix( 1.02465030736761,0,0,1.02465030736761,0,0);
+    -moz-transform: matrix( 1.02465030736761,0,0,1.02465030736761,0,0);
+    -webkit-transform: matrix( 1.02465030736761,0,0,1.02465030736761,0,0);
+    -ms-transform: matrix( 1.02465030736761,0,0,1.02465030736761,0,0);
+}
+  
