@@ -1,6 +1,6 @@
 export const shopItemsToSell = [
 	{
-		image: "",
+		image: "hare",
 		name: "Зайчик-попрыгайчик",
 		sizes: ["Рост", "вес"],
 		sizeValues: ["30 см", "200 г"],

@@ -1,7 +1,7 @@
 import React from "react";
-import { FooterTextLogo } from "../../components";
 import { Link } from "react-router-dom";
-import { Reostat, FormMultiselect, ImageForCatalog } from "../../components";
+import { Reostat, FormMultiselect, FooterTextLogo } from "../../../components";
+import { ItemCard } from "../../Cards";
 
 export const CatalogPage = ({
 	changeMinFilterValue,
@@ -21,7 +21,7 @@ export const CatalogPage = ({
 				minValue={itemsFilters.rangeMin}
 				maxValue={itemsFilters.rangeMax}
 			/>
-			<ImageForCatalog image="main-logo" />
+			<ItemCard />
 			<FormMultiselect nameOfSortType={itemsFilters.selectedFilter} changeTypeOfSort={changeTypeOfSort} />
 			<Link to="/hiddenpage">To hidden page</Link>
 		</div>

@@ -1,7 +1,9 @@
 .paragraph-card{
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Verdana-Bold";
     color: rgb(0, 0, 0);
     line-height: 1.333;
+    margin: 0;
+    padding: 0;
 }
   

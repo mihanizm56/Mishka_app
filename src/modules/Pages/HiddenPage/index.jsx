@@ -1,5 +1,5 @@
 import React from "react";
-import { Paragraph } from "../../components";
+import { Paragraph } from "../../../components";
 import { Link, Redirect } from "react-router-dom";
 
 const checkLogin = parameter => {

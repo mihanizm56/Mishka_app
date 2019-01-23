@@ -1,6 +1,6 @@
 import React from "react";
 import "./MainPage.css";
-import {} from "../../components";
+import {} from "../../../components";
 
 export const MainPage = props => {
 	return (

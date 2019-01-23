@@ -1,11 +1,11 @@
 // @flow
 import React from "react";
-import "./ImageForCatalog.css";
+import "./ImageForPage.css";
 import MediaQuery from "react-responsive";
 import { ImageComponent } from "../";
 import { getSmallImage, getMiddleImage, getBigImage } from "../../helpers";
 
-type ImageForCatalogProps = {
+type ImageForPageProps = {
 	image: string,
 };
 
@@ -18,14 +18,14 @@ const configForImage = {
 	heightBig: "464px",
 };
 
-export const ImageForCatalog = (props: ImageForCatalogProps) => {
+export const ImageForPage = (props: ImageForPageProps) => {
 	const { image } = props;
 	const smallImage = getBigImage(`${image}-big`);
 	const middleImage = getMiddleImage(`${image}-middle`);
 	const bigImage = getSmallImage(`${image}-small`);
 	return (
 		<>
-			<MediaQuery minWidth={1280}>
+			<MediaQuery minWidth={1001}>
 				<ImageComponent
 					image={bigImage}
 					alt={image}
@@ -33,7 +33,7 @@ export const ImageForCatalog = (props: ImageForCatalogProps) => {
 					heigthOfImage={configForImage.heightBig}
 				/>
 			</MediaQuery>
-			<MediaQuery minWidth={768} maxWidth={1279}>
+			<MediaQuery minWidth={701} maxWidth={1000}>
 				<ImageComponent
 					image={middleImage}
 					alt={image}
@@ -41,7 +41,7 @@ export const ImageForCatalog = (props: ImageForCatalogProps) => {
 					heigthOfImage={configForImage.heightMiddle}
 				/>
 			</MediaQuery>
-			<MediaQuery minWidth={240} maxWidth={767}>
+			<MediaQuery minWidth={240} maxWidth={700}>
 				<ImageComponent
 					image={smallImage}
 					alt={image}
