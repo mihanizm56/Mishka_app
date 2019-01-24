@@ -4,21 +4,21 @@ export const shopItemsToSell = [
 		name: "Зайчик-попрыгайчик",
 		sizes: ["Рост", "вес"],
 		sizeValues: ["30 см", "200 г"],
-		priceOfThisItems: 1200,
+		price: 1200,
 	},
 	{
 		image: "",
 		name: "Корзинка для белья",
 		sizes: ["Диаметр", "высота"],
 		sizeValues: ["30 см", "10 см"],
-		priceOfThisItems: 690,
+		price: 690,
 	},
 	{
 		image: "",
 		name: "Большая корзинка для игрушек",
 		sizes: ["Диаметр", "высота"],
 		sizeValues: ["30 см", "30 см"],
-		priceOfThisItems: 1500,
+		price: 1500,
 	},
 ];
 

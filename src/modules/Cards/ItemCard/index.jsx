@@ -1,5 +1,6 @@
 import React from "react";
 import { ImageForPage, ParagraphForCards, TextForItems } from "../../../components";
+import { ItemPriceBox } from "../Boxes";
 import "./ItemCard.css";
 
 type ItemCardType = {
@@ -10,7 +11,7 @@ type ItemCardType = {
 	priceOfThisItems: number,
 };
 
-export const ItemCard = ({ image, name, sizes, sizeValues, priceOfThisItems }): ItemCardType => {
+export const ItemCard = ({ image, name, sizes, sizeValues, price }): ItemCardType => {
 	return (
 		<>
 			<div className="item-card-wrapper">
@@ -20,6 +21,7 @@ export const ItemCard = ({ image, name, sizes, sizeValues, priceOfThisItems }): 
 						<ParagraphForCards text={name} />
 						{/* <TextParametersForItems sizes={sizes} sizeValues={sizeValues}/> */}
 						<TextForItems text="test" />
+						<ItemPriceBox price={price} />
 					</div>
 				</div>
 			</div>
@@ -32,5 +34,5 @@ ItemCard.defaultProps = {
 	name: "Зайчик-попрыгайчик",
 	sizes: ["Рост", "вес"],
 	sizeValues: ["30 см", "200 г"],
-	priceOfThisItems: 1200,
+	price: 1200,
 };
