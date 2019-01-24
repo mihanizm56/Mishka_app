@@ -1,5 +1,7 @@
 .button-with-icon{
-    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     outline: none;
 }

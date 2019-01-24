@@ -20,9 +20,9 @@ export const ItemCard = ({ image, name, sizes, sizeValues, price }): ItemCardTyp
 					<div className="item-card-textbox">
 						<ParagraphForCards text={name} />
 						{/* <TextParametersForItems sizes={sizes} sizeValues={sizeValues}/> */}
-						<TextForItems text="test" />
-						<ItemPriceBox price={price} />
+						{/* <TextForItems text="test" /> */}
 					</div>
+					<ItemPriceBox price={price} />
 				</div>
 			</div>
 		</>

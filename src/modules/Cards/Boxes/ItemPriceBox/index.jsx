@@ -11,7 +11,11 @@ export const ItemPriceBox = ({ price }: ItemPriceBoxType) => {
 	return (
 		<div className="item-card__price-box">
 			<BoldParagraph text={`${price} руб.`} />
-			<ButtonWithIcon icon="basket" width="100px" height="100px" />
+			<ButtonWithIcon className='test' icon="basket" width="24px" height="24px" />
 		</div>
 	);
 };
+
+ItemPriceBox.defaultProps = {
+	price: 1000,
+}
