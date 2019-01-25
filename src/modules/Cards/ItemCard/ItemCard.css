@@ -1,7 +1,7 @@
 .item-card-wrapper{
     display: flex;
     box-sizing: border-box;
-    border: 1px solid red;
+    border: 1px solid #ededed;
 }
 
 .item-card-text-wrapper{
@@ -58,6 +58,10 @@
         flex-direction: column;
         height: 195px;
         width: 255px;
+    }
+    .item-card-textbox{
+        height: 125px;
+        width: 268px;
     }
   }
   

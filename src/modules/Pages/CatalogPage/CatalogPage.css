@@ -1,0 +1,24 @@
+.catalog__shop-items{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+
+
+@media (max-width: 700px) {    
+    .catalog__shop-items{
+        flex-direction: column;
+    }
+  }
+
+  @media (min-width: 701px) {
+    .catalog__shop-items{
+        flex-direction: column;
+    }
+  }
+
+  @media (min-width: 1001px) {
+    .catalog__shop-items{
+        flex-direction: row;
+    }
+  }
