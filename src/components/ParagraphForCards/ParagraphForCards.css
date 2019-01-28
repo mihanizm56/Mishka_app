@@ -5,5 +5,10 @@
     line-height: 1.333;
     margin: 0;
     padding: 0;
+    opacity: 1;
+    transition: .2s;
 }
   
+.paragraph-card:hover{
+    opacity: 0.6;
+}

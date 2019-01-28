@@ -7,4 +7,4 @@ type SVGType = {
 	path: string,
 };
 
-export const SVGComponent = ({ path }: SVGType) => <SVG src={`${path}`} className='icon' alt="icon" />;
+export const SVGComponent = ({ path }: SVGType) => <SVG src={`${path}`} className="icon" alt="icon" />;
