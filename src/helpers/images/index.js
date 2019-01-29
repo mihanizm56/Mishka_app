@@ -22,12 +22,15 @@ import mainLogoSmallIcon from "../../images/icons/main-logo/img/main-logo-small.
 import mainLogoMiddleIcon from "../../images/icons/main-logo/img/main-logo-mid.svg";
 import mainLogoBigIcon from "../../images/icons/main-logo/img/main-logo-big.svg";
 
+import iconVideoSmall from "../../images/icons/icon-video-small.svg";
+import iconVideoMiddle from "../../images/icons/icon-video-mid.svg";
+import iconVideoBig from "../../images/icons/icon-video-big.svg";
+
 import iconBasket from "../../images/icons/icon-basket.svg";
 import iconAcademy from "../../images/icons/icon-acagemy.svg";
 import iconFacebook from "../../images/icons/icon-fb.svg";
 import iconInstagram from "../../images/icons/icon-insta.svg";
 import iconTelegram from "../../images/icons/icon-tg.svg";
-import iconVideo from "../../images/icons/icon-video.svg";
 import iconLogoFooter from "../../images/icons/icon-logo-footer.svg";
 import iconSearch from "../../images/icons/icon-search.svg";
 
@@ -55,7 +58,7 @@ export const getSmallImage = (name: string) => {
 		case "icon-telegram-small":
 			return iconTelegram;
 		case "icon-video-small":
-			return iconVideo;
+			return iconVideoSmall;
 		case "icon-logo-footer-small":
 			return iconLogoFooter;
 		case "icon-search-small":
@@ -90,7 +93,7 @@ export const getMiddleImage = (name: string) => {
 		case "icon-telegram-middle":
 			return iconTelegram;
 		case "icon-video-middle":
-			return iconVideo;
+			return iconVideoMiddle;
 		case "icon-logo-footer-middle":
 			return iconLogoFooter;
 		case "icon-search-middle":
@@ -125,7 +128,7 @@ export const getBigImage = (name: string) => {
 		case "icon-telegram-big":
 			return iconTelegram;
 		case "icon-video-big":
-			return iconVideo;
+			return iconVideoBig;
 		case "icon-logo-footer-big":
 			return iconLogoFooter;
 		case "icon-search-big":
