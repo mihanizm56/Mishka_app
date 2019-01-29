@@ -12,6 +12,7 @@ import {
 } from "../../actions";
 import { registerApp } from "../../helpers";
 import { SearchField } from "../../components";
+import "./App.css";
 
 class App extends Component {
 	componentDidMount() {
@@ -37,7 +38,7 @@ class App extends Component {
 		} = this.props;
 		const userIsLoggedIn = loginState.login || localStorage.login === "true";
 		return (
-			<>
+			<div className="global-wrapper">
 				<SearchField callback={changeSearchFilter} />
 				<button onClick={() => userIsLoggedIn && userSignOut()}>Выйти</button>
 				<Router
@@ -51,7 +52,7 @@ class App extends Component {
 					shopItems={shopItems}
 					changeTypeOfSort={changeTypeOfSort}
 				/>
-			</>
+			</div>
 		);
 	}
 }

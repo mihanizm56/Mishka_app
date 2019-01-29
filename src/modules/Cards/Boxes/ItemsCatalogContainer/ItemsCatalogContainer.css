@@ -1,0 +1,26 @@
+.catalog__shop-items{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+
+
+@media (max-width: 767px) {    
+    .catalog__shop-items{
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .catalog__shop-items{
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .catalog__shop-items{
+        flex-direction: row;
+    }
+  }

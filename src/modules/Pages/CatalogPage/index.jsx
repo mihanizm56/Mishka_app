@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Reostat, FormMultiselect, FooterTextLogo } from "../../../components";
-import { ItemCard } from "../../Cards";
+import { ItemsCatalogContainer } from "../../Cards";
 import "./CatalogPage.css";
 
 export const CatalogPage = ({
@@ -23,13 +23,7 @@ export const CatalogPage = ({
 				minValue={itemsFilters.rangeMin}
 				maxValue={itemsFilters.rangeMax}
 			/>
-			<div className='catalog__shop-items'>
-				{shopItems.map(item => {
-					return (
-						<ItemCard key={item.id} image={item.image} name={item.name} sizes={item.sizes} sizeValues={item.sizeValues} price={item.price} />
-					)
-				})}
-			</div>
+			<ItemsCatalogContainer items={shopItems} />
 			<FormMultiselect nameOfSortType={itemsFilters.selectedFilter} changeTypeOfSort={changeTypeOfSort} />
 			<Link to="/hiddenpage">To hidden page</Link>
 		</div>
