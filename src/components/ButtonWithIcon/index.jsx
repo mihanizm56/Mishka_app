@@ -19,5 +19,5 @@ ButtonWithIcon.defaultProps = {
 	width: "10px",
 	height: "10px",
 	icon: "",
-	callback: () => alert("check"),
+	callback: () => console.log("default click on ButtonWithIcon"),
 };

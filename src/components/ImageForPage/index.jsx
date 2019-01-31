@@ -7,22 +7,14 @@ import { getSmallImage, getMiddleImage, getBigImage } from "../../helpers";
 
 type ImageForPageProps = {
 	image: string,
+	configForImage: any, //////////////////////////////////////////////////////!!!!!!!!!!!!!!!!
 };
 
-const configForImage = {
-	widthMin: "260px",
-	heightMin: "195px",
-	widthMiddle: "334px",
-	heightMiddle: "334px-",
-	widthBig: "317px",
-	heightBig: "464px",
-};
-
-export const ImageForPage = (props: ImageForPageProps) => {
-	const { image } = props;
+export const ImageForPage = ({ image, configForImage }: ImageForPageProps) => {
 	const smallImage = getBigImage(`${image}-big`);
 	const middleImage = getMiddleImage(`${image}-middle`);
 	const bigImage = getSmallImage(`${image}-small`);
+
 	return (
 		<>
 			<MediaQuery minWidth={1201}>
