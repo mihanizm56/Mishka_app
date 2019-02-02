@@ -9,3 +9,4 @@ export const changeRangeMinValue = "CHANGE_RANGE_MIN";
 export const changeRangeMaxValue = "CHANGE_RANGE_MAX";
 export const changeSelectedFilter = "CHANGE_SELECTED_FITER";
 export const changeSearchFilter = "CHANGE_SEARCH_FITER";
+export const changePageType = "CHANGE_PAGE";

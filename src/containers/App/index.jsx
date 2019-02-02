@@ -9,9 +9,11 @@ import {
 	changeRangeMax,
 	selectFilter,
 	changeSearchField,
+	changePageAction,
 } from "../../actions";
 import { registerApp } from "../../helpers";
 import { SearchField } from "../../components";
+import { Footer } from "../../modules";
 import "./App.css";
 
 class App extends Component {
@@ -35,6 +37,7 @@ class App extends Component {
 			shopItems,
 			changeTypeOfSort,
 			changeSearchFilter,
+			changePage,
 		} = this.props;
 		const userIsLoggedIn = loginState.login || localStorage.login === "true";
 		return (
@@ -51,7 +54,9 @@ class App extends Component {
 					itemsFilters={itemsFilters}
 					shopItems={shopItems}
 					changeTypeOfSort={changeTypeOfSort}
+					changePage={changePage}
 				/>
+				<Footer />
 			</div>
 		);
 	}
@@ -83,6 +88,9 @@ const mapDispatchToProps = dispatch => {
 		},
 		changeSearchFilter(value) {
 			dispatch(changeSearchField(value));
+		},
+		changePage(page) {
+			dispatch(changePageAction(page));
 		},
 	};
 };

@@ -30,7 +30,7 @@ import iconBasket from "../../images/icons/icon-basket.svg";
 import iconAcademy from "../../images/icons/icon-acagemy.svg";
 import iconFacebook from "../../images/icons/icon-fb.svg";
 import iconInstagram from "../../images/icons/icon-insta.svg";
-import iconTelegram from "../../images/icons/icon-tg.svg";
+import iconTwitter from "../../images/icons/icon-twitter.svg";
 import iconLogoFooter from "../../images/icons/icon-logo-footer.svg";
 import iconSearch from "../../images/icons/icon-search.svg";
 import iconCamera from "../../images/icons/icon-camera.svg";
@@ -50,14 +50,14 @@ export const getSmallImage = (name: string) => {
 			return mainLogoSmallIcon;
 		case "icon-basket-small":
 			return iconBasket;
-		case "icon-acagemy-small":
+		case "icon-academy-small":
 			return iconAcademy;
 		case "icon-facebook-small":
 			return iconFacebook;
 		case "icon-instagram-small":
 			return iconInstagram;
-		case "icon-telegram-small":
-			return iconTelegram;
+		case "icon-twitter-small":
+			return iconTwitter;
 		case "icon-video-small":
 			return iconVideoSmall;
 		case "icon-logo-footer-small":
@@ -87,14 +87,14 @@ export const getMiddleImage = (name: string) => {
 			return mainLogoMiddleIcon;
 		case "icon-basket-middle":
 			return iconBasket;
-		case "icon-acagemy-middle":
+		case "icon-academy-middle":
 			return iconAcademy;
 		case "icon-facebook-middle":
 			return iconFacebook;
 		case "icon-instagram-middle":
 			return iconInstagram;
-		case "icon-telegram-middle":
-			return iconTelegram;
+		case "icon-twitter-middle":
+			return iconTwitter;
 		case "icon-video-middle":
 			return iconVideoMiddle;
 		case "icon-logo-footer-middle":
@@ -124,14 +124,14 @@ export const getBigImage = (name: string) => {
 			return mainLogoBigIcon;
 		case "icon-basket-big":
 			return iconBasket;
-		case "icon-acagemy-big":
+		case "icon-academy-big":
 			return iconAcademy;
 		case "icon-facebook-big":
 			return iconFacebook;
 		case "icon-instagram-big":
 			return iconInstagram;
-		case "icon-telegram-big":
-			return iconTelegram;
+		case "icon-twitter-big":
+			return iconTwitter;
 		case "icon-video-big":
 			return iconVideoBig;
 		case "icon-logo-footer-big":
