@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Reostat, FormMultiselect, FooterTextLogo } from "../../../components";
-import { ItemsCatalogContainer, VideoBox } from "../../Cards";
+import { ItemsCatalogContainer, VideoBox, ButtonForOffer } from "../../Cards";
 import "./CatalogPage.css";
 
 export const CatalogPage = ({
@@ -23,10 +23,10 @@ export const CatalogPage = ({
 				minValue={itemsFilters.rangeMin}
 				maxValue={itemsFilters.rangeMax}
 			/> */}
-			{/* <ItemsCatalogContainer items={shopItems} /> */}
+			<ItemsCatalogContainer items={shopItems} />
 			<VideoBox />
 			{/* <FormMultiselect nameOfSortType={itemsFilters.selectedFilter} changeTypeOfSort={changeTypeOfSort} /> */}
-			<Link to="/hiddenpage">To hidden page</Link>
+			{/* <Link to="/hiddenpage">To hidden page</Link> */}
 		</div>
 	);
 };

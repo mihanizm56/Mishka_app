@@ -33,6 +33,7 @@ import iconInstagram from "../../images/icons/icon-insta.svg";
 import iconTelegram from "../../images/icons/icon-tg.svg";
 import iconLogoFooter from "../../images/icons/icon-logo-footer.svg";
 import iconSearch from "../../images/icons/icon-search.svg";
+import iconCamera from "../../images/icons/icon-camera.svg";
 
 export const getSmallImage = (name: string) => {
 	// console.log(`test getSmallImage, image-name=${name}`);
@@ -63,6 +64,8 @@ export const getSmallImage = (name: string) => {
 			return iconLogoFooter;
 		case "icon-search-small":
 			return iconSearch;
+		case "icon-camera-small":
+			return iconCamera;
 
 		default:
 			return null;
@@ -98,6 +101,8 @@ export const getMiddleImage = (name: string) => {
 			return iconLogoFooter;
 		case "icon-search-middle":
 			return iconSearch;
+		case "icon-camera-middle":
+			return iconCamera;
 
 		default:
 			return null;
@@ -133,6 +138,8 @@ export const getBigImage = (name: string) => {
 			return iconLogoFooter;
 		case "icon-search-big":
 			return iconSearch;
+		case "icon-camera-big":
+			return iconCamera;
 
 		default:
 			return null;
