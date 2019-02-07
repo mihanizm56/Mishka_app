@@ -13,6 +13,8 @@ export class CatalogPage extends Component {
 
 	render() {
 		const { changeMinFilterValue, changeMaxFilterValue, itemsFilters, shopItems, changeTypeOfSort } = this.props;
+		console.log("TEST ROUTER MATCH");
+		console.log(window.history);
 		return (
 			<div className="catalog-wrapper">
 				{/* <FooterTextLogo text="Hello CatalogPage !" /> */}

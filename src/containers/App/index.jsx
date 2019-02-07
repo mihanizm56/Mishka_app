@@ -13,18 +13,18 @@ import {
 } from "../../actions";
 import { registerApp } from "../../helpers";
 import { SearchField } from "../../components";
-import { Footer } from "../../modules";
+import { MainWrapper } from "../../modules";
 import "./App.css";
 
 class App extends Component {
 	componentDidMount() {
 		registerApp();
-		console.log("app registered");
+		console.log("app registered in firebase");
 	}
 
 	render() {
-		console.log("test App props");
-		console.log(this.props);
+		// console.log("test App props");
+		// console.log(this.props);
 		const {
 			loginState,
 			userSignIn,
@@ -42,8 +42,9 @@ class App extends Component {
 		const userIsLoggedIn = loginState.login || localStorage.login === "true";
 		return (
 			<div className="global-wrapper">
-				<SearchField callback={changeSearchFilter} />
-				<button onClick={() => userIsLoggedIn && userSignOut()}>Выйти</button>
+				<MainWrapper />
+				{/* <SearchField callback={changeSearchFilter} /> */}
+				{/* <button onClick={() => userIsLoggedIn && userSignOut()}>Выйти</button> */}
 				<Router
 					appToLoad={appToLoad}
 					isLoading={appLoading.loading}
@@ -56,7 +57,7 @@ class App extends Component {
 					changeTypeOfSort={changeTypeOfSort}
 					changePage={changePage}
 				/>
-				<Footer />
+				{/* <Footer /> */}
 			</div>
 		);
 	}
