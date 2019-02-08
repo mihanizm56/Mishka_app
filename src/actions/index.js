@@ -9,6 +9,7 @@ import {
 	appHasLoaded,
 	changeSelectedFilter,
 	changeSearchFilter,
+	changePageType,
 } from "../constants";
 import firebase from "firebase";
 
@@ -26,6 +27,14 @@ export function loadingApp() {
 	console.log("test loadingApp");
 	return {
 		type: appIsLoading,
+	};
+}
+
+export function changePageAction(page) {
+	console.log("test changePage");
+	return {
+		type: changePageType,
+		payload: page,
 	};
 }
 

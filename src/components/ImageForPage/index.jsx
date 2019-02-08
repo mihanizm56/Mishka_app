@@ -7,25 +7,17 @@ import { getSmallImage, getMiddleImage, getBigImage } from "../../helpers";
 
 type ImageForPageProps = {
 	image: string,
+	configForImage: any, //////////////////////////////////////////////////////!!!!!!!!!!!!!!!!
 };
 
-const configForImage = {
-	widthMin: "260px",
-	heightMin: "195px",
-	widthMiddle: "334px",
-	heightMiddle: "334px-",
-	widthBig: "317px",
-	heightBig: "464px",
-};
-
-export const ImageForPage = (props: ImageForPageProps) => {
-	const { image } = props;
+export const ImageForPage = ({ image, configForImage }: ImageForPageProps) => {
 	const smallImage = getBigImage(`${image}-big`);
 	const middleImage = getMiddleImage(`${image}-middle`);
 	const bigImage = getSmallImage(`${image}-small`);
+
 	return (
 		<>
-			<MediaQuery minWidth={1001}>
+			<MediaQuery minWidth={1201}>
 				<ImageComponent
 					image={bigImage}
 					alt={image}
@@ -33,7 +25,7 @@ export const ImageForPage = (props: ImageForPageProps) => {
 					heigthOfImage={configForImage.heightBig}
 				/>
 			</MediaQuery>
-			<MediaQuery minWidth={701} maxWidth={1000}>
+			<MediaQuery minWidth={768} maxWidth={1200}>
 				<ImageComponent
 					image={middleImage}
 					alt={image}
@@ -41,7 +33,7 @@ export const ImageForPage = (props: ImageForPageProps) => {
 					heigthOfImage={configForImage.heightMiddle}
 				/>
 			</MediaQuery>
-			<MediaQuery minWidth={240} maxWidth={700}>
+			<MediaQuery minWidth={320} maxWidth={767}>
 				<ImageComponent
 					image={smallImage}
 					alt={image}

@@ -9,19 +9,22 @@ import {
 	changeRangeMax,
 	selectFilter,
 	changeSearchField,
+	changePageAction,
 } from "../../actions";
 import { registerApp } from "../../helpers";
 import { SearchField } from "../../components";
+import { MainWrapper } from "../../modules";
+import "./App.css";
 
 class App extends Component {
 	componentDidMount() {
 		registerApp();
-		console.log("app registered");
+		console.log("app registered in firebase");
 	}
 
 	render() {
-		console.log("test App props");
-		console.log(this.props);
+		// console.log("test App props");
+		// console.log(this.props);
 		const {
 			loginState,
 			userSignIn,
@@ -34,12 +37,14 @@ class App extends Component {
 			shopItems,
 			changeTypeOfSort,
 			changeSearchFilter,
+			changePage,
 		} = this.props;
 		const userIsLoggedIn = loginState.login || localStorage.login === "true";
 		return (
-			<>
-				<SearchField callback={changeSearchFilter} />
-				<button onClick={() => userIsLoggedIn && userSignOut()}>Выйти</button>
+			<div className="global-wrapper">
+				<MainWrapper />
+				{/* <SearchField callback={changeSearchFilter} /> */}
+				{/* <button onClick={() => userIsLoggedIn && userSignOut()}>Выйти</button> */}
 				<Router
 					appToLoad={appToLoad}
 					isLoading={appLoading.loading}
@@ -50,8 +55,10 @@ class App extends Component {
 					itemsFilters={itemsFilters}
 					shopItems={shopItems}
 					changeTypeOfSort={changeTypeOfSort}
+					changePage={changePage}
 				/>
-			</>
+				{/* <Footer /> */}
+			</div>
 		);
 	}
 }
@@ -82,6 +89,9 @@ const mapDispatchToProps = dispatch => {
 		},
 		changeSearchFilter(value) {
 			dispatch(changeSearchField(value));
+		},
+		changePage(page) {
+			dispatch(changePageAction(page));
 		},
 	};
 };

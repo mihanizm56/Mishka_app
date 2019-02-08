@@ -22,14 +22,19 @@ import mainLogoSmallIcon from "../../images/icons/main-logo/img/main-logo-small.
 import mainLogoMiddleIcon from "../../images/icons/main-logo/img/main-logo-mid.svg";
 import mainLogoBigIcon from "../../images/icons/main-logo/img/main-logo-big.svg";
 
+import iconVideoSmall from "../../images/icons/icon-video-small.svg";
+import iconVideoMiddle from "../../images/icons/icon-video-mid.svg";
+import iconVideoBig from "../../images/icons/icon-video-big.svg";
+
 import iconBasket from "../../images/icons/icon-basket.svg";
 import iconAcademy from "../../images/icons/icon-acagemy.svg";
 import iconFacebook from "../../images/icons/icon-fb.svg";
 import iconInstagram from "../../images/icons/icon-insta.svg";
-import iconTelegram from "../../images/icons/icon-tg.svg";
-import iconVideo from "../../images/icons/icon-video.svg";
+import iconTwitter from "../../images/icons/icon-twitter.svg";
 import iconLogoFooter from "../../images/icons/icon-logo-footer.svg";
 import iconSearch from "../../images/icons/icon-search.svg";
+import iconCamera from "../../images/icons/icon-camera.svg";
+import iconZoom from "../../images/icons/icon-zoom.svg";
 
 export const getSmallImage = (name: string) => {
 	// console.log(`test getSmallImage, image-name=${name}`);
@@ -46,20 +51,24 @@ export const getSmallImage = (name: string) => {
 			return mainLogoSmallIcon;
 		case "icon-basket-small":
 			return iconBasket;
-		case "icon-acagemy-small":
+		case "icon-academy-small":
 			return iconAcademy;
 		case "icon-facebook-small":
 			return iconFacebook;
 		case "icon-instagram-small":
 			return iconInstagram;
-		case "icon-telegram-small":
-			return iconTelegram;
+		case "icon-twitter-small":
+			return iconTwitter;
 		case "icon-video-small":
-			return iconVideo;
+			return iconVideoSmall;
 		case "icon-logo-footer-small":
 			return iconLogoFooter;
 		case "icon-search-small":
 			return iconSearch;
+		case "icon-camera-small":
+			return iconCamera;
+		case "icon-zoom-small":
+			return iconZoom;
 
 		default:
 			return null;
@@ -81,20 +90,24 @@ export const getMiddleImage = (name: string) => {
 			return mainLogoMiddleIcon;
 		case "icon-basket-middle":
 			return iconBasket;
-		case "icon-acagemy-middle":
+		case "icon-academy-middle":
 			return iconAcademy;
 		case "icon-facebook-middle":
 			return iconFacebook;
 		case "icon-instagram-middle":
 			return iconInstagram;
-		case "icon-telegram-middle":
-			return iconTelegram;
+		case "icon-twitter-middle":
+			return iconTwitter;
 		case "icon-video-middle":
-			return iconVideo;
+			return iconVideoMiddle;
 		case "icon-logo-footer-middle":
 			return iconLogoFooter;
 		case "icon-search-middle":
 			return iconSearch;
+		case "icon-camera-middle":
+			return iconCamera;
+		case "icon-zoom-middle":
+			return iconZoom;
 
 		default:
 			return null;
@@ -116,20 +129,24 @@ export const getBigImage = (name: string) => {
 			return mainLogoBigIcon;
 		case "icon-basket-big":
 			return iconBasket;
-		case "icon-acagemy-big":
+		case "icon-academy-big":
 			return iconAcademy;
 		case "icon-facebook-big":
 			return iconFacebook;
 		case "icon-instagram-big":
 			return iconInstagram;
-		case "icon-telegram-big":
-			return iconTelegram;
+		case "icon-twitter-big":
+			return iconTwitter;
 		case "icon-video-big":
-			return iconVideo;
+			return iconVideoBig;
 		case "icon-logo-footer-big":
 			return iconLogoFooter;
 		case "icon-search-big":
 			return iconSearch;
+		case "icon-camera-big":
+			return iconCamera;
+		case "icon-zoom-big":
+			return iconZoom;
 
 		default:
 			return null;

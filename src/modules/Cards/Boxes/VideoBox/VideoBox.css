@@ -1,0 +1,123 @@
+.video-wrapper{
+    display: flex;
+}
+
+.video__photo-container{
+    position: relative;
+}
+
+.video__icon-play{
+    position: absolute;
+    transition: .5s;
+}
+
+.video__icon-play:hover{
+    position: absolute;
+    transform: scale(0.7);
+}
+
+.video-container__button{
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 767px) {    
+    .video-wrapper{
+        flex-direction: column;
+        align-items: center;
+        height: 500px;
+        width: 100%;
+    }
+    .video__photo-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .video__icon-play-small{
+        left: 107px;
+        top: 150px;
+    }
+    .photo-container__icon-and-title-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 200px;
+        margin: 36px 0 36px 0;
+    }
+    .icon-and-title-wrapper__title{
+        width: 130px;
+    }
+    .video__description-wrapper{
+        margin-top: 35px;
+        width: 200px;
+    }
+    .video-container__description{
+        margin-bottom: 30px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .video-wrapper{
+        flex-direction: column;
+        height: 741px;
+    }
+    .video__icon-play-mid{
+        left: 300px;
+        top: 160px;
+    }
+    .video__description-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .description-wrapper__video-container{
+        width: 582px;
+    }
+    .video-container__icon-and-title{
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+        margin-top: 36px;
+    }
+    .video-container__description{
+        margin-top: 45px;
+    }
+    .video-container__button{
+        margin-top: 45px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .video-wrapper{
+        flex-direction: row;
+        height: 455px;
+    }
+    .video__icon-play-big{
+        left: 284px;
+        top: 195px;
+    }
+    .video__description-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .description-wrapper__video-container{
+        width: 240px;
+        padding-top: 47px;
+    }
+    .video-container__icon{
+        margin-bottom: 32px;
+    }
+    .video-container__title{
+        margin-bottom: 46px;
+        width: 235px;
+    }
+    .video-container__description{
+        margin-bottom: 55px;
+    }
+
+  }

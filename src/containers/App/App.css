@@ -1,0 +1,24 @@
+.global-wrapper{
+    border: 1px solid blue;
+}
+
+@media (max-width: 767px) {    
+    .global-wrapper{
+        width:320px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .global-wrapper{
+        width:768px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .global-wrapper{
+        width:1200px;
+    }
+  }
+  
+  
+  

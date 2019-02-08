@@ -15,13 +15,13 @@ export const SVGForPage = ({ icon }: SVGForPageProps) => {
 	const bigIcon = getSmallImage(`icon-${icon}-small`);
 	return (
 		<>
-			<MediaQuery minWidth={1280}>
+			<MediaQuery minWidth={1201}>
 				<SVGComponent path={smallIcon} />
 			</MediaQuery>
-			<MediaQuery minWidth={768} maxWidth={1279}>
+			<MediaQuery minWidth={768} maxWidth={1200}>
 				<SVGComponent path={middleIcon} />
 			</MediaQuery>
-			<MediaQuery minWidth={240} maxWidth={767}>
+			<MediaQuery minWidth={320} maxWidth={767}>
 				<SVGComponent path={bigIcon} />
 			</MediaQuery>
 		</>
