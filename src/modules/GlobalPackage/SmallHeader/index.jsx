@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BoldParagraph, SVGForPage, LinkComponent } from "../../../components";
-import { UserBasketBox } from "../../Cards";
+import { UserBasketBox, SpecialHeaderBlock } from "../../Cards";
 import "./SmallHeader.css";
 
 export class SmallHeader extends Component {
@@ -47,6 +47,7 @@ export class SmallHeader extends Component {
 					</div>
 				</div>
 				{isSmallMenuOpened ? this.showSmallMenu() : null}
+				<SpecialHeaderBlock page="catalog" />
 			</div>
 		);
 	}

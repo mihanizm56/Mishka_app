@@ -1,5 +1,7 @@
 .main-title{
-    font-size: 48.797px;
+    padding: 0;
+    margin: 0;
+    
     font-family: "Verdana-Bold";
     color: rgb(35, 31, 32);
     line-height: 1.14;
@@ -8,4 +10,23 @@
     -webkit-transform: matrix( 1.02465030736761,0,0,1.02465030736761,0,0);
     -ms-transform: matrix( 1.02465030736761,0,0,1.02465030736761,0,0);
 }
+  
+
+@media (max-width: 767px) {    
+    .main-title{
+        font-size: 23.423px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .main-title{
+        font-size: 39px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .main-title{
+        font-size: 48.797px;
+    }
+  }
   

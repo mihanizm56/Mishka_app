@@ -1,13 +1,13 @@
 import React from "react";
 import { BoldParagraph, SVGForPage, RegularAdditionalParagraph, LinkComponent } from "../../../components";
-import { UserBasketBox } from "../../Cards";
+import { UserBasketBox, SpecialHeaderBlock } from "../../Cards";
 import { FONT_SIZE_FOR_SECOND_LINE_IN_HEADER } from "./constants";
 import "./MidHeader.css";
 
 export const MidHeader = () => {
 	return (
 		<div className="middle-header-wrapper">
-			<div className="middle-middle-header__first-line-header">
+			<div className="middle-header__first-line-header">
 				<div className="first-line-middle-header__logo">
 					<LinkComponent WrappedComponent={SVGForPage} icon="main-logo" route="main" />
 				</div>
@@ -20,7 +20,7 @@ export const MidHeader = () => {
 					<UserBasketBox />
 				</div>
 			</div>
-			<div className="middle-middle-header__second-line-header">
+			<div className="middle-header__second-line-header">
 				<div className="second-line-middle-header__catalog-title">
 					<LinkComponent
 						text="Каталог товаров"
@@ -41,6 +41,7 @@ export const MidHeader = () => {
 					<RegularAdditionalParagraph text="Бесплатная доставка по России" />
 				</div>
 			</div>
+			<SpecialHeaderBlock page="catalog" />
 		</div>
 	);
 };

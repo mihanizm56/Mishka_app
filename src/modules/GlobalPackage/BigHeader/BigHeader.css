@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 160px;
+    height: 350px;
 }
 
 .first-line-big-header__zoom-wrapper{
@@ -17,6 +17,7 @@
     width: 80px;
     border-left: 1px solid #ECECEC;
     border-right: 1px solid #ECECEC;
+    z-index: 2;
 }
 
 .big-header__first-line-big-header{
@@ -53,7 +54,7 @@
     display: flex;
     justify-content: flex-start;
     height: 70px;
-    background-color: #F1F1F1;
+    z-index: 2;
 }
 
 .second-line-big-header__new-items,

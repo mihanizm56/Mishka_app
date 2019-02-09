@@ -4,7 +4,7 @@ import "./MainWrapper.css";
 
 export const MainWrapper = props => {
 	return (
-		<div>
+		<div className="main-wrapper">
 			<Header />
 			<Footer />
 		</div>
