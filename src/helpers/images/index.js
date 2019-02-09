@@ -35,6 +35,8 @@ import iconLogoFooter from "../../images/icons/icon-logo-footer.svg";
 import iconSearch from "../../images/icons/icon-search.svg";
 import iconCamera from "../../images/icons/icon-camera.svg";
 import iconZoom from "../../images/icons/icon-zoom.svg";
+import iconCross from "../../images/icons/icon-cross.svg";
+import iconMenu from "../../images/icons/icon-menu.svg";
 
 export const getSmallImage = (name: string) => {
 	// console.log(`test getSmallImage, image-name=${name}`);
@@ -69,6 +71,10 @@ export const getSmallImage = (name: string) => {
 			return iconCamera;
 		case "icon-zoom-small":
 			return iconZoom;
+		case "icon-cross-small":
+			return iconCross;
+		case "icon-menu-small":
+			return iconMenu;
 
 		default:
 			return null;
@@ -108,6 +114,10 @@ export const getMiddleImage = (name: string) => {
 			return iconCamera;
 		case "icon-zoom-middle":
 			return iconZoom;
+		case "icon-cross-middle":
+			return iconCross;
+		case "icon-menu-middle":
+			return iconMenu;
 
 		default:
 			return null;
@@ -147,6 +157,10 @@ export const getBigImage = (name: string) => {
 			return iconCamera;
 		case "icon-zoom-big":
 			return iconZoom;
+		case "icon-cross-big":
+			return iconCross;
+		case "icon-menu-big":
+			return iconMenu;
 
 		default:
 			return null;

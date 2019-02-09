@@ -40,7 +40,7 @@
 }  
 @media (min-width: 768px) {
     .footer-wrapper{
-        justify-content: space-between;
+        justify-content: space-around;
         flex-direction: row;
         height: 143px;
     }
@@ -59,6 +59,8 @@
         justify-content: space-between;
         flex-direction: row;
         height: 143px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
     .footer-container__logo{
         width: 105px;

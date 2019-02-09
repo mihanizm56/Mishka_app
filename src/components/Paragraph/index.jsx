@@ -7,6 +7,10 @@ type ParagraphProps = {
 	className: string,
 };
 
-export const Paragraph = ({ text, className }: ParagraphProps): Node => <p className={className}>{text}</p>;
+export const Paragraph = ({ text, className, customFontSize }: ParagraphProps): Node => (
+	<p className={className} style={customFontSize ? { fontSize: customFontSize } : null}>
+		{text}
+	</p>
+);
 
 //const Paragraph = pure(ParagraphComponent);

@@ -6,7 +6,7 @@ export const MainWrapper = props => {
 	return (
 		<div>
 			<Header />
-			{/* <Footer /> */}
+			<Footer />
 		</div>
 	);
 };

@@ -1,0 +1,48 @@
+.basket-box-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.basket-box__icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23px;
+    height: 23px;
+    margin-right: 10px;
+}
+.basket-box__text{
+    margin-left: 10px;
+}
+
+@media (max-width: 767px) {    
+    .basket-box-wrapper{
+        justify-content: flex-start;
+        width: 100%;
+        padding-left: 35px;
+        height: 80px;
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width: 768px) {
+    .basket-box-wrapper{
+        width: 317px;
+        height: 90px;
+    }
+    .basket-box__text{
+        width: 200px;
+        height: 23px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .basket-box-wrapper{
+        width: 317px;
+        height: 90px;
+    }
+    .basket-box__text{
+        width: 200px;
+        height: 23px;
+    }
+}

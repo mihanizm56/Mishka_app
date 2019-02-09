@@ -7,6 +7,6 @@ type BoldParagraphProps = {
 	text: string,
 };
 
-export const BoldParagraph = ({ text }: BoldParagraphProps): Node => (
-	<Paragraph text={text} className="bold-paragraph" />
+export const BoldParagraph = ({ text, customFontSize }: BoldParagraphProps): Node => (
+	<Paragraph text={text} customFontSize={customFontSize} className="bold-paragraph" />
 );

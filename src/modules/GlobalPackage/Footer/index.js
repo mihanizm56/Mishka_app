@@ -1,17 +1,17 @@
 import React from "react";
-import { SVGForPage, FooterTextLogo } from "../../../components";
+import { SVGForPage, FooterTextLogo, LinkComponent } from "../../../components";
 import "./Footer.css";
 
 export const Footer = props => {
 	return (
 		<div className="footer-wrapper">
 			<div className="footer-container__logo">
-				<SVGForPage icon="logo-footer" />
+				<LinkComponent WrappedComponent={SVGForPage} icon="logo-footer" route="https://htmlacademy.ru/" usualLink />
 			</div>
 			<div className="footer-container__footer-icon-container">
-				<SVGForPage icon="instagram" />
-				<SVGForPage icon="facebook" />
-				<SVGForPage icon="twitter" />
+				<LinkComponent WrappedComponent={SVGForPage} icon="instagram" route="https://www.instagram.com" usualLink />
+				<LinkComponent WrappedComponent={SVGForPage} icon="facebook" route="https://www.facebook.com" usualLink />
+				<LinkComponent WrappedComponent={SVGForPage} icon="twitter" route="https://www.twitter.com" usualLink />
 			</div>
 			<div className="footer-container__academy-container">
 				<FooterTextLogo text="Разработано" />

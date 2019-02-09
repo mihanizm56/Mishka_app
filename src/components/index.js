@@ -18,3 +18,4 @@ export * from "./SVGComponent";
 export * from "./SVGForPage";
 export * from "./SearchField";
 export * from "./ButtonWithIcon";
+export * from "./LinkComponent";
