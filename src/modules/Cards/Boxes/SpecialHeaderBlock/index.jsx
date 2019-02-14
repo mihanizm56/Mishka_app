@@ -17,6 +17,9 @@ export const SpecialHeaderBlock = ({ page }) => {
 			<MediaQuery minWidth={768} maxWidth={1200}>
 				<div className="special-header-block__icon-zigzag" style={{ backgroundImage: `url(${zigzagMiddleImage})` }} />
 			</MediaQuery>
+			<MediaQuery minWidth={320} maxWidth={767}>
+				<div className="special-header-block__special-background" />
+			</MediaQuery>
 		</div>
 	);
 };

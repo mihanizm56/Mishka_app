@@ -4,7 +4,8 @@ import "./Footer.css";
 
 export const Footer = props => {
 	return (
-		<div className="footer-wrapper">
+		<div className="footer-container">
+			<div className="footer-container__special-background" />
 			<div className="footer-container__logo">
 				<LinkComponent WrappedComponent={SVGForPage} icon="logo-footer" route="https://htmlacademy.ru/" usualLink />
 			</div>
