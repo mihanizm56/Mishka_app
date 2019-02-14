@@ -1,14 +1,24 @@
 import React, { Component } from "react";
-import { BoldParagraph, SVGForPage, LinkComponent } from "../../../components";
-import { UserBasketBox, SpecialHeaderBlock } from "../../Cards";
+import { BoldParagraph, SVGForPage, ImageForPage, LinkComponent } from "../../../components";
+import { UserBasketBox } from "../../Cards";
 import "./SmallHeader.css";
 
 export class SmallHeader extends Component {
-	state = {
-		isSmallMenuOpened: false,
-	};
+	constructor() {
+		super();
+		this.state = {
+			isSmallMenuOpened: false,
+		};
+		this.configForSmallMenuIcon = {
+			width: "20px",
+			heigth: "14px",
+		};
+	}
 
-	handleOpenSmallMenu = () => this.setState(prevState => ({ isSmallMenuOpened: !prevState.isSmallMenuOpened }));
+	handleOpenSmallMenu = () => {
+		console.log("check click");
+		this.setState(prevState => ({ isSmallMenuOpened: !prevState.isSmallMenuOpened }));
+	};
 
 	showSmallMenu = () => {
 		return (
@@ -43,12 +53,18 @@ export class SmallHeader extends Component {
 						<LinkComponent WrappedComponent={SVGForPage} icon="main-logo" route="main" />
 					</div>
 					<div className="small-header-logo-wrapper__menu-icon" onClick={this.handleOpenSmallMenu}>
-						<SVGForPage icon={isSmallMenuOpened ? "cross" : "menu"} />
+						{/* <SVGForPage icon={isSmallMenuOpened ? "cross" : "menu"} /> */}
+						<ImageForPage
+							image={isSmallMenuOpened ? "icon-cross" : "icon-menu"}
+							configForImage={this.configForSmallMenuIcon}
+						/>
 					</div>
 				</div>
 				{isSmallMenuOpened ? this.showSmallMenu() : null}
-				<SpecialHeaderBlock page="catalog" />
 			</div>
 		);
 	}
 }
+
+// icon-cross-small
+// icon-menu-small

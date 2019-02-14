@@ -6,7 +6,7 @@ import {
 	RegularAdditionalParagraph,
 	LinkComponent,
 } from "../../../components";
-import { UserBasketBox, SpecialHeaderBlock } from "../../Cards";
+import { UserBasketBox } from "../../Cards";
 import "./BigHeader.css";
 
 export const BigHeader = () => {
@@ -42,7 +42,6 @@ export const BigHeader = () => {
 					<RegularAdditionalParagraph text="Бесплатная доставка по России" />
 				</div>
 			</div>
-			<SpecialHeaderBlock page="catalog" />
 		</div>
 	);
 };

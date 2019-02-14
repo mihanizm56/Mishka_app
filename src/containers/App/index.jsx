@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Router } from "../../router";
+
 import {
 	loginRequest,
 	signOutFirebase,
@@ -25,38 +25,14 @@ class App extends Component {
 	render() {
 		// console.log("test App props");
 		// console.log(this.props);
-		const {
-			loginState,
-			userSignIn,
-			appLoading,
-			appToLoad,
-			userSignOut,
-			changeMinFilterValue,
-			changeMaxFilterValue,
-			itemsFilters,
-			shopItems,
-			changeTypeOfSort,
-			changeSearchFilter,
-			changePage,
-		} = this.props;
+		const { loginState, ...restProps } = this.props;
 		const userIsLoggedIn = loginState.login || localStorage.login === "true";
 		return (
 			<div className="global-wrapper">
-				<MainWrapper />
+				<MainWrapper {...restProps} userIsLoggedIn={userIsLoggedIn} />
 				{/* <SearchField callback={changeSearchFilter} /> */}
 				{/* <button onClick={() => userIsLoggedIn && userSignOut()}>Выйти</button> */}
-				<Router
-					appToLoad={appToLoad}
-					isLoading={appLoading.loading}
-					parameter={userIsLoggedIn}
-					userSignIn={userSignIn}
-					changeMinFilterValue={changeMinFilterValue}
-					changeMaxFilterValue={changeMaxFilterValue}
-					itemsFilters={itemsFilters}
-					shopItems={shopItems}
-					changeTypeOfSort={changeTypeOfSort}
-					changePage={changePage}
-				/>
+
 				{/* <Footer /> */}
 			</div>
 		);

@@ -35,8 +35,10 @@ import iconLogoFooter from "../../images/icons/icon-logo-footer.svg";
 import iconSearch from "../../images/icons/icon-search.svg";
 import iconCamera from "../../images/icons/icon-camera.svg";
 import iconZoom from "../../images/icons/icon-zoom.svg";
-import iconCross from "../../images/icons/icon-cross.svg";
-import iconMenu from "../../images/icons/icon-menu.svg";
+
+/// Icons Special For Interactive Actions
+import iconCross from "../../images/pictures/forSpecialIcons/menu-icon-close.png";
+import iconMenu from "../../images/pictures/forSpecialIcons/menu-icon.png";
 
 export const getSmallImage = (name: string) => {
 	// console.log(`test getSmallImage, image-name=${name}`);

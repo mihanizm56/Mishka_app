@@ -1,6 +1,6 @@
 import React from "react";
 import { BoldParagraph, SVGForPage, RegularAdditionalParagraph, LinkComponent } from "../../../components";
-import { UserBasketBox, SpecialHeaderBlock } from "../../Cards";
+import { UserBasketBox } from "../../Cards";
 import { FONT_SIZE_FOR_SECOND_LINE_IN_HEADER } from "./constants";
 import "./MidHeader.css";
 
@@ -41,7 +41,6 @@ export const MidHeader = () => {
 					<RegularAdditionalParagraph text="Бесплатная доставка по России" />
 				</div>
 			</div>
-			<SpecialHeaderBlock page="catalog" />
 		</div>
 	);
 };
