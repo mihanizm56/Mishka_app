@@ -56,16 +56,16 @@
         width: 100%;
     }
     .under-header-box__back-box{
-        top: -24px;
+        top: -55px;
         left: -50%;
         width: 300%;
-        height: 280px;
+        height: 310px;
     }
     .under-header-box__text{
-        margin-bottom: 50px;
+        margin-bottom: 90px;
     }
     .under-header-box__zigzag-box{
-        bottom: -10px;
+        bottom: -16px;
         left: -31%;
         width: 161%;
         height: 34px;

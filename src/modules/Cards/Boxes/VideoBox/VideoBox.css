@@ -88,6 +88,9 @@
     .video-container__button{
         margin-top: 45px;
     }
+    .video__photo-container{
+        align-self: center;
+    }
   }
 
   @media (min-width: 1200px) {
