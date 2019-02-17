@@ -1,7 +1,6 @@
 import React from "react";
 import MediaQuery from "react-responsive";
 import { BigHeader, MidHeader, SmallHeader } from "../";
-import "./Header.css";
 
 export const Header = () => {
 	return (

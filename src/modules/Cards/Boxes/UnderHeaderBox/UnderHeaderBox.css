@@ -21,6 +21,7 @@
     .under-header-box{
         height: 178px;
         width: 100%;
+        margin-bottom: 30px;
     }
     .under-header-box__back-box{
         top: 0;

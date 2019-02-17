@@ -15,7 +15,6 @@
 .middle-header__rigth-container{
     display: flex;
     height: 100%;
-    border: 1px solid blue;
 }
 
 .first-line-middle-header__zoom-wrapper{
