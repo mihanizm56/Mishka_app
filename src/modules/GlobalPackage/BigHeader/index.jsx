@@ -6,7 +6,7 @@ import {
 	RegularAdditionalParagraph,
 	LinkComponent,
 } from "../../../components";
-import { UserBasketBox } from "../../Cards";
+import { UserBasketBox, UnderHeaderBox } from "../../Cards";
 import "./BigHeader.css";
 
 export const BigHeader = () => {
@@ -41,6 +41,9 @@ export const BigHeader = () => {
 				<div className="second-line-big-header__delivery-info">
 					<RegularAdditionalParagraph text="Бесплатная доставка по России" />
 				</div>
+			</div>
+			<div>
+				<UnderHeaderBox text="Каталог товаров" />
 			</div>
 		</div>
 	);

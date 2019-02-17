@@ -40,6 +40,7 @@
 .big-header__first-line-big-header{
     display: flex;
     justify-content: space-between;
+    height: 250px;
 }
 .first-line-big-header__catalog-title,
 .first-line-big-header__knitting-title {

@@ -6,8 +6,8 @@
 .footer-container__special-background{
     position: absolute;
     top: 0;
-    left: -500px;
-    width: 2000px;
+    left: -70%;
+    width: 250%;
     height: 100%;
     background-color: #F1F1F1;
     z-index: -1;
@@ -54,7 +54,7 @@
 }  
 @media (min-width: 768px) {
     .footer-container{
-        justify-content: space-around;
+        justify-content: space-between;
         flex-direction: row;
         height: 143px;
     }
@@ -63,12 +63,14 @@
     }
     .footer-container__logo{
         width: 105px;
+        margin-left: 50px;
     }
     .footer-container__footer-icon-container{
         width: 140px;
     }
     .footer-container__academy-container{
         width: 190px;
+        margin-right: 40px;
     }   
 }
 @media (min-width: 1200px) {

@@ -21,7 +21,7 @@ export const MainWrapper = props => {
 	return (
 		<div className="main-wrapper">
 			<Header />
-			<Router
+			{/* <Router
 				appToLoad={appToLoad}
 				isLoading={appLoading.loading}
 				parameter={userIsLoggedIn}
@@ -32,8 +32,8 @@ export const MainWrapper = props => {
 				shopItems={shopItems}
 				changeTypeOfSort={changeTypeOfSort}
 				changePage={changePage}
-			/>
-			<Footer />
+			/> */}
+			{/* <Footer /> */}
 		</div>
 	);
 };

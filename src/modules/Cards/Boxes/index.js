@@ -3,3 +3,4 @@ export * from "./ItemDescriptionBox";
 export * from "./ItemsCatalogContainer";
 export * from "./VideoBox";
 export * from "./UserBasketBox";
+export * from "./UnderHeaderBox";

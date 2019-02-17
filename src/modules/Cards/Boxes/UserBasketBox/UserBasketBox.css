@@ -18,10 +18,12 @@
 @media (max-width: 767px) {    
     .basket-box-wrapper{
         justify-content: flex-start;
-        width: 100%;
-        padding-left: 35px;
         height: 80px;
+        width: 250px;
         box-sizing: border-box;
+    }
+    .basket-box__icon{
+        margin-right: 20px;
     }
 }
 

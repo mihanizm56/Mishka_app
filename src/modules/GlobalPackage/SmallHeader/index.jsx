@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BoldParagraph, SVGForPage, ImageForPage, LinkComponent } from "../../../components";
-import { UserBasketBox } from "../../Cards";
+import { UserBasketBox, UnderHeaderBox } from "../../Cards";
 import "./SmallHeader.css";
 
 export class SmallHeader extends Component {
@@ -16,7 +16,6 @@ export class SmallHeader extends Component {
 	}
 
 	handleOpenSmallMenu = () => {
-		console.log("check click");
 		this.setState(prevState => ({ isSmallMenuOpened: !prevState.isSmallMenuOpened }));
 	};
 
@@ -30,11 +29,11 @@ export class SmallHeader extends Component {
 					<LinkComponent text="Вазание на заказ" WrappedComponent={BoldParagraph} route="order" />
 				</div>
 				<div className="small-header__zoom-wrapper">
-					<div className="zoom-wrapper__zoom-icon">
-						<SVGForPage icon="zoom" />
-					</div>
 					<div className="zoom-wrapper__zoom-text">
 						<BoldParagraph text="Поиск по сайту" />
+						<div className="zoom-wrapper__zoom-icon">
+							<SVGForPage icon="zoom" />
+						</div>
 					</div>
 				</div>
 				<div className="small-header__basket-wrapper">
@@ -52,15 +51,27 @@ export class SmallHeader extends Component {
 					<div className="small-header-logo-wrapper__logo-icon">
 						<LinkComponent WrappedComponent={SVGForPage} icon="main-logo" route="main" />
 					</div>
-					<div className="small-header-logo-wrapper__menu-icon" onClick={this.handleOpenSmallMenu}>
-						{/* <SVGForPage icon={isSmallMenuOpened ? "cross" : "menu"} /> */}
-						<ImageForPage
-							image={isSmallMenuOpened ? "icon-cross" : "icon-menu"}
-							configForImage={this.configForSmallMenuIcon}
-						/>
+					<div
+						style={{ display: `${isSmallMenuOpened ? "none" : "block"}` }}
+						className="small-header-logo-wrapper__menu-icon"
+						onClick={this.handleOpenSmallMenu}
+					>
+						<ImageForPage image="icon-menu" configForImage={this.configForSmallMenuIcon} />
+					</div>
+					<div
+						style={{ display: `${isSmallMenuOpened ? "block" : "none"}` }}
+						className="small-header-logo-wrapper__cross-icon"
+						onClick={this.handleOpenSmallMenu}
+					>
+						<ImageForPage image="icon-cross" configForImage={this.configForSmallMenuIcon} />
 					</div>
 				</div>
-				{isSmallMenuOpened ? this.showSmallMenu() : null}
+				<div className={`small-menu-wrapper${isSmallMenuOpened ? "--opened" : ""}`}>
+					{isSmallMenuOpened ? this.showSmallMenu() : null}
+				</div>
+				<div>
+					<UnderHeaderBox text="Каталог товаров" />
+				</div>
 			</div>
 		);
 	}

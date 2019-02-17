@@ -4,13 +4,13 @@
 
 @media (max-width: 767px) {    
     .main-wrapper{
-        width:320px;
+      width:100%;
     }
   }
 
   @media (min-width: 768px) {
     .main-wrapper{
-        width:768px;
+        width:100%;
     }
   }
 
