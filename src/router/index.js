@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { CatalogPage, HiddenPage, MainPage } from "../modules";
+import { CatalogPage, HiddenPage, IndexPage } from "../modules";
 import FormAuth from "../modules/Pages/FormAuth";
 import { ErrorComponent } from "../components";
 
@@ -19,8 +19,8 @@ export const Router = ({
 }) => {
 	return (
 		<Switch>
-			<Route exact path="/" render={() => <MainPage changePage={changePage} />} />
-			<Route exact path="/main" render={() => <MainPage changePage={changePage} />} />
+			<Route exact path="/" render={() => <IndexPage changePage={changePage} />} />
+			<Route exact path="/main" render={() => <IndexPage changePage={changePage} />} />
 			<Route
 				exact
 				path="/catalog"

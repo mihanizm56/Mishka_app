@@ -1,0 +1,17 @@
+.paragraph-index-items{
+    font-size: 19px;
+    font-family: "Verdana-Bold";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+@media (max-width: 767px) {
+    .paragraph-index-items{
+        font-size: 16px;
+        font-family: "Verdana-Bold";
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        line-height: 1.2;
+    }
+} 

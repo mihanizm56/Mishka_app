@@ -19,3 +19,4 @@ export * from "./SVGForPage";
 export * from "./SearchField";
 export * from "./ButtonWithIcon";
 export * from "./LinkComponent";
+export * from "./ParagraphForItemsInTitle";

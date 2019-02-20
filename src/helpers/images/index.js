@@ -40,6 +40,14 @@ import iconZoom from "../../images/icons/icon-zoom.svg";
 import iconCross from "../../images/pictures/forSpecialIcons/menu-icon-close.png";
 import iconMenu from "../../images/pictures/forSpecialIcons/menu-icon.png";
 
+/// Icons Index Page
+import iconFlower from "../../images/icons/index-page/icon-flower.svg";
+import iconBall from "../../images/icons/index-page/icon-ball.svg";
+import iconGift from "../../images/icons/index-page/icon-gift.svg";
+import iconHeart from "../../images/icons/index-page/icon-heart.svg";
+import iconRocket from "../../images/icons/index-page/icon-rocket.svg";
+import iconStyle from "../../images/icons/index-page/icon-style.svg";
+
 export const getSmallImage = (name: string) => {
 	// console.log(`test getSmallImage, image-name=${name}`);
 	switch (name) {
@@ -77,6 +85,18 @@ export const getSmallImage = (name: string) => {
 			return iconCross;
 		case "icon-menu-small":
 			return iconMenu;
+		case "icon-flower-small":
+			return iconFlower;
+		case "icon-ball-small":
+			return iconBall;
+		case "icon-gift-small":
+			return iconGift;
+		case "icon-heart-small":
+			return iconHeart;
+		case "icon-rocket-small":
+			return iconRocket;
+		case "icon-style-small":
+			return iconStyle;
 
 		default:
 			return null;
@@ -120,6 +140,18 @@ export const getMiddleImage = (name: string) => {
 			return iconCross;
 		case "icon-menu-middle":
 			return iconMenu;
+		case "icon-flower-middle":
+			return iconFlower;
+		case "icon-ball-middle":
+			return iconBall;
+		case "icon-gift-middle":
+			return iconGift;
+		case "icon-heart-middle":
+			return iconHeart;
+		case "icon-rocket-middle":
+			return iconRocket;
+		case "icon-style-middle":
+			return iconStyle;
 
 		default:
 			return null;
@@ -163,6 +195,18 @@ export const getBigImage = (name: string) => {
 			return iconCross;
 		case "icon-menu-big":
 			return iconMenu;
+		case "icon-flower-big":
+			return iconFlower;
+		case "icon-ball-big":
+			return iconBall;
+		case "icon-gift-big":
+			return iconGift;
+		case "icon-heart-big":
+			return iconHeart;
+		case "icon-rocket-big":
+			return iconRocket;
+		case "icon-style-big":
+			return iconStyle;
 
 		default:
 			return null;

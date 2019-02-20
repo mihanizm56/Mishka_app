@@ -1,0 +1,38 @@
+.index-item-box-wrapper{
+    border: 1px solid red;
+    display: flex;
+
+}
+
+@media (max-width: 767px) {    
+    .index-item-box-wrapper {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-height: 90px;
+        max-height: 100px;
+        width: 100%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .index-item-box-wrapper {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 100px;
+        width: 331px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .index-item-box-wrapper {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 100px;
+        width: 331px;
+        margin-bottom: 60px;
+    }
+  }
+  
