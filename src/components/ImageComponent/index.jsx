@@ -4,8 +4,8 @@ import "./ImageComponent.css";
 
 type imageProps = {
 	image: string,
-	widthOfImage: string,
-	heigthOfImage: string,
+	widthOfImage?: string,
+	heigthOfImage?: string,
 	alt: string,
 };
 

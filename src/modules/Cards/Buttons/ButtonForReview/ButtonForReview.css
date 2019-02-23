@@ -1,0 +1,43 @@
+.button-review-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: .5s;
+}
+
+.button-review-wrapper:hover{
+    background-color: #444444;
+}
+.button-review-wrapper:active{
+    background-color: #444444;
+}
+
+.button-review-wrapper:hover .text-button{
+    color: #fff;
+}
+
+.button-review-wrapper:active .text-button{
+    color: #fff;
+    opacity: 0.3;
+}
+
+@media (max-width: 767px) {
+    .button-review-wrapper{
+        height: 50px;
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .button-review-wrapper{
+        height: 50px;
+        width: 175px;
+    }
+}
+@media (min-width: 1200px) {
+    .button-review-wrapper{
+        height: 50px;
+        width: 175px;
+    }
+}

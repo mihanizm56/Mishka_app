@@ -13,37 +13,48 @@
 .about-box__item-box{
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid blue;
   width: 100%;
 }
 
 
 
-@media (max-width: 767px) {    
+@media (max-width: 767px) { 
+    .about-box-wrapper{
+      width: 80%;
+    }   
     .about-box__item-box{
-        max-width: 90%;
+     
     }
     .about-box__title{
       padding-left: 1%;
+      margin-bottom: 35px;
     }
     .about-box__item-box{}
   }
 
   @media (min-width: 768px) {
     .about-box-wrapper{
-      width: 668px;
-      height: 501px;
+      width: 90%;
+      height: 590px;
     }
-    .about-box__title{}
-    .about-box__item-box{}
+    .about-box__title{
+      padding-left: 1%;
+      margin-bottom: 60px;
+    }
+    .about-box__item-box{
+      justify-content: space-between;
+    }
   }
 
   @media (min-width: 1200px) {
     .about-box-wrapper{
       width: 700px;
-      height: 500px;
+      height: 600px;
     }
-    .about-box__title{}
+    .about-box__title{
+      padding-left: 3px;
+      margin-bottom: 60px;
+    }
     .about-box__item-box{}
   }
 

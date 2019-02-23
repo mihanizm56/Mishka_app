@@ -8,7 +8,7 @@ export const AboutBox = ({ iconsInBox }) => {
 	return (
 		<div className="about-box-wrapper">
 			<div className="about-box__title">
-				<MainTitle text="Коротко о нас:" />
+				<MainTitle text="Коротко о нас:" style={{ marginBottom: "60px" }} />
 			</div>
 			<div className="about-box__item-box">
 				{iconsInBox.map(item => {
