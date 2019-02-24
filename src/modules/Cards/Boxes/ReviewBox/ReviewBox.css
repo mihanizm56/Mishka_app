@@ -1,4 +1,5 @@
 .review-wrapper{
+  position: relative;
     align-self: center;
     display: flex;
     border: 1px solid red;
@@ -15,17 +16,35 @@
 
 @media (max-width: 767px) { 
     .review-wrapper{
-
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 80%;
+      min-height: 536px;
+      max-height: 615px;
     }
     .review__image{
       display: none;
+    }
+    .review__buttons-wrapper{
+      flex-direction: column;
+      justify-content: space-between;
+      height: 142px;
+    }
+    .review__text-box{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 440px;
+      border: 1px solid blue;
     }
 }
 
 @media (min-width: 768px) {
     .review-wrapper{
+      align-self: flex-start;
       height: 457px;
-      width: 90%;
+      width: 95%;
       justify-content: space-between;
     }
     .review__image{
@@ -36,7 +55,16 @@
       align-self: center;
       flex-direction: column;
       justify-content: space-between;
+      z-index: 2;
       height: 272px;
+    }
+    .review__text-box{
+      position: absolute;
+      left: 50px;
+      top: 91px;
+      min-width: 668px;
+      min-height: 275px;
+      border: 1px solid blue;
     }
 }
 
@@ -56,5 +84,13 @@
     flex-direction: column;
     justify-content: space-between;
     height: 272px;
+  }
+  .review__text-box{
+    position: absolute;
+    left: 175px;
+    top: 91px;
+    min-width: 700px;
+    min-height: 275px;
+    border: 1px solid blue;
   }
 }

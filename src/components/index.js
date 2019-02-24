@@ -20,3 +20,5 @@ export * from "./SearchField";
 export * from "./ButtonWithIcon";
 export * from "./LinkComponent";
 export * from "./ParagraphForItemsInTitle";
+export * from "./TextForLoginInReview";
+export * from "./NameForReview";

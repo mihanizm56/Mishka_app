@@ -7,3 +7,4 @@ export * from "./UnderHeaderBox";
 export * from "./AboutBox";
 export * from "./IndexItemBox";
 export * from "./ReviewBox";
+export * from "./ReviewTextBox";

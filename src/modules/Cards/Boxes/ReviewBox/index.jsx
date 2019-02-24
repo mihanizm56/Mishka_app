@@ -1,6 +1,8 @@
 import React from "react";
-import { ImageForPage, MainTitle } from "../../../../components";
+import MediaQuery from "react-responsive";
+import { ImageForPage } from "../../../../components";
 import { ButtonForReview, ListButtonsBox } from "../../Buttons";
+import { ReviewTextBox } from "../";
 import "./ReviewBox.css";
 
 const configForReviewImage = {
@@ -13,14 +15,42 @@ const configForReviewImage = {
 export const ReviewBox = ({ review, name, surname, login }) => {
 	return (
 		<div className="review-wrapper">
-			<div className="review__image">
-				<ImageForPage image="review-back" configForImage={configForReviewImage} />
-			</div>
-			{/* <MainTitle text="Отзывы" /> */}
-			<div className="review__buttons-wrapper">
-				<ButtonForReview />
-				<ListButtonsBox />
-			</div>
+			<MediaQuery minWidth={1201}>
+				<div className="review__image">
+					<ImageForPage image="review-back" configForImage={configForReviewImage} />
+				</div>
+				<div className="review__text-box">
+					<ReviewTextBox review={review} name={name} surname={surname} login={login} />
+				</div>
+				<div className="review__buttons-wrapper">
+					<ButtonForReview />
+					<ListButtonsBox />
+				</div>
+			</MediaQuery>
+			<MediaQuery minWidth={768} maxWidth={1200}>
+				<div className="review__image">
+					<ImageForPage image="review-back" configForImage={configForReviewImage} />
+				</div>
+				<div className="review__text-box">
+					<ReviewTextBox review={review} name={name} surname={surname} login={login} />
+				</div>
+				<div className="review__buttons-wrapper">
+					<ButtonForReview />
+					<ListButtonsBox />
+				</div>
+			</MediaQuery>
+			<MediaQuery minWidth={320} maxWidth={767}>
+				<div className="review__image">
+					<ImageForPage image="review-back" configForImage={configForReviewImage} />
+				</div>
+				<div className="review__text-box">
+					<ReviewTextBox review={review} name={name} surname={surname} login={login} />
+				</div>
+				<div className="review__buttons-wrapper">
+					<ListButtonsBox />
+					<ButtonForReview />
+				</div>
+			</MediaQuery>
 		</div>
 	);
 };
