@@ -53,6 +53,7 @@ import iconHeart from "../../images/icons/index-page/icon-heart.svg";
 import iconRocket from "../../images/icons/index-page/icon-rocket.svg";
 import iconStyle from "../../images/icons/index-page/icon-style.svg";
 import iconArrow from "../../images/icons/index-page/icon-arrow.svg";
+import iconFlag from "../../images/icons/index-page/icon-flag.svg";
 
 export const getSmallImage = (name: string) => {
 	// console.log(`test getSmallImage, image-name=${name}`);
@@ -164,6 +165,8 @@ export const getMiddleImage = (name: string) => {
 			return iconStyle;
 		case "icon-arrow-middle":
 			return iconArrow;
+		case "icon-flag-middle":
+			return iconFlag;
 
 		default:
 			return null;
@@ -223,6 +226,8 @@ export const getBigImage = (name: string) => {
 			return iconStyle;
 		case "icon-arrow-big":
 			return iconArrow;
+		case "icon-flag-big":
+			return iconFlag;
 
 		default:
 			return null;

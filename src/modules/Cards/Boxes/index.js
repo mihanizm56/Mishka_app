@@ -8,3 +8,4 @@ export * from "./AboutBox";
 export * from "./IndexItemBox";
 export * from "./ReviewBox";
 export * from "./ReviewTextBox";
+export * from "./ContactBox";

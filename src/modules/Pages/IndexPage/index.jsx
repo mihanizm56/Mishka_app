@@ -1,6 +1,6 @@
 import React from "react";
 import "./IndexPage.css";
-import { AboutBox, ReviewBox } from "../../Cards";
+import { AboutBox, ReviewBox, ContactBox } from "../../Cards";
 
 export const IndexPage = props => {
 	return (
@@ -8,6 +8,7 @@ export const IndexPage = props => {
 			<p>IndexPage</p>
 			<AboutBox />
 			<ReviewBox />
+			<ContactBox />
 		</div>
 	);
 };
