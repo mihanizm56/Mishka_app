@@ -5,11 +5,16 @@
 }
 
 .contacts-container{
-    
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     border: 1px solid green;
 }
 
 .contacts-title-container{
+    display: flex;  
+    align-self: center;
+    border: 1px solid red;
 }
 
 .contacts-email-container{
@@ -20,11 +25,11 @@
     border: 1px solid red;
 }
 
-.contacts-adress__text-value{
-                    
-}
-.contacts-button{
-
+.contacts-email-container,
+.contacts-adress {
+    display: flex;
+    justify-content: space-between;  
+    box-sizing: border-box;
 }
 
 .contacts-additional-wrapper{
@@ -45,23 +50,17 @@
     }
 
     .contacts-title-container{
-        display: flex;  
-        align-self: center;
         margin-top: 60px;
         width: 100%;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid red;
     }
 
     .contacts-email-container,
     .contacts-adress {
-        display: flex;
-        justify-content: space-between;  
         align-self: flex-start;
         width: 100%;
         margin: 40px 0 0 0;
-        box-sizing: border-box;
     }
 
     .contacts-button{
@@ -88,23 +87,17 @@
     }
 
     .contacts-title-container{
-        display: flex;  
-        align-self: center;
         margin-top: 60px;
         width: 90%;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid red;
     }
 
     .contacts-email-container,
     .contacts-adress {
-        display: flex;
-        justify-content: space-between;  
         align-self: center;
         width: 260px;
         margin: 50px 0 50px 0;
-        box-sizing: border-box;
     }
 
     .contacts-button{
@@ -130,31 +123,18 @@
         width: 93%;
     }
 
-    .contacts-container{
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-    }
-
     .contacts-title-container{
-        display: flex;  
-        align-self: center;
         margin-top: 60px;
         width: 380px;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid red;
     }
 
     .contacts-email-container,
-    .contacts-adress {
-        display: flex;
-        justify-content: space-between;  
-        align-self: center;
+    .contacts-adress { 
         width: 380px;
         padding-left: 110px;
         margin: 50px 0 0 0;
-        box-sizing: border-box;
     }
 
     .contacts-button{
