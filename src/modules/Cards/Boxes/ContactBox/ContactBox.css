@@ -1,7 +1,6 @@
 
 .contact-box-wrapper{
     display: flex;
-
     border: 1px solid red;
 }
 
@@ -9,8 +8,10 @@
     
     border: 1px solid green;
 }
+
 .contacts-title-container{
 }
+
 .contacts-email-container{
     border: 1px solid black;
 
@@ -18,9 +19,10 @@
 .contacts-adress{
     border: 1px solid red;
 }
-                .contacts-adress__text-value{
+
+.contacts-adress__text-value{
                     
-                }
+}
 .contacts-button{
 
 }
@@ -122,6 +124,7 @@
 
 @media (min-width: 1200px) {
     .contact-box-wrapper{
+        flex-direction: row;
         align-self: center;
         height: 456px;
         width: 93%;
@@ -150,7 +153,7 @@
         align-self: center;
         width: 380px;
         padding-left: 110px;
-        margin-top: 50px;
+        margin: 50px 0 0 0;
         box-sizing: border-box;
     }
 
