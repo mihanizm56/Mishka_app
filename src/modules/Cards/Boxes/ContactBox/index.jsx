@@ -49,8 +49,53 @@ export class ContactBox extends Component<propsType> {
 					</div>
 					<div className="contact-box__image-imitation" />
 				</MediaQuery>
-				{/* <MediaQuery minWidth={768} maxWidth={1200}></MediaQuery>
-<MediaQuery minWidth={320} maxWidth={767}></MediaQuery> */}
+				<MediaQuery minWidth={768} maxWidth={1200}>
+					<div className="contacts-title-container">
+						<MainTitle text="Контакты" />
+						<SVGForPage icon="flag" />
+					</div>
+					<div className="contacts-additional-wrapper">
+						<div className="contacts-email-container">
+							<TextForVideo text="e-mail" />
+							<TextForVideo text={emailAdress} />
+						</div>
+						<div className="contacts-adress">
+							<TextForVideo text="адрес:" />
+							<div className="contacts-adress__text-value">
+								<TextForVideo text={adressCityValue} />
+								<TextForVideo text={adressStreetValue} />
+								<TextForVideo text={adressBlockValue} />
+							</div>
+						</div>
+					</div>
+					<div className="contact-box__image-imitation" />
+					<div className="contacts-button">
+						<ButtonForOffer />
+					</div>
+				</MediaQuery>
+				<MediaQuery minWidth={320} maxWidth={767}>
+					<div className="contacts-title-container">
+						<MainTitle text="Контакты" />
+					</div>
+					<div className="contacts-additional-wrapper">
+						<div className="contacts-email-container">
+							<TextForVideo text="e-mail" />
+							<TextForVideo text={emailAdress} />
+						</div>
+						<div className="contacts-adress">
+							<TextForVideo text="адрес:" />
+							<div className="contacts-adress__text-value">
+								<TextForVideo text={adressCityValue} />
+								<TextForVideo text={adressStreetValue} />
+								<TextForVideo text={adressBlockValue} />
+							</div>
+						</div>
+					</div>
+					<div className="contact-box__image-imitation" />
+					<div className="contacts-button">
+						<ButtonForOffer />
+					</div>
+				</MediaQuery>
 			</div>
 		);
 	}

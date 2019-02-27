@@ -1,12 +1,12 @@
 .review-wrapper{
   position: relative;
-    align-self: center;
-    display: flex;
-    border: 1px solid red;
+  align-self: center;
+  display: flex;
+  border: 1px solid red;
 }
 
 .review__image{
-    border: 1px solid green;
+  border: 1px solid green;
 }
 
 .review__buttons-wrapper{
@@ -35,7 +35,7 @@
       left: 0;
       top: 0;
       width: 100%;
-      height: 440px;
+      height: 360px;
       border: 1px solid blue;
     }
 }
