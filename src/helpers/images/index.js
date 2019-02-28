@@ -21,6 +21,10 @@ import { videoBackBigImage } from "../../images/pictures";
 import { BackgroundForReviewBigImage } from "../../images/pictures";
 import { BackgroundForReviewMiddleImage } from "../../images/pictures";
 
+import { basketIndexSmallImage } from "../../images/pictures";
+import { basketIndexMiddleImage } from "../../images/pictures";
+import { basketIndexBigImage } from "../../images/pictures";
+
 //иконки вставляем через export default
 
 import mainLogoSmallIcon from "../../images/icons/main-logo/img/main-logo-small.svg";
@@ -54,6 +58,7 @@ import iconRocket from "../../images/icons/index-page/icon-rocket.svg";
 import iconStyle from "../../images/icons/index-page/icon-style.svg";
 import iconArrow from "../../images/icons/index-page/icon-arrow.svg";
 import iconFlag from "../../images/icons/index-page/icon-flag.svg";
+import iconHitTitle from "../../images/icons/index-page/icon-week-hit.svg";
 
 export const getSmallImage = (name: string) => {
 	// console.log(`test getSmallImage, image-name=${name}`);
@@ -66,6 +71,8 @@ export const getSmallImage = (name: string) => {
 			return bigBasketSmallImage;
 		case "video-back-small":
 			return videoBackSmallImage;
+		case "index-basket-small":
+			return basketIndexSmallImage;
 		case "icon-main-logo-small":
 			return mainLogoSmallIcon;
 		case "icon-basket-small":
@@ -106,6 +113,8 @@ export const getSmallImage = (name: string) => {
 			return iconStyle;
 		case "icon-arrow-small":
 			return iconArrow;
+		case "icon-hit-small":
+			return iconHitTitle;
 
 		default:
 			return null;
@@ -125,6 +134,8 @@ export const getMiddleImage = (name: string) => {
 			return videoBackMiddleImage;
 		case "review-back-middle":
 			return BackgroundForReviewMiddleImage;
+		case "index-basket-middle":
+			return basketIndexMiddleImage;
 		case "icon-main-logo-middle":
 			return mainLogoMiddleIcon;
 		case "icon-basket-middle":
@@ -167,6 +178,8 @@ export const getMiddleImage = (name: string) => {
 			return iconArrow;
 		case "icon-flag-middle":
 			return iconFlag;
+		case "icon-hit-middle":
+			return iconHitTitle;
 
 		default:
 			return null;
@@ -186,6 +199,8 @@ export const getBigImage = (name: string) => {
 			return videoBackBigImage;
 		case "review-back-big":
 			return BackgroundForReviewBigImage;
+		case "index-basket-big":
+			return basketIndexBigImage;
 		case "icon-main-logo-big":
 			return mainLogoBigIcon;
 		case "icon-basket-big":
@@ -228,6 +243,8 @@ export const getBigImage = (name: string) => {
 			return iconArrow;
 		case "icon-flag-big":
 			return iconFlag;
+		case "icon-hit-big":
+			return iconHitTitle;
 
 		default:
 			return null;
