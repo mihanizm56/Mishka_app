@@ -10,3 +10,4 @@ export * from "./ReviewBox";
 export * from "./ReviewTextBox";
 export * from "./ContactBox";
 export * from "./WeeklyHitBox";
+export * from "./TableForHitItem";

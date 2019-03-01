@@ -1,0 +1,22 @@
+.table-hit-wrapper--big{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 110px;
+    width: 100%;
+}
+
+.table-row--big{
+    display: flex;
+    border-bottom:1px solid #ECECEC;
+    padding: 10px 0;
+}
+.table-row__block-name--big{
+    display: flex;
+    align-items: center;
+    width: 100px;
+}
+.table-row__block-value--big{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}

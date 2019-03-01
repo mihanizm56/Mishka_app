@@ -20,7 +20,7 @@ export const Router = ({
 	return (
 		<Switch>
 			<Route exact path="/" render={() => <IndexPage changePage={changePage} />} />
-			<Route exact path="/main" render={() => <IndexPage changePage={changePage} />} />
+			<Route exact path="/index" render={() => <IndexPage changePage={changePage} />} />
 			<Route
 				exact
 				path="/catalog"
