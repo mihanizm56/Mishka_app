@@ -12,11 +12,43 @@ export const TableForHitItem = ({ characteristics }) => {
 				<div className="table-hit-wrapper--big">
 					{characteristics.map(item => {
 						return (
-							<div className="table-row--big">
-								<div className="table-row__block-name--big">
+							<div className="table-row">
+								<div className="table-row__block-name">
 									<TextForVideo text={item.name} />
 								</div>
-								<div className="table-row__block-value--big">
+								<div className="table-row__block-value">
+									<TextForVideo text={item.value} />
+								</div>
+							</div>
+						);
+					})}
+				</div>
+			</MediaQuery>
+			<MediaQuery minWidth={768} maxWidth={1200}>
+				<div className="table-hit-wrapper--mid">
+					{characteristics.map(item => {
+						return (
+							<div className="table-row">
+								<div className="table-row__block-name">
+									<TextForVideo text={item.name} />
+								</div>
+								<div className="table-row__block-value">
+									<TextForVideo text={item.value} />
+								</div>
+							</div>
+						);
+					})}
+				</div>
+			</MediaQuery>
+			<MediaQuery minWidth={320} maxWidth={767}>
+				<div className="table-hit-wrapper--small">
+					{characteristics.map(item => {
+						return (
+							<div className="table-row">
+								<div className="table-row__block-name">
+									<TextForVideo text={item.name} />
+								</div>
+								<div className="table-row__block-value">
 									<TextForVideo text={item.value} />
 								</div>
 							</div>
