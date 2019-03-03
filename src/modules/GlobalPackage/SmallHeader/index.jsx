@@ -1,9 +1,14 @@
+// @flow
 import React, { Component } from "react";
 import { BoldParagraph, SVGForPage, ImageForPage, LinkComponent } from "../../../components";
 import { UserBasketBox, UnderHeaderBox } from "../../Cards";
 import "./SmallHeader.css";
 
 export class SmallHeader extends Component {
+	static defaultProps = {
+		pageName: "index",
+	};
+
 	constructor() {
 		super();
 		this.state = {
@@ -45,6 +50,7 @@ export class SmallHeader extends Component {
 
 	render() {
 		const { isSmallMenuOpened } = this.state;
+		const { pageName } = this.props;
 		return (
 			<div className="small-header-wrapper">
 				<div className="small-header__small-header-logo-wrapper">
@@ -69,13 +75,12 @@ export class SmallHeader extends Component {
 				<div className={`small-menu-wrapper${isSmallMenuOpened ? "--opened" : ""}`}>
 					{isSmallMenuOpened ? this.showSmallMenu() : null}
 				</div>
-				<div>
-					<UnderHeaderBox text="Каталог товаров" />
-				</div>
+				{pageName !== "index" && (
+					<div>
+						<UnderHeaderBox text="Каталог товаров" />
+					</div>
+				)}
 			</div>
 		);
 	}
 }
-
-// icon-cross-small
-// icon-menu-small

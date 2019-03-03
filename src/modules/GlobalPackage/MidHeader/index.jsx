@@ -4,9 +4,11 @@ import { UserBasketBox, UnderHeaderBox } from "../../Cards";
 import { FONT_SIZE_FOR_SECOND_LINE_IN_HEADER } from "./constants";
 import "./MidHeader.css";
 
-export const MidHeader = () => {
+export const MidHeader = ({ pageName }) => {
 	return (
-		<div className="middle-header-wrapper">
+		<div
+			className={pageName === "index" ? "middle-header-wrapper middle-header-wrapper--index" : "middle-header-wrapper"}
+		>
 			<div className="middle-header__first-line-header">
 				<div className="first-line-middle-header__logo">
 					<LinkComponent WrappedComponent={SVGForPage} icon="main-logo" route="main" />
@@ -47,9 +49,15 @@ export const MidHeader = () => {
 					</div>
 				</div>
 			</div>
-			<div>
-				<UnderHeaderBox text="Каталог товаров" />
-			</div>
+			{pageName !== "index" && (
+				<div>
+					<UnderHeaderBox text="Каталог товаров" />
+				</div>
+			)}
 		</div>
 	);
+};
+
+MidHeader.defaultProps = {
+	pageName: "index",
 };

@@ -60,6 +60,9 @@ import iconArrow from "../../images/icons/index-page/icon-arrow.svg";
 import iconFlag from "../../images/icons/index-page/icon-flag.svg";
 import iconHitTitle from "../../images/icons/index-page/icon-week-hit.svg";
 
+import iconVase from "../../images/icons/index-page/icon-vase.svg";
+import iconToy from "../../images/icons/index-page/icon-toy.svg";
+
 export const getSmallImage = (name: string) => {
 	// console.log(`test getSmallImage, image-name=${name}`);
 	switch (name) {
@@ -115,6 +118,10 @@ export const getSmallImage = (name: string) => {
 			return iconArrow;
 		case "icon-hit-small":
 			return iconHitTitle;
+		case "icon-vase-small":
+			return iconVase;
+		case "icon-toy-small":
+			return iconToy;
 
 		default:
 			return null;
@@ -180,6 +187,10 @@ export const getMiddleImage = (name: string) => {
 			return iconFlag;
 		case "icon-hit-middle":
 			return iconHitTitle;
+		case "icon-vase-middle":
+			return iconVase;
+		case "icon-toy-middle":
+			return iconToy;
 
 		default:
 			return null;
@@ -245,6 +256,10 @@ export const getBigImage = (name: string) => {
 			return iconFlag;
 		case "icon-hit-big":
 			return iconHitTitle;
+		case "icon-vase-big":
+			return iconVase;
+		case "icon-toy-big":
+			return iconToy;
 
 		default:
 			return null;

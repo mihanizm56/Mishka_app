@@ -11,3 +11,4 @@ export * from "./ReviewTextBox";
 export * from "./ContactBox";
 export * from "./WeeklyHitBox";
 export * from "./TableForHitItem";
+export * from "./HouseBox";

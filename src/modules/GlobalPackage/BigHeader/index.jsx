@@ -9,9 +9,9 @@ import {
 import { UserBasketBox, UnderHeaderBox } from "../../Cards";
 import "./BigHeader.css";
 
-export const BigHeader = () => {
+export const BigHeader = ({ pageName }) => {
 	return (
-		<div className="big-header-wrapper">
+		<div className={pageName === "index" ? "big-header-wrapper big-header-wrapper--index" : "big-header-wrapper"}>
 			<div className="big-header__first-line-big-header">
 				<div className="first-line-big-header__catalog-title">
 					<LinkComponent text="Каталог товаров" WrappedComponent={BoldParagraph} route="catalog" />
@@ -42,9 +42,15 @@ export const BigHeader = () => {
 					<RegularAdditionalParagraph text="Бесплатная доставка по России" />
 				</div>
 			</div>
-			<div>
-				<UnderHeaderBox text="Каталог товаров" />
-			</div>
+			{pageName !== "index" && (
+				<div>
+					<UnderHeaderBox text="Каталог товаров" />
+				</div>
+			)}
 		</div>
 	);
+};
+
+BigHeader.defaultProps = {
+	pageName: "index",
 };
