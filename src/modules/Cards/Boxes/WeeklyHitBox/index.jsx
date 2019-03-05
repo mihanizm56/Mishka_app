@@ -8,8 +8,8 @@ import { TableForHitItem } from "../";
 import "./WeeklyHitBox.css";
 
 const configForWeeklyHitBoxImage = {
-	// widthMin: "260px",
-	// heightMin: "150px",
+	widthMin: "100%",
+	heightMin: "315px",
 	widthMiddle: "333px",
 	heightMiddle: "404px",
 	widthBig: "525px",
@@ -19,15 +19,10 @@ const configForWeeklyHitBoxImage = {
 const styleForBigButtomOffer = {
 	width: "98%",
 	height: "50px",
-	marginTop: "12px",
+	marginTop: "35px",
 };
 
 const styleForBigButtomOfferSmall = { ...styleForBigButtomOffer, marginTop: "35px" };
-
-// const styleForSpecialParagraph = {
-// 	color: "#63D1BB",
-// 	fontFamily
-// };
 
 const descriptionOfItem = "Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.";
 
@@ -47,8 +42,7 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 						<ButtonVariable text="Заказать" customStyle={styleForBigButtomOffer} />
 					</div>
 				</div>
-				{/* <ImageForPage image={image} configForImage={configForWeeklyHitBoxImage} /> */}
-				<div style={{ width: "525px", height: "636px", border: "1px solid green" }} />
+				<ImageForPage image={image} configForImage={configForWeeklyHitBoxImage} />
 			</MediaQuery>
 			<MediaQuery minWidth={768} maxWidth={1200}>
 				<div className="hit-box-title">
@@ -62,8 +56,7 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 						<FooterTextLogo text={`Цена: ${price}`} />
 						<ButtonVariable text="Заказать" customStyle={styleForBigButtomOffer} />
 					</div>
-					<div style={{ width: "333px", height: "404px", border: "1px solid green" }} />
-					{/* <ImageForPage image={image} configForImage={configForWeeklyHitBoxImage} /> */}
+					<ImageForPage image={image} configForImage={configForWeeklyHitBoxImage} />
 				</div>
 			</MediaQuery>
 
@@ -76,12 +69,11 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 					<TextForVideo text={descriptionOfItem} />
 					<TableForHitItem />
 				</div>
-				<div
-					style={{ width: "100%", maxWidth: "260px", height: "315px", border: "1px solid green", marginBottom: "35px" }}
-				/>
+				<div className="small-hit-image-wrapper">
+					<ImageForPage image={image} configForImage={configForWeeklyHitBoxImage} />
+				</div>
 				<FooterTextLogo text={`Цена: ${price}`} />
 				<ButtonVariable text="Заказать" customStyle={styleForBigButtomOfferSmall} />
-				{/* <ImageForPage image={image} configForImage={configForWeeklyHitBoxImage} /> */}
 			</MediaQuery>
 		</div>
 	);

@@ -18,12 +18,15 @@ import { videoBackSmallImage } from "../../images/pictures";
 import { videoBackMiddleImage } from "../../images/pictures";
 import { videoBackBigImage } from "../../images/pictures";
 
-import { BackgroundForReviewBigImage } from "../../images/pictures";
-import { BackgroundForReviewMiddleImage } from "../../images/pictures";
+import { BackgroundImageForReview } from "../../images/pictures";
 
 import { basketIndexSmallImage } from "../../images/pictures";
 import { basketIndexMiddleImage } from "../../images/pictures";
 import { basketIndexBigImage } from "../../images/pictures";
+
+import { mapBackSmallImage } from "../../images/pictures";
+import { mapBackMiddleImage } from "../../images/pictures";
+import { mapBackBigImage } from "../../images/pictures";
 
 //иконки вставляем через export default
 
@@ -76,6 +79,8 @@ export const getSmallImage = (name: string) => {
 			return videoBackSmallImage;
 		case "index-basket-small":
 			return basketIndexSmallImage;
+		case "map-back-small":
+			return mapBackSmallImage;
 		case "icon-main-logo-small":
 			return mainLogoSmallIcon;
 		case "icon-basket-small":
@@ -140,9 +145,11 @@ export const getMiddleImage = (name: string) => {
 		case "video-back-middle":
 			return videoBackMiddleImage;
 		case "review-back-middle":
-			return BackgroundForReviewMiddleImage;
+			return BackgroundImageForReview;
 		case "index-basket-middle":
 			return basketIndexMiddleImage;
+		case "map-back-middle":
+			return mapBackMiddleImage;
 		case "icon-main-logo-middle":
 			return mainLogoMiddleIcon;
 		case "icon-basket-middle":
@@ -198,7 +205,7 @@ export const getMiddleImage = (name: string) => {
 };
 
 export const getBigImage = (name: string) => {
-	// console.log(`test getBigImage, image-name=${name}`);
+	//console.log(`test getBigImage, image-name=${name}`);
 	switch (name) {
 		case "hare-big":
 			return hareBigImage;
@@ -209,9 +216,11 @@ export const getBigImage = (name: string) => {
 		case "video-back-big":
 			return videoBackBigImage;
 		case "review-back-big":
-			return BackgroundForReviewBigImage;
+			return BackgroundImageForReview;
 		case "index-basket-big":
 			return basketIndexBigImage;
+		case "map-back-big":
+			return mapBackBigImage;
 		case "icon-main-logo-big":
 			return mainLogoBigIcon;
 		case "icon-basket-big":

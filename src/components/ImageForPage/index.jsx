@@ -11,9 +11,9 @@ type ImageForPageProps = {
 };
 
 export const ImageForPage = ({ image, configForImage }: ImageForPageProps) => {
-	const smallImage = getBigImage(`${image}-big`);
+	const bigImage = getBigImage(`${image}-big`);
 	const middleImage = getMiddleImage(`${image}-middle`);
-	const bigImage = getSmallImage(`${image}-small`);
+	const smallImage = getSmallImage(`${image}-small`);
 
 	return (
 		<>

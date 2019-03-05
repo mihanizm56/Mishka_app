@@ -17,5 +17,7 @@
   @media (min-width: 1200px) {
     .main-wrapper{
         width:1200px;
+        display: flex;
+        flex-direction: column;
     }
   }
