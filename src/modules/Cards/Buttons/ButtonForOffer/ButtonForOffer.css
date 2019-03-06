@@ -26,7 +26,7 @@
 @media (max-width: 767px) {
     .button-offer-wrapper{
         height: 50px;
-        width:190px;
+        width:100%;
     }
 }
 @media (min-width: 768px) {

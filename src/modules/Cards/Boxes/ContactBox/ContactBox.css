@@ -1,28 +1,17 @@
 
 .contact-box-wrapper{
     display: flex;
-    border: 1px solid red;
 }
 
 .contacts-container{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    border: 1px solid green;
 }
 
 .contacts-title-container{
     display: flex;  
     align-self: center;
-    border: 1px solid red;
-}
-
-.contacts-email-container{
-    border: 1px solid black;
-
-}
-.contacts-adress{
-    border: 1px solid red;
 }
 
 .contacts-email-container,
@@ -35,11 +24,11 @@
 .contacts-additional-wrapper{
     display: flex;
     align-self: center;
-    border: 1px solid green;
 }
 
-.contact-box__image-imitation{
-    border: 1px solid black;
+.email-wrapper{
+    height: 25px;
+    border-bottom: 1px solid #62D1BA;
 }
 
 @media (max-width: 767px) { 
@@ -66,6 +55,7 @@
     .contacts-button{
         margin: 40px 0 40px 0;
         align-self: center;
+        width: 100%;
     }
 
     .contacts-additional-wrapper{
@@ -88,7 +78,7 @@
 
     .contacts-title-container{
         margin-top: 60px;
-        width: 90%;
+        width: 93%;
         justify-content: space-between;
         align-items: center;
     }
@@ -107,7 +97,7 @@
 
     .contacts-additional-wrapper{
         justify-content: space-around;
-        width: 90%;
+        width: 93%;
     }    
 
     .contact-box__image-imitation{
@@ -121,6 +111,7 @@
         align-self: center;
         height: 456px;
         width: 93%;
+        margin-top: 40px;
     }
 
     .contacts-title-container{

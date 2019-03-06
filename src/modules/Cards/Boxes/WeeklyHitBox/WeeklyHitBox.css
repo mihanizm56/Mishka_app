@@ -1,24 +1,20 @@
 .hit-box-wrapper{
     position: relative;
     display: flex;
-    border: 1px solid red;
 }
 
 .hit-box-title{
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
 }
 
 .hit-box-text-container{
     display: flex;
-    border: 1px solid green;
 }
 
 .hit-box-text-wrapper{
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
 }
 
 .green-paragraph-index-small{
@@ -32,8 +28,6 @@
 .small-hit-image-wrapper{
     margin-bottom: 35px;
 }
-
-
 
 @media (max-width: 767px) {    
     .hit-box-wrapper{

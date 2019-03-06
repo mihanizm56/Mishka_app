@@ -33,7 +33,9 @@ export class ContactBox extends Component<propsType> {
 						</div>
 						<div className="contacts-email-container">
 							<TextForVideo text="e-mail" />
-							<TextForVideo text={emailAdress} />
+							<span className="email-wrapper">
+								<TextForVideo text={emailAdress} />
+							</span>
 						</div>
 						<div className="contacts-adress">
 							<TextForVideo text="адрес:" />
@@ -93,7 +95,7 @@ export class ContactBox extends Component<propsType> {
 					</div>
 					<div className="contact-box__image-imitation" />
 					<div className="contacts-button">
-						<ButtonForOffer />
+						<ButtonForOffer text="Напишите нам" />
 					</div>
 				</MediaQuery>
 			</div>

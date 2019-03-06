@@ -1,21 +1,10 @@
 .review-text-box-wrapper{
     display: flex;
-
-    border: 1px solid black;
-}
-
-.review-text-box__main-title{
-    
-}
-  
-.review-text-box__text{
-    border: 1px solid blue;
 }
 
 .review-text__login-wrapper{
     display: flex;
     height: 44px;
-    border: 1px solid green;
 }
 
 @media (max-width: 767px) { 

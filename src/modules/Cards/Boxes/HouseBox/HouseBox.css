@@ -3,15 +3,6 @@
     align-self: center;
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
-}
-
-.house-box-photo-container{
-    border: 1px solid green;
-}
-
-.fake-photo-house{
-    border: 1px solid blue
 }
 
 .house-box-wrapper--big{
@@ -41,15 +32,10 @@
     display: flex;
     align-items: center;
     text-align: center;
-    border: 1px solid red;
 } 
 
 .house-box-main-title--big{
     width: 620px;
-}
-
-.house-box-cards-container{
-    border: 1px solid brown;
 }
 
 .house-box-cards-container--big{
@@ -62,7 +48,6 @@
 }
 
 .house-box__zigzag-box{
-    border: 1px solid black;
     background-size: contain;
     background-repeat: repeat;
 }
@@ -169,8 +154,8 @@
 }
 
 .house-box__background-color-box--mid{
-    top: 93px;
-    height: 670px;
+    top: 90px;
+    height: 780px;
 }
 
 .house-box__background-color-box--small{

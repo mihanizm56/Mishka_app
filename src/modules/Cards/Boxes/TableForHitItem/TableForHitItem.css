@@ -26,7 +26,8 @@
 .table-hit-wrapper--mid{
     display: flex;
     flex-direction: column;
-    margin-bottom: 110px;
+    margin-bottom: 60px;
+    margin-top: 30px;
     width: 100%;
 }
 

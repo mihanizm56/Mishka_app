@@ -39,7 +39,7 @@
   @media (min-width: 768px) {
     .item-card-wrapper{
         flex-direction: row;
-        width: 667px;
+        width: 687px;
         height: 334px;
         margin-bottom: 54px;
     }

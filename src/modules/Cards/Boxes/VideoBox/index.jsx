@@ -14,9 +14,9 @@ import "./VideoBox.css";
 const configForVideoImage = {
 	widthMin: "260px",
 	heightMin: "150px",
-	widthMiddle: "668px",
+	widthMiddle: "687px",
 	heightMiddle: "455px",
-	widthBig: "682px",
+	widthBig: "758px",
 	heightBig: "455px",
 };
 

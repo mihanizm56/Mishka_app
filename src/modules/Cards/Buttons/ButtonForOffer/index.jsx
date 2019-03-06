@@ -7,14 +7,15 @@ type ButtonForOfferType = {
 	callback: () => void,
 };
 
-export const ButtonForOffer = ({ callback }: ButtonForOfferType) => {
+export const ButtonForOffer = ({ callback, text }: ButtonForOfferType) => {
 	return (
 		<div className="button-offer-wrapper" onClick={callback}>
-			<TextForButton text="СДЕЛАТЬ ЗАКАЗ" />
+			<TextForButton text={text} />
 		</div>
 	);
 };
 
 ButtonForOffer.defaultProps = {
 	callback: () => console.log("default callback ButtonForOffer"),
+	text: "СДЕЛАТЬ ЗАКАЗ",
 };

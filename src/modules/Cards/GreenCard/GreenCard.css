@@ -4,7 +4,6 @@
     align-items: center;
     flex-grow: 1;
     padding: 30px;
-    border: 1px solid green;
 }
 
 @media (max-width: 767px) {    

@@ -1,15 +1,9 @@
 .list-buttons-container{
-    border: 1px solid red;
     display: flex;
     justify-content: space-around;
 }
 
-.button-arrow_prev{
-    border: 1px solid brown;
-}
-
 .button-arrow_next{
-    border: 1px solid brown;
     transform: rotate(180deg);
 }
 
