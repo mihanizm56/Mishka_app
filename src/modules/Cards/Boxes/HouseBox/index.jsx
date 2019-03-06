@@ -3,7 +3,7 @@ import React from "react";
 import MediaQuery from "react-responsive";
 import { GreenCard } from "../../";
 import "./HouseBox.css";
-import { MainTitle } from "../../../../components";
+import { MainTitle, ImageForPage } from "../../../../components";
 
 import zigzagPhotoBig from "../../../../images/pictures/zigZag/img/zigzag-big.png";
 import zigzagPhotoMiddle from "../../../../images/pictures/zigZag/img/zigzag-mid.png";
@@ -23,6 +23,15 @@ const dataForGreenCards = {
 	},
 };
 
+const configForHouseImage = {
+	widthSmall: "100%",
+	heightSmall: "500px",
+	widthMiddle: "100%",
+	heightMiddle: "600px",
+	widthBig: "550px",
+	heightBig: "600px",
+};
+
 export const HouseBox = () => {
 	return (
 		<>
@@ -31,6 +40,7 @@ export const HouseBox = () => {
 					<div className="house-box-photo-container house-box-photo-container--big">
 						<div className="house-box__background-color-box house-box__background-color-box--big" />
 						<div className="fake-photo-house fake-photo-house--big">
+							<ImageForPage image="house-index" configForImage={configForHouseImage} />
 							<div className="house-box-main-title house-box-main-title--big">
 								<MainTitle text="Милые штуки ручной работы для дома" />
 							</div>
@@ -61,6 +71,7 @@ export const HouseBox = () => {
 					<div className="house-box__background-color-box house-box__background-color-box--mid" />
 					<div className="house-box-photo-container house-box-photo-container--mid">
 						<div className="fake-photo-house fake-photo-house--mid">
+							<ImageForPage image="house-index" configForImage={configForHouseImage} />
 							<div className="house-box-main-title house-box-main-title--mid">
 								<MainTitle text="Милые штуки ручной работы для дома" />
 							</div>
@@ -90,6 +101,7 @@ export const HouseBox = () => {
 				<div className="house-box-wrapper house-box-wrapper--small">
 					<div className="house-box__background-color-box house-box__background-color-box--small" />
 					<div className="fake-photo-house fake-photo-house--small">
+						<ImageForPage image="house-index" configForImage={configForHouseImage} />
 						<div className="house-box-main-title house-box-main-title--small">
 							<MainTitle text="Милые штуки ручной работы для дома" />
 						</div>

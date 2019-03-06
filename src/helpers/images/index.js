@@ -28,6 +28,10 @@ import { mapBackSmallImage } from "../../images/pictures";
 import { mapBackMiddleImage } from "../../images/pictures";
 import { mapBackBigImage } from "../../images/pictures";
 
+import { houseIndexSmallImage } from "../../images/pictures";
+import { houseIndexMiddleImage } from "../../images/pictures";
+import { houseIndexBigImage } from "../../images/pictures";
+
 //иконки вставляем через export default
 
 import mainLogoSmallIcon from "../../images/icons/main-logo/img/main-logo-small.svg";
@@ -81,6 +85,8 @@ export const getSmallImage = (name: string) => {
 			return basketIndexSmallImage;
 		case "map-back-small":
 			return mapBackSmallImage;
+		case "house-index-small":
+			return houseIndexSmallImage;
 		case "icon-main-logo-small":
 			return mainLogoSmallIcon;
 		case "icon-basket-small":
@@ -150,6 +156,8 @@ export const getMiddleImage = (name: string) => {
 			return basketIndexMiddleImage;
 		case "map-back-middle":
 			return mapBackMiddleImage;
+		case "house-index-middle":
+			return houseIndexMiddleImage;
 		case "icon-main-logo-middle":
 			return mainLogoMiddleIcon;
 		case "icon-basket-middle":
@@ -221,6 +229,8 @@ export const getBigImage = (name: string) => {
 			return basketIndexBigImage;
 		case "map-back-big":
 			return mapBackBigImage;
+		case "house-index-big":
+			return houseIndexBigImage;
 		case "icon-main-logo-big":
 			return mainLogoBigIcon;
 		case "icon-basket-big":

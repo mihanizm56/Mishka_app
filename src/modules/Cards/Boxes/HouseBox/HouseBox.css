@@ -15,7 +15,7 @@
 }
 
 .house-box-wrapper--big{
-    height: 600px;
+    height: 700px;
     margin-bottom: 60px;
 }
 
@@ -30,6 +30,8 @@
     width: 620px;
     height: 600px;
     align-self: center;
+    display: flex;
+    justify-content: center;
 }
 
 .house-box-main-title{
@@ -55,7 +57,7 @@
     height: 120px;
     width: 100%;
     position: absolute;
-    top: 480px;
+    top: 580px;
     left: 0;
 }
 
@@ -68,7 +70,7 @@
 .house-box__zigzag-box--big{
     position: absolute;
     z-index: 2;
-    bottom: -23px;
+    bottom: -119px;
     left: -35.5%;
     width: 161%;
     height: 34px;
@@ -90,17 +92,20 @@
     width: 520px;
     height: 746px;
     align-self: center;
+    display: flex;
+    justify-content: center;
 }
 
 .house-box-main-title--mid{
     width: 520px;
+    top: 120px;
 }
 .house-box-cards-container--mid{
     display: flex;
     height: 120px;
     width: 100%;
     position: absolute;
-    top: 480px;
+    top: 580px;
     left: 0;
 }
 
@@ -128,6 +133,7 @@
 .fake-photo-house--small{
     position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 300px;
