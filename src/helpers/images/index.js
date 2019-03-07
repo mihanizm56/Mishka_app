@@ -32,6 +32,10 @@ import { houseIndexSmallImage } from "../../images/pictures";
 import { houseIndexMiddleImage } from "../../images/pictures";
 import { houseIndexBigImage } from "../../images/pictures";
 
+import { zigzagIndexImageBig } from "../../images/pictures";
+import { zigzagIndexImageMiddle } from "../../images/pictures";
+import { zigzagIndexImageSmall } from "../../images/pictures";
+
 //иконки вставляем через export default
 
 import mainLogoSmallIcon from "../../images/icons/main-logo/img/main-logo-small.svg";
@@ -87,6 +91,8 @@ export const getSmallImage = (name: string) => {
 			return mapBackSmallImage;
 		case "house-index-small":
 			return houseIndexSmallImage;
+		case "zigzag-index-small":
+			return zigzagIndexImageSmall;
 		case "icon-main-logo-small":
 			return mainLogoSmallIcon;
 		case "icon-basket-small":
@@ -158,6 +164,8 @@ export const getMiddleImage = (name: string) => {
 			return mapBackMiddleImage;
 		case "house-index-middle":
 			return houseIndexMiddleImage;
+		case "zigzag-index-middle":
+			return zigzagIndexImageMiddle;
 		case "icon-main-logo-middle":
 			return mainLogoMiddleIcon;
 		case "icon-basket-middle":
@@ -231,6 +239,8 @@ export const getBigImage = (name: string) => {
 			return mapBackBigImage;
 		case "house-index-big":
 			return houseIndexBigImage;
+		case "zigzag-index-big":
+			return zigzagIndexImageBig;
 		case "icon-main-logo-big":
 			return mainLogoBigIcon;
 		case "icon-basket-big":

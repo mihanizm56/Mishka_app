@@ -16,6 +16,15 @@ const configForWeeklyHitBoxImage = {
 	heightBig: "636px",
 };
 
+const configForZigzagImage = {
+	widthMin: "100%",
+	heightMin: "8px",
+	widthMiddle: "100%",
+	heightMiddle: "17px",
+	widthBig: "100%",
+	heightBig: "23px",
+};
+
 const styleForBigButtomOffer = {
 	width: "98%",
 	height: "50px",
@@ -30,33 +39,43 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 	return (
 		<div className="hit-box-wrapper">
 			<MediaQuery minWidth={1201}>
-				<div className="hit-box-title">
-					<SVGForPage icon="hit" />
-					<MainTitle text={itemName} />
-				</div>
-				<div className="hit-box-text-container">
-					<div className="hit-box-text-wrapper">
-						<TextForVideo text={descriptionOfItem} />
-						<TableForHitItem />
-						<FooterTextLogo text={`Цена: ${price}`} />
-						<ButtonVariable text="Заказать" customStyle={styleForBigButtomOffer} />
+				<div className="hit-box-main-box">
+					<div className="hit-box-title">
+						<SVGForPage icon="hit" />
+						<MainTitle text={itemName} />
 					</div>
-				</div>
-				<ImageForPage image={image} configForImage={configForWeeklyHitBoxImage} />
-			</MediaQuery>
-			<MediaQuery minWidth={768} maxWidth={1200}>
-				<div className="hit-box-title">
-					<MainTitle text={itemName} />
-					<SVGForPage icon="hit" />
-				</div>
-				<div className="hit-box-text-container">
-					<div className="hit-box-text-wrapper">
-						<TextForVideo text={descriptionOfItem} />
-						<TableForHitItem />
-						<FooterTextLogo text={`Цена: ${price}`} />
-						<ButtonVariable text="Заказать" customStyle={styleForBigButtomOffer} />
+					<div className="hit-box-text-container">
+						<div className="hit-box-text-wrapper">
+							<TextForVideo text={descriptionOfItem} />
+							<TableForHitItem />
+							<FooterTextLogo text={`Цена: ${price}`} />
+							<ButtonVariable text="Заказать" customStyle={styleForBigButtomOffer} />
+						</div>
 					</div>
 					<ImageForPage image={image} configForImage={configForWeeklyHitBoxImage} />
+				</div>
+				<div className="zig-zag-container zig-zag-container--big">
+					<ImageForPage image="zigzag-index" configForImage={configForZigzagImage} />
+				</div>
+			</MediaQuery>
+			<MediaQuery minWidth={768} maxWidth={1200}>
+				<div className="hit-box-main-box">
+					<div className="hit-box-title">
+						<MainTitle text={itemName} />
+						<SVGForPage icon="hit" />
+					</div>
+					<div className="hit-box-text-container">
+						<div className="hit-box-text-wrapper">
+							<TextForVideo text={descriptionOfItem} />
+							<TableForHitItem />
+							<FooterTextLogo text={`Цена: ${price}`} />
+							<ButtonVariable text="Заказать" customStyle={styleForBigButtomOffer} />
+						</div>
+						<ImageForPage image={image} configForImage={configForWeeklyHitBoxImage} />
+					</div>
+				</div>
+				<div className="zig-zag-container zig-zag-container--mid">
+					<ImageForPage image="zigzag-index" configForImage={configForZigzagImage} />
 				</div>
 			</MediaQuery>
 
@@ -74,6 +93,9 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 				</div>
 				<FooterTextLogo text={`Цена: ${price}`} />
 				<ButtonVariable text="Заказать" customStyle={styleForBigButtomOfferSmall} />
+				<div className="zig-zag-container zig-zag-container--small">
+					<ImageForPage image="zigzag-index" configForImage={configForZigzagImage} />
+				</div>
 			</MediaQuery>
 		</div>
 	);
