@@ -12,3 +12,4 @@ export * from "./ContactBox";
 export * from "./WeeklyHitBox";
 export * from "./TableForHitItem";
 export * from "./HouseBox";
+export * from "./CheckBox";

@@ -70,9 +70,12 @@ import iconStyle from "../../images/icons/index-page/icon-style.svg";
 import iconArrow from "../../images/icons/index-page/icon-arrow.svg";
 import iconFlag from "../../images/icons/index-page/icon-flag.svg";
 import iconHitTitle from "../../images/icons/index-page/icon-week-hit.svg";
-
 import iconVase from "../../images/icons/index-page/icon-vase.svg";
 import iconToy from "../../images/icons/index-page/icon-toy.svg";
+
+///// Icons form page
+
+import iconCheck from "../../images/icons/form-page/icon-check.svg";
 
 export const getSmallImage = (name: string) => {
 	// console.log(`test getSmallImage, image-name=${name}`);
@@ -139,6 +142,8 @@ export const getSmallImage = (name: string) => {
 			return iconVase;
 		case "icon-toy-small":
 			return iconToy;
+		case "icon-check-small":
+			return iconCheck;
 
 		default:
 			return null;
@@ -214,6 +219,8 @@ export const getMiddleImage = (name: string) => {
 			return iconVase;
 		case "icon-toy-middle":
 			return iconToy;
+		case "icon-check-middle":
+			return iconCheck;
 
 		default:
 			return null;
@@ -289,6 +296,8 @@ export const getBigImage = (name: string) => {
 			return iconVase;
 		case "icon-toy-big":
 			return iconToy;
+		case "icon-check-big":
+			return iconCheck;
 
 		default:
 			return null;

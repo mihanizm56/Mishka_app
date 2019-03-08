@@ -1,0 +1,42 @@
+.check-box-container{
+    border: 1px solid red;
+
+}
+
+.check-box-wrapper{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.label-wrapper{
+    /* border: 1px solid red; */
+}
+
+@media (max-width: 767px){
+
+
+}
+@media (min-width: 768px){
+
+}
+@media (min-width: 1200px){
+    .check-box-container{
+        width: 200px;
+        display: flex;
+    }
+
+    .check-box-wrapper{
+        height: 50px;
+        width: 50px;
+    }
+
+    .label-wrapper{
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }    
+}

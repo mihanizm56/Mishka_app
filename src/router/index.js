@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { CatalogPage, HiddenPage, IndexPage } from "../modules";
+import { CatalogPage, HiddenPage, IndexPage, OrderPage } from "../modules";
 import FormAuth from "../modules/Pages/FormAuth";
 import { ErrorComponent } from "../components";
 
@@ -50,6 +50,7 @@ export const Router = ({
 					/>
 				)}
 			/>
+			<Route exact path="/orderpage" render={() => <OrderPage />} />
 			<Route exact render={() => <ErrorComponent />} />
 		</Switch>
 	);
