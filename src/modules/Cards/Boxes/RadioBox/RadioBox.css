@@ -1,0 +1,16 @@
+.radio-box-container{
+    display: flex;
+    border-radius: 50%;
+    width: 54px;
+}
+
+.radio-box-wrapper{
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

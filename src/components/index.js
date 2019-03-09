@@ -25,3 +25,6 @@ export * from "./ButtonWithIcon";
 export * from "./LinkComponent";
 export * from "./InteractiveSVGIcon";
 export * from "./LabelForOrderForm";
+export * from "./FormLabelParagraph";
+export * from "./FormTextInput";
+export * from "./InputComponent";

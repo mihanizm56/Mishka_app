@@ -13,3 +13,4 @@ export * from "./WeeklyHitBox";
 export * from "./TableForHitItem";
 export * from "./HouseBox";
 export * from "./CheckBox";
+export * from "./RadioBox";

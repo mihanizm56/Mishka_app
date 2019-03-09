@@ -1,0 +1,27 @@
+.form-text-input-field-wrapper{
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: none;
+    padding: 0 7px 10px 15px;
+}
+
+.form-text-input-field-wrapper--active{
+    border-bottom: 2px solid #62D1BA;
+}
+
+.form-text-input-field-wrapper:focus{
+    border-bottom: 2px solid #62D1BA;
+}
+
+.form-text-input-field-wrapper--error{
+    border-bottom: 2px solid #F0B1B1;
+}
+
+@media (max-width: 767px) {
+    .form-text-input-field-wrapper{
+        padding-right: 5px;
+        padding-left: 0;
+    }
+}

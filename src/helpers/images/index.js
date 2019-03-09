@@ -74,8 +74,10 @@ import iconVase from "../../images/icons/index-page/icon-vase.svg";
 import iconToy from "../../images/icons/index-page/icon-toy.svg";
 
 ///// Icons form page
-
 import iconCheck from "../../images/icons/form-page/icon-check.svg";
+import iconRadio from "../../images/icons/form-page/icon-radio.svg";
+import iconPhone from "../../images/icons/form-page/icon-phone.svg";
+import iconMail from "../../images/icons/form-page/icon-mail.svg";
 
 export const getSmallImage = (name: string) => {
 	// console.log(`test getSmallImage, image-name=${name}`);
@@ -144,6 +146,12 @@ export const getSmallImage = (name: string) => {
 			return iconToy;
 		case "icon-check-small":
 			return iconCheck;
+		case "icon-radio-small":
+			return iconRadio;
+		case "icon-phone-small":
+			return iconPhone;
+		case "icon-mail-small":
+			return iconMail;
 
 		default:
 			return null;
@@ -221,6 +229,12 @@ export const getMiddleImage = (name: string) => {
 			return iconToy;
 		case "icon-check-middle":
 			return iconCheck;
+		case "icon-radio-middle":
+			return iconRadio;
+		case "icon-phone-middle":
+			return iconPhone;
+		case "icon-mail-middle":
+			return iconMail;
 
 		default:
 			return null;
@@ -298,6 +312,12 @@ export const getBigImage = (name: string) => {
 			return iconToy;
 		case "icon-check-big":
 			return iconCheck;
+		case "icon-radio-big":
+			return iconRadio;
+		case "icon-phone-big":
+			return iconPhone;
+		case "icon-mail-big":
+			return iconMail;
 
 		default:
 			return null;
