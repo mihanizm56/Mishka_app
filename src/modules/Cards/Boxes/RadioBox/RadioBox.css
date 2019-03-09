@@ -14,3 +14,7 @@
     align-items: center;
     cursor: pointer;
 }
+
+.radio-box-wrapper:hover{
+    border: 2px solid #62D1BA;
+}
