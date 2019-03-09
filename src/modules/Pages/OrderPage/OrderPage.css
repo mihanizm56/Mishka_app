@@ -1,0 +1,52 @@
+.order-page-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border: 1px solid green;
+}
+
+.order-page-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid blue;
+}
+
+.order-page__text{
+    border: 1px solid red;
+}
+
+@media (max-width: 767px) {
+    .order-page-container{
+        width:80%;
+        align-self: center;
+    }
+    .order-page__text{
+        margin-top: 90px;
+        align-self: center;
+        width: 100%;
+    }
+}  
+
+@media (min-width: 768px) {
+    .order-page-container{
+        width: 100%;
+        padding-left: 30px;
+        align-self: center;
+    }
+    .order-page__text{
+        margin-top: 90px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .order-page-container{
+        align-self: center;
+        width: 93%;
+    }
+    .order-page__text{
+        margin-top: 130px;
+        align-self: center;
+        width: 740px;
+    }
+}
