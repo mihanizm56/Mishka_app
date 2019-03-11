@@ -1,0 +1,16 @@
+.textarea{
+    font-size: 14px;
+    font-family: "Verdana-Bold";
+    color: rgb(0, 0, 0);
+    line-height: 1.714;
+    opacity: 1;
+    transition: .2s;
+    border: 2px solid black;
+    outline: none;
+    padding: 15px 17px;
+    resize: none;
+    overflow: hidden;
+}
+
+
+  

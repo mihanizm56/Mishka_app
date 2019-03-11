@@ -5,3 +5,8 @@
     line-height: 1;
 }
   
+@media (max-width: 767px) {
+    .label-check-box{
+        width: 160px;
+    }
+}

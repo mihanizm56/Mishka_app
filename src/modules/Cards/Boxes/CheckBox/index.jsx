@@ -24,7 +24,7 @@ export class CheckBox extends Component {
 				<div className="check-box-wrapper" onClick={this.handleCheckBoxChange}>
 					{checked && <InteractiveSVGIcon icon="check" />}
 				</div>
-				<div className="label-wrapper">
+				<div className="label-wrapper-checkbox">
 					<LabelForOrderForm text={text} />
 				</div>
 			</div>

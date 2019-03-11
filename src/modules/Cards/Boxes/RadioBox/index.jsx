@@ -23,6 +23,9 @@ export class RadioBox extends Component {
 				<div className="radio-box-wrapper" onClick={this.handleRadioBoxChange}>
 					{checked && <InteractiveSVGIcon icon="radio" />}
 				</div>
+				<div className="label-wrapper-radiobox">
+					<LabelForOrderForm text={text} />
+				</div>
 			</div>
 		);
 	}
