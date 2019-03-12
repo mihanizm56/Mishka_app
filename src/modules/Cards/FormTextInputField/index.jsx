@@ -1,12 +1,12 @@
 // @flow
 import React, { Component } from "react";
-import { FormTextInput, InteractiveSVGIcon } from "../../../components";
+import { FormTextInput, InteractiveSVGIcon, FormFieldBoldParagraph } from "../../../components";
 import { getClass } from "../../../helpers";
 import "./FormTextInputField.css";
 
 export class FormTextInputField extends Component {
 	static defaultProps = {
-		icon: "phone",
+		icon: null,
 		error: false,
 	};
 
@@ -34,16 +34,21 @@ export class FormTextInputField extends Component {
 
 	render() {
 		const { inputIsActive } = this.state;
-		const { formatter, icon, text, error } = this.props;
+		const { formatter, icon, text, error, fieldLabelText } = this.props;
 
 		return (
-			<div
-				className={getClass("form-text-input-field-wrapper", inputIsActive, error)}
-				onClick={this.focusInput}
-				onBlur={this.blurInput}
-			>
-				<FormTextInput text={text} getRef={this.getInputRef} />
-				{<InteractiveSVGIcon icon={icon} />}
+			<div className="form-text-input-field-wrapper">
+				<div className="form-text-input-field__label">
+					<FormFieldBoldParagraph text={fieldLabelText} />
+				</div>
+				<div
+					className={getClass("form-text-input-field__field", inputIsActive, error)}
+					onClick={this.focusInput}
+					onBlur={this.blurInput}
+				>
+					<FormTextInput text={text} getRef={this.getInputRef} />
+					{icon && <InteractiveSVGIcon icon={icon} />}
+				</div>
 			</div>
 		);
 	}

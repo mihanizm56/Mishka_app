@@ -29,3 +29,4 @@ export * from "./FormLabelParagraph";
 export * from "./FormTextInput";
 export * from "./InputComponent";
 export * from "./TextAreaFormComponent";
+export * from "./FormFieldBoldParagraph";

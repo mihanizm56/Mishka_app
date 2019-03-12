@@ -1,27 +1,116 @@
 .form-text-input-field-wrapper{
+    border: 1px solid black;
+    display: flex;
+}
+
+.form-text-input-field__label{
+    border: 1px solid green;
+    display: flex;
+}
+
+.form-text-input-field__field {
     border-bottom: 2px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: none;
-    padding: 0 7px 10px 15px;
+    padding: 0 7px 0 15px;
 }
 
-.form-text-input-field-wrapper--active{
-    border-bottom: 2px solid #62D1BA;
-}
 
-.form-text-input-field-wrapper:focus{
-    border-bottom: 2px solid #62D1BA;
-}
 
-.form-text-input-field-wrapper--error{
-    border-bottom: 2px solid #F0B1B1;
-}
 
 @media (max-width: 767px) {
     .form-text-input-field-wrapper{
-        padding-right: 5px;
-        padding-left: 0;
+        flex-direction: column;
+        height: 65px;
+        flex-grow: 0.5;
+        margin-top: 20px;
+    }
+    .form-text-input-field__label{
+        margin-right: 20px;
+        align-items: center;
+    }
+    .form-text-input-field__field {
+        flex-grow: 1;
+        padding: 5px 5px 0 0;
     }
 }
+
+@media (min-width: 768px) {
+    .form-text-input-field-wrapper{
+        height: 55px;
+        flex-grow: 0.5;
+        margin-top: 50px;
+    }
+    .form-text-input-field__label{
+        margin-right: 20px;
+        align-items: center;
+    }
+    .form-text-input-field__field {
+        flex-grow: 1;
+    }
+}
+
+@media (min-width: 900px) {
+    .form-text-input-field-wrapper{
+        height: 55px;
+        flex-grow: 0.5;
+        margin-top: 50px;
+    }
+    .form-text-input-field__label{
+        margin-right: 20px;
+        align-items: center;
+    }
+    .form-text-input-field__field {
+        flex-grow: 1;
+    }
+}
+
+@media (min-width: 1200px) {
+    .form-text-input-field-wrapper{
+        height: 55px;
+        flex-grow: 0.5;
+        margin-top: 50px;
+    }
+    .form-text-input-field__label{
+        margin-right: 20px;
+        align-items: center;
+    }
+    .form-text-input-field__field {
+        flex-grow: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-text-input-field__field:hover{
+    border-bottom: 2px solid #62D1BA;
+    cursor: pointer;
+}
+
+.form-text-input-field__field--active{
+    border-bottom: 2px solid #62D1BA;
+}
+
+.form-text-input-field__field--error{
+    border-bottom: 2px solid #F0B1B1;
+}
+
+

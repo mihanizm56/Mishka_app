@@ -30,38 +30,55 @@ export class OrderPage extends Component {
 						<div className="check-container__buttons">
 							<MediaQuery minWidth={1201}>
 								<div className="buttons-big-first-column">
-									{arrayOfCheckValues.slice(0, 1).map((item, index) => {
-										return <CheckBox text={item.title} key={index} />;
-									})}
+									<CheckBox text="Белый" />
+									<CheckBox text="«Тиффани»" />
 								</div>
 								<div className="buttons-big-second-column">
-									{arrayOfCheckValues.slice(2, 3).map((item, index) => {
-										return <CheckBox text={item.title} key={index} />;
-									})}
+									<CheckBox text="Розовый" />
+									<CheckBox text="Серый" />
 								</div>
 								<div className="buttons-big-third-column">
-									{arrayOfCheckValues.slice(4, 5).map((item, index) => {
-										return <CheckBox text={item.title} key={index} />;
-									})}
+									<CheckBox text="Черный" />
+									<CheckBox text="Оранжевый" />
 								</div>
 							</MediaQuery>
-							{/* <MediaQuery minWidth={768} maxWidth={1200}></MediaQuery>
-<MediaQuery minWidth={320} maxWidth={767}></MediaQuery> */}
-							{/* {arrayOfCheckValues.slice(0, 3).map((item, index) => {
-									return <CheckBox text={item.title} key={index} />;
-								})}
-							</div>
-							<div className="buttons-second-column">
-								{arrayOfCheckValues.slice(3).map((item, index) => {
-									return <CheckBox text={item.title} key={index} />;
-								})}
-							</div> */}
+							<MediaQuery minWidth={768} maxWidth={1200}>
+								<div className="buttons-mid-first-column">
+									<CheckBox text="Белый" />
+									<CheckBox text="«Тиффани»" />
+									<CheckBox text="Розовый" />
+								</div>
+								<div className="buttons-mid-second-column">
+									<CheckBox text="Серый" />
+									<CheckBox text="Черный" />
+									<CheckBox text="Оранжевый" />
+								</div>
+							</MediaQuery>
+							<MediaQuery minWidth={320} maxWidth={767}>
+								<div className="buttons-small-column">
+									<CheckBox text="Белый" />
+									<CheckBox text="«Тиффани»" />
+									<CheckBox text="Розовый" />
+									<CheckBox text="Серый" />
+									<CheckBox text="Черный" />
+									<CheckBox text="Оранжевый" />
+								</div>
+							</MediaQuery>
 						</div>
 					</div>
-					{/* 
-					<div className='order-page-name-container'>
 
+					<div className="order-page-name-container">
+						<div className="order-page-name-container__title">
+							<FormLabelParagraph text="фио" />
+						</div>
+						<div className="order-page-name-container__fields">
+							<FormTextInputField />
+							<FormTextInputField />
+							<FormTextInputField />
+						</div>
 					</div>
+
+					{/* 
 					<div className='order-page-contact-container'>
 
 					</div>
