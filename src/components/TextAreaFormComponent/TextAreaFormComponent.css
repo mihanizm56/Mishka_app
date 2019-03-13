@@ -1,5 +1,5 @@
 .textarea{
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Verdana-Bold";
     color: rgb(0, 0, 0);
     line-height: 1.714;
@@ -10,7 +10,6 @@
     padding: 15px 17px;
     resize: none;
     overflow: hidden;
+    width: 100%;
 }
-
-
   

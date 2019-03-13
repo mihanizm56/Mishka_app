@@ -9,11 +9,9 @@ type TextAreaProps = {
 };
 
 export const TextAreaFormComponent = ({ placeholder, width, height }: TextAreaProps): Node => (
-	<textarea style={{ width: height, height: height }} className="textarea" placeholder={placeholder} />
+	<textarea className="textarea" placeholder={placeholder} />
 );
 
 TextAreaFormComponent.defaultProps = {
 	placeholder: "default textarea placeholder",
-	width: "200px",
-	height: "100px",
 };

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import MediaQuery from "react-responsive";
-import { FormLabelParagraph, TextForVideo, TextAreaFormComponent } from "../../../components";
-import { CheckBox, RadioBox, FormTextInputField } from "../../Cards";
+import { FormLabelParagraph, TextForVideo, TextAreaFormComponent, FormAdditionalParagraph } from "../../../components";
+import { CheckBox, RadioBox, FormTextInputField, ButtonForSendOffer } from "../../Cards";
 import "./OrderPage.css";
 
 export class OrderPage extends Component {
@@ -78,16 +78,46 @@ export class OrderPage extends Component {
 						</div>
 					</div>
 
-					{/* 
-					<div className='order-page-contact-container'>
-
+					<div className="order-page-contact-container">
+						<div className="contact-fields-first-field">
+							<div className="contact-fields-first-field__title">
+								<FormLabelParagraph text="тел" />
+							</div>
+							<div className="contact-fields-first-field__fields">
+								<FormTextInputField icon="phone" noTitle />
+							</div>
+						</div>
+						<div className="contact-fields-second-field">
+							<div className="contact-fields-second-field__title">
+								<FormLabelParagraph text="e-mail" />
+							</div>
+							<div className="contact-fields-second-field__fields">
+								<FormTextInputField icon="mail" noTitle />
+							</div>
+						</div>
 					</div>
-					<div className='order-page-textarea-container'>
 
+					<div className="order-page-textarea-container">
+						<div className="order-page-textarea-container__title">
+							<FormLabelParagraph text="доп	" />
+						</div>
+						<div className="order-page-textarea-container__fields">
+							<TextAreaFormComponent />
+						</div>
 					</div>
-					<div className='order-page-send-container'>
-
-					</div> */}
+					<div className="order-page-send-container">
+						<MediaQuery minWidth={1201}>
+							<ButtonForSendOffer />
+							<FormAdditionalParagraph />
+						</MediaQuery>
+						<MediaQuery minWidth={768} maxWidth={1200}>
+							<ButtonForSendOffer />
+							<FormAdditionalParagraph />
+						</MediaQuery>
+						<MediaQuery minWidth={320} maxWidth={767}>
+							<ButtonForSendOffer />
+						</MediaQuery>
+					</div>
 				</div>
 			</div>
 		);

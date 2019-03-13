@@ -8,3 +8,10 @@
     border: none;
 }
   
+
+@media (max-width: 767px) {
+    .form-input{
+        width: 100%;
+        padding-right: 15px;
+    }
+}

@@ -34,13 +34,16 @@ export class FormTextInputField extends Component {
 
 	render() {
 		const { inputIsActive } = this.state;
-		const { formatter, icon, text, error, fieldLabelText } = this.props;
+		const { formatter, icon, text, error, fieldLabelText, noTitle } = this.props;
 
 		return (
 			<div className="form-text-input-field-wrapper">
-				<div className="form-text-input-field__label">
-					<FormFieldBoldParagraph text={fieldLabelText} />
-				</div>
+				{!noTitle ? (
+					<div className="form-text-input-field__label">
+						<FormFieldBoldParagraph text={fieldLabelText} />
+					</div>
+				) : null}
+
 				<div
 					className={getClass("form-text-input-field__field", inputIsActive, error)}
 					onClick={this.focusInput}
