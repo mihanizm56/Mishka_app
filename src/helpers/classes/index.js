@@ -1,4 +1,4 @@
-export const getClass = (initialClass, active, error) => {
+export const getClass = (initialClass, active, error, noMarginTop) => {
 	let resultClass = initialClass;
 
 	if (error) {
@@ -7,6 +7,10 @@ export const getClass = (initialClass, active, error) => {
 
 	if (active) {
 		resultClass += ` ${initialClass}--active`;
+	}
+
+	if (noMarginTop) {
+		resultClass += ` ${initialClass}--no-margin-top`;
 	}
 
 	return resultClass;

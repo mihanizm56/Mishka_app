@@ -4,6 +4,11 @@ import { FormLabelParagraph, TextForVideo, TextAreaFormComponent, FormAdditional
 import { CheckBox, RadioBox, FormTextInputField, ButtonForSendOffer } from "../../Cards";
 import "./OrderPage.css";
 
+const backgroundColors = {
+	grey: "#F1F1F1",
+	default: "#fff",
+};
+
 export class OrderPage extends Component {
 	render() {
 		const { arrayOfCheckValues } = this.props;
@@ -84,7 +89,7 @@ export class OrderPage extends Component {
 								<FormLabelParagraph text="тел" />
 							</div>
 							<div className="contact-fields-first-field__fields">
-								<FormTextInputField icon="phone" noTitle />
+								<FormTextInputField icon="phone" noTitle noMarginTop backgroundColor={backgroundColors.grey} />
 							</div>
 						</div>
 						<div className="contact-fields-second-field">
@@ -92,11 +97,10 @@ export class OrderPage extends Component {
 								<FormLabelParagraph text="e-mail" />
 							</div>
 							<div className="contact-fields-second-field__fields">
-								<FormTextInputField icon="mail" noTitle />
+								<FormTextInputField icon="mail" noTitle noMarginTop backgroundColor={backgroundColors.grey} />
 							</div>
 						</div>
 					</div>
-
 					<div className="order-page-textarea-container">
 						<div className="order-page-textarea-container__title">
 							<FormLabelParagraph text="доп	" />

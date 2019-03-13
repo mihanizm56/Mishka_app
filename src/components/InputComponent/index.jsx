@@ -24,14 +24,20 @@ export class InputComponent extends Component<InputComponentProps> {
 	}
 
 	render() {
-		const { type, className, placeholder, customFontSize, getRef } = this.props;
+		const { type, className, placeholder, customFontSize, getRef, backgroundColor } = this.props;
 		return (
 			<input
 				ref={this.inputRef}
 				type={type}
 				className={className}
 				placeholder={placeholder}
-				style={customFontSize ? { fontSize: customFontSize } : null}
+				style={
+					customFontSize
+						? { fontSize: customFontSize }
+						: null || backgroundColor
+						? { backgroundColor: backgroundColor }
+						: null
+				}
 			/>
 		);
 	}
