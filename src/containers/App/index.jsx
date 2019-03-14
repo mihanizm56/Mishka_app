@@ -32,8 +32,6 @@ class App extends Component {
 				<MainWrapper {...restProps} userIsLoggedIn={userIsLoggedIn} />
 				{/* <SearchField callback={changeSearchFilter} /> */}
 				{/* <button onClick={() => userIsLoggedIn && userSignOut()}>Выйти</button> */}
-
-				{/* <Footer /> */}
 			</div>
 		);
 	}

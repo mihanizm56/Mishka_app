@@ -2,11 +2,12 @@
 import React, { Component } from "react";
 import { BoldParagraph, SVGForPage, ImageForPage, LinkComponent } from "../../../components";
 import { UserBasketBox, UnderHeaderBox } from "../../Cards";
+import { getHeaderTitle } from "../../../helpers";
 import "./SmallHeader.css";
 
 export class SmallHeader extends Component {
 	static defaultProps = {
-		pageName: "index",
+		pageName: null,
 	};
 
 	constructor() {
@@ -75,9 +76,9 @@ export class SmallHeader extends Component {
 				<div className={`small-menu-wrapper${isSmallMenuOpened ? "--opened" : ""}`}>
 					{isSmallMenuOpened ? this.showSmallMenu() : null}
 				</div>
-				{pageName !== "index" && (
+				{pageName !== "index-page" && (
 					<div>
-						<UnderHeaderBox text="Каталог товаров" />
+						<UnderHeaderBox text={getHeaderTitle(pageName)} />
 					</div>
 				)}
 			</div>

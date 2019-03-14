@@ -2,6 +2,7 @@ import React from "react";
 import { BoldParagraph, SVGForPage, RegularAdditionalParagraph, LinkComponent } from "../../../components";
 import { UserBasketBox, UnderHeaderBox } from "../../Cards";
 import { FONT_SIZE_FOR_SECOND_LINE_IN_HEADER } from "./constants";
+import { getHeaderTitle } from "../../../helpers";
 import "./MidHeader.css";
 
 export const MidHeader = ({ pageName }) => {
@@ -49,9 +50,9 @@ export const MidHeader = ({ pageName }) => {
 					</div>
 				</div>
 			</div>
-			{pageName !== "index" && (
+			{pageName !== "index-page" && (
 				<div>
-					<UnderHeaderBox text="Каталог товаров" />
+					<UnderHeaderBox text={getHeaderTitle(pageName)} />
 				</div>
 			)}
 		</div>
@@ -59,5 +60,5 @@ export const MidHeader = ({ pageName }) => {
 };
 
 MidHeader.defaultProps = {
-	pageName: "index",
+	pageName: null,
 };

@@ -1,4 +1,13 @@
-export const getClass = (initialClass, active, error, noMarginTop) => {
+// @flow
+
+type getClassParametersType = {
+	initialClass: string,
+	active?: boolean,
+	error?: boolean,
+	noMarginTop?: boolean,
+};
+
+export const getClass = ({ initialClass, active, error, noMarginTop }: getClassParametersType): string => {
 	let resultClass = initialClass;
 
 	if (error) {

@@ -29,6 +29,12 @@ export class OrderPage extends Component {
 						</div>
 					</div>
 					<div className="order-page-check-container">
+						<MediaQuery minWidth={1201}>
+							<div className="background-grey-container background-grey-container__check-container background-grey-container__check-container--big" />
+						</MediaQuery>
+						<MediaQuery minWidth={768} maxWidth={1200}>
+							<div className="background-grey-container background-grey-container__check-container background-grey-container__check-container--middle" />
+						</MediaQuery>
 						<div className="check-container__title">
 							<FormLabelParagraph text="цвет" />
 						</div>
@@ -71,7 +77,6 @@ export class OrderPage extends Component {
 							</MediaQuery>
 						</div>
 					</div>
-
 					<div className="order-page-name-container">
 						<div className="order-page-name-container__title">
 							<FormLabelParagraph text="фио" />
@@ -82,8 +87,13 @@ export class OrderPage extends Component {
 							<FormTextInputField />
 						</div>
 					</div>
-
 					<div className="order-page-contact-container">
+						<MediaQuery minWidth={1201}>
+							<div className="background-grey-container background-grey-container__contact-container" />
+						</MediaQuery>
+						<MediaQuery minWidth={768} maxWidth={1200}>
+							<div className="background-grey-container background-grey-container__contact-container" />
+						</MediaQuery>
 						<div className="contact-fields-first-field">
 							<div className="contact-fields-first-field__title">
 								<FormLabelParagraph text="тел" />

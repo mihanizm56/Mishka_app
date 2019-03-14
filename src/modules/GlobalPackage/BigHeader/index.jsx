@@ -7,6 +7,7 @@ import {
 	LinkComponent,
 } from "../../../components";
 import { UserBasketBox, UnderHeaderBox } from "../../Cards";
+import { getHeaderTitle } from "../../../helpers";
 import "./BigHeader.css";
 
 export const BigHeader = ({ pageName }) => {
@@ -42,9 +43,9 @@ export const BigHeader = ({ pageName }) => {
 					<RegularAdditionalParagraph text="Бесплатная доставка по России" />
 				</div>
 			</div>
-			{pageName !== "index" && (
+			{pageName !== "index-page" && (
 				<div>
-					<UnderHeaderBox text="Каталог товаров" />
+					<UnderHeaderBox text={getHeaderTitle(pageName)} />
 				</div>
 			)}
 		</div>
@@ -52,5 +53,5 @@ export const BigHeader = ({ pageName }) => {
 };
 
 BigHeader.defaultProps = {
-	pageName: "index",
+	pageName: null,
 };

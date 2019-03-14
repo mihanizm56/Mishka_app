@@ -35,10 +35,10 @@ export class FormTextInputField extends Component {
 	render() {
 		const { inputIsActive } = this.state;
 		const { formatter, icon, text, error, fieldLabelText, noTitle, backgroundColor, noMarginTop } = this.props;
-		console.log("check props FormTextInputField");
-		console.log(this.props);
+		// console.log("check props FormTextInputField");
+		// console.log(this.props);
 		return (
-			<div className={getClass("form-text-input-field-wrapper", null, null, noMarginTop)}>
+			<div className={getClass({ initialClass: "form-text-input-field-wrapper", noMarginTop })}>
 				{!noTitle ? (
 					<div className="form-text-input-field__label">
 						<FormFieldBoldParagraph text={fieldLabelText} />
@@ -46,7 +46,7 @@ export class FormTextInputField extends Component {
 				) : null}
 
 				<div
-					className={getClass("form-text-input-field__field", inputIsActive, error)}
+					className={getClass({ initialClass: "form-text-input-field__field", inputIsActive, error })}
 					onClick={this.focusInput}
 					onBlur={this.blurInput}
 				>
