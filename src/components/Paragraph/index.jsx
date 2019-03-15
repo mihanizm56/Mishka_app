@@ -1,6 +1,6 @@
 // @flow
 import React, { Node } from "react";
-import { pure } from "recompose";
+//import { pure } from "recompose";
 
 type ParagraphProps = {
 	text: string,

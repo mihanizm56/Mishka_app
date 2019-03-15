@@ -4,3 +4,5 @@ export * from "./ListButtonsBox";
 export * from "./ButtonForOfferIndex";
 export * from "./ButtonVariable";
 export * from "./ButtonForSendOffer";
+export * from "./ButtonItemPriceBox";
+export * from "./ButtonIconVideoBox";

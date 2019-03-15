@@ -1,14 +1,18 @@
+// @flow
 import React from "react";
 import { BoldParagraph, SVGForPage, RegularAdditionalParagraph, LinkComponent } from "../../../components";
 import { UserBasketBox, UnderHeaderBox } from "../../Cards";
 import { FONT_SIZE_FOR_SECOND_LINE_IN_HEADER } from "./constants";
-import { getHeaderTitle } from "../../../helpers";
+import { getHeaderTitle, getSpecialClassForHeader } from "../../../helpers";
 import "./MidHeader.css";
 
 export const MidHeader = ({ pageName }) => {
 	return (
 		<div
-			className={pageName === "index" ? "middle-header-wrapper middle-header-wrapper--index" : "middle-header-wrapper"}
+			className={getSpecialClassForHeader({
+				initialClass: "middle-header-wrapper",
+				isIndexPage: pageName === "index-page",
+			})}
 		>
 			<div className="middle-header__first-line-header">
 				<div className="first-line-middle-header__logo">

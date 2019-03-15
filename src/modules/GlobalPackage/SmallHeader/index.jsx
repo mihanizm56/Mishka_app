@@ -7,7 +7,7 @@ import "./SmallHeader.css";
 
 export class SmallHeader extends Component {
 	static defaultProps = {
-		pageName: null,
+		pageName: "catalog-page",
 	};
 
 	constructor() {

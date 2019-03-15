@@ -7,12 +7,17 @@ import {
 	LinkComponent,
 } from "../../../components";
 import { UserBasketBox, UnderHeaderBox } from "../../Cards";
-import { getHeaderTitle } from "../../../helpers";
+import { getHeaderTitle, getSpecialClassForHeader } from "../../../helpers";
 import "./BigHeader.css";
 
 export const BigHeader = ({ pageName }) => {
 	return (
-		<div className={pageName === "index" ? "big-header-wrapper big-header-wrapper--index" : "big-header-wrapper"}>
+		<div
+			className={getSpecialClassForHeader({
+				initialClass: "big-header-wrapper",
+				isIndexPage: pageName === "index-page",
+			})}
+		>
 			<div className="big-header__first-line-big-header">
 				<div className="first-line-big-header__catalog-title">
 					<LinkComponent text="Каталог товаров" WrappedComponent={BoldParagraph} route="catalog" />
@@ -53,5 +58,5 @@ export const BigHeader = ({ pageName }) => {
 };
 
 BigHeader.defaultProps = {
-	pageName: null,
+	pageName: "index-page",
 };

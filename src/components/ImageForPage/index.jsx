@@ -1,6 +1,5 @@
 // @flow
 import React from "react";
-import "./ImageForPage.css";
 import MediaQuery from "react-responsive";
 import { ImageComponent } from "../";
 import { getSmallImage, getMiddleImage, getBigImage } from "../../helpers";

@@ -1,6 +1,7 @@
 // @flow
 import React from "react";
-import { ButtonWithIcon, BoldParagraph } from "../../../../components";
+import { BoldParagraph } from "../../../../components";
+import { ButtonItemPriceBox } from "../../Buttons";
 import "./ItemPriceBox.css";
 
 type ItemPriceBoxType = {
@@ -11,7 +12,7 @@ export const ItemPriceBox = ({ price }: ItemPriceBoxType) => {
 	return (
 		<div className="item-card__price-box">
 			<BoldParagraph text={`${price} руб.`} />
-			<ButtonWithIcon className="test" icon="basket" width="24px" height="24px" />
+			<ButtonItemPriceBox />
 		</div>
 	);
 };

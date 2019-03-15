@@ -24,3 +24,13 @@ export const getClass = ({ initialClass, active, error, noMarginTop }: getClassP
 
 	return resultClass;
 };
+
+export const getSpecialClassForHeader = ({ initialClass, isIndexPage }: getClassParametersType): string => {
+	let resultClass = initialClass;
+
+	if (isIndexPage) {
+		resultClass += ` ${initialClass}--index-page`;
+	}
+
+	return resultClass;
+};

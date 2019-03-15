@@ -3,12 +3,11 @@ import React from "react";
 import MediaQuery from "react-responsive";
 import {
 	ImageForPage,
-	ButtonWithIcon,
 	FooterTextLogo as DescriptionVideoBoxTitle,
 	TextForVideo,
 	SVGForPage,
 } from "../../../../components";
-import { ButtonForOffer } from "../../";
+import { ButtonForOffer, ButtonIconVideoBox } from "../../Buttons";
 import "./VideoBox.css";
 
 const configForVideoImage = {
@@ -28,7 +27,7 @@ export const VideoBox = props => {
 					<div className="video__photo-container">
 						<ImageForPage image="video-back" configForImage={configForVideoImage} />
 						<div className="video__icon-play video__icon-play-big">
-							<ButtonWithIcon icon="video" width="110px" height="82px" />
+							<ButtonIconVideoBox />
 						</div>
 					</div>
 					<div className="video__description-wrapper">
@@ -54,7 +53,7 @@ export const VideoBox = props => {
 					<div className="video__photo-container">
 						<ImageForPage image="video-back" configForImage={configForVideoImage} />
 						<div className="video__icon-play video__icon-play-mid">
-							<ButtonWithIcon icon="video" width="102px" height="77px" />
+							<ButtonIconVideoBox />
 						</div>
 					</div>
 					<div className="video__description-wrapper">
@@ -86,7 +85,7 @@ export const VideoBox = props => {
 						</div>
 						<ImageForPage image="video-back" configForImage={configForVideoImage} />
 						<div className="video__icon-play video__icon-play-small">
-							<ButtonWithIcon icon="video" width="102px" height="77px" />
+							<ButtonIconVideoBox />
 						</div>
 					</div>
 					<div className="video__description-wrapper">
