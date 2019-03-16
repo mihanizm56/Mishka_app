@@ -2,13 +2,19 @@
 import React from "react";
 import MediaQuery from "react-responsive";
 import { TextForVideo } from "../../../../components";
-
+import {
+	BIG_MEDIA_SIZE,
+	MIDDLE_MEDIA_SIZE_FROM,
+	MIDDLE_MEDIA_SIZE_TO,
+	SMALL_MEDIA_SIZE_FROM,
+	SMALL_MEDIA_SIZE_TO,
+} from "../../../../constants";
 import "./TableForHitItem.css";
 
 export const TableForHitItem = ({ characteristics }) => {
 	return (
 		<>
-			<MediaQuery minWidth={1201}>
+			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
 				<div className="table-hit-wrapper--big">
 					{characteristics.map(item => {
 						return (
@@ -24,7 +30,7 @@ export const TableForHitItem = ({ characteristics }) => {
 					})}
 				</div>
 			</MediaQuery>
-			<MediaQuery minWidth={768} maxWidth={1200}>
+			<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 				<div className="table-hit-wrapper--mid">
 					{characteristics.map(item => {
 						return (
@@ -40,7 +46,7 @@ export const TableForHitItem = ({ characteristics }) => {
 					})}
 				</div>
 			</MediaQuery>
-			<MediaQuery minWidth={320} maxWidth={767}>
+			<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
 				<div className="table-hit-wrapper--small">
 					{characteristics.map(item => {
 						return (
@@ -76,5 +82,3 @@ TableForHitItem.defaultProps = {
 		},
 	],
 };
-//<MediaQuery minWidth={768} maxWidth={1200}></MediaQuery>
-//<MediaQuery minWidth={320} maxWidth={767}></MediaQuery>

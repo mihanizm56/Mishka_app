@@ -9,6 +9,13 @@ import {
 } from "../../../../components";
 import { ButtonForOffer, ButtonIconVideoBox } from "../../Buttons";
 import "./VideoBox.css";
+import {
+	BIG_MEDIA_SIZE,
+	MIDDLE_MEDIA_SIZE_FROM,
+	MIDDLE_MEDIA_SIZE_TO,
+	SMALL_MEDIA_SIZE_FROM,
+	SMALL_MEDIA_SIZE_TO,
+} from "../../../../constants";
 
 const configForVideoImage = {
 	widthMin: "260px",
@@ -22,7 +29,7 @@ const configForVideoImage = {
 export const VideoBox = props => {
 	return (
 		<div className="video-wrapper">
-			<MediaQuery minWidth={1201}>
+			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
 				<div className="video__inside-box">
 					<div className="video__photo-container">
 						<ImageForPage image="video-back" configForImage={configForVideoImage} />
@@ -48,7 +55,7 @@ export const VideoBox = props => {
 					</div>
 				</div>
 			</MediaQuery>
-			<MediaQuery minWidth={768} maxWidth={1200}>
+			<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 				<div className="video__inside-box">
 					<div className="video__photo-container">
 						<ImageForPage image="video-back" configForImage={configForVideoImage} />
@@ -72,7 +79,7 @@ export const VideoBox = props => {
 					</div>
 				</div>
 			</MediaQuery>
-			<MediaQuery minWidth={320} maxWidth={767}>
+			<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
 				<div className="video__inside-box">
 					<div className="video__photo-container">
 						<div className="photo-container__icon-and-title-wrapper">

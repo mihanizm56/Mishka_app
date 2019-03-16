@@ -3,7 +3,13 @@ import React, { Component } from "react";
 import { BoldParagraph, SVGForPage, ImageForPage, LinkComponent } from "../../../components";
 import { UserBasketBox, UnderHeaderBox } from "../../Cards";
 import { getHeaderTitle } from "../../../helpers";
+import { WIDTH_FOR_ICON, HEIGTH_FOR_ICON } from "./constants";
 import "./SmallHeader.css";
+
+const configForImage = {
+	width: WIDTH_FOR_ICON,
+	heigth: HEIGTH_FOR_ICON,
+};
 
 export class SmallHeader extends Component {
 	static defaultProps = {
@@ -14,10 +20,6 @@ export class SmallHeader extends Component {
 		super();
 		this.state = {
 			isSmallMenuOpened: false,
-		};
-		this.configForSmallMenuIcon = {
-			width: "20px",
-			heigth: "14px",
 		};
 	}
 
@@ -63,14 +65,14 @@ export class SmallHeader extends Component {
 						className="small-header-logo-wrapper__menu-icon"
 						onClick={this.handleOpenSmallMenu}
 					>
-						<ImageForPage image="icon-menu" configForImage={this.configForSmallMenuIcon} />
+						<ImageForPage image="icon-menu" configForImage={configForImage} />
 					</div>
 					<div
 						style={{ display: `${isSmallMenuOpened ? "block" : "none"}` }}
 						className="small-header-logo-wrapper__cross-icon"
 						onClick={this.handleOpenSmallMenu}
 					>
-						<ImageForPage image="icon-cross" configForImage={this.configForSmallMenuIcon} />
+						<ImageForPage image="icon-cross" configForImage={configForImage} />
 					</div>
 				</div>
 				<div className={`small-menu-wrapper${isSmallMenuOpened ? "--opened" : ""}`}>

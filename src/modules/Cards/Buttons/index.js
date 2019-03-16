@@ -6,3 +6,4 @@ export * from "./ButtonVariable";
 export * from "./ButtonForSendOffer";
 export * from "./ButtonItemPriceBox";
 export * from "./ButtonIconVideoBox";
+export * from "./ButtonForWeeklyHitBox";

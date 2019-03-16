@@ -4,6 +4,13 @@ import "./SVGForPage.css";
 import MediaQuery from "react-responsive";
 import { SVGComponent } from "../";
 import { getSmallImage, getMiddleImage, getBigImage } from "../../helpers";
+import {
+	BIG_MEDIA_SIZE,
+	MIDDLE_MEDIA_SIZE_FROM,
+	MIDDLE_MEDIA_SIZE_TO,
+	SMALL_MEDIA_SIZE_FROM,
+	SMALL_MEDIA_SIZE_TO,
+} from "../../constants";
 
 type SVGForPageProps = {
 	icon: string,
@@ -15,13 +22,13 @@ export const SVGForPage = ({ icon }: SVGForPageProps) => {
 	const bigIcon = getSmallImage(`icon-${icon}-small`);
 	return (
 		<>
-			<MediaQuery minWidth={1201}>
+			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
 				<SVGComponent path={smallIcon} />
 			</MediaQuery>
-			<MediaQuery minWidth={768} maxWidth={1200}>
+			<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 				<SVGComponent path={middleIcon} />
 			</MediaQuery>
-			<MediaQuery minWidth={320} maxWidth={767}>
+			<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
 				<SVGComponent path={bigIcon} />
 			</MediaQuery>
 		</>

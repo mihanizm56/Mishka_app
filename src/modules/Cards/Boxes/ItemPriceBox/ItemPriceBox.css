@@ -1,11 +1,11 @@
 .item-card__price-box{
     display: flex;
+    align-items:center;
+    justify-content: space-between;
 }
 
 @media (max-width: 767px) {      
     .item-card__price-box{
-        align-items: center;
-        justify-content: space-between;
         width: 205px;
         height: 73px;
     }
@@ -17,8 +17,6 @@
 
   @media (min-width: 768px) {
     .item-card__price-box{
-        justify-content: space-between;
-        align-items: center;
         width: 268px;
         height: 73px;
     }
@@ -30,9 +28,6 @@
 
   @media (min-width: 1200px) {
     .item-card__price-box{
-        flex-direction: row;
-        justify-content: space-between;
-        align-items:center;
         width: 268px;
         height: 100px;
     }

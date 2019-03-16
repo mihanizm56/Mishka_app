@@ -4,11 +4,23 @@ import MediaQuery from "react-responsive";
 import { GreenCard } from "../../";
 import "./HouseBox.css";
 import { MainTitle, ImageForPage } from "../../../../components";
-
+import {
+	BIG_MEDIA_SIZE,
+	MIDDLE_MEDIA_SIZE_FROM,
+	MIDDLE_MEDIA_SIZE_TO,
+	SMALL_MEDIA_SIZE_FROM,
+	SMALL_MEDIA_SIZE_TO,
+} from "../../../../constants";
+import {
+	HOUSE_WIDTH_SMALL,
+	HOUSE_HEIGHT_SMALL,
+	HOUSE_WIDTH_MIDDLE,
+	HOUSE_HEIGHT_MIDDLE,
+	HOUSE_WIDTH_BIG,
+	HOUSE_HEIGHT_BIG,
+} from "./constants";
 import zigzagPhotoBig from "../../../../images/pictures/zigZag/img/zigzag-big.png";
 import zigzagPhotoMiddle from "../../../../images/pictures/zigZag/img/zigzag-mid.png";
-
-// <div style={{ backgroundImage: `url(${zigzagPhotoMiddle})` }} className="under-header-box__zigzag-box" />
 
 const dataForGreenCards = {
 	first: {
@@ -24,18 +36,18 @@ const dataForGreenCards = {
 };
 
 const configForHouseImage = {
-	widthSmall: "100%",
-	heightSmall: "500px",
-	widthMiddle: "100%",
-	heightMiddle: "600px",
-	widthBig: "550px",
-	heightBig: "600px",
+	widthSmall: HOUSE_WIDTH_SMALL,
+	heightSmall: HOUSE_HEIGHT_SMALL,
+	widthMiddle: HOUSE_WIDTH_MIDDLE,
+	heightMiddle: HOUSE_HEIGHT_MIDDLE,
+	widthBig: HOUSE_WIDTH_BIG,
+	heightBig: HOUSE_HEIGHT_BIG,
 };
 
 export const HouseBox = () => {
 	return (
 		<>
-			<MediaQuery minWidth={1201}>
+			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
 				<div className="house-box-wrapper house-box-wrapper--big">
 					<div className="house-box-photo-container house-box-photo-container--big">
 						<div className="house-box__background-color-box house-box__background-color-box--big" />
@@ -66,7 +78,7 @@ export const HouseBox = () => {
 					</div>
 				</div>
 			</MediaQuery>
-			<MediaQuery minWidth={768} maxWidth={1200}>
+			<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 				<div className="house-box-wrapper house-box-wrapper--mid">
 					<div className="house-box__background-color-box house-box__background-color-box--mid" />
 					<div className="house-box-photo-container house-box-photo-container--mid">
@@ -97,7 +109,7 @@ export const HouseBox = () => {
 					</div>
 				</div>
 			</MediaQuery>
-			<MediaQuery minWidth={320} maxWidth={767}>
+			<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
 				<div className="house-box-wrapper house-box-wrapper--small">
 					<div className="house-box__background-color-box house-box__background-color-box--small" />
 					<div className="fake-photo-house fake-photo-house--small">

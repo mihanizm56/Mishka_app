@@ -3,6 +3,13 @@ import MediaQuery from "react-responsive";
 import { MainTitle } from "../../../../components";
 import zigzagPhotoBig from "../../../../images/pictures/zigZag/img/zigzag-big.png";
 import zigzagPhotoMiddle from "../../../../images/pictures/zigZag/img/zigzag-mid.png";
+import {
+	BIG_MEDIA_SIZE,
+	MIDDLE_MEDIA_SIZE_FROM,
+	MIDDLE_MEDIA_SIZE_TO,
+	SMALL_MEDIA_SIZE_FROM,
+	SMALL_MEDIA_SIZE_TO,
+} from "../../../../constants";
 import "./UnderHeaderBox.css";
 
 export const UnderHeaderBox = ({ text }) => {
@@ -12,13 +19,13 @@ export const UnderHeaderBox = ({ text }) => {
 			<div className="under-header-box__text">
 				<MainTitle text={text} />
 			</div>
-			<MediaQuery minWidth={1201}>
+			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
 				<div style={{ backgroundImage: `url(${zigzagPhotoBig})` }} className="under-header-box__zigzag-box" />
 			</MediaQuery>
-			<MediaQuery minWidth={768} maxWidth={1200}>
+			<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 				<div style={{ backgroundImage: `url(${zigzagPhotoMiddle})` }} className="under-header-box__zigzag-box" />
 			</MediaQuery>
-			<MediaQuery minWidth={320} maxWidth={767}>
+			<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
 				<div className="under-header-box__zigzag-box" />
 			</MediaQuery>
 		</div>

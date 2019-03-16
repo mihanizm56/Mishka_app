@@ -2,6 +2,13 @@
 import React, { Node } from "react";
 import MediaQuery from "react-responsive";
 import { InputComponent } from "../";
+import {
+	BIG_MEDIA_SIZE,
+	MIDDLE_MEDIA_SIZE_FROM,
+	MIDDLE_MEDIA_SIZE_TO,
+	SMALL_MEDIA_SIZE_FROM,
+	SMALL_MEDIA_SIZE_TO,
+} from "../../constants";
 import "./FormTextInput.css";
 
 type FormTextInputProps = {
@@ -13,7 +20,7 @@ type FormTextInputProps = {
 export const FormTextInput = ({ placeholder, getRef, backgroundColor }: FormTextInputProps): Node => {
 	return (
 		<>
-			<MediaQuery minWidth={1201}>
+			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
 				<InputComponent
 					placeholder={placeholder}
 					className="form-input"
@@ -21,7 +28,7 @@ export const FormTextInput = ({ placeholder, getRef, backgroundColor }: FormText
 					backgroundColor={backgroundColor}
 				/>
 			</MediaQuery>
-			<MediaQuery minWidth={768} maxWidth={1200}>
+			<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 				<InputComponent
 					placeholder={placeholder}
 					className="form-input"
@@ -29,7 +36,7 @@ export const FormTextInput = ({ placeholder, getRef, backgroundColor }: FormText
 					backgroundColor={backgroundColor}
 				/>
 			</MediaQuery>
-			<MediaQuery minWidth={320} maxWidth={767}>
+			<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
 				<InputComponent placeholder={placeholder} className="form-input" getRef={getRef} />
 			</MediaQuery>
 		</>

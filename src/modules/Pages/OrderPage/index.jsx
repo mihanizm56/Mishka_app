@@ -2,6 +2,13 @@ import React, { Component } from "react";
 import MediaQuery from "react-responsive";
 import { FormLabelParagraph, TextForVideo, TextAreaFormComponent, FormAdditionalParagraph } from "../../../components";
 import { CheckBox, RadioBox, FormTextInputField, ButtonForSendOffer } from "../../Cards";
+import {
+	BIG_MEDIA_SIZE,
+	MIDDLE_MEDIA_SIZE_FROM,
+	MIDDLE_MEDIA_SIZE_TO,
+	SMALL_MEDIA_SIZE_FROM,
+	SMALL_MEDIA_SIZE_TO,
+} from "../../../constants";
 import "./OrderPage.css";
 
 const backgroundColors = {
@@ -29,17 +36,17 @@ export class OrderPage extends Component {
 						</div>
 					</div>
 					<div className="order-page-check-container">
-						<MediaQuery minWidth={1201}>
+						<MediaQuery minWidth={BIG_MEDIA_SIZE}>
 							<div className="background-grey-container background-grey-container__check-container background-grey-container__check-container--big" />
 						</MediaQuery>
-						<MediaQuery minWidth={768} maxWidth={1200}>
+						<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 							<div className="background-grey-container background-grey-container__check-container background-grey-container__check-container--middle" />
 						</MediaQuery>
 						<div className="check-container__title">
 							<FormLabelParagraph text="цвет" />
 						</div>
 						<div className="check-container__buttons">
-							<MediaQuery minWidth={1201}>
+							<MediaQuery minWidth={BIG_MEDIA_SIZE}>
 								<div className="buttons-big-first-column">
 									<CheckBox text="Белый" />
 									<CheckBox text="«Тиффани»" />
@@ -53,7 +60,7 @@ export class OrderPage extends Component {
 									<CheckBox text="Оранжевый" />
 								</div>
 							</MediaQuery>
-							<MediaQuery minWidth={768} maxWidth={1200}>
+							<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 								<div className="buttons-mid-first-column">
 									<CheckBox text="Белый" />
 									<CheckBox text="«Тиффани»" />
@@ -65,7 +72,7 @@ export class OrderPage extends Component {
 									<CheckBox text="Оранжевый" />
 								</div>
 							</MediaQuery>
-							<MediaQuery minWidth={320} maxWidth={767}>
+							<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
 								<div className="buttons-small-column">
 									<CheckBox text="Белый" />
 									<CheckBox text="«Тиффани»" />
@@ -88,10 +95,10 @@ export class OrderPage extends Component {
 						</div>
 					</div>
 					<div className="order-page-contact-container">
-						<MediaQuery minWidth={1201}>
+						<MediaQuery minWidth={BIG_MEDIA_SIZE}>
 							<div className="background-grey-container background-grey-container__contact-container" />
 						</MediaQuery>
-						<MediaQuery minWidth={768} maxWidth={1200}>
+						<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 							<div className="background-grey-container background-grey-container__contact-container" />
 						</MediaQuery>
 						<div className="contact-fields-first-field">
@@ -120,15 +127,15 @@ export class OrderPage extends Component {
 						</div>
 					</div>
 					<div className="order-page-send-container">
-						<MediaQuery minWidth={1201}>
+						<MediaQuery minWidth={BIG_MEDIA_SIZE}>
 							<ButtonForSendOffer />
 							<FormAdditionalParagraph />
 						</MediaQuery>
-						<MediaQuery minWidth={768} maxWidth={1200}>
+						<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 							<ButtonForSendOffer />
 							<FormAdditionalParagraph />
 						</MediaQuery>
-						<MediaQuery minWidth={320} maxWidth={767}>
+						<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
 							<ButtonForSendOffer />
 						</MediaQuery>
 					</div>

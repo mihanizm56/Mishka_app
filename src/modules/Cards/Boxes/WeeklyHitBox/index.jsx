@@ -2,43 +2,25 @@
 import React from "react";
 import MediaQuery from "react-responsive";
 import { ImageForPage, SVGForPage, MainTitle, TextForVideo, FooterTextLogo, Paragraph } from "../../../../components";
-import { ButtonVariable } from "../../Buttons";
+import { ButtonForWeeklyHitBox } from "../../Buttons";
 import { TableForHitItem } from "../";
+import { configForWeeklyHitBoxImage, configForZigzagImage } from "./constants";
+import {
+	BIG_MEDIA_SIZE,
+	MIDDLE_MEDIA_SIZE_FROM,
+	MIDDLE_MEDIA_SIZE_TO,
+	SMALL_MEDIA_SIZE_FROM,
+	SMALL_MEDIA_SIZE_TO,
+} from "../../../../constants";
 
 import "./WeeklyHitBox.css";
-
-const configForWeeklyHitBoxImage = {
-	widthMin: "100%",
-	heightMin: "315px",
-	widthMiddle: "333px",
-	heightMiddle: "404px",
-	widthBig: "525px",
-	heightBig: "636px",
-};
-
-const configForZigzagImage = {
-	widthMin: "100%",
-	heightMin: "8px",
-	widthMiddle: "100%",
-	heightMiddle: "17px",
-	widthBig: "100%",
-	heightBig: "23px",
-};
-
-const styleForBigButtomOffer = {
-	width: "98%",
-	height: "50px",
-	marginTop: "35px",
-};
-
-const styleForBigButtomOfferSmall = { ...styleForBigButtomOffer, marginTop: "35px" };
 
 const descriptionOfItem = "Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.";
 
 export const WeeklyHitBox = ({ itemName, image, price }) => {
 	return (
 		<div className="hit-box-wrapper">
-			<MediaQuery minWidth={1201}>
+			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
 				<div className="hit-box-main-box">
 					<div className="hit-box-title">
 						<SVGForPage icon="hit" />
@@ -49,7 +31,7 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 							<TextForVideo text={descriptionOfItem} />
 							<TableForHitItem />
 							<FooterTextLogo text={`Цена: ${price}`} />
-							<ButtonVariable text="Заказать" customStyle={styleForBigButtomOffer} />
+							<ButtonForWeeklyHitBox />
 						</div>
 					</div>
 					<ImageForPage image={image} configForImage={configForWeeklyHitBoxImage} />
@@ -58,7 +40,7 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 					<ImageForPage image="zigzag-index" configForImage={configForZigzagImage} />
 				</div>
 			</MediaQuery>
-			<MediaQuery minWidth={768} maxWidth={1200}>
+			<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 				<div className="hit-box-main-box">
 					<div className="hit-box-title">
 						<MainTitle text={itemName} />
@@ -69,7 +51,7 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 							<TextForVideo text={descriptionOfItem} />
 							<TableForHitItem />
 							<FooterTextLogo text={`Цена: ${price}`} />
-							<ButtonVariable text="Заказать" customStyle={styleForBigButtomOffer} />
+							<ButtonForWeeklyHitBox />
 						</div>
 						<ImageForPage image={image} configForImage={configForWeeklyHitBoxImage} />
 					</div>
@@ -79,7 +61,7 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 				</div>
 			</MediaQuery>
 
-			<MediaQuery minWidth={320} maxWidth={767}>
+			<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
 				<div className="hit-box-title">
 					<MainTitle text={itemName} />
 					<Paragraph text="Товар недели" className="green-paragraph-index-small" />
@@ -92,7 +74,7 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 					<ImageForPage image={image} configForImage={configForWeeklyHitBoxImage} />
 				</div>
 				<FooterTextLogo text={`Цена: ${price}`} />
-				<ButtonVariable text="Заказать" customStyle={styleForBigButtomOfferSmall} />
+				<ButtonForWeeklyHitBox />
 				<div className="zig-zag-container zig-zag-container--small">
 					<ImageForPage image="zigzag-index" configForImage={configForZigzagImage} />
 				</div>

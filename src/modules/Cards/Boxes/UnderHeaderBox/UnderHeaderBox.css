@@ -23,6 +23,7 @@
         width: 100%;
         margin-bottom: 30px;
     }
+    
     .under-header-box__back-box{
         top: 0;
         left: -50%;
@@ -35,15 +36,18 @@
         height: 210px;
         width: 100%;
     }
+
     .under-header-box__back-box{
         top: -71px;
         left: -50%;
         width: 300%;
         height: 280px;
     }
+
     .under-header-box__text{
         margin-bottom: 68px;
     }
+
     .under-header-box__zigzag-box{
         bottom: -10px;
         left: -31%;
@@ -56,15 +60,18 @@
         height: 240px;
         width: 100%;
     }
+
     .under-header-box__back-box{
         top: -55px;
         left: -50%;
         width: 300%;
         height: 310px;
     }
+
     .under-header-box__text{
         margin-bottom: 90px;
     }
+
     .under-header-box__zigzag-box{
         bottom: -16px;
         left: -31%;

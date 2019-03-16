@@ -1,7 +1,6 @@
 // @flow
 import React from "react";
 import { ButtonWithIcon } from "../../../../components";
-import "./ButtonItemPriceBox.css";
 
 type ButtonItemPriceBoxType = {
 	callback: () => void,

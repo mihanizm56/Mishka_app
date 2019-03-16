@@ -10,6 +10,7 @@
 .button-review-wrapper:hover{
     background-color: #444444;
 }
+
 .button-review-wrapper:active{
     background-color: #444444;
 }
@@ -25,7 +26,6 @@
 
 @media (max-width: 767px) {
     .button-review-wrapper{
-       
         height: 50px;
         width: 100%;
     }

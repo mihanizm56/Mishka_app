@@ -15,20 +15,16 @@
   width: 100%;
 }
 
-
-
 @media (max-width: 767px) { 
     .about-box-wrapper{
       width: 80%;
     }   
-    .about-box__item-box{
-     
-    }
+
     .about-box__title{
       padding-left: 1%;
       margin-bottom: 35px;
     }
-    .about-box__item-box{}
+
   }
 
   @media (min-width: 768px) {
@@ -36,13 +32,16 @@
       width: 93%;
       height: 590px;
     }
+
     .about-box__title{
       padding-left: 1%;
       margin-bottom: 60px;
     }
+
     .about-box__item-box{
       justify-content: space-between;
     }
+
   }
 
   @media (min-width: 1200px) {
@@ -50,11 +49,12 @@
       width: 700px;
       height: 600px;
     }
+
     .about-box__title{
       padding-left: 3px;
       margin-bottom: 60px;
     }
-    .about-box__item-box{}
+    
   }
 
   

@@ -1,5 +1,6 @@
 .footer-container{
     display: flex;
+    justify-content: space-between;
     position: relative;
 }
 
@@ -34,13 +35,8 @@
 @media (max-width: 767px) {
     .footer-container{
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
         height: 160px;
-    }
-
-    .footer-container__special-background{
-
     }
 
     .footer-container__logo{
@@ -54,6 +50,7 @@
         box-sizing: border-box;
         border-bottom:1px solid #E5E5E5; 
     }
+
     .footer-container__academy-container{
         height: 50%;
         display: flex;
@@ -63,12 +60,8 @@
 }  
 @media (min-width: 768px) {
     .footer-container{
-        justify-content: space-between;
         flex-direction: row;
         height: 143px;
-    }
-    .footer-container__special-background{
-        
     }
 
     .footer-container__logo{
@@ -88,16 +81,11 @@
 }
 @media (min-width: 1200px) {
     .footer-container{
-        justify-content: space-between;
         flex-direction: row;
         height: 143px;
         padding-left: 40px;
         padding-right: 40px;
         margin-top: 50px;
-    }
-
-    .footer-container__special-background{
-        
     }
 
     .footer-container__logo{

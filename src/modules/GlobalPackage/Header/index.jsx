@@ -2,6 +2,13 @@
 import React from "react";
 import MediaQuery from "react-responsive";
 import { BigHeader, MidHeader, SmallHeader } from "../";
+import {
+	BIG_MEDIA_SIZE,
+	MIDDLE_MEDIA_SIZE_FROM,
+	MIDDLE_MEDIA_SIZE_TO,
+	SMALL_MEDIA_SIZE_FROM,
+	SMALL_MEDIA_SIZE_TO,
+} from "../../../constants";
 
 type HeaderPropType = {
 	pageName: string,
@@ -10,13 +17,13 @@ type HeaderPropType = {
 export const Header = ({ pageName }: HeaderPropType) => {
 	return (
 		<div className="header-wrapper">
-			<MediaQuery minWidth={1201}>
+			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
 				<BigHeader pageName={pageName} />
 			</MediaQuery>
-			<MediaQuery minWidth={768} maxWidth={1200}>
+			<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 				<MidHeader pageName={pageName} />
 			</MediaQuery>
-			<MediaQuery minWidth={320} maxWidth={767}>
+			<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
 				<SmallHeader pageName={pageName} />
 			</MediaQuery>
 		</div>

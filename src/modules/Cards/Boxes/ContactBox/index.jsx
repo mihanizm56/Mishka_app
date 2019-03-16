@@ -4,6 +4,21 @@ import MediaQuery from "react-responsive";
 import { SVGForPage, MainTitle, TextForVideo, ImageForPage } from "../../../../components";
 import { ButtonForOffer } from "../../Buttons";
 // import {MapContainer} from '../'
+import {
+	BIG_MEDIA_SIZE,
+	MIDDLE_MEDIA_SIZE_FROM,
+	MIDDLE_MEDIA_SIZE_TO,
+	SMALL_MEDIA_SIZE_FROM,
+	SMALL_MEDIA_SIZE_TO,
+} from "../../../../constants";
+import {
+	ZIGZAG_WIDTH_BIG,
+	ZIGZAG_HEIGHT_BIG,
+	ZIGZAG_WIDTH_MIDDLE,
+	ZIGZAG_HEIGHT_MIDDLE,
+	ZIGZAG_WIDTH_SMALL,
+	ZIGZAG_HEIGHT_SMALL,
+} from "./constants";
 import "./ContactBox.css";
 
 type propsType = {
@@ -14,12 +29,12 @@ type propsType = {
 };
 
 const configForZigzagImage = {
-	widthMin: "100%",
-	heightMin: "8px",
-	widthMiddle: "100%",
-	heightMiddle: "17px",
-	widthBig: "100%",
-	heightBig: "23px",
+	widthMin: ZIGZAG_WIDTH_SMALL,
+	heightMin: ZIGZAG_HEIGHT_SMALL,
+	widthMiddle: ZIGZAG_WIDTH_MIDDLE,
+	heightMiddle: ZIGZAG_HEIGHT_MIDDLE,
+	widthBig: ZIGZAG_WIDTH_BIG,
+	heightBig: ZIGZAG_HEIGHT_BIG,
 };
 
 export class ContactBox extends Component<propsType> {
@@ -33,7 +48,7 @@ export class ContactBox extends Component<propsType> {
 		const { emailAdress, adressCityValue, adressStreetValue, adressBlockValue } = this.props;
 		return (
 			<div className="contact-box-wrapper">
-				<MediaQuery minWidth={1201}>
+				<MediaQuery minWidth={BIG_MEDIA_SIZE}>
 					{/* <MapContainer /> */}
 					<div className="zig-zag-second-container zig-zag-second-container--big">
 						<ImageForPage image="zigzag-index" configForImage={configForZigzagImage} />
@@ -65,7 +80,7 @@ export class ContactBox extends Component<propsType> {
 						<div className="contact-box__image-imitation" />
 					</div>
 				</MediaQuery>
-				<MediaQuery minWidth={768} maxWidth={1200}>
+				<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 					<div className="contacts-title-container">
 						<MainTitle text="Контакты" />
 						<SVGForPage icon="flag" />
@@ -92,7 +107,7 @@ export class ContactBox extends Component<propsType> {
 						<ImageForPage image="zigzag-index" configForImage={configForZigzagImage} />
 					</div>
 				</MediaQuery>
-				<MediaQuery minWidth={320} maxWidth={767}>
+				<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
 					<div className="contacts-title-container">
 						<MainTitle text="Контакты" />
 					</div>
