@@ -13,7 +13,7 @@ import {
 } from "../../actions";
 import { registerApp } from "../../helpers";
 import { SearchField } from "../../components";
-import { MainWrapper } from "../../modules";
+import { MainWrapper } from "../../containers";
 import "./App.css";
 
 class App extends Component {

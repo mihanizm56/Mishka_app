@@ -1,0 +1,17 @@
+.form-input{
+    font-size: 18px;
+    font-family: "Verdana";
+    color: rgb(0, 0, 0);
+    line-height: 1;
+    flex-grow: 1;
+    outline: none;
+    border: none;
+}
+  
+
+@media (max-width: 767px) {
+    .form-input{
+        width: 100%;
+        padding-right: 15px;
+    }
+}

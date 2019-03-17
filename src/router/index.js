@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { CatalogPage, HiddenPage, IndexPage, OrderPage } from "../modules";
-import FormAuth from "../modules/Pages/FormAuth";
-import { ErrorComponent } from "../components";
+import { CatalogPage, HiddenPage, IndexPage, OrderPage } from "../containers";
+import FormAuth from "../containers/pages/FormAuth";
+import { ErrorPage } from "../containers";
 
 export const Router = ({
 	parameter,
@@ -51,7 +51,7 @@ export const Router = ({
 				)}
 			/>
 			<Route exact path="/orderpage" render={() => <OrderPage />} />
-			<Route exact render={() => <ErrorComponent />} />
+			<Route exact render={() => <ErrorPage />} />
 		</Switch>
 	);
 };

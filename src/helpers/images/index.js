@@ -61,23 +61,23 @@ import iconCross from "../../images/pictures/forSpecialIcons/menu-icon-close.png
 import iconMenu from "../../images/pictures/forSpecialIcons/menu-icon.png";
 
 /// Icons Index Page
-import iconFlower from "../../images/icons/index-page/icon-flower.svg";
-import iconBall from "../../images/icons/index-page/icon-ball.svg";
-import iconGift from "../../images/icons/index-page/icon-gift.svg";
-import iconHeart from "../../images/icons/index-page/icon-heart.svg";
-import iconRocket from "../../images/icons/index-page/icon-rocket.svg";
-import iconStyle from "../../images/icons/index-page/icon-style.svg";
-import iconArrow from "../../images/icons/index-page/icon-arrow.svg";
-import iconFlag from "../../images/icons/index-page/icon-flag.svg";
-import iconHitTitle from "../../images/icons/index-page/icon-week-hit.svg";
-import iconVase from "../../images/icons/index-page/icon-vase.svg";
-import iconToy from "../../images/icons/index-page/icon-toy.svg";
+import iconFlower from "../../images/icons/icon-flower.svg";
+import iconBall from "../../images/icons/icon-ball.svg";
+import iconGift from "../../images/icons/icon-gift.svg";
+import iconHeart from "../../images/icons/icon-heart.svg";
+import iconRocket from "../../images/icons/icon-rocket.svg";
+import iconStyle from "../../images/icons/icon-style.svg";
+import iconArrow from "../../images/icons/icon-arrow.svg";
+import iconFlag from "../../images/icons/icon-flag.svg";
+import iconHitTitle from "../../images/icons/icon-week-hit.svg";
+import iconVase from "../../images/icons/icon-vase.svg";
+import iconToy from "../../images/icons/icon-toy.svg";
 
 ///// Icons form page
-import iconCheck from "../../images/icons/form-page/icon-check.svg";
-import iconRadio from "../../images/icons/form-page/icon-radio.svg";
-import iconPhone from "../../images/icons/form-page/icon-phone.svg";
-import iconMail from "../../images/icons/form-page/icon-mail.svg";
+import iconCheck from "../../images/icons/icon-check.svg";
+import iconRadio from "../../images/icons/icon-radio.svg";
+import iconPhone from "../../images/icons/icon-phone.svg";
+import iconMail from "../../images/icons/icon-mail.svg";
 
 export const getSmallImage = (name: string) => {
 	// console.log(`test getSmallImage, image-name=${name}`);
