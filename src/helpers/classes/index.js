@@ -13,6 +13,9 @@ export const getClass = ({
 	error,
 	noMarginTop,
 	noOpacityChange,
+	big,
+	middle,
+	small,
 }: getClassParametersType): string => {
 	let resultClass = initialClass;
 
@@ -30,6 +33,18 @@ export const getClass = ({
 
 	if (noOpacityChange) {
 		resultClass += ` ${initialClass}--no-opacity-change`;
+	}
+
+	if (big) {
+		resultClass += ` ${initialClass}--big`;
+	}
+
+	if (middle) {
+		resultClass += ` ${initialClass}--no-opacity-middle`;
+	}
+
+	if (small) {
+		resultClass += ` ${initialClass}--no-opacity-small`;
 	}
 
 	return resultClass;

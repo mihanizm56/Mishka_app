@@ -5,7 +5,7 @@ import { store } from "./store";
 import { ConnectedRouter } from "connected-react-router";
 import "./index.css";
 import "./fonts/index.css";
-import App from "./containers/app";
+import App from "./containers/App/";
 import { history } from "./store";
 import "normalize.css";
 

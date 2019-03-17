@@ -1,0 +1,22 @@
+.form-input-header{
+    font-size: 18px;
+    font-family: "Verdana";
+    color: rgb(0, 0, 0);
+    line-height: 1;
+    flex-grow: 1;
+    outline: none;
+    border: none;
+}
+
+.form-input-header--big{
+    
+}
+
+.form-input-header--middle{
+    
+}
+
+.form-input-header--small{
+    
+}
+

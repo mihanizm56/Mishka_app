@@ -1,6 +1,5 @@
 // @flow
 import React, { Component } from "react";
-// import { pure } from "recompose";
 
 type InputComponentProps = {
 	text: string,
