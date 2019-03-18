@@ -53,7 +53,7 @@ export class SmallHeader extends Component {
 			<>
 				<div className="small-header__catalog-title">
 					<LinkComponent text="Каталог товаров" WrappedComponent={BoldParagraph} route="catalog" />
-				</div>
+				</div>	
 				<div className="small-header__knitting-title">
 					<LinkComponent text="Вазание на заказ" WrappedComponent={BoldParagraph} route="orderpage" />
 				</div>
