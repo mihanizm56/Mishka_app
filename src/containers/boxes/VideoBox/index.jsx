@@ -7,7 +7,7 @@ import {
 	TextForVideo,
 	SVGForPage,
 } from "../../../components";
-import { ButtonForOffer, ButtonIconVideoBox } from "../../../components";
+import { ButtonForOffer, ButtonPlayVideo } from "../../../components";
 import {
 	BIG_MEDIA_SIZE,
 	MIDDLE_MEDIA_SIZE_FROM,
@@ -34,7 +34,7 @@ export const VideoBox = props => {
 					<div className="video__photo-container">
 						<ImageForPage image="video-back" configForImage={configForVideoImage} />
 						<div className="video__icon-play video__icon-play-big">
-							<ButtonIconVideoBox />
+							<ButtonPlayVideo />
 						</div>
 					</div>
 					<div className="video__description-wrapper">
@@ -60,7 +60,7 @@ export const VideoBox = props => {
 					<div className="video__photo-container">
 						<ImageForPage image="video-back" configForImage={configForVideoImage} />
 						<div className="video__icon-play video__icon-play-mid">
-							<ButtonIconVideoBox />
+							<ButtonPlayVideo />
 						</div>
 					</div>
 					<div className="video__description-wrapper">
@@ -92,7 +92,7 @@ export const VideoBox = props => {
 						</div>
 						<ImageForPage image="video-back" configForImage={configForVideoImage} />
 						<div className="video__icon-play video__icon-play-small">
-							<ButtonIconVideoBox />
+							<ButtonPlayVideo />
 						</div>
 					</div>
 					<div className="video__description-wrapper">

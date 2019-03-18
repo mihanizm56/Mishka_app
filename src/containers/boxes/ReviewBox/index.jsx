@@ -1,6 +1,6 @@
 import React from "react";
 import MediaQuery from "react-responsive";
-import { ButtonForReview, ListButtonsBox, ImageForPage } from "../../../components";
+import { ButtonWriteReview, ListButtonsBox, ImageForPage } from "../../../components";
 import { ReviewTextBox } from "../";
 import {
 	BIG_MEDIA_SIZE,
@@ -29,7 +29,7 @@ export const ReviewBox = ({ review, name, surname, login }) => {
 					<ReviewTextBox review={review} name={name} surname={surname} login={login} />
 				</div>
 				<div className="review__buttons-wrapper">
-					<ButtonForReview />
+					<ButtonWriteReview />
 					<ListButtonsBox />
 				</div>
 			</MediaQuery>
@@ -41,7 +41,7 @@ export const ReviewBox = ({ review, name, surname, login }) => {
 					<ReviewTextBox review={review} name={name} surname={surname} login={login} />
 				</div>
 				<div className="review__buttons-wrapper">
-					<ButtonForReview />
+					<ButtonWriteReview />
 					<ListButtonsBox />
 				</div>
 			</MediaQuery>
@@ -54,7 +54,7 @@ export const ReviewBox = ({ review, name, surname, login }) => {
 				</div>
 				<div className="review__buttons-wrapper">
 					<ListButtonsBox />
-					<ButtonForReview />
+					<ButtonWriteReview />
 				</div>
 			</MediaQuery>
 		</div>

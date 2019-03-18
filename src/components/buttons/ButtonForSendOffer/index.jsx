@@ -10,7 +10,7 @@ type ButtonForSendOfferType = {
 export const ButtonForSendOffer = ({ callback }: ButtonForSendOfferType) => {
 	return (
 		<div className="button-send-wrapper" onClick={callback}>
-			<TextForButton text="СДЕЛАТЬ ЗАКАЗ" />
+			<TextForButton text="ОТПРАВИТЬ ЗАКАЗ" />
 		</div>
 	);
 };

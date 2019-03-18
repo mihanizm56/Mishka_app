@@ -1,7 +1,7 @@
 // @flow
 import React from "react";
 import MediaQuery from "react-responsive";
-import { ButtonWithIcon } from "../../../components";
+import { ButtonWrappedIcon } from "../../../components";
 import {
 	BIG_MEDIA_SIZE,
 	MIDDLE_MEDIA_SIZE_FROM,
@@ -10,26 +10,26 @@ import {
 	SMALL_MEDIA_SIZE_TO,
 } from "../../../constants";
 
-type ButtonIconVideoBoxType = {
+type ButtonPlayVideoType = {
 	callback: () => void,
 };
 
-export const ButtonIconVideoBox = ({ callback }: ButtonIconVideoBoxType) => {
+export const ButtonPlayVideo = ({ callback }: ButtonPlayVideoType) => {
 	return (
 		<>
 			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
-				<ButtonWithIcon icon="video" width="110px" height="82px" />
+				<ButtonWrappedIcon icon="video" width="110px" height="82px" noOpacityChange />
 			</MediaQuery>
 			<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
-				<ButtonWithIcon icon="video" width="102px" height="77px" />
+				<ButtonWrappedIcon icon="video" width="102px" height="77px" noOpacityChange />
 			</MediaQuery>
 			<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
-				<ButtonWithIcon icon="video" width="102px" height="77px" />
+				<ButtonWrappedIcon icon="video" width="102px" height="77px" noOpacityChange />
 			</MediaQuery>
 		</>
 	);
 };
 
-ButtonIconVideoBox.defaultProps = {
-	callback: () => console.log("click on ButtonIconVideoBox"),
+ButtonPlayVideo.defaultProps = {
+	callback: () => console.log("click on ButtonPlayVideo"),
 };

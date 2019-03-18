@@ -7,7 +7,13 @@ type getClassParametersType = {
 	noMarginTop?: boolean,
 };
 
-export const getClass = ({ initialClass, active, error, noMarginTop }: getClassParametersType): string => {
+export const getClass = ({
+	initialClass,
+	active,
+	error,
+	noMarginTop,
+	noOpacityChange,
+}: getClassParametersType): string => {
 	let resultClass = initialClass;
 
 	if (error) {
@@ -20,6 +26,10 @@ export const getClass = ({ initialClass, active, error, noMarginTop }: getClassP
 
 	if (noMarginTop) {
 		resultClass += ` ${initialClass}--no-margin-top`;
+	}
+
+	if (noOpacityChange) {
+		resultClass += ` ${initialClass}--no-opacity-change`;
 	}
 
 	return resultClass;

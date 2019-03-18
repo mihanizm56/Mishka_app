@@ -11,6 +11,12 @@
     opacity: 0.3;
 }
 
+.interactive-icon-wrapper--no-opacity-change,
+.interactive-icon-wrapper--no-opacity-change:hover,
+.interactive-icon-wrapper--no-opacity-change:active {
+    opacity: 1;
+}
+
 .click-wrapper{
     position: absolute;
     top: 0px;

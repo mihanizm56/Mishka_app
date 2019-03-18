@@ -1,5 +1,3 @@
-export const BUTTON_FOR_WEEKLY_HIT_BOX_STYLE = {
-	width: "98%",
-	height: "50px",
-	marginTop: "35px",
-};
+export const BUTTON_FOR_WEEKLY_HIT_BOX_WIDTH = "98%";
+export const BUTTON_FOR_WEEKLY_HIT_BOX_HEIGHT = "50px";
+export const BUTTON_FOR_WEEKLY_HIT_BOX_MARGIN_TOP = "35px";
