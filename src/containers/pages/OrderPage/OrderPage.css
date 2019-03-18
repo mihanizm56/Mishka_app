@@ -518,7 +518,7 @@
 
     .contact-fields-first-field__title,
     .contact-fields-second-field__title{
-        width: 185px;
+        width: 160px;
         padding-top: 20px;
         justify-content: flex-start;
     }
@@ -548,7 +548,7 @@
 
     .contact-fields-first-field__title,
     .contact-fields-second-field__title{
-        width: 185px;
+        width: 170px;
         padding-top: 20px;
         justify-content: flex-start;
     }
@@ -561,6 +561,12 @@
 
     .order-page-name-container{
         margin-bottom: 60px;
+    }
+
+    .order-page-name-container__fields{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0.69;
     }
 
     .order-page-textarea-container__fields{

@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    position: relative;
 }
 
 .zoom-wrapper__zoom-icon{
@@ -126,6 +126,16 @@
     animation: fadeIn .3s ease-in-out 0.9s both;
 }
 
+.first-line-small-header__search-input{
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+    height: 26px;
+    width: 190px;
+    margin-right: -45px;
+    animation: fadeInInputHeaderSmall .2s ease-in-out both;
+}
+
 @keyframes fadeIn {
     from { 
         opacity: 0;
@@ -165,5 +175,17 @@
     to { 
         opacity: 0;
         transform: rotate(90deg)
+     }
+   }
+
+   
+@keyframes fadeInInputHeaderSmall {
+    from { 
+        opacity: 0;
+        transform: translate3d(50px, 0, 0)
+     }
+    to { 
+        opacity: 1;
+        transform: translate3d(0, 0, 0)
      }
    }

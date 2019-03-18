@@ -1,8 +1,8 @@
 // @flow
 import React, { Component } from "react";
-import { BoldParagraph, SVGForPage, ImageForPage, LinkComponent, InteractiveSVGIcon } from "../../../../../components";
+import { BoldParagraph, SVGForPage, ImageForPage, LinkComponent, InteractiveSVGIcon, SearchHeaderInput } from "../../../../../components";
 import { UserBasketBox, UnderHeaderBox } from "../../../../boxes";
-import { getHeaderTitle } from "../../../../../helpers";
+import { getHeaderTitle, getClass } from "../../../../../helpers";
 import { WIDTH_FOR_ICON, HEIGTH_FOR_ICON } from "./constants";
 import "./SmallHeader.css";
 
@@ -20,14 +20,15 @@ export class SmallHeader extends Component {
 		super();
 		this.state = {
 			isSmallMenuOpened: false,
+			searchInputOpened: false
 		};
 	}
 
-	componentDidUpdate(prevProps){
-		const {page: prevPage} = this.props;
-		const {page: nextPage} = prevProps;
-		if(prevPage !== nextPage){
-			this.setState({isSmallMenuOpened: false})
+	componentDidUpdate(prevProps) {
+		const { page: prevPage } = this.props;
+		const { page: nextPage } = prevProps;
+		if (prevPage !== nextPage) {
+			this.setState({ isSmallMenuOpened: false })
 		}
 	}
 
@@ -35,7 +36,19 @@ export class SmallHeader extends Component {
 		this.setState(prevState => ({ isSmallMenuOpened: !prevState.isSmallMenuOpened }));
 	};
 
-	showSmallMenu = () => {
+	handleToggleInput = () => {
+		this.setState(prevState => ({ searchInputOpened: !prevState.searchInputOpened }))
+	}
+
+	getSearchItem = (searchInputOpened) => {
+		return searchInputOpened ? 
+		<div className={getClass({ initialClass: "first-line-small-header__search-input", active: searchInputOpened })}>
+			<SearchHeaderInput />
+		</div> 
+		: <BoldParagraph text="Поиск по сайту" />
+	}
+
+	showSmallMenu = (searchInputOpened) => {
 		return (
 			<>
 				<div className="small-header__catalog-title">
@@ -46,10 +59,10 @@ export class SmallHeader extends Component {
 				</div>
 				<div className="small-header__zoom-wrapper">
 					<div className="zoom-wrapper__zoom-text">
-						<BoldParagraph text="Поиск по сайту" />
 						<div className="zoom-wrapper__zoom-icon">
-							<InteractiveSVGIcon icon="zoom" />
+							<InteractiveSVGIcon icon="zoom" handleClick={this.handleToggleInput}/>
 						</div>
+						{this.getSearchItem(searchInputOpened)}
 					</div>
 				</div>
 				<div className="small-header__basket-wrapper">
@@ -60,7 +73,7 @@ export class SmallHeader extends Component {
 	};
 
 	render() {
-		const { isSmallMenuOpened } = this.state;
+		const { isSmallMenuOpened, searchInputOpened } = this.state;
 		const { page } = this.props;
 		return (
 			<div className="small-header-wrapper">
@@ -84,7 +97,7 @@ export class SmallHeader extends Component {
 					</div>
 				</div>
 				<div className={`small-menu-wrapper${isSmallMenuOpened ? "--opened" : ""}`}>
-					{isSmallMenuOpened ? this.showSmallMenu() : null}
+					{isSmallMenuOpened ? this.showSmallMenu(searchInputOpened) : null}
 				</div>
 				{page !== "index-page" && (
 					<div>
