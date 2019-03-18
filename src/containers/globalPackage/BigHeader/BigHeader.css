@@ -7,6 +7,7 @@
 }
 
 .first-line-big-header__zoom-wrapper{
+    position: relative;
     display: flex;
     justify-content: flex-end;
     width: 150px;
@@ -90,3 +91,31 @@
 .big-header-wrapper--index-page{
     height: 160px;
 }
+
+.first-line-big-header__search-input{
+    display: none;
+    position: absolute;
+    align-items: center;
+    overflow: hidden;
+    top: 111px;
+    left: -70px;
+    height: 98%;
+    width: 220px;
+    z-index: 3;
+    animation: fadeInInputHeaderBig .2s ease-in-out both;
+}
+
+.first-line-big-header__search-input--active{
+    display: flex;
+}
+
+@keyframes fadeInInputHeaderBig {
+    from { 
+        opacity: 0;
+        transform: translate3d(0, -20px, 0)
+     }
+    to { 
+        opacity: 1;
+        transform: translate3d(0, 0, 0)
+     }
+   }

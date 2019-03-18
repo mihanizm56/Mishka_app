@@ -40,11 +40,11 @@ export const getClass = ({
 	}
 
 	if (middle) {
-		resultClass += ` ${initialClass}--no-opacity-middle`;
+		resultClass += ` ${initialClass}--middle`;
 	}
 
 	if (small) {
-		resultClass += ` ${initialClass}--no-opacity-small`;
+		resultClass += ` ${initialClass}--small`;
 	}
 
 	return resultClass;

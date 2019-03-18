@@ -6,6 +6,7 @@ import {
 	RegularAdditionalParagraph,
 	LinkComponent,
 	InteractiveSVGIcon,
+	SearchHeaderInput,
 } from "../../../components";
 import { UserBasketBox, UnderHeaderBox } from "../../boxes";
 import { FONT_SIZE_FOR_SECOND_LINE_IN_HEADER } from "./constants";
@@ -28,6 +29,9 @@ export const MidHeader = ({ pageName }) => {
 					<div className="first-line-middle-header__zoom-wrapper">
 						<div className="first-line-middle-header__zoom-icon">
 							<InteractiveSVGIcon icon="zoom" />
+						</div>
+						<div className="first-line-middle-header__search-input">
+							<SearchHeaderInput />
 						</div>
 					</div>
 					<div className="first-line-header__basket-wrapper">

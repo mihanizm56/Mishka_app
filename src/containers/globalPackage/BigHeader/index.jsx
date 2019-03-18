@@ -6,6 +6,7 @@ import {
 	RegularAdditionalParagraph,
 	LinkComponent,
 	InteractiveSVGIcon,
+	SearchHeaderInput,
 } from "../../../components";
 import { UserBasketBox, UnderHeaderBox } from "../../boxes";
 import { getHeaderTitle, getSpecialClassForHeader } from "../../../helpers";
@@ -32,6 +33,9 @@ export const BigHeader = ({ pageName }) => {
 				<div className="first-line-big-header__zoom-wrapper">
 					<div className="first-line-big-header__zoom-icon">
 						<InteractiveSVGIcon icon="zoom" />
+					</div>
+					<div className="first-line-big-header__search-input">
+						<SearchHeaderInput />
 					</div>
 				</div>
 				<div className="first-line-big-header__basket-wrapper">

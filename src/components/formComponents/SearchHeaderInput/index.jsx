@@ -20,34 +20,16 @@ type SearchHeaderInputProps = {
 
 export const SearchHeaderInput = ({ placeholder, getRef, backgroundColor }: SearchHeaderInputProps): Node => {
 	return (
-		<>
-			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
-				<InputComponent
-					placeholder={placeholder}
-					className={getClass({ initialClass: "form-input-header", big: true })}
-					getRef={getRef}
-					backgroundColor={backgroundColor}
-				/>
-			</MediaQuery>
-			<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
-				<InputComponent
-					placeholder={placeholder}
-					className={getClass({ initialClass: "form-input-header", middle: true })}
-					getRef={getRef}
-					backgroundColor={backgroundColor}
-				/>
-			</MediaQuery>
-			<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
-				<InputComponent
-					placeholder={placeholder}
-					className={getClass({ initialClass: "form-input-header", small: true })}
-					getRef={getRef}
-				/>
-			</MediaQuery>
-		</>
+		<InputComponent
+			placeholder={placeholder}
+			className="form-input-header"
+			getRef={getRef}
+			backgroundColor={backgroundColor}
+		/>
 	);
 };
 
 SearchHeaderInput.defaultProps = {
-	placeholder: "default form placeholder",
+	placeholder: "Поиск default",
+	getRef: () => {},
 };
