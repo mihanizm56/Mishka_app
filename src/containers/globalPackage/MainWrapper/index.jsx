@@ -15,7 +15,6 @@ export const MainWrapper = props => {
 		shopItems,
 		changeTypeOfSort,
 		changeSearchFilter,
-		changePage,
 		userIsLoggedIn,
 		router
 	} = props;
@@ -34,7 +33,6 @@ export const MainWrapper = props => {
 				itemsFilters={itemsFilters}
 				shopItems={shopItems}
 				changeTypeOfSort={changeTypeOfSort}
-				changePage={changePage}
 			/>
 			<Footer />
 		</div>

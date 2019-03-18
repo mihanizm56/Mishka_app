@@ -14,13 +14,12 @@ export const Router = ({
 	changeMaxFilterValue,
 	itemsFilters,
 	shopItems,
-	changeTypeOfSort,
-	changePage,
+	changeTypeOfSort
 }) => {
 	return (
 		<Switch>
-			<Route exact path="/" render={() => <IndexPage changePage={changePage} />} />
-			<Route exact path="/index" render={() => <IndexPage changePage={changePage} />} />
+			<Route exact path="/" render={() => <IndexPage />} />
+			<Route exact path="/index" render={() => <IndexPage />} />
 			<Route
 				exact
 				path="/catalog"
@@ -31,11 +30,10 @@ export const Router = ({
 						itemsFilters={itemsFilters}
 						shopItems={shopItems}
 						changeTypeOfSort={changeTypeOfSort}
-						changePage={changePage}
 					/>
 				)}
 			/>
-			<Route exact path="/hiddenpage" render={() => <HiddenPage login={parameter} changePage={changePage} />} />
+			<Route exact path="/hiddenpage" render={() => <HiddenPage login={parameter} />} />
 			<Route
 				exact
 				path="/formauth"
@@ -46,7 +44,6 @@ export const Router = ({
 						signInFunc={userSignIn}
 						signOutFunc={userSignOut}
 						login={parameter}
-						changePage={changePage}
 					/>
 				)}
 			/>

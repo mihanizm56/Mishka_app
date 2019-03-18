@@ -8,8 +8,7 @@ import {
 	appIsLoading,
 	appHasLoaded,
 	changeSelectedFilter,
-	changeSearchFilter,
-	changePageType,
+	changeSearchFilter
 } from "../constants";
 import firebase from "firebase";
 
@@ -29,14 +28,6 @@ export function loadingApp() {
 		type: appIsLoading,
 	};
 }
-
-// export function changePageAction(page) {
-// 	console.log("test changePage");
-// 	return {
-// 		type: changePageType,
-// 		payload: page,
-// 	};
-// }
 
 export function selectFilter(value) {
 	console.log("test selectedFilter");

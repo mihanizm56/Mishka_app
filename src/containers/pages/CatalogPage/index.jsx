@@ -6,11 +6,6 @@ import { ButtonForOffer } from "../../../components";
 import "./CatalogPage.css";
 
 export class CatalogPage extends Component {
-	componentDidMount() {
-		//console.log("CatalogPage");
-		//console.log(this.props);
-		//this.props.changePage("CatalogPage");
-	}
 
 	render() {
 		const { changeMinFilterValue, changeMaxFilterValue, itemsFilters, shopItems, changeTypeOfSort } = this.props;

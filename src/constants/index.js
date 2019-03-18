@@ -9,7 +9,6 @@ export const changeRangeMinValue = "CHANGE_RANGE_MIN";
 export const changeRangeMaxValue = "CHANGE_RANGE_MAX";
 export const changeSelectedFilter = "CHANGE_SELECTED_FITER";
 export const changeSearchFilter = "CHANGE_SEARCH_FITER";
-export const changePageType = "CHANGE_PAGE";
 
 export const BIG_MEDIA_SIZE = 1201;
 export const MIDDLE_MEDIA_SIZE_FROM = 768;

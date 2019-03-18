@@ -8,8 +8,7 @@ import {
 	changeRangeMin,
 	changeRangeMax,
 	selectFilter,
-	changeSearchField,
-	changePageAction,
+	changeSearchField
 } from "../../actions";
 import { registerApp } from "../../helpers";
 import { SearchField } from "../../components";
@@ -63,10 +62,7 @@ const mapDispatchToProps = dispatch => {
 		},
 		changeSearchFilter(value) {
 			dispatch(changeSearchField(value));
-		},
-		// changePage(page) {
-		// 	dispatch(changePageAction(page));
-		// },
+		}
 	};
 };
 
