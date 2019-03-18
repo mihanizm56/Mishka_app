@@ -14,7 +14,9 @@ type HeaderPropType = {
 	pageName: string,
 };
 
-export const Header = ({ pageName }: HeaderPropType) => {
+export const Header = (props: HeaderPropType) => {
+	console.log(props)
+	const {pageName} = props
 	return (
 		<div className="header-wrapper">
 			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
