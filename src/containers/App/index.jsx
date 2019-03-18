@@ -23,8 +23,8 @@ class App extends Component {
 	}
 
 	render() {
-		// console.log("test App props");
-		// console.log(this.props);
+		//console.log("test App props");
+		//console.log(this.props);
 		const { loginState, ...restProps } = this.props;
 		const userIsLoggedIn = loginState.login || localStorage.login === "true";
 		return (
@@ -64,9 +64,9 @@ const mapDispatchToProps = dispatch => {
 		changeSearchFilter(value) {
 			dispatch(changeSearchField(value));
 		},
-		changePage(page) {
-			dispatch(changePageAction(page));
-		},
+		// changePage(page) {
+		// 	dispatch(changePageAction(page));
+		// },
 	};
 };
 

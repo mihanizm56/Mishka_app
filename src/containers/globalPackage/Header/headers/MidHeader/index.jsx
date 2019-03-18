@@ -7,18 +7,18 @@ import {
 	LinkComponent,
 	InteractiveSVGIcon,
 	SearchHeaderInput,
-} from "../../../components";
-import { UserBasketBox, UnderHeaderBox } from "../../boxes";
+} from "../../../../../components";
+import { UserBasketBox, UnderHeaderBox } from "../../../../boxes";
 import { FONT_SIZE_FOR_SECOND_LINE_IN_HEADER } from "./constants";
-import { getHeaderTitle, getSpecialClassForHeader } from "../../../helpers";
+import { getHeaderTitle, getSpecialClassForHeader } from "../../../../../helpers";
 import "./MidHeader.css";
 
-export const MidHeader = ({ pageName }) => {
+export const MidHeader = ({ page }) => {
 	return (
 		<div
 			className={getSpecialClassForHeader({
 				initialClass: "middle-header-wrapper",
-				isIndexPage: pageName === "index-page",
+				isIndexPage: page === "index-page",
 			})}
 		>
 			<div className="middle-header__first-line-header">
@@ -53,7 +53,7 @@ export const MidHeader = ({ pageName }) => {
 						<LinkComponent
 							text="Вазание на заказ"
 							WrappedComponent={BoldParagraph}
-							route="order"
+							route="orderpage"
 							customFontSize={FONT_SIZE_FOR_SECOND_LINE_IN_HEADER}
 						/>
 					</div>
@@ -64,9 +64,9 @@ export const MidHeader = ({ pageName }) => {
 					</div>
 				</div>
 			</div>
-			{pageName !== "index-page" && (
+			{page !== "index-page" && (
 				<div>
-					<UnderHeaderBox text={getHeaderTitle(pageName)} />
+					<UnderHeaderBox text={getHeaderTitle(page)} />
 				</div>
 			)}
 		</div>
@@ -74,5 +74,5 @@ export const MidHeader = ({ pageName }) => {
 };
 
 MidHeader.defaultProps = {
-	pageName: null,
+	page: null,
 };

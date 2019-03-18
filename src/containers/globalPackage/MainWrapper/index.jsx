@@ -17,10 +17,13 @@ export const MainWrapper = props => {
 		changeSearchFilter,
 		changePage,
 		userIsLoggedIn,
+		router
 	} = props;
+	console.log(props)
+	console.log(router)
 	return (
 		<div className="main-wrapper">
-			<Header />
+			<Header route={router}/>
 			<Router
 				appToLoad={appToLoad}
 				isLoading={appLoading.loading}

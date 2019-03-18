@@ -1,8 +1,8 @@
 // @flow
 import React, { Component } from "react";
-import { BoldParagraph, SVGForPage, ImageForPage, LinkComponent, InteractiveSVGIcon } from "../../../components";
-import { UserBasketBox, UnderHeaderBox } from "../../boxes";
-import { getHeaderTitle } from "../../../helpers";
+import { BoldParagraph, SVGForPage, ImageForPage, LinkComponent, InteractiveSVGIcon } from "../../../../../components";
+import { UserBasketBox, UnderHeaderBox } from "../../../../boxes";
+import { getHeaderTitle } from "../../../../../helpers";
 import { WIDTH_FOR_ICON, HEIGTH_FOR_ICON } from "./constants";
 import "./SmallHeader.css";
 
@@ -13,7 +13,7 @@ const configForImage = {
 
 export class SmallHeader extends Component {
 	static defaultProps = {
-		pageName: "catalog-page",
+		page: "index-page",
 	};
 
 	constructor() {
@@ -21,6 +21,14 @@ export class SmallHeader extends Component {
 		this.state = {
 			isSmallMenuOpened: false,
 		};
+	}
+
+	componentDidUpdate(prevProps){
+		const {page: prevPage} = this.props;
+		const {page: nextPage} = prevProps;
+		if(prevPage !== nextPage){
+			this.setState({isSmallMenuOpened: false})
+		}
 	}
 
 	handleOpenSmallMenu = () => {
@@ -34,7 +42,7 @@ export class SmallHeader extends Component {
 					<LinkComponent text="Каталог товаров" WrappedComponent={BoldParagraph} route="catalog" />
 				</div>
 				<div className="small-header__knitting-title">
-					<LinkComponent text="Вазание на заказ" WrappedComponent={BoldParagraph} route="order" />
+					<LinkComponent text="Вазание на заказ" WrappedComponent={BoldParagraph} route="orderpage" />
 				</div>
 				<div className="small-header__zoom-wrapper">
 					<div className="zoom-wrapper__zoom-text">
@@ -53,7 +61,7 @@ export class SmallHeader extends Component {
 
 	render() {
 		const { isSmallMenuOpened } = this.state;
-		const { pageName } = this.props;
+		const { page } = this.props;
 		return (
 			<div className="small-header-wrapper">
 				<div className="small-header__small-header-logo-wrapper">
@@ -78,9 +86,9 @@ export class SmallHeader extends Component {
 				<div className={`small-menu-wrapper${isSmallMenuOpened ? "--opened" : ""}`}>
 					{isSmallMenuOpened ? this.showSmallMenu() : null}
 				</div>
-				{pageName !== "index-page" && (
+				{page !== "index-page" && (
 					<div>
-						<UnderHeaderBox text={getHeaderTitle(pageName)} />
+						<UnderHeaderBox text={getHeaderTitle(page)} />
 					</div>
 				)}
 			</div>

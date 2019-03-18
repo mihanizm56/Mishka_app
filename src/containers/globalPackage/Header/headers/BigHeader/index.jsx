@@ -7,17 +7,17 @@ import {
 	LinkComponent,
 	InteractiveSVGIcon,
 	SearchHeaderInput,
-} from "../../../components";
-import { UserBasketBox, UnderHeaderBox } from "../../boxes";
-import { getHeaderTitle, getSpecialClassForHeader } from "../../../helpers";
+} from "../../../../../components";
+import { UserBasketBox, UnderHeaderBox } from "../../../../boxes";
+import { getHeaderTitle, getSpecialClassForHeader } from "../../../../../helpers";
 import "./BigHeader.css";
 
-export const BigHeader = ({ pageName }) => {
+export const BigHeader = ({ page }) => {
 	return (
 		<div
 			className={getSpecialClassForHeader({
 				initialClass: "big-header-wrapper",
-				isIndexPage: pageName === "index-page",
+				isIndexPage: page === "index-page",
 			})}
 		>
 			<div className="big-header__first-line-big-header">
@@ -53,9 +53,9 @@ export const BigHeader = ({ pageName }) => {
 					<RegularAdditionalParagraph text="Бесплатная доставка по России" />
 				</div>
 			</div>
-			{pageName !== "index-page" && (
+			{page !== "index-page" && (
 				<div>
-					<UnderHeaderBox text={getHeaderTitle(pageName)} />
+					<UnderHeaderBox text={getHeaderTitle(page)} />
 				</div>
 			)}
 		</div>
@@ -63,5 +63,5 @@ export const BigHeader = ({ pageName }) => {
 };
 
 BigHeader.defaultProps = {
-	pageName: "index-page",
+	page: "index-page",
 };

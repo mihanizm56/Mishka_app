@@ -7,15 +7,15 @@ import "./CatalogPage.css";
 
 export class CatalogPage extends Component {
 	componentDidMount() {
-		console.log("CatalogPage");
-		console.log(this.props);
-		this.props.changePage("CatalogPage");
+		//console.log("CatalogPage");
+		//console.log(this.props);
+		//this.props.changePage("CatalogPage");
 	}
 
 	render() {
 		const { changeMinFilterValue, changeMaxFilterValue, itemsFilters, shopItems, changeTypeOfSort } = this.props;
-		console.log("TEST ROUTER MATCH");
-		console.log(window.history);
+		//console.log("TEST ROUTER MATCH");
+		//console.log(window.history);
 		return (
 			<div className="catalog-wrapper">
 				{/* <FooterTextLogo text="Hello CatalogPage !" /> */}

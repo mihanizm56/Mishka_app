@@ -3,7 +3,7 @@ import { GreenCardParagraph, SVGForPage } from "../../../components";
 import "./GreenCard.css";
 
 export const GreenCard = ({ text, icon, backgroundColor }) => {
-	console.log("text", text, "icon", icon, "backgroundColor", backgroundColor);
+	//console.log("text", text, "icon", icon, "backgroundColor", backgroundColor);
 	return (
 		<div className="green-card-wrapper" style={{ backgroundColor: `${backgroundColor}` }}>
 			<GreenCardParagraph text={text} />

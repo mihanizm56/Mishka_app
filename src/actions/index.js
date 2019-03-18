@@ -30,13 +30,13 @@ export function loadingApp() {
 	};
 }
 
-export function changePageAction(page) {
-	console.log("test changePage");
-	return {
-		type: changePageType,
-		payload: page,
-	};
-}
+// export function changePageAction(page) {
+// 	console.log("test changePage");
+// 	return {
+// 		type: changePageType,
+// 		payload: page,
+// 	};
+// }
 
 export function selectFilter(value) {
 	console.log("test selectedFilter");
