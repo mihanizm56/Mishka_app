@@ -45,6 +45,7 @@
     }
     .review-text-box__text{
         margin-top: 66px;
+        width: 760px;
     }
     .review-text__login-wrapper{
         justify-content: space-between;

@@ -1,0 +1,18 @@
+.text-header-basket-icon{
+    font-size: 16px;
+    font-family: "Verdana-Bold";
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.text-header-basket-icon:hover{
+    opacity:0.6;
+}
+
+.text-header-basket-icon:active{
+    opacity:0.4;
+}

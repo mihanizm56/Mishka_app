@@ -10,6 +10,7 @@
     "rc-slider": "^8.6.4",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-player": "^1.9.3",
     "react-redux": "^6.0.0",
     "react-responsive": "^6.0.1",
     "react-router-dom": "^4.3.1",
@@ -36,8 +37,7 @@
     ],
     "production": [
       ">1%",
-      "not ie < 11",
-      "Firefox ESR"
+      "not ie < 11"
     ]
   },
   "devDependencies": {

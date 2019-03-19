@@ -17,3 +17,4 @@ export * from "./FormAdditionalParagraph";
 export * from "./FormFieldBoldParagraph";
 export * from "./FormLabelParagraph";
 export * from "./GreenCardParagraph";
+export * from "./TextForHeaderBasketIcon";

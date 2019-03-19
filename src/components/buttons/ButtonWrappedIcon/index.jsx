@@ -9,8 +9,8 @@ type ButtonWrappedIconType = {
 	icon: string,
 };
 
-export const ButtonWrappedIcon = ({ width, height, icon, callback, noOpacityChange }: ButtonWrappedIconType) => (
-	<div onClick={() => callback()} className="button-wrapped-icon" style={{ width: width, height: height }}>
+export const ButtonWrappedIcon = ({ width, height, icon, handleClick, noOpacityChange }: ButtonWrappedIconType) => (
+	<div onClick={handleClick} className="button-wrapped-icon" style={{ width: width, height: height }}>
 		<InteractiveSVGIcon icon={icon} noOpacityChange={noOpacityChange} />
 	</div>
 );
@@ -19,5 +19,5 @@ ButtonWrappedIcon.defaultProps = {
 	width: "10px",
 	height: "10px",
 	icon: "",
-	callback: () => console.log("default click on ButtonWrappedIcon"),
+	handleClick: () => console.log("default click on ButtonWrappedIcon"),
 };

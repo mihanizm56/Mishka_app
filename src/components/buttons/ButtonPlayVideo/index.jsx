@@ -14,17 +14,17 @@ type ButtonPlayVideoType = {
 	callback: () => void,
 };
 
-export const ButtonPlayVideo = ({ callback }: ButtonPlayVideoType) => {
+export const ButtonPlayVideo = ({ handleClick }: ButtonPlayVideoType) => {
 	return (
 		<>
 			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
-				<ButtonWrappedIcon icon="video" width="110px" height="82px" noOpacityChange />
+				<ButtonWrappedIcon icon="video" width="110px" height="82px" noOpacityChange handleClick={handleClick}/>
 			</MediaQuery>
 			<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
-				<ButtonWrappedIcon icon="video" width="102px" height="77px" noOpacityChange />
+				<ButtonWrappedIcon icon="video" width="102px" height="77px" noOpacityChange handleClick={handleClick}/>
 			</MediaQuery>
 			<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
-				<ButtonWrappedIcon icon="video" width="102px" height="77px" noOpacityChange />
+				<ButtonWrappedIcon icon="video" width="102px" height="77px" noOpacityChange handleClick={handleClick}/>
 			</MediaQuery>
 		</>
 	);

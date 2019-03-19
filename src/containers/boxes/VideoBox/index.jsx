@@ -7,7 +7,7 @@ import {
 	TextForVideo,
 	SVGForPage,
 } from "../../../components";
-import { ButtonForOffer, ButtonPlayVideo } from "../../../components";
+import { ButtonForOffer, ButtonPlayVideo, VideoPlayerComponent } from "../../../components";
 import {
 	BIG_MEDIA_SIZE,
 	MIDDLE_MEDIA_SIZE_FROM,
@@ -17,30 +17,18 @@ import {
 } from "../../../constants";
 import "./VideoBox.css";
 
-const configForVideoImage = {
-	widthMin: "260px",
-	heightMin: "150px",
-	widthMiddle: "687px",
-	heightMiddle: "455px",
-	widthBig: "758px",
-	heightBig: "455px",
-};
-
 export const VideoBox = props => {
 	return (
 		<div className="video-wrapper">
 			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
 				<div className="video__inside-box">
 					<div className="video__photo-container">
-						<ImageForPage image="video-back" configForImage={configForVideoImage} />
-						<div className="video__icon-play video__icon-play-big">
-							<ButtonPlayVideo />
-						</div>
+						<VideoPlayerComponent link='https://www.youtube.com/watch?v=ysz5S6PUM-U' size='big'/>
 					</div>
 					<div className="video__description-wrapper">
 						<div className="description-wrapper__video-container">
 							<div className="video-container__icon">
-								<SVGForPage icon="camera" configForImage={configForVideoImage} />
+								<SVGForPage icon="camera" />
 							</div>
 							<div className="video-container__title">
 								<DescriptionVideoBoxTitle text="Процесс производства" />
@@ -58,15 +46,12 @@ export const VideoBox = props => {
 			<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 				<div className="video__inside-box">
 					<div className="video__photo-container">
-						<ImageForPage image="video-back" configForImage={configForVideoImage} />
-						<div className="video__icon-play video__icon-play-mid">
-							<ButtonPlayVideo />
-						</div>
+						<VideoPlayerComponent link='https://www.youtube.com/watch?v=ysz5S6PUM-U' size='middle'/>
 					</div>
 					<div className="video__description-wrapper">
 						<div className="description-wrapper__video-container">
 							<div className="video-container__icon-and-title">
-								<SVGForPage icon="camera" configForImage={configForVideoImage} />
+								<SVGForPage icon="camera" />
 								<DescriptionVideoBoxTitle text="Процесс производства" />
 							</div>
 							<div className="video-container__description">
@@ -84,15 +69,14 @@ export const VideoBox = props => {
 					<div className="video__photo-container">
 						<div className="photo-container__icon-and-title-wrapper">
 							<div className="icon-and-title-wrapper__icon">
-								<SVGForPage icon="camera" configForImage={configForVideoImage} />
+								<SVGForPage icon="camera" />
 							</div>
 							<div className="icon-and-title-wrapper__title">
 								<DescriptionVideoBoxTitle text="Процесс производства" />
 							</div>
 						</div>
-						<ImageForPage image="video-back" configForImage={configForVideoImage} />
-						<div className="video__icon-play video__icon-play-small">
-							<ButtonPlayVideo />
+						<div className="video__photo-container">
+							<VideoPlayerComponent link='https://www.youtube.com/watch?v=ysz5S6PUM-U' size='small'/>
 						</div>
 					</div>
 					<div className="video__description-wrapper">

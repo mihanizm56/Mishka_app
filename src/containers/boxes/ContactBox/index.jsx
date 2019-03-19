@@ -50,6 +50,50 @@ export class ContactBox extends Component<propsType> {
 		adressStreetValue: "ул. Dafault Конюшенная,",
 		adressBlockValue: "д. 19/8, test 101",
 	};
+
+	handleClick = (ref) => {
+		if (ref) {
+			const { current: { innerText } } = ref;
+			if(innerText) {
+				this.copyTextToClipboard(innerText)
+				console.log('check element', innerText)
+			}
+		}
+	}
+
+	copyTextToClipboard = (text) => {
+		const textArea = document.createElement("textarea");
+	
+		textArea.style = {
+			position: 'fixed',
+			top: 0,
+			left: 0,
+			width: '2em',
+			height: '2em',
+			padding: 0,
+			border: 'none',
+			outline: 'none',
+			boxShadow: 'none',
+			background: 'transparent'
+		}
+
+		textArea.value = text;
+
+		document.body.appendChild(textArea);
+		textArea.focus();
+		textArea.select();
+	  
+		try {
+		  var successful = document.execCommand('copy');
+		  var msg = successful ? 'successful' : 'unsuccessful';
+		  console.log('Copying text command was ' + msg);
+		} catch (err) {
+		  console.log('Oops, unable to copy');
+		}
+	  
+		document.body.removeChild(textArea);
+	  }
+
 	render() {
 		const { emailAdress, adressCityValue, adressStreetValue, adressBlockValue } = this.props;
 		return (
@@ -68,7 +112,7 @@ export class ContactBox extends Component<propsType> {
 							<div className="contacts-email-container">
 								<TextForVideo text="e-mail" />
 								<span className="email-wrapper">
-									<TextEmailContact text={emailAdress} />
+									<TextEmailContact text={emailAdress} handleClick={this.handleClick} needRef />
 								</span>
 							</div>
 							<div className="contacts-adress">
@@ -94,7 +138,7 @@ export class ContactBox extends Component<propsType> {
 					<div className="contacts-additional-wrapper">
 						<div className="contacts-email-container">
 							<TextForVideo text="e-mail" />
-							<TextEmailContact text={emailAdress} />
+							<TextEmailContact text={emailAdress} handleClick={this.handleClick} needRef />
 						</div>
 						<div className="contacts-adress">
 							<TextForVideo text="адрес:" />
@@ -120,7 +164,7 @@ export class ContactBox extends Component<propsType> {
 					<div className="contacts-additional-wrapper">
 						<div className="contacts-email-container">
 							<TextForVideo text="e-mail" />
-							<TextEmailContact text={emailAdress} />
+							<TextEmailContact text={emailAdress} handleClick={this.handleClick} needRef />
 						</div>
 						<div className="contacts-adress">
 							<TextForVideo text="адрес:" />
