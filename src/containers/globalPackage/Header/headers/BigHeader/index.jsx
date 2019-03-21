@@ -1,5 +1,5 @@
 // @flow
-import React, {Component} from "react";
+import React, { PureComponent } from "react";
 import {
 	BoldParagraph,
 	SVGForPage,
@@ -13,22 +13,24 @@ import { UserBasketBox, UnderHeaderBox } from "../../../../boxes";
 import { getHeaderTitle, getSpecialClassForHeader, getClass } from "../../../../../helpers";
 import "./BigHeader.css";
 
-export class BigHeader extends Component {
+export class BigHeader extends PureComponent {
 	static defaultProps = {
-		page:'index-page'
-	}
+		page: "index-page",
+	};
 
 	state = {
-		searchInputOpened: false
-	}
+		searchInputOpened: false,
+	};
 
 	handleToggleInput = () => {
-		this.setState(prevState => ({searchInputOpened: !prevState.searchInputOpened}))
-	}
+		this.setState(prevState => ({ searchInputOpened: !prevState.searchInputOpened }));
+	};
 
-	render(){
-		const {searchInputOpened} = this.state
-		const {page} = this.props;
+	render() {
+		const { searchInputOpened } = this.state;
+		const { page } = this.props;
+		console.log("//////////////////////");
+		console.log("получил страницу ", page);
 		return (
 			<div
 				className={getSpecialClassForHeader({
@@ -48,9 +50,11 @@ export class BigHeader extends Component {
 					</div>
 					<div className="first-line-big-header__zoom-wrapper">
 						<div className="first-line-big-header__zoom-icon">
-							<InteractiveSVGIcon icon="zoom" handleClick={this.handleToggleInput}/>
+							<InteractiveSVGIcon icon="zoom" handleClick={this.handleToggleInput} />
 						</div>
-						<div className={getClass({initialClass:"first-line-big-header__search-input", active:searchInputOpened})}>
+						<div
+							className={getClass({ initialClass: "first-line-big-header__search-input", active: searchInputOpened })}
+						>
 							<SearchHeaderInput />
 						</div>
 					</div>

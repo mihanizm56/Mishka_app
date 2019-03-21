@@ -35,6 +35,9 @@
     }
     .video__photo-container{
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .photo-container__icon-and-title-wrapper{
@@ -48,7 +51,7 @@
         width: 130px;
     }
     .video__description-wrapper{
-        margin-top: 35px;
+        margin: 35px 0 35px 0;
         width: 80%;
     }
     .video-container__description{
