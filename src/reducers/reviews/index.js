@@ -19,7 +19,6 @@ const initialState = {
 			login: "@nasiwin",
 		},
 	],
-	index: 0,
 };
 
 export const reviews = (state = initialState, action) => {

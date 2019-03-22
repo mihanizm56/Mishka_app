@@ -3,7 +3,14 @@ import React from "react";
 import { InteractiveSVGIcon } from "../../../components";
 import "./ListButtonsBox.css";
 
-export const ListButtonsBox = ({ onNextClick, onPrevClick }) => {
+// type ListButtonsBoxPropTypes = {
+// 	onNextClick, onPrevClick
+// }
+
+export const ListButtonsBox = (props: ListButtonsBoxPropTypes) => {
+	const { onNextClick, onPrevClick } = props;
+	console.log("ListButtonsBox props");
+	console.log(props);
 	return (
 		<div className="list-buttons-container">
 			<div className="button-arrow_prev">

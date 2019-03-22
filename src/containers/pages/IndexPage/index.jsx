@@ -1,15 +1,20 @@
+// @flow
 import React from "react";
 import "./IndexPage.css";
-import { AboutBox, ReviewBox, ContactBox, WeeklyHitBox, HouseBox } from "../../boxes";
+import { AboutBox, ListReviewsBox, ContactBox, WeeklyHitBox, HouseBox } from "../../boxes";
 
-export const IndexPage = props => {
-	//console.log(props.match)
+type IndexPagePropTypes = {};
+
+export const IndexPage = (props: IndexPagePropTypes) => {
+	console.log("props in index page");
+	console.log(props);
+	const { reviews } = props;
 	return (
 		<div className="index-page-wrapper">
 			<HouseBox />
 			<WeeklyHitBox />
 			<AboutBox />
-			<ReviewBox />
+			<ListReviewsBox reviews={reviews} />
 			<ContactBox />
 		</div>
 	);
