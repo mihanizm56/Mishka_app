@@ -8,7 +8,7 @@ import {
 	changeRangeMin,
 	changeRangeMax,
 	selectFilter,
-	changeSearchField
+	changeSearchField,
 } from "../../actions";
 import { registerApp } from "../../helpers";
 import { SearchField } from "../../components";
@@ -62,7 +62,7 @@ const mapDispatchToProps = dispatch => {
 		},
 		changeSearchFilter(value) {
 			dispatch(changeSearchField(value));
-		}
+		},
 	};
 };
 
