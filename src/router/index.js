@@ -13,6 +13,7 @@ export const Router = (props: RouterPropTypes) => {
 	const { reviews } = props;
 	return (
 		<Switch>
+			{/* <IndexPageRoute exact path="/" /> */}
 			<Route exact path="/" render={() => <IndexPage reviews={reviews} />} />
 			<Route exact path="/index" render={() => <IndexPage />} />
 			<Route
