@@ -7,6 +7,7 @@ export const MainWrapper = props => {
 	const { router, ...restProps } = props;
 	//console.log(props);
 	//console.log(router);
+	//// поменять название Router на MainLayout
 	return (
 		<div className="main-wrapper">
 			<Header route={router} />
