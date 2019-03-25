@@ -1,5 +1,6 @@
+// @flow
 import React from "react";
-import { Router } from "../../../router";
+import { MainLayout } from "../../../router/MainLayout";
 import { Footer, Header } from "../";
 import "./MainWrapper.css";
 
@@ -7,11 +8,10 @@ export const MainWrapper = props => {
 	const { router, ...restProps } = props;
 	//console.log(props);
 	//console.log(router);
-	//// поменять название Router на MainLayout
 	return (
 		<div className="main-wrapper">
 			<Header route={router} />
-			<Router {...restProps} />
+			<MainLayout {...restProps} />
 			<Footer />
 		</div>
 	);

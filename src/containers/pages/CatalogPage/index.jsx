@@ -6,11 +6,14 @@ import { ButtonForOffer } from "../../../components";
 import "./CatalogPage.css";
 
 export class CatalogPage extends Component {
+	componentDidMount() {}
 
 	render() {
 		const { changeMinFilterValue, changeMaxFilterValue, itemsFilters, shopItems, changeTypeOfSort } = this.props;
 		//console.log("TEST ROUTER MATCH");
 		//console.log(window.history);
+		console.log("test CatalogPage props");
+		console.log(this.props);
 		return (
 			<div className="catalog-wrapper">
 				{/* <FooterTextLogo text="Hello CatalogPage !" /> */}

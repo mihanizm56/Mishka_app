@@ -8,13 +8,13 @@ import {
 	appIsLoading,
 	appHasLoaded,
 	changeSelectedFilter,
-	changeSearchFilter
+	changeSearchFilter,
 } from "../constants";
 import firebase from "firebase";
 
 export type ACReturns = { type: string, payload: string };
 
-export function loginCorrect() {
+export function loginCorrectAction() {
 	console.log("test loginSuccess");
 	localStorage.login = "true";
 	return {
@@ -22,14 +22,14 @@ export function loginCorrect() {
 	};
 }
 
-export function loadingApp() {
+export function loadingAppAction() {
 	console.log("test loadingApp");
 	return {
 		type: appIsLoading,
 	};
 }
 
-export function selectFilter(value) {
+export function selectFilterAction(value) {
 	console.log("test selectedFilter");
 	return {
 		type: changeSelectedFilter,
@@ -37,14 +37,14 @@ export function selectFilter(value) {
 	};
 }
 
-export function loadingAppDone() {
+export function loadingAppDoneAction() {
 	console.log("test loadingAppDone");
 	return {
 		type: appHasLoaded,
 	};
 }
 
-export function signOutLocal() {
+export function signOutLocalAction() {
 	console.log("test signOut");
 	localStorage.login = "";
 	return {
@@ -52,34 +52,34 @@ export function signOutLocal() {
 	};
 }
 
-export function changeRangeMin(number) {
+export function changeRangeMinAction(number) {
 	return {
 		type: changeRangeMinValue,
 		payload: number,
 	};
 }
 
-export function changeRangeMax(number) {
+export function changeRangeMaxAction(number) {
 	return {
 		type: changeRangeMaxValue,
 		payload: number,
 	};
 }
 
-export function changeSearchField(value) {
+export function changeSearchFieldAction(value) {
 	return {
 		type: changeSearchFilter,
 		payload: value,
 	};
 }
 
-export function signOutFirebase() {
+export function signOutFirebaseAction() {
 	return dispatch => {
 		firebase
 			.auth()
 			.signOut()
 			.then(() => {
-				dispatch(signOutLocal());
+				dispatch(signOutLocalAction());
 				console.log("signOutUser done");
 			})
 			.catch(function(error) {
@@ -88,7 +88,7 @@ export function signOutFirebase() {
 	};
 }
 
-export function loginRequest(email, password) {
+export function loginRequestAction(email, password) {
 	console.log("check loginRequest");
 	console.log(`email = ${email}, password = ${password}`);
 	if (email !== "" && password !== "") {
@@ -96,10 +96,10 @@ export function loginRequest(email, password) {
 			return firebase
 				.auth()
 				.signInWithEmailAndPassword(email, password)
-				.then(() => dispatch(loginCorrect()))
-				.then(() => dispatch(loadingAppDone()))
+				.then(() => dispatch(loginCorrectAction()))
+				.then(() => dispatch(loadingAppDoneAction()))
 				.catch(error => {
-					dispatch(loadingAppDone());
+					dispatch(loadingAppDoneAction());
 					alert(error.message);
 				});
 		};

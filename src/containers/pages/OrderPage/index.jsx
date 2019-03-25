@@ -19,6 +19,22 @@ const backgroundColors = {
 };
 
 export class OrderPage extends Component {
+	static defaultProps = {
+		arrayOfCheckValues: [
+			{ title: "Белый" },
+			{ title: "«Тиффани»" },
+			{ title: "Розовый" },
+			{ title: "Серый" },
+			{ title: "Черный" },
+			{ title: "Оранжевый" },
+		],
+	};
+
+	componentDidMount() {
+		console.log("test OrderPage props");
+		console.log(this.props);
+	}
+
 	render() {
 		const { arrayOfCheckValues } = this.props;
 		return (
@@ -146,19 +162,3 @@ export class OrderPage extends Component {
 		);
 	}
 }
-
-/* <CheckBox />
-				<RadioBox />
-				<FormLabelParagraph text="фио" />
-				<FormTextInputField /> */
-
-OrderPage.defaultProps = {
-	arrayOfCheckValues: [
-		{ title: "Белый" },
-		{ title: "«Тиффани»" },
-		{ title: "Розовый" },
-		{ title: "Серый" },
-		{ title: "Черный" },
-		{ title: "Оранжевый" },
-	],
-};

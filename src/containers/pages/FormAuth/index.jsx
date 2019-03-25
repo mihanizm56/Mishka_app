@@ -5,7 +5,7 @@ import { Redirect } from "react-router-dom";
 
 class FormAuthComponent extends Component {
 	signInUser = ({ email, password }) => {
-		const { signInFunc, appToLoad } = this.props;
+		const { signInFunc, appToLoad } = this.props; ///////////////переделать и сделать асинхронным
 		appToLoad();
 		signInFunc(email, password);
 	};
@@ -29,7 +29,7 @@ class FormAuthComponent extends Component {
 	}
 }
 
-export default reduxForm({
+export const FormAuth = reduxForm({
 	validate: ({ email, password }) => {
 		const errors = {};
 		if (!email || email === "") errors.email = "Failed email";
