@@ -18,7 +18,7 @@ const customButtonStyle = {
 };
 
 export const ButtonForWeeklyHitBox = ({ callback }: ButtonForWeeklyHitBoxType) => {
-	return <ButtonVariable text="Заказать" customStyle={customButtonStyle} />;
+	return <ButtonVariable text="Заказать" callback={callback} customStyle={customButtonStyle} />;
 };
 
 ButtonForWeeklyHitBox.defaultProps = {

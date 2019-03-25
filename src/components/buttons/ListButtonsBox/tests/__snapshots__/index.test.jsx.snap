@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonWriteReview test test render snapshot test without props 1`] = `
+<div
+  className="list-buttons-container"
+>
+  <div
+    className="button-arrow_prev"
+  >
+    <InteractiveSVGIcon
+      handleClick={[Function]}
+      icon="arrow"
+    />
+  </div>
+  <div
+    className="button-arrow_next"
+  >
+    <InteractiveSVGIcon
+      handleClick={[Function]}
+      icon="arrow"
+    />
+  </div>
+</div>
+`;

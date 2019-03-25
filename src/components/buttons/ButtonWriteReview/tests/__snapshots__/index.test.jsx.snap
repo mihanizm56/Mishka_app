@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonWriteReview test test render snapshot test without props 1`] = `
+<div
+  className="button-write-wrapper"
+  onClick={[Function]}
+>
+  <TextForButton
+    text="НАПИСАТЬ"
+  />
+</div>
+`;

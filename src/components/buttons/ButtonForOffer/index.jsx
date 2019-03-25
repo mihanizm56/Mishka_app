@@ -5,6 +5,7 @@ import "./ButtonForOffer.css";
 
 type ButtonForOfferType = {
 	callback: () => void,
+	text: string
 };
 
 export const ButtonForOffer = ({ callback, text }: ButtonForOfferType) => {

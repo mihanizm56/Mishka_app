@@ -22,8 +22,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "test-cover": "react-scripts test --coverage",
+    "test:run": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage",
     "precommit": "lint-staged",
     "lint": "node_modules/.bin/eslint src/",
     "flow": "flow"

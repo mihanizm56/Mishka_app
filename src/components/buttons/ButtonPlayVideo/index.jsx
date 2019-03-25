@@ -11,7 +11,7 @@ import {
 } from "../../../constants";
 
 type ButtonPlayVideoType = {
-	callback: () => void,
+	handleClick: () => void,
 };
 
 export const ButtonPlayVideo = ({ handleClick }: ButtonPlayVideoType) => {
@@ -31,5 +31,5 @@ export const ButtonPlayVideo = ({ handleClick }: ButtonPlayVideoType) => {
 };
 
 ButtonPlayVideo.defaultProps = {
-	callback: () => console.log("click on ButtonPlayVideo"),
+	handleClick: () => console.log("click on ButtonPlayVideo"),
 };
