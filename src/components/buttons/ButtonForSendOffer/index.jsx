@@ -16,5 +16,5 @@ export const ButtonForSendOffer = ({ callback }: ButtonForSendOfferType) => {
 };
 
 ButtonForSendOffer.defaultProps = {
-	callback: () => console.log("default callback ButtonForSendOffer"),
+	callback: () => {},
 };

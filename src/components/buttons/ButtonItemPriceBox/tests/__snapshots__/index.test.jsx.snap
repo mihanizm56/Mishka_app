@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonItemPriceBox test test render render snap without any props 1`] = `
+<InteractiveSVGIcon
+  handleClick={[Function]}
+  icon="basket"
+/>
+`;

@@ -5,7 +5,7 @@ import "./ButtonForOffer.css";
 
 type ButtonForOfferType = {
 	callback: () => void,
-	text: string
+	text: string,
 };
 
 export const ButtonForOffer = ({ callback, text }: ButtonForOfferType) => {
@@ -17,6 +17,6 @@ export const ButtonForOffer = ({ callback, text }: ButtonForOfferType) => {
 };
 
 ButtonForOffer.defaultProps = {
-	callback: () => console.log("default callback ButtonForOffer"),
+	callback: () => {},
 	text: "СДЕЛАТЬ ЗАКАЗ",
 };

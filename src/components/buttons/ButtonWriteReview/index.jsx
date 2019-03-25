@@ -16,5 +16,5 @@ export const ButtonWriteReview = ({ callback }: ButtonWriteReviewType) => {
 };
 
 ButtonWriteReview.defaultProps = {
-	callback: () => console.log("test click on ButtonWriteReview"),
+	callback: () => {},
 };

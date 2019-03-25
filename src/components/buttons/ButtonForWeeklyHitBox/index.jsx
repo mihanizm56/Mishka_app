@@ -22,5 +22,5 @@ export const ButtonForWeeklyHitBox = ({ callback }: ButtonForWeeklyHitBoxType) =
 };
 
 ButtonForWeeklyHitBox.defaultProps = {
-	callback: () => console.log("click on ButtonForWeeklyHitBox"),
+	callback: () => {},
 };

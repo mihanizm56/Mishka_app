@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonForWeeklyHitBox test test render render snap without any props 1`] = `
+<ButtonVariable
+  callback={[Function]}
+  customStyle={
+    Object {
+      "height": "50px",
+      "marginTop": "35px",
+      "width": "98%",
+    }
+  }
+  text="Заказать"
+/>
+`;

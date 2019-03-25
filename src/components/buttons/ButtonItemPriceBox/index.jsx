@@ -11,5 +11,5 @@ export const ButtonItemPriceBox = ({ callback }: ButtonItemPriceBoxType) => {
 };
 
 ButtonItemPriceBox.defaultProps = {
-	callback: () => console.log("click on ButtonItemPriceBox"),
+	callback: () => {},
 };

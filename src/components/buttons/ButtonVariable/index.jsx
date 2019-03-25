@@ -23,6 +23,6 @@ export const ButtonVariable = ({ callback, text, customStyle }: ButtonVariableTy
 };
 
 ButtonVariable.defaultProps = {
-	callback: () => console.log("test click on ButtonVariable"),
+	callback: () => {},
 	text: "defaultText",
 };
