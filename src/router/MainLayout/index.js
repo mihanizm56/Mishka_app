@@ -1,9 +1,7 @@
 // @flow
 import React from "react";
 import { Switch } from "react-router-dom";
-// import { CatalogPage, HiddenPage, IndexPage, OrderPage, ErrorPage } from "../../containers";
 import { AuthPageRoute, CatalogPageRoute, ErrorPageRoute, IndexPageRoute, OrderPageRoute } from "../";
-// import FormAuth from "../../containers/pages/FormAuth";
 
 type MainLayoutPropTypes = {};
 
