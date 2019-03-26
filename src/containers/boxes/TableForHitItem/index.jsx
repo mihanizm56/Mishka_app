@@ -1,7 +1,7 @@
 // @flow
 import React from "react";
 import MediaQuery from "react-responsive";
-import { TextForVideo } from "../../../components";
+import { OpenSansText } from "../../../components";
 import {
 	BIG_MEDIA_SIZE,
 	MIDDLE_MEDIA_SIZE_FROM,
@@ -20,10 +20,10 @@ export const TableForHitItem = ({ characteristics }) => {
 						return (
 							<div className="table-row" key={index}>
 								<div className="table-row__block-name">
-									<TextForVideo text={item.name} />
+									<OpenSansText classname='text-video' text={item.name} />
 								</div>
 								<div className="table-row__block-value">
-									<TextForVideo text={item.value} />
+									<OpenSansText classname='text-video' text={item.value} />
 								</div>
 							</div>
 						);
@@ -36,10 +36,10 @@ export const TableForHitItem = ({ characteristics }) => {
 						return (
 							<div className="table-row" key={index}>
 								<div className="table-row__block-name">
-									<TextForVideo text={item.name} />
+									<OpenSansText classname='text-video' text={item.name} />
 								</div>
 								<div className="table-row__block-value">
-									<TextForVideo text={item.value} />
+									<OpenSansText classname='text-video' text={item.value} />
 								</div>
 							</div>
 						);
@@ -52,10 +52,10 @@ export const TableForHitItem = ({ characteristics }) => {
 						return (
 							<div className="table-row" key={index}>
 								<div className="table-row__block-name">
-									<TextForVideo text={item.name} />
+									<OpenSansText classname='text-video' text={item.name} />
 								</div>
 								<div className="table-row__block-value">
-									<TextForVideo text={item.value} />
+									<OpenSansText classname='text-video' text={item.value} />
 								</div>
 							</div>
 						);

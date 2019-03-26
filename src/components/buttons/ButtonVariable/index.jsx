@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { TextForButton } from "../../../components";
+import { OpenSansText} from "../../../components";
 import "./ButtonVariable.css";
 
 type styleType = {
@@ -17,7 +17,7 @@ type ButtonVariableType = {
 export const ButtonVariable = ({ callback, text, customStyle }: ButtonVariableType) => {
 	return (
 		<div className="button-variable-wrapper" onClick={callback} style={{ ...customStyle }}>
-			<TextForButton text={text} />
+			<OpenSansText classname='text-button' bold  text={text} />
 		</div>
 	);
 };

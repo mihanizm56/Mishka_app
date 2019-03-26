@@ -1,12 +1,28 @@
 // @flow
 import React, { Node } from "react";
 import "./VerdanaText.css";
-import { getClass, setInlineStyle } from '../../../../helpers'
+import { getClass } from "../../../../helpers";
 
 type VerdanaTextProps = {
-    text: string,
+    text?: string,
+    fontColor?: string,
+    bold?: boolean,
+    fontSize?: string,
+    additionalClass?: string,
+    hovered?: boolean,
 };
 
-export const VerdanaText = ({ text, fontColor, bold, fontSize, additionalClass, hovered }: VerdanaTextProps): Node => (
-    <p style={setInlineStyle({ fontColor, fontSize })} className={getClass({ initialClass: 'open-sans-text', bold: bold, hovered: hovered, additionalClass })} >{text}</p>
-);
+export const VerdanaText = ({
+    text,
+    bold,
+    inlineStyles,
+    additionalClass,
+    hovered,
+}: VerdanaTextProps): Node => (
+        <p
+            style={inlineStyles}
+            className={getClass({ initialClass: "open-sans-text", bold: bold, hovered: hovered, additionalClass })}
+        >
+            {text}
+        </p>
+    );

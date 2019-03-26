@@ -18,12 +18,13 @@ export const getClass = ({
 	small,
 	bold,
 	hovered,
+	ligth,
 	additionalClass
 }: getClassParametersType): string => {
 	let resultClass = initialClass;
 
 	if (additionalClass) {
-		resultClass += ` ${additionalClass}`;
+		resultClass += ` ${initialClass}--${additionalClass}`;
 	}
 
 	if (error) {
@@ -60,6 +61,10 @@ export const getClass = ({
 
 	if (hovered) {
 		resultClass += ` ${initialClass}--hovered`;
+	}
+
+	if (ligth) {
+		resultClass += ` ${initialClass}--ligth`;
 	}
 
 	return resultClass;

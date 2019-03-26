@@ -5,7 +5,7 @@ exports[`ButtonWriteReview test test render snapshot test without props 1`] = `
   className="button-write-wrapper"
   onClick={[Function]}
 >
-  <TextForButton
+  <OpenSansText classname='text-button' bold 
     text="НАПИСАТЬ"
   />
 </div>

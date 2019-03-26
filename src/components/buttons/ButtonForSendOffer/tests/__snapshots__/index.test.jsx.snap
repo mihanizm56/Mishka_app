@@ -5,7 +5,7 @@ exports[`ButtonForSendOffer test test render render snap without any props 1`] =
   className="button-send-wrapper"
   onClick={[Function]}
 >
-  <TextForButton
+  <OpenSansText classname='text-button' bold 
     text="ОТПРАВИТЬ ЗАКАЗ"
   />
 </div>

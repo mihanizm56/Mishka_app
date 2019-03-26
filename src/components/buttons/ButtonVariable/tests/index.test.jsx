@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import { ButtonVariable } from "../";
-import { TextForButton } from "../../../texts";
+import { OpenSansText} from "../../../texts";
 
 describe("ButtonVariable test", () => {
 	const mockClick = jest.fn();

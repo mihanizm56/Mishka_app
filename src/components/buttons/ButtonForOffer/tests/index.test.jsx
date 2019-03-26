@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
 import { ButtonForOffer } from "../";
-import { TextForButton } from "../../../texts";
+import { OpenSansText} from "../../../texts";
 
 describe("ButtonForOffer test", () => {
 	const testString = "test string";

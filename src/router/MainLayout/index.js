@@ -12,7 +12,7 @@ export const MainLayout = (props: MainLayoutPropTypes) => {
 		<Switch>
 			<IndexPageRoute exact path="/" />
 			<IndexPageRoute path="/index" />
-			<OrderPageRoute path="/order" />
+			<OrderPageRoute path="/orderpage" />
 			<CatalogPageRoute path="/catalog" />
 			<AuthPageRoute path="/auth" />
 			<ErrorPageRoute />

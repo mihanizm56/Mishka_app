@@ -1,7 +1,7 @@
 // @flow
 import React from "react";
 import MediaQuery from "react-responsive";
-import { ImageForPage, SVGForPage, MainTitle, TextForVideo, FooterTextLogo, Paragraph } from "../../../components";
+import { ImageForPage, SVGForPage, MainTitle, OpenSansText, FooterTextLogo, Paragraph } from "../../../components";
 import { ButtonForWeeklyHitBox } from "../../../components";
 import { TableForHitItem } from "../";
 import { configForWeeklyHitBoxImage, configForZigzagImage } from "./constants";
@@ -28,7 +28,7 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 					</div>
 					<div className="hit-box-text-container">
 						<div className="hit-box-text-wrapper">
-							<TextForVideo text={descriptionOfItem} />
+							<OpenSansText classname='text-video' text={descriptionOfItem} />
 							<TableForHitItem />
 							<FooterTextLogo text={`Цена: ${price}`} />
 							<ButtonForWeeklyHitBox />
@@ -48,7 +48,7 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 					</div>
 					<div className="hit-box-text-container">
 						<div className="hit-box-text-wrapper">
-							<TextForVideo text={descriptionOfItem} />
+							<OpenSansText classname='text-video' text={descriptionOfItem} />
 							<TableForHitItem />
 							<FooterTextLogo text={`Цена: ${price}`} />
 							<ButtonForWeeklyHitBox />
@@ -67,7 +67,7 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 					<Paragraph text="Товар недели" className="green-paragraph-index-small" />
 				</div>
 				<div className="hit-box-text-wrapper">
-					<TextForVideo text={descriptionOfItem} />
+					<OpenSansText classname='text-video' text={descriptionOfItem} />
 					<TableForHitItem />
 				</div>
 				<div className="small-hit-image-wrapper">

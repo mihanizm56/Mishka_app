@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { TextForButton } from "../../../components";
+import { OpenSansText} from "../../../components";
 import "./ButtonWriteReview.css";
 
 type ButtonWriteReviewType = {
@@ -10,7 +10,7 @@ type ButtonWriteReviewType = {
 export const ButtonWriteReview = ({ callback }: ButtonWriteReviewType) => {
 	return (
 		<div className="button-write-wrapper" onClick={callback}>
-			<TextForButton text="НАПИСАТЬ" />
+			<OpenSansText classname='text-button' bold  text="НАПИСАТЬ" />
 		</div>
 	);
 };

@@ -4,7 +4,7 @@ import MediaQuery from "react-responsive";
 import {
 	ImageForPage,
 	FooterTextLogo as DescriptionVideoBoxTitle,
-	TextForVideo,
+	OpenSansText,
 	SVGForPage,
 } from "../../../components";
 import { ButtonForOffer, ButtonPlayVideo, VideoPlayerComponent } from "../../../components";
@@ -34,7 +34,7 @@ export const VideoBox = props => {
 								<DescriptionVideoBoxTitle text="Процесс производства" />
 							</div>
 							<div className="video-container__description">
-								<TextForVideo text="По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары." />
+								<OpenSansText classname='text-video' text="По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары." />
 							</div>
 							<div className="video-container__button">
 								<ButtonForOffer />
@@ -55,7 +55,7 @@ export const VideoBox = props => {
 								<DescriptionVideoBoxTitle text="Процесс производства" />
 							</div>
 							<div className="video-container__description">
-								<TextForVideo text="По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары." />
+								<OpenSansText classname='text-video' text="По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары." />
 							</div>
 							<div className="video-container__button">
 								<ButtonForOffer />
@@ -81,7 +81,7 @@ export const VideoBox = props => {
 					</div>
 					<div className="video__description-wrapper">
 						<div className="video-container__description">
-							<TextForVideo text="По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары." />
+							<OpenSansText classname='text-video' text="По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары." />
 						</div>
 						<div className="video-container__button">
 							<ButtonForOffer />

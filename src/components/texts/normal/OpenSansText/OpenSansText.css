@@ -1,27 +1,89 @@
+
+/* default class */
+
 .open-sans-text{
-    font-size: 16px;
+    font-size: 10px;
     font-family: "OpenSans";
-    color: rgb(0, 0, 0);
+    color: red;
     margin: 0;
     padding: 0;
 }
 
-/* .open-sans-text--bold{
+.open-sans-text--bold{
     font-family: "OpenSans-Bold";
 }
 
-.form-additional-paragraph{
+.open-sans-text--ligth{
+    font-family: "OpenSans-Light";
+}
+
+/* FormAdditionalParagraph */
+
+.open-sans-text--form-additional-paragraph{
     font-size: 16px;
     color: rgb(68, 68, 68);
     line-height: 1.875;
 }
 
-.title-form-label-paragraph{
+/* TextEmailContact */
+
+.open-sans-text--text-email-contact{
     font-size: 16px;
-    font-family: "OpenSans-Bold";
+    color: rgb(68, 68, 68);
+    line-height: 1.875;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.open-sans-text--text-email-contact:hover {
+    color: #77D2C4;
+}
+
+@media (max-width: 767px) {
+    .open-sans-text--text-email-contact{
+        font-size: 15px;
+        line-height: 1.5;
+    }
+}
+
+/* TextForItems */
+
+.open-sans-text--text-card{
+    font-size: 14px;
+    color: rgb(68, 68, 68);
+    line-height: 2;
+}
+
+/* TextForVideo */
+
+.open-sans-text--text-video{
+    font-size: 16px;
+    color: rgb(68, 68, 68);
+    line-height: 1.875;
+}
+
+@media (max-width: 767px) {
+    .text-video{
+        font-size: 15px;
+        line-height: 1.5;
+    }
+}
+
+
+/* FormLabelParagraph */
+
+.open-sans-text--title-form-label-paragraph{
+    font-size: 16px;
     color: rgb(99, 209, 187);
     text-transform: uppercase;
     line-height: 1;
-    margin: 0;
-    padding: 0;
-} */
+}
+
+/* TextForButton */
+
+.open-sans-text--text-button{
+    font-size: 16px;
+    color: rgb(68, 68, 68);
+    text-transform: uppercase;
+    line-height: 1;
+}

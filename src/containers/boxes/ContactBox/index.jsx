@@ -4,9 +4,8 @@ import MediaQuery from "react-responsive";
 import {
 	SVGForPage,
 	MainTitle,
-	TextForVideo,
+	OpenSansText,
 	ImageForPage,
-	TextEmailContact,
 	ButtonForOffer,
 } from "../../../components";
 // import {MapContainer} from '../'
@@ -110,17 +109,18 @@ export class ContactBox extends Component<propsType> {
 								<MainTitle text="Контакты" />
 							</div>
 							<div className="contacts-email-container">
-								<TextForVideo text="e-mail" />
+								<OpenSansText classname='text-video' text="e-mail" />
 								<span className="email-wrapper">
-									<TextEmailContact text={emailAdress} handleClick={this.handleClick} needRef />
+									<OpenSansText classname="text-email-contact" text={emailAdress} handleClick={this.handleClick} needRef />
+
 								</span>
 							</div>
 							<div className="contacts-adress">
-								<TextForVideo text="адрес:" />
+								<OpenSansText classname='text-video' text="адрес:" />
 								<div className="contacts-adress__text-value">
-									<TextForVideo text={adressCityValue} />
-									<TextForVideo text={adressStreetValue} />
-									<TextForVideo text={adressBlockValue} />
+									<OpenSansText classname='text-video' text={adressCityValue} />
+									<OpenSansText classname='text-video' text={adressStreetValue} />
+									<OpenSansText classname='text-video' text={adressBlockValue} />
 								</div>
 							</div>
 							<div className="contacts-button">
@@ -137,15 +137,15 @@ export class ContactBox extends Component<propsType> {
 					</div>
 					<div className="contacts-additional-wrapper">
 						<div className="contacts-email-container">
-							<TextForVideo text="e-mail" />
-							<TextEmailContact text={emailAdress} handleClick={this.handleClick} needRef />
+							<OpenSansText classname='text-video' text="e-mail" />
+							<OpenSansText classname="text-email-contact" text={emailAdress} handleClick={this.handleClick} needRef />
 						</div>
 						<div className="contacts-adress">
-							<TextForVideo text="адрес:" />
+							<OpenSansText classname='text-video' text="адрес:" />
 							<div className="contacts-adress__text-value">
-								<TextForVideo text={adressCityValue} />
-								<TextForVideo text={adressStreetValue} />
-								<TextForVideo text={adressBlockValue} />
+								<OpenSansText classname='text-video' text={adressCityValue} />
+								<OpenSansText classname='text-video' text={adressStreetValue} />
+								<OpenSansText classname='text-video' text={adressBlockValue} />
 							</div>
 						</div>
 					</div>
@@ -163,15 +163,15 @@ export class ContactBox extends Component<propsType> {
 					</div>
 					<div className="contacts-additional-wrapper">
 						<div className="contacts-email-container">
-							<TextForVideo text="e-mail" />
-							<TextEmailContact text={emailAdress} handleClick={this.handleClick} needRef />
+							<OpenSansText classname='text-video' text="e-mail" />
+							<OpenSansText classname="text-email-contact" text={emailAdress} handleClick={this.handleClick} needRef />
 						</div>
 						<div className="contacts-adress">
-							<TextForVideo text="адрес:" />
+							<OpenSansText classname='text-video' text="адрес:" />
 							<div className="contacts-adress__text-value">
-								<TextForVideo text={adressCityValue} />
-								<TextForVideo text={adressStreetValue} />
-								<TextForVideo text={adressBlockValue} />
+								<OpenSansText classname='text-video' text={adressCityValue} />
+								<OpenSansText classname='text-video' text={adressStreetValue} />
+								<OpenSansText classname='text-video' text={adressBlockValue} />
 							</div>
 						</div>
 					</div>

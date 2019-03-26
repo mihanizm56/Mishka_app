@@ -15,7 +15,7 @@
     background-color: #444444;
 }
 
-.button-send-wrapper:hover .text-button{
+.button-send-wrapper:hover .open-sans-text--text-button{
     color: #fff;
 }
 

@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { TextForItems } from "../../../components";
+import { OpenSansText } from "../../../components";
 
 type ItemDescriptionBoxType = {
 	sizes: Array<string>,
@@ -10,7 +10,7 @@ type ItemDescriptionBoxType = {
 export const ItemDescriptionBox = ({ sizes, values }: ItemDescriptionBoxType) => {
 	return (
 		<div className="item-card__description-box">
-			<TextForItems text={`${sizes[0]} ${values[0]}, ${sizes[1]} ${values[1]}`} />
+			<OpenSansText classname='text-card' text={`${sizes[0]} ${values[0]}, ${sizes[1]} ${values[1]}`} />
 		</div>
 	);
 };

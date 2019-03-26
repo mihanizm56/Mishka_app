@@ -7,10 +7,10 @@ type FormLabelParagraphProps = {
 	text: string,
 };
 
-export const FormLabelParagraph = ({ text }: FormLabelParagraphProps): Node => (
+export const OpenSansText = ({ text }: FormLabelParagraphProps): Node => (
 	<Paragraph text={text} className="title-form-label-paragraph" />
 );
 
-FormLabelParagraph.defaultProps = {
+OpenSansText.defaultProps = {
 	text: "default form title label",
 };

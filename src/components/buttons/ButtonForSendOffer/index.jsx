@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { TextForButton } from "../../../components";
+import { OpenSansText} from "../../../components";
 import "./ButtonForSendOffer.css";
 
 type ButtonForSendOfferType = {
@@ -10,7 +10,7 @@ type ButtonForSendOfferType = {
 export const ButtonForSendOffer = ({ callback }: ButtonForSendOfferType) => {
 	return (
 		<div className="button-send-wrapper" onClick={callback}>
-			<TextForButton text="ОТПРАВИТЬ ЗАКАЗ" />
+			<OpenSansText classname='text-button' bold text="ОТПРАВИТЬ ЗАКАЗ" />
 		</div>
 	);
 };

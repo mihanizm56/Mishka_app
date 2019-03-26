@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import MediaQuery from "react-responsive";
-import { FormLabelParagraph, TextForVideo, TextAreaFormComponent, FormAdditionalParagraph } from "../../../components";
+import { FormLabelParagraph, OpenSansText, TextAreaFormComponent, ButtonForSendOffer } from "../../../components";
 import { FormTextInputField } from "../../cards";
 import {
 	BIG_MEDIA_SIZE,
@@ -9,7 +9,6 @@ import {
 	SMALL_MEDIA_SIZE_FROM,
 	SMALL_MEDIA_SIZE_TO,
 } from "../../../constants";
-import { ButtonForSendOffer } from "../../../components";
 import { CheckBox, RadioBox } from "../../boxes";
 import "./OrderPage.css";
 
@@ -41,12 +40,12 @@ export class OrderPage extends Component {
 			<div className="order-page-wrapper">
 				<div className="order-page-container">
 					<div className="order-page__text">
-						<TextForVideo text="Мы будем рады воплотить в жизнь ваши пожелания!" />
-						<TextForVideo text="Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали." />
+						<OpenSansText classname='text-video' text="Мы будем рады воплотить в жизнь ваши пожелания!" />
+						<OpenSansText classname='text-video' text="Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали." />
 					</div>
 					<div className="order-page-radio-container">
 						<div className="radio-container__title">
-							<FormLabelParagraph text="тип" />
+							<OpenSansText classname='title-form-label-paragraph' bold text="тип" />
 						</div>
 						<div className="radio-container__buttons">
 							<RadioBox text="Аксессуар для интерьера" />
@@ -61,7 +60,7 @@ export class OrderPage extends Component {
 							<div className="background-grey-container background-grey-container__check-container background-grey-container__check-container--middle" />
 						</MediaQuery>
 						<div className="check-container__title">
-							<FormLabelParagraph text="цвет" />
+							<OpenSansText classname='title-form-label-paragraph' bold text="цвет" />
 						</div>
 						<div className="check-container__buttons">
 							<MediaQuery minWidth={BIG_MEDIA_SIZE}>
@@ -104,7 +103,7 @@ export class OrderPage extends Component {
 					</div>
 					<div className="order-page-name-container">
 						<div className="order-page-name-container__title">
-							<FormLabelParagraph text="фио" />
+							<OpenSansText classname='title-form-label-paragraph' bold text="фио" />
 						</div>
 						<div className="order-page-name-container__fields">
 							<FormTextInputField />
@@ -121,7 +120,7 @@ export class OrderPage extends Component {
 						</MediaQuery>
 						<div className="contact-fields-first-field">
 							<div className="contact-fields-first-field__title">
-								<FormLabelParagraph text="тел" />
+								<OpenSansText classname='title-form-label-paragraph' bold text="тел" />
 							</div>
 							<div className="contact-fields-first-field__fields">
 								<FormTextInputField icon="phone" noTitle noMarginTop backgroundColor={backgroundColors.grey} />
@@ -129,7 +128,7 @@ export class OrderPage extends Component {
 						</div>
 						<div className="contact-fields-second-field">
 							<div className="contact-fields-second-field__title">
-								<FormLabelParagraph text="e-mail" />
+								<OpenSansText classname='title-form-label-paragraph' bold text="e-mail" />
 							</div>
 							<div className="contact-fields-second-field__fields">
 								<FormTextInputField icon="mail" noTitle noMarginTop backgroundColor={backgroundColors.grey} />
@@ -138,7 +137,7 @@ export class OrderPage extends Component {
 					</div>
 					<div className="order-page-textarea-container">
 						<div className="order-page-textarea-container__title">
-							<FormLabelParagraph text="доп	" />
+							<OpenSansText classname='title-form-label-paragraph' bold text="доп	" />
 						</div>
 						<div className="order-page-textarea-container__fields">
 							<TextAreaFormComponent />
@@ -147,11 +146,11 @@ export class OrderPage extends Component {
 					<div className="order-page-send-container">
 						<MediaQuery minWidth={BIG_MEDIA_SIZE}>
 							<ButtonForSendOffer />
-							<FormAdditionalParagraph />
+							<OpenSansText classname='form-additional-paragraph' />
 						</MediaQuery>
 						<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 							<ButtonForSendOffer />
-							<FormAdditionalParagraph />
+							<OpenSansText classname='form-additional-paragraph' />
 						</MediaQuery>
 						<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
 							<ButtonForSendOffer />

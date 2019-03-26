@@ -14,11 +14,11 @@
     background-color: #444444;
 }
 
-.button-offer-wrapper:hover .text-button{
+.button-offer-wrapper:hover .open-sans-text--text-button{
     color: #fff;
 }
 
-.button-offer-wrapper:active .text-button{
+.button-offer-wrapper:active .open-sans-text--text-button{
     color: #fff;
     opacity: 0.3;
 }
