@@ -1,0 +1,27 @@
+.open-sans-text{
+    font-size: 16px;
+    font-family: "OpenSans";
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+
+/* .open-sans-text--bold{
+    font-family: "OpenSans-Bold";
+}
+
+.form-additional-paragraph{
+    font-size: 16px;
+    color: rgb(68, 68, 68);
+    line-height: 1.875;
+}
+
+.title-form-label-paragraph{
+    font-size: 16px;
+    font-family: "OpenSans-Bold";
+    color: rgb(99, 209, 187);
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+} */

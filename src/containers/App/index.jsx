@@ -4,6 +4,9 @@ import { registerApp } from "../../helpers";
 import { MainWrapper } from "..";
 import "./App.css";
 
+
+import {OpenSansText} from '../../components'
+
 class AppContainer extends Component {
 	componentDidMount() {
 		registerApp();
@@ -17,9 +20,10 @@ class AppContainer extends Component {
 		const userIsLoggedIn = loginState.login || localStorage.login === "true";
 		return (
 			<div className="global-wrapper">
-				<MainWrapper userIsLoggedIn={userIsLoggedIn} router={router} />
+				{/* <MainWrapper userIsLoggedIn={userIsLoggedIn} router={router} /> */}
 				{/* <SearchField callback={changeSearchFilter} /> */}
 				{/* <button onClick={() => userIsLoggedIn && userSignOut()}>Выйти</button> */}
+				<OpenSansText text='test text' fontSize='40px' bold fontColor='red' additionalClass='add class'/>
 			</div>
 		);
 	}
