@@ -45,7 +45,7 @@ export class SmallHeader extends Component {
 			<div className={getClass({ initialClass: "first-line-small-header__search-input", active: searchInputOpened })}>
 				<SearchHeaderInput />
 			</div>
-			: this.getLabelComponent("Поиск по сайту")
+			: <VerdanaText text='Поиск по сайту' bold classname='bold-paragraph'/>
 	}
 
 	showSmallMenu = (searchInputOpened) => {
