@@ -11,7 +11,7 @@ type ItemPriceBoxType = {
 export const ItemPriceBox = ({ price }: ItemPriceBoxType) => {
 	return (
 		<div className="item-card__price-box">
-			<VerdanaText text={`${price} руб.`} classname='main-title' bold/>
+			<VerdanaText text={`${price} руб.`} classname='bold-paragraph' bold/>
 			<ButtonWrappedIcon icon="basket" />
 		</div>
 	);

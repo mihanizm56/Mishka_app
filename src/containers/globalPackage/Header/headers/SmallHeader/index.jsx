@@ -1,10 +1,9 @@
 // @flow
 import React, { Component } from "react";
-import { SVGForPage, ImageForPage, LinkComponent, InteractiveSVGIcon, SearchHeaderInput } from "../../../../../components";
+import { SVGForPage, ImageForPage, LinkComponent, InteractiveSVGIcon, SearchHeaderInput, VerdanaText } from "../../../../../components";
 import { UserBasketBox, UnderHeaderBox } from "../../../../boxes";
 import { getHeaderTitle, getClass } from "../../../../../helpers";
 import { WIDTH_FOR_ICON, HEIGTH_FOR_ICON } from "./constants";
-import {getLabelComponent} from '../utils'
 import "./SmallHeader.css";
 
 const configForImage = {
@@ -53,10 +52,10 @@ export class SmallHeader extends Component {
 		return (
 			<>
 				<div className="small-header__catalog-title">
-					<LinkComponent text="Каталог товаров" WrappedComponent={getLabelComponent()} route="catalog" />
+					<LinkComponent text="Каталог товаров" WrappedComponent={VerdanaText} classname='bold-paragraph' bold route="catalog" />
 				</div>
 				<div className="small-header__knitting-title">
-					<LinkComponent text="Вазание на заказ" WrappedComponent={getLabelComponent()} route="orderpage" />
+					<LinkComponent text="Вазание на заказ" WrappedComponent={VerdanaText} bold classname='bold-paragraph' route="orderpage" />
 				</div>
 				<div className="small-header__zoom-wrapper">
 					<div className="zoom-wrapper__zoom-text">
