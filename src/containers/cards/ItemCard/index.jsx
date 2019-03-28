@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageForPage, ParagraphForCards } from "../../../components";
+import { ImageForPage, VerdanaText } from "../../../components";
 import { ItemPriceBox, ItemDescriptionBox } from "../../boxes";
 import "./ItemCard.css";
 
@@ -27,7 +27,7 @@ export const ItemCard = ({ image, name, sizes, sizeValues, price }): ItemCardTyp
 				<ImageForPage image={image} configForImage={configForCardCatalogImage} />
 				<div className="item-card-text-wrapper">
 					<div className="item-card-textbox">
-						<ParagraphForCards text={name} />
+						<VerdanaText text={name} classname='paragraph-card' bold/>
 						<ItemDescriptionBox sizes={sizes} values={sizeValues} />
 					</div>
 					<ItemPriceBox price={price} />

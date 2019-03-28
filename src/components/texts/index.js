@@ -1,7 +1,6 @@
 export * from "./MainTitle";
 export * from "./NameForReview";
 export * from "./Paragraph";
-export * from "./ParagraphForCards";
 export * from "./TextAreaFormComponent";
 export * from "./BoldParagraph";
 export * from "./FooterTextLogo";
