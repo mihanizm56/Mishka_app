@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "connected-react-router": "^6.1.0",
+    "connected-react-router": "^6.3.2",
     "eslint-plugin-notice": "^0.7.7",
     "firebase": "^5.7.2",
     "normalize.css": "^8.0.1",

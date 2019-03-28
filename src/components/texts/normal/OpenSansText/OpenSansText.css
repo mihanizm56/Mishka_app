@@ -87,3 +87,12 @@
     text-transform: uppercase;
     line-height: 1;
 }
+
+
+/* TextForLoginInReview */
+
+.open-sans-text--review-login-text{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
+}

@@ -3,7 +3,7 @@ import React, {Component} from "react";
 import {
 	BoldParagraph,
 	SVGForPage,
-	RegularAdditionalParagraph,
+	VerdanaText,
 	LinkComponent,
 	InteractiveSVGIcon,
 	SearchHeaderInput,
@@ -77,7 +77,7 @@ export class MidHeader extends Component {
 					</div>
 					<div className="middle-header__second-container">
 						<div className="second-line-middle-header__delivery-info">
-							<RegularAdditionalParagraph text="Бесплатная доставка по России" />
+							<VerdanaText text="Бесплатная доставка по России" classname='regular-additional-paragraph'/>
 						</div>
 					</div>
 				</div>

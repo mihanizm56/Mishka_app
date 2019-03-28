@@ -14,7 +14,7 @@ export const ReviewTextBox = ({ review, name, surname, login }) => {
 			</div>
 			<div className="review-text__login-wrapper">
 				<NameForReview value={`${name} ${surname}`} />
-				<TextForLoginInReview text={login} />
+				<OpenSansText classname='review-login-text' text={login} ligth />
 			</div>
 		</div>
 	);

@@ -1,28 +1,49 @@
 // @flow
-import React, { Node } from "react";
+import React, { Node, createRef } from "react";
 import "./VerdanaText.css";
 import { getClass } from "../../../../helpers";
 
 type VerdanaTextProps = {
-    text?: string,
-    fontColor?: string,
+    text: string,
     bold?: boolean,
-    fontSize?: string,
-    additionalClass?: string,
+    classname?: string,
     hovered?: boolean,
+    inlineStyles?: Object,
+    ligth?: boolean,
+    title?: string,
+    needRef?: boolean,
+    handleClick?: Function,
+    withRefClick?: Function
 };
 
 export const VerdanaText = ({
     text,
     bold,
     inlineStyles,
-    additionalClass,
+    classname,
     hovered,
-}: VerdanaTextProps): Node => (
+    ligth,
+    title,
+    needRef,
+    handleClick,
+    withRefClick
+}: VerdanaTextProps): Node => {
+    const OpenSansRef = needRef ? createRef() : null;
+
+    return (
         <p
-            style={inlineStyles}
-            className={getClass({ initialClass: "open-sans-text", bold: bold, hovered: hovered, additionalClass })}
+            style={{ ...inlineStyles }}
+            title={title}
+            className={getClass({ initialClass: 'verdana-text', bold: bold, hovered: hovered, ligth: ligth, additionalClass: classname})}
+            ref={needRef && OpenSansRef}
+            onClick={needRef && withRefClick ? () => withRefClick(OpenSansRef) : handleClick}
         >
             {text}
         </p>
-    );
+    )
+}
+
+
+VerdanaText.defaultProps = {
+    text: 'default Verdana text'
+}

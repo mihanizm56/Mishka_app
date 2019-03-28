@@ -3,11 +3,10 @@ import React, { PureComponent } from "react";
 import {
 	BoldParagraph,
 	SVGForPage,
-	BoldAdditionalParagraph,
-	RegularAdditionalParagraph,
 	LinkComponent,
 	InteractiveSVGIcon,
 	SearchHeaderInput,
+	VerdanaText
 } from "../../../../../components";
 import { UserBasketBox, UnderHeaderBox } from "../../../../boxes";
 import { getHeaderTitle, getSpecialClassForHeader, getClass } from "../../../../../helpers";
@@ -64,13 +63,13 @@ export class BigHeader extends PureComponent {
 				</div>
 				<div className="big-header__second-line-header">
 					<div className="second-line-big-header__new-items">
-						<BoldAdditionalParagraph text="Новые поступления" />
+						<VerdanaText text="Новые поступления" classname='regular-additional-paragraph'/>
 					</div>
 					<div className="second-line-big-header__discount">
-						<BoldAdditionalParagraph text="Распродажа" />
+						<VerdanaText text="Распродажа" classname='regular-additional-paragraph'/>
 					</div>
 					<div className="second-line-big-header__delivery-info">
-						<RegularAdditionalParagraph text="Бесплатная доставка по России" />
+						<VerdanaText text="Бесплатная доставка по России" classname='regular-additional-paragraph'/>
 					</div>
 				</div>
 				{page !== "index-page" && (
