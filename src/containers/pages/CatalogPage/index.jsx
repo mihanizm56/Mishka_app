@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Reostat, FormMultiselect, FooterTextLogo } from "../../../components";
+import { Reostat, FormMultiselect } from "../../../components";
 import { ItemsCatalogContainer, VideoBox } from "../../boxes";
 import { ButtonForOffer } from "../../../components";
 import "./CatalogPage.css";
@@ -16,7 +16,6 @@ export class CatalogPage extends Component {
 		console.log(this.props);
 		return (
 			<div className="catalog-wrapper">
-				{/* <FooterTextLogo text="Hello CatalogPage !" /> */}
 				{/* <Reostat
 				shopItems={shopItems}
 				changeMaxFilterValue={changeMaxFilterValue}

@@ -1,12 +1,12 @@
 import React from "react";
-import { Paragraph } from "../../../components";
+import { VerdanaText } from "../../../components";
 import { Link, Redirect } from "react-router-dom";
 
 const checkLogin = parameter => {
 	//console.log(`test checkLogin, parameter = ${parameter}`);
 	return parameter ? (
 		<>
-			<Paragraph text="This is HiddenPage" />
+			<VerdanaText text="This is HiddenPage" classname="main-title" bold/>;
 			<Link to="/mainpage">To main page</Link>
 		</>
 	) : (

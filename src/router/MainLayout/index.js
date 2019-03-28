@@ -6,8 +6,8 @@ import { AuthPageRoute, CatalogPageRoute, ErrorPageRoute, IndexPageRoute, OrderP
 type MainLayoutPropTypes = {};
 
 export const MainLayout = (props: MainLayoutPropTypes) => {
-	console.log("пропсы в MainLayout");
-	console.log(props);
+	//console.log("пропсы в MainLayout");
+	//console.log(props);
 	return (
 		<Switch>
 			<IndexPageRoute exact path="/" />

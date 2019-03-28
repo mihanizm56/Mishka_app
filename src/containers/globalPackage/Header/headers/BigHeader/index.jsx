@@ -1,7 +1,6 @@
 // @flow
 import React, { PureComponent } from "react";
 import {
-	BoldParagraph,
 	SVGForPage,
 	LinkComponent,
 	InteractiveSVGIcon,
@@ -10,6 +9,7 @@ import {
 } from "../../../../../components";
 import { UserBasketBox, UnderHeaderBox } from "../../../../boxes";
 import { getHeaderTitle, getSpecialClassForHeader, getClass } from "../../../../../helpers";
+import {getLabelComponent} from '../utils'
 import "./BigHeader.css";
 
 export class BigHeader extends PureComponent {
@@ -39,10 +39,10 @@ export class BigHeader extends PureComponent {
 			>
 				<div className="big-header__first-line-big-header">
 					<div className="first-line-big-header__catalog-title">
-						<LinkComponent text="Каталог товаров" WrappedComponent={BoldParagraph} route="catalog" />
+						<LinkComponent text="Каталог товаров" WrappedComponent={VerdanaText} classname='bold-paragraph' bold route="catalog" />
 					</div>
 					<div className="first-line-big-header__knitting-title">
-						<LinkComponent text="Вазание на заказ" WrappedComponent={BoldParagraph} route="orderpage" />
+						<LinkComponent text="Вазание на заказ" WrappedComponent={VerdanaText} bold classname='bold-paragraph' route="orderpage" />
 					</div>
 					<div className="first-line-big-header__logo">
 						<LinkComponent WrappedComponent={InteractiveSVGIcon} icon="main-logo" route="index" />

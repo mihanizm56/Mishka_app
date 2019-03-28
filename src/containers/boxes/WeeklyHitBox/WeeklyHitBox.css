@@ -17,14 +17,6 @@
     flex-direction: column;
 }
 
-.green-paragraph-index-small{
-    color: #63D1BB;
-    font-size: 16px;
-    font-family: "OpenSans-Bold";
-    text-transform: uppercase;
-    line-height: 1;
-}
-
 .small-hit-image-wrapper{
     margin-bottom: 35px;
 }

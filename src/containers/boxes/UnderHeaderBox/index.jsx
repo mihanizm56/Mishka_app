@@ -1,6 +1,6 @@
 import React from "react";
 import MediaQuery from "react-responsive";
-import { MainTitle } from "../../../components";
+import { VerdanaText } from "../../../components";
 import {
 	BIG_MEDIA_SIZE,
 	MIDDLE_MEDIA_SIZE_FROM,
@@ -17,7 +17,7 @@ export const UnderHeaderBox = ({ text }) => {
 		<div className="under-header-box">
 			<div className="under-header-box__back-box" />
 			<div className="under-header-box__text">
-				<MainTitle text={text} />
+				<VerdanaText text={text} classname='main-title' bold/>
 			</div>
 			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
 				<div style={{ backgroundImage: `url(${zigzagPhotoBig})` }} className="under-header-box__zigzag-box" />

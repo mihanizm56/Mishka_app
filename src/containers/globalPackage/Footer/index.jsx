@@ -1,5 +1,5 @@
 import React from "react";
-import { FooterTextLogo, LinkComponent, InteractiveSVGIcon } from "../../../components";
+import { LinkComponent, InteractiveSVGIcon, VerdanaText } from "../../../components";
 import "./Footer.css";
 
 export const Footer = props => {
@@ -30,7 +30,7 @@ export const Footer = props => {
 				<LinkComponent WrappedComponent={InteractiveSVGIcon} icon="twitter" route="https://www.twitter.com" usualLink />
 			</div>
 			<div className="footer-container__academy-container">
-				<FooterTextLogo text="Разработано" />
+				<VerdanaText text="Разработано" classname='footer__text-logo' bold/>
 				<InteractiveSVGIcon icon="academy" />
 			</div>
 		</div>

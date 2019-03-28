@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import MediaQuery from "react-responsive";
-import { FormLabelParagraph, OpenSansText, TextAreaFormComponent, ButtonForSendOffer } from "../../../components";
+import { FormLabelParagraph, OpenSansText, TextArea, ButtonForSendOffer } from "../../../components";
 import { FormTextInputField } from "../../cards";
 import {
 	BIG_MEDIA_SIZE,
@@ -140,7 +140,7 @@ export class OrderPage extends Component {
 							<OpenSansText classname='title-form-label-paragraph' bold text="доп	" />
 						</div>
 						<div className="order-page-textarea-container__fields">
-							<TextAreaFormComponent />
+							<TextArea />
 						</div>
 					</div>
 					<div className="order-page-send-container">

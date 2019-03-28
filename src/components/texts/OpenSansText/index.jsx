@@ -1,9 +1,9 @@
 // @flow
 import React, { Node, createRef } from "react";
-import "./TahomaText.css";
-import { getClass } from "../../../../helpers";
+import "./OpenSansText.css";
+import { getClass } from "../../../helpers";
 
-type TahomaTextProps = {
+type OpenSansTextProps = {
     text: string,
     bold?: boolean,
     classname?: string,
@@ -16,7 +16,7 @@ type TahomaTextProps = {
     withRefClick?: Function
 };
 
-export const TahomaText = ({
+export const OpenSansText = ({
     text,
     bold,
     inlineStyles,
@@ -27,14 +27,14 @@ export const TahomaText = ({
     needRef,
     handleClick,
     withRefClick
-}: TahomaTextProps): Node => {
+}: OpenSansTextProps): Node => {
     const OpenSansRef = needRef ? createRef() : null;
 
     return (
         <p
             style={{ ...inlineStyles }}
             title={title}
-            className={getClass({ initialClass: 'tahoma-text', bold: bold, hovered: hovered, ligth: ligth, additionalClass: classname})}
+            className={getClass({ initialClass: 'open-sans-text', bold: bold, hovered: hovered, ligth: ligth, additionalClass: classname})}
             ref={needRef && OpenSansRef}
             onClick={needRef && withRefClick ? () => withRefClick(OpenSansRef) : handleClick}
         >
@@ -44,6 +44,6 @@ export const TahomaText = ({
 }
 
 
-TahomaText.defaultProps = {
-    text: 'default Tahoma text'
+OpenSansText.defaultProps = {
+    text: 'default OpenSans text'
 }

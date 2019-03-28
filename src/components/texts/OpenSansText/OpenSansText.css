@@ -96,3 +96,12 @@
     color: rgb(0, 0, 0);
     line-height: 1.5;
 }
+
+/* WeeklyHitBox */
+
+.open-sans-text--green-paragraph-index-small{
+    color: #63D1BB;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 1;
+}

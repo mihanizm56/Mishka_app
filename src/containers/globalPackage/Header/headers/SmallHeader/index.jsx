@@ -1,9 +1,10 @@
 // @flow
 import React, { Component } from "react";
-import { BoldParagraph, SVGForPage, ImageForPage, LinkComponent, InteractiveSVGIcon, SearchHeaderInput } from "../../../../../components";
+import { SVGForPage, ImageForPage, LinkComponent, InteractiveSVGIcon, SearchHeaderInput } from "../../../../../components";
 import { UserBasketBox, UnderHeaderBox } from "../../../../boxes";
 import { getHeaderTitle, getClass } from "../../../../../helpers";
 import { WIDTH_FOR_ICON, HEIGTH_FOR_ICON } from "./constants";
+import {getLabelComponent} from '../utils'
 import "./SmallHeader.css";
 
 const configForImage = {
@@ -41,26 +42,26 @@ export class SmallHeader extends Component {
 	}
 
 	getSearchItem = (searchInputOpened) => {
-		return searchInputOpened ? 
-		<div className={getClass({ initialClass: "first-line-small-header__search-input", active: searchInputOpened })}>
-			<SearchHeaderInput />
-		</div> 
-		: <BoldParagraph text="Поиск по сайту" />
+		return searchInputOpened ?
+			<div className={getClass({ initialClass: "first-line-small-header__search-input", active: searchInputOpened })}>
+				<SearchHeaderInput />
+			</div>
+			: this.getLabelComponent("Поиск по сайту")
 	}
 
 	showSmallMenu = (searchInputOpened) => {
 		return (
 			<>
 				<div className="small-header__catalog-title">
-					<LinkComponent text="Каталог товаров" WrappedComponent={BoldParagraph} route="catalog" />
-				</div>	
+					<LinkComponent text="Каталог товаров" WrappedComponent={getLabelComponent()} route="catalog" />
+				</div>
 				<div className="small-header__knitting-title">
-					<LinkComponent text="Вазание на заказ" WrappedComponent={BoldParagraph} route="orderpage" />
+					<LinkComponent text="Вазание на заказ" WrappedComponent={getLabelComponent()} route="orderpage" />
 				</div>
 				<div className="small-header__zoom-wrapper">
 					<div className="zoom-wrapper__zoom-text">
 						<div className="zoom-wrapper__zoom-icon">
-							<InteractiveSVGIcon icon="zoom" handleClick={this.handleToggleInput}/>
+							<InteractiveSVGIcon icon="zoom" handleClick={this.handleToggleInput} />
 						</div>
 						{this.getSearchItem(searchInputOpened)}
 					</div>

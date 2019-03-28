@@ -3,7 +3,7 @@ import React from "react";
 import MediaQuery from "react-responsive";
 import { GreenCard } from "../../";
 import "./HouseBox.css";
-import { MainTitle, ImageForPage } from "../../../components";
+import { ImageForPage, VerdanaText } from "../../../components";
 import {
 	BIG_MEDIA_SIZE,
 	MIDDLE_MEDIA_SIZE_FROM,
@@ -54,7 +54,7 @@ export const HouseBox = () => {
 						<div className="fake-photo-house fake-photo-house--big">
 							<ImageForPage image="house-index" configForImage={configForHouseImage} />
 							<div className="house-box-main-title house-box-main-title--big">
-								<MainTitle text="Милые штуки ручной работы для дома" />
+								<VerdanaText text="Милые штуки ручной работы для дома" classname='main-title' bold/>
 							</div>
 						</div>
 						<div className="house-box-cards-container house-box-cards-container--big">
@@ -85,7 +85,7 @@ export const HouseBox = () => {
 						<div className="fake-photo-house fake-photo-house--mid">
 							<ImageForPage image="house-index" configForImage={configForHouseImage} />
 							<div className="house-box-main-title house-box-main-title--mid">
-								<MainTitle text="Милые штуки ручной работы для дома" />
+								<VerdanaText text="Милые штуки ручной работы для дома" classname='main-title' bold/>
 							</div>
 						</div>
 						<div className="house-box-cards-container house-box-cards-container--mid">
@@ -115,7 +115,7 @@ export const HouseBox = () => {
 					<div className="fake-photo-house fake-photo-house--small">
 						<ImageForPage image="house-index" configForImage={configForHouseImage} />
 						<div className="house-box-main-title house-box-main-title--small">
-							<MainTitle text="Милые штуки ручной работы для дома" />
+							<VerdanaText text="Милые штуки ручной работы для дома" classname='main-title' bold/>
 						</div>
 					</div>
 					<div className="house-box-cards-container house-box-cards-container--small">

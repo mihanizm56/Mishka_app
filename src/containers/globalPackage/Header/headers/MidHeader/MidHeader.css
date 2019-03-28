@@ -73,6 +73,7 @@
     display: flex;
     height: 100%;
 }
+
 .middle-header__second-container{
     display: flex;
     height: 100%;
@@ -84,7 +85,7 @@
     justify-content: center;
     align-items: center;
     height: 70px;
-    width: 145px;
+    width: 155px;
 }
 
 .second-line-middle-header__catalog-title{

@@ -3,9 +3,9 @@ import React from "react";
 import MediaQuery from "react-responsive";
 import {
 	ImageForPage,
-	FooterTextLogo as DescriptionVideoBoxTitle,
 	OpenSansText,
 	SVGForPage,
+	VerdanaText
 } from "../../../components";
 import { ButtonForOffer, ButtonPlayVideo, VideoPlayerComponent } from "../../../components";
 import {
@@ -31,7 +31,7 @@ export const VideoBox = props => {
 								<SVGForPage icon="camera" />
 							</div>
 							<div className="video-container__title">
-								<DescriptionVideoBoxTitle text="Процесс производства" />
+								<VerdanaText text="Процесс производства" classname='footer__text-logo' bold/>
 							</div>
 							<div className="video-container__description">
 								<OpenSansText classname='text-video' text="По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары." />
@@ -52,7 +52,7 @@ export const VideoBox = props => {
 						<div className="description-wrapper__video-container">
 							<div className="video-container__icon-and-title">
 								<SVGForPage icon="camera" />
-								<DescriptionVideoBoxTitle text="Процесс производства" />
+								<VerdanaText text="Процесс производства" classname='footer__text-logo' bold/>
 							</div>
 							<div className="video-container__description">
 								<OpenSansText classname='text-video' text="По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары." />
@@ -72,7 +72,7 @@ export const VideoBox = props => {
 								<SVGForPage icon="camera" />
 							</div>
 							<div className="icon-and-title-wrapper__title">
-								<DescriptionVideoBoxTitle text="Процесс производства" />
+								<VerdanaText text="Процесс производства" classname='footer__text-logo' bold/>
 							</div>
 						</div>
 						<div className="video__photo-container">

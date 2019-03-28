@@ -1,12 +1,11 @@
 // @flow
 import React from "react";
-import { Paragraph } from "../../";
-import "./LabelForOrderForm.css";
+import { VerdanaText } from "../../";
 
 type LabelForOrderFormProps = {
 	text: string,
 };
 
 export const LabelForOrderForm = ({ text }: LabelForOrderFormProps) => {
-	return <Paragraph text={text} className="label-check-box" />;
+	return <VerdanaText text={text} classname="label-check-box" bold/>;
 };

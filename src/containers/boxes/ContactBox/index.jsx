@@ -3,10 +3,10 @@ import React, { Component } from "react";
 import MediaQuery from "react-responsive";
 import {
 	SVGForPage,
-	MainTitle,
 	OpenSansText,
 	ImageForPage,
 	ButtonForOffer,
+	VerdanaText
 } from "../../../components";
 // import {MapContainer} from '../'
 import {
@@ -106,7 +106,7 @@ export class ContactBox extends Component<propsType> {
 						<div className="contacts-container">
 							<div className="contacts-title-container">
 								<SVGForPage icon="flag" />
-								<MainTitle text="Контакты" />
+								<VerdanaText text="Контакты" classname='main-title' bold/>
 							</div>
 							<div className="contacts-email-container">
 								<OpenSansText classname='text-video' text="e-mail" />
@@ -132,7 +132,7 @@ export class ContactBox extends Component<propsType> {
 				</MediaQuery>
 				<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 					<div className="contacts-title-container">
-						<MainTitle text="Контакты" />
+						<VerdanaText text="Контакты" classname='main-title' bold/>
 						<SVGForPage icon="flag" />
 					</div>
 					<div className="contacts-additional-wrapper">
@@ -159,7 +159,7 @@ export class ContactBox extends Component<propsType> {
 				</MediaQuery>
 				<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
 					<div className="contacts-title-container">
-						<MainTitle text="Контакты" />
+						<VerdanaText text="Контакты" classname='main-title' bold/>
 					</div>
 					<div className="contacts-additional-wrapper">
 						<div className="contacts-email-container">

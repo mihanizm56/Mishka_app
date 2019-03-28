@@ -1,7 +1,6 @@
 // @flow
 import React, {Component} from "react";
 import {
-	BoldParagraph,
 	SVGForPage,
 	VerdanaText,
 	LinkComponent,
@@ -61,17 +60,21 @@ export class MidHeader extends Component {
 						<div className="second-line-middle-header__catalog-title">
 							<LinkComponent
 								text="Каталог товаров"
-								WrappedComponent={BoldParagraph}
+								WrappedComponent={VerdanaText}
 								route="catalog"
-								customFontSize={FONT_SIZE_FOR_SECOND_LINE_IN_HEADER}
+								classname='bold-paragraph'
+								bold
+								inlineStyles={{fontSize:FONT_SIZE_FOR_SECOND_LINE_IN_HEADER}}
 							/>
 						</div>
 						<div className="second-line-middle-header__knitting-title">
 							<LinkComponent
-								text="Вазание на заказ"
-								WrappedComponent={BoldParagraph}
+								text="Вязание на заказ"
+								WrappedComponent={VerdanaText}
+								classname='bold-paragraph'
+								bold
 								route="orderpage"
-								customFontSize={FONT_SIZE_FOR_SECOND_LINE_IN_HEADER}
+								inlineStyles={{fontSize: FONT_SIZE_FOR_SECOND_LINE_IN_HEADER}}
 							/>
 						</div>
 					</div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { SVGForPage, TextForHeaderBasketIcon } from "../../../components";
+import { SVGForPage, TextForHeaderBasketIcon, VerdanaText } from "../../../components";
 import "./UserBasketBox.css";
 
 const getNormalizedItems = value => value;
@@ -11,7 +11,7 @@ export const UserBasketBox = ({ numberOfItems }) => {
 				<SVGForPage icon="basket" />
 			</div>
 			<div className="basket-box__text">
-				<TextForHeaderBasketIcon text={`Корзина: ${getNormalizedItems(numberOfItems)}`} />
+				<VerdanaText text={`Корзина: ${getNormalizedItems(numberOfItems)}`} classname='text-header-basket-icon' bold/>
 			</div>
 		</div>
 	);
@@ -20,3 +20,4 @@ export const UserBasketBox = ({ numberOfItems }) => {
 UserBasketBox.defaultProps = {
 	numberOfItems: "пока пуста",
 };
+
