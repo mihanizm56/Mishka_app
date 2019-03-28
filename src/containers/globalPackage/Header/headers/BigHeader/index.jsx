@@ -9,7 +9,6 @@ import {
 } from "../../../../../components";
 import { UserBasketBox, UnderHeaderBox } from "../../../../boxes";
 import { getHeaderTitle, getSpecialClassForHeader, getClass } from "../../../../../helpers";
-import {getLabelComponent} from '../utils'
 import "./BigHeader.css";
 
 export class BigHeader extends PureComponent {
