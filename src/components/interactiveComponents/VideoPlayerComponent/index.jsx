@@ -36,7 +36,7 @@ export class VideoPlayerComponent extends Component {
 
     handleClick = () => {
         console.log('check handleClick')
-        this.setState(prevState => ({ isPlaying: !prevState.isPlaying }))
+        this.setState(prevState => ({ isPlaying: !prevState.isPlaying }), console.log('STATE CHANGED'))
     }
 
     getWidth = size => {

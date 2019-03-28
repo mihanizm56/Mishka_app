@@ -17,7 +17,7 @@ export const ButtonWrappedIcon = ({ width, height, icon, handleClick, noOpacityC
 		className="button-wrapped-icon"
 		style={width && height ? { width: width, height: height } : null}
 	>
-		<InteractiveSVGIcon icon={icon} noOpacityChange={noOpacityChange} handleClick={handleClick} />
+		<InteractiveSVGIcon icon={icon} noOpacityChange={noOpacityChange} />
 	</div>
 );
 
