@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import MediaQuery from "react-responsive";
 import {
-	SVGForPage,
+	SVGIcon,
 	OpenSansText,
 	ImageForPage,
 	VerdanaText
@@ -105,7 +105,7 @@ export class ContactBox extends Component<propsType> {
 					<div className="contact-box-main-content">
 						<div className="contacts-container">
 							<div className="contacts-title-container">
-								<SVGForPage icon="flag" />
+								<SVGIcon icon="flag" />
 								<VerdanaText text="Контакты" classname='main-title' bold/>
 							</div>
 							<div className="contacts-email-container">
@@ -133,7 +133,7 @@ export class ContactBox extends Component<propsType> {
 				<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 					<div className="contacts-title-container">
 						<VerdanaText text="Контакты" classname='main-title' bold/>
-						<SVGForPage icon="flag" />
+						<SVGIcon icon="flag" />
 					</div>
 					<div className="contacts-additional-wrapper">
 						<div className="contacts-email-container">

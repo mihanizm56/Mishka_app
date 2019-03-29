@@ -1,12 +1,12 @@
 // @flow
 import React from "react";
-import { ParagraphForItemsInTitle, SVGForPage, VerdanaText } from "../../../components";
+import { ParagraphForItemsInTitle, SVGIcon, VerdanaText } from "../../../components";
 import "./IndexItemBox.css";
 
 export const IndexItemBox = ({ text, icon }) => {
 	return (
 		<div className="index-item-box-wrapper">
-			<SVGForPage icon={icon} />
+			<SVGIcon icon={icon} />
 			<VerdanaText text={text} classname='paragraph-index-items' bold/>
 		</div>
 	);

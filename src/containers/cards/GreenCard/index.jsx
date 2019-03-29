@@ -1,5 +1,5 @@
 import React from "react";
-import { GreenCardParagraph, SVGForPage, TahomaText } from "../../../components";
+import { GreenCardParagraph, SVGIcon, TahomaText } from "../../../components";
 import "./GreenCard.css";
 
 export const GreenCard = ({ text, icon, backgroundColor }) => {
@@ -7,7 +7,7 @@ export const GreenCard = ({ text, icon, backgroundColor }) => {
 	return (
 		<div className="green-card-wrapper" style={{ backgroundColor: `${backgroundColor}` }}>
 			<TahomaText bold text={text} classname="green-card-paragraph"/>
-			<SVGForPage icon={icon} />
+			<SVGIcon icon={icon} />
 		</div>
 	);
 };

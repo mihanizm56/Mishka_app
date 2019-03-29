@@ -1,7 +1,7 @@
 // @flow
 import React, { PureComponent } from "react";
 import {
-	SVGForPage,
+	SVGIcon,
 	LinkComponent,
 	InteractiveSVGIcon,
 	SearchHeaderInput,

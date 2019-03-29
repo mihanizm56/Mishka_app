@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from "react";
-import { FormTextInput, SVGForPage, FormFieldBoldParagraph, VerdanaText } from "../../../components";
+import { FormTextInput, SVGIcon, FormFieldBoldParagraph, VerdanaText } from "../../../components";
 import { getClass } from "../../../helpers";
 import "./FormTextInputField.css";
 
@@ -51,7 +51,7 @@ export class FormTextInputField extends Component {
 					onBlur={this.blurInput}
 				>
 					<FormTextInput text={text} getRef={this.getInputRef} backgroundColor={backgroundColor} />
-					{icon && <SVGForPage icon={icon} />}
+					{icon && <SVGIcon icon={icon} />}
 				</div>
 			</div>
 		);

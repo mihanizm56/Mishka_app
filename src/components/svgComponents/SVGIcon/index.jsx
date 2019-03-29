@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import "./SVGForPage.css";
+import "./SVGIcon.css";
 import MediaQuery from "react-responsive";
 import { SVGComponent } from "../";
 import { getSmallImage, getMiddleImage, getBigImage } from "../../../helpers";
@@ -12,11 +12,11 @@ import {
 	SMALL_MEDIA_SIZE_TO,
 } from "../../../constants";
 
-type SVGForPageProps = {
+type SVGIconProps = {
 	icon: string,
 };
 
-export const SVGForPage = ({ icon }: SVGForPageProps) => {
+export const SVGIcon = ({ icon }: SVGIconProps) => {
 	const smallIcon = getBigImage(`icon-${icon}-big`);
 	const middleIcon = getMiddleImage(`icon-${icon}-middle`);
 	const bigIcon = getSmallImage(`icon-${icon}-small`);

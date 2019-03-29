@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from "react";
-import { SVGForPage, ImageForPage, LinkComponent, InteractiveSVGIcon, SearchHeaderInput, VerdanaText } from "../../../../../components";
+import { SVGIcon, ImageForPage, LinkComponent, InteractiveSVGIcon, SearchHeaderInput, VerdanaText } from "../../../../../components";
 import { UserBasketBox, UnderHeaderBox } from "../../../../boxes";
 import { getHeaderTitle, getClass } from "../../../../../helpers";
 import { WIDTH_FOR_ICON, HEIGTH_FOR_ICON } from "./constants";

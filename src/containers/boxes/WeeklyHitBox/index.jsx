@@ -1,7 +1,7 @@
 // @flow
 import React from "react";
 import MediaQuery from "react-responsive";
-import { ImageForPage, SVGForPage, OpenSansText, VerdanaText } from "../../../components";
+import { ImageForPage, SVGIcon, OpenSansText, VerdanaText } from "../../../components";
 import { TableForHitItem } from "../";
 import { configForWeeklyHitBoxImage, configForZigzagImage } from "./constants";
 import {
@@ -24,7 +24,7 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
 				<div className="hit-box-main-box">
 					<div className="hit-box-title">
-						<SVGForPage icon="hit" />
+						<SVGIcon icon="hit" />
 						<VerdanaText text={itemName} classname='main-title' bold />
 					</div>
 					<div className="hit-box-text-container">
@@ -45,7 +45,7 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 				<div className="hit-box-main-box">
 					<div className="hit-box-title">
 						<VerdanaText text={itemName} classname='main-title' bold />
-						<SVGForPage icon="hit" />
+						<SVGIcon icon="hit" />
 					</div>
 					<div className="hit-box-text-container">
 						<div className="hit-box-text-wrapper">

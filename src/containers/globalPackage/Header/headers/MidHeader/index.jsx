@@ -1,7 +1,7 @@
 // @flow
 import React, {Component} from "react";
 import {
-	SVGForPage,
+	SVGIcon,
 	VerdanaText,
 	LinkComponent,
 	InteractiveSVGIcon,
