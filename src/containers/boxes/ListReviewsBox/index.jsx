@@ -4,23 +4,21 @@ import { getUserName, getUserSurname } from "../../../helpers";
 
 export class ListReviewsBox extends Component {
 	static defaultProps = {
-		reviews: {
-			reviewList: [
-				{
-					text:
-						"Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!",
-					user: "Анастасия Красильникова",
-					login: "@misssssiskras",
-				},
-			],
-		},
+		reviews: [
+			{
+				text:
+					"Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!",
+				user: "Анастасия Красильникова",
+				login: "@misssssiskras",
+			},
+		],
 	};
 
 	static getDerivedStateFromProps(nextProps, prevState) {
 		// if проверка массивов, да да!!
 
-		if (nextProps.reviews.reviewList) {
-			return { ...prevState, reviews: nextProps.reviews.reviewList };
+		if (nextProps.reviews) {
+			return { ...prevState, reviews: nextProps.reviews };
 		}
 
 		return { ...prevState };

@@ -106,6 +106,14 @@ export function loginRequestAction(email, password) {
 	}
 }
 
+
+export const addReview = (value) => {
+	return {
+		type: changeSearchFilter,
+		payload: value,
+	};
+}
+
 //import { authentificate} from '../helpers'
 // export function signUpFirebase(email, password) {
 // 	console.log("check signUpFirebase request");

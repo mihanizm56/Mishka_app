@@ -29,9 +29,6 @@ export const VerdanaText = (props: VerdanaTextProps): Node => {
         withRefClick } = props;
     const OpenSansRef = needRef ? createRef() : null;
 
-    console.log('VERDANA CHECK')
-    console.log(props)
-
     return (
         <p
             style={{ ...inlineStyles }}
