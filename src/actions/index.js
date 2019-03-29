@@ -114,7 +114,7 @@ export const addReview = (value) => {
 	};
 }
 
-//import { authentificate} from '../helpers'
+//import { authentificate} from '../utils'
 // export function signUpFirebase(email, password) {
 // 	console.log("check signUpFirebase request");
 // 	console.log(`email = ${email}, password = ${password}`);
