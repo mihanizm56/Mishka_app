@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import MediaQuery from "react-responsive";
-import { FormLabelParagraph, OpenSansText, TextArea, ButtonForSendOffer } from "../../../components";
+import { FormLabelParagraph, OpenSansText, TextArea } from "../../../components";
 import { FormTextInputField } from "../../cards";
 import {
 	BIG_MEDIA_SIZE,
@@ -11,6 +11,8 @@ import {
 } from "../../../constants";
 import { CheckBox, RadioBox } from "../../boxes";
 import "./OrderPage.css";
+
+import {Button} from '../../../components/buttons'
 
 const backgroundColors = {
 	grey: "#F1F1F1",
@@ -145,15 +147,15 @@ export class OrderPage extends Component {
 					</div>
 					<div className="order-page-send-container">
 						<MediaQuery minWidth={BIG_MEDIA_SIZE}>
-							<ButtonForSendOffer />
+							<Button classname='button-send' text='отправить заказ' />
 							<OpenSansText classname='form-additional-paragraph' />
 						</MediaQuery>
 						<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
-							<ButtonForSendOffer />
+							<Button classname='button-send' text='отправить заказ' />
 							<OpenSansText classname='form-additional-paragraph' />
 						</MediaQuery>
 						<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
-							<ButtonForSendOffer />
+							<Button classname='button-send' text='отправить заказ' />
 						</MediaQuery>
 					</div>
 				</div>

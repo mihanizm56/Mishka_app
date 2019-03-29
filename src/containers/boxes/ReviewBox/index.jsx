@@ -1,8 +1,8 @@
 // @flow
 import React from "react";
 import MediaQuery from "react-responsive";
-import { ButtonWriteReview, ListButtonsBox, ImageForPage } from "../../../components";
-import { ReviewTextBox } from "../";
+import { ImageForPage } from "../../../components";
+import { ReviewTextBox, ListButtonsBox } from "../";
 import {
 	BIG_MEDIA_SIZE,
 	MIDDLE_MEDIA_SIZE_FROM,
@@ -11,6 +11,8 @@ import {
 	SMALL_MEDIA_SIZE_TO,
 } from "../../../constants";
 import "./ReviewBox.css";
+
+import { Button } from '../../../components/buttons'
 
 const configForReviewImage = {
 	widthMiddle: "350px",
@@ -35,7 +37,7 @@ export const ReviewBox = (props: ReviewBoxPropTypes) => {
 					<ReviewTextBox review={review} name={name} surname={surname} login={login} />
 				</div>
 				<div className="review__buttons-wrapper">
-					<ButtonWriteReview />
+					<Button classname="button-write-wrapper" text='написать' />
 					<ListButtonsBox onNextClick={onNextClick} onPrevClick={onPrevClick} />
 				</div>
 			</MediaQuery>
@@ -47,7 +49,7 @@ export const ReviewBox = (props: ReviewBoxPropTypes) => {
 					<ReviewTextBox review={review} name={name} surname={surname} login={login} />
 				</div>
 				<div className="review__buttons-wrapper">
-					<ButtonWriteReview />
+					<Button classname="button-write-wrapper" text='написать' />
 					<ListButtonsBox onNextClick={onNextClick} onPrevClick={onPrevClick} />
 				</div>
 			</MediaQuery>
@@ -60,7 +62,7 @@ export const ReviewBox = (props: ReviewBoxPropTypes) => {
 				</div>
 				<div className="review__buttons-wrapper">
 					<ListButtonsBox onNextClick={onNextClick} onPrevClick={onPrevClick} />
-					<ButtonWriteReview />
+					<Button classname="button-write-wrapper" text='написать' />
 				</div>
 			</MediaQuery>
 		</div>

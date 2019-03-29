@@ -5,9 +5,9 @@ import {
 	SVGForPage,
 	OpenSansText,
 	ImageForPage,
-	ButtonForOffer,
 	VerdanaText
 } from "../../../components";
+import {Button} from '../../../components/buttons'
 // import {MapContainer} from '../'
 import {
 	BIG_MEDIA_SIZE,
@@ -124,7 +124,7 @@ export class ContactBox extends Component<propsType> {
 								</div>
 							</div>
 							<div className="contacts-button">
-								<ButtonForOffer />
+								<Button text='check' classname="button-offer-wrapper" text='сделать заказ'/>
 							</div>
 						</div>
 						<div className="contact-box__image-imitation" />
@@ -151,7 +151,7 @@ export class ContactBox extends Component<propsType> {
 					</div>
 					<div className="contact-box__image-imitation" />
 					<div className="contacts-button">
-						<ButtonForOffer />
+						<Button text='check' classname="button-offer-wrapper" text='сделать заказ'/>
 					</div>
 					<div className="zig-zag-second-container zig-zag-second-container--mid">
 						<ImageForPage image="zigzag-index" configForImage={configForZigzagImage} />
@@ -177,7 +177,7 @@ export class ContactBox extends Component<propsType> {
 					</div>
 					<div className="contact-box__image-imitation" />
 					<div className="contacts-button">
-						<ButtonForOffer text="Напишите нам" />
+						<Button text='check' classname="button-offer-wrapper" text='Напишите нам'/>
 					</div>
 					<div className="zig-zag-second-container zig-zag-second-container--small">
 						<ImageForPage image="zigzag-index" configForImage={configForZigzagImage} />

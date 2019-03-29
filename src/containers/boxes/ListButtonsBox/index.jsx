@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { InteractiveSVGIcon } from "../../../components";
+import { IconButton } from '../../../components/buttons';
 import "./ListButtonsBox.css";
 
 type ListButtonsBoxPropTypes = {
@@ -12,17 +12,13 @@ export const ListButtonsBox = (props: ListButtonsBoxPropTypes) => {
 	const { onNextClick, onPrevClick } = props;
 	return (
 		<div className="list-buttons-container">
-			<div className="button-arrow_prev">
-				<InteractiveSVGIcon icon="arrow" handleClick={onPrevClick} />
-			</div>
-			<div className="button-arrow_next">
-				<InteractiveSVGIcon icon="arrow" handleClick={onNextClick} />
-			</div>
+			<IconButton classname='button-arrow_prev' icon='arrow' handleClick={onPrevClick} />
+			<IconButton classname='button-arrow_next' icon='arrow' handleClick={onNextClick} />
 		</div>
 	);
 };
 
 ListButtonsBox.defaultProps = {
-	onNextClick: () => {},
-	onPrevClick: () => {},
+	onNextClick: () => { },
+	onPrevClick: () => { },
 };

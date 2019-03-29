@@ -5,6 +5,8 @@ import { ImageForPage, ButtonPlayVideo } from '../../../components';
 import './VideoPlayerComponent.css';
 import { getClass } from '../../../helpers';
 
+import {IconButton} from '../../buttons'
+
 const configForPhotoImage = {
     widthMin: "100%",
     heightMin: "100%",
@@ -95,7 +97,7 @@ export class VideoPlayerComponent extends Component {
                             }
                         )
                     }>
-                        <ButtonPlayVideo handleClick={this.handleClick} />
+                        <IconButton classname='button-play-video' icon='video' noOpacityChange handleClick={this.handleClick} />
                     </div>
                 </>
             )

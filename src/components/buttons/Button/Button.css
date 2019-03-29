@@ -1,0 +1,174 @@
+
+/* ButtonForOffer */
+
+.button-offer-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: .5s;
+}
+
+.button-offer-wrapper:hover{
+    background-color: #444444;
+}
+.button-offer-wrapper:active{
+    background-color: #444444;
+}
+
+.button-offer-wrapper:hover .open-sans-text--text-button{
+    color: #fff;
+}
+
+.button-offer-wrapper:active .open-sans-text--text-button{
+    color: #fff;
+    opacity: 0.3;
+}
+
+@media (max-width: 767px) {
+    .button-offer-wrapper{
+        height: 50px;
+        width:100%;
+    }
+}
+@media (min-width: 768px) {
+    .button-offer-wrapper{
+        height: 50px;
+        width:583px;
+    }
+}
+@media (min-width: 1200px) {
+    .button-offer-wrapper{
+        height: 50px;
+        width:230px;
+    }
+}
+
+/* ButtonWriteReview */
+
+.button-write-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: .5s;
+}
+
+.button-write-wrapper:hover{
+    background-color: #444444;
+}
+
+.button-write-wrapper:active{
+    background-color: #444444;
+}
+
+.button-write-wrapper:hover .open-sans-text--text-button{
+    color: #fff;
+}
+
+.button-write-wrapper:active .text-button{
+    color: #fff;
+    opacity: 0.3;
+}
+
+@media (max-width: 767px) {
+    .button-write-wrapper{
+        height: 50px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .button-write-wrapper{
+        height: 50px;
+        width: 175px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .button-write-wrapper{
+        height: 50px;
+        width: 175px;
+    }
+}
+
+/* ButtonForWeeklyHitBox */
+
+.button-weekly{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: .5s;
+    width: 98%;
+    height: 50px;
+    margin-top: 35px;
+}
+
+.button-weekly:hover{
+    background-color: #444444;
+}
+.button-weekly:active{
+    background-color: #444444;
+}
+
+.button-weekly:hover .open-sans-text--text-button{
+    color: #fff;
+}
+
+.button-weekly:active .text-button{
+    color: #fff;
+    opacity: 0.3;
+}
+
+/* ButtonForSendOffer */
+
+.button-send{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: .5s;
+}
+
+.button-send:hover{
+    background-color: #444444;
+}
+
+.button-send:active{
+    background-color: #444444;
+}
+
+.button-send:hover .open-sans-text--text-button{
+    color: #fff;
+}
+
+.button-send:active .text-button{
+    color: #fff;
+    opacity: 0.3;
+}
+
+@media (max-width: 767px) {
+    .button-send{
+        height: 50px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .button-send{
+        height: 50px;
+        width: 230px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .button-send{
+        height: 50px;
+        width: 230px;
+    }
+}

@@ -15,3 +15,4 @@ export * from "./HouseBox";
 export * from "./CheckBox";
 export * from "./RadioBox";
 export * from "./ListReviewsBox";
+export * from "./ListButtonsBox";

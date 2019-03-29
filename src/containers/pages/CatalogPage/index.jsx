@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Reostat, FormMultiselect } from "../../../components";
 import { ItemsCatalogContainer, VideoBox } from "../../boxes";
-import { ButtonForOffer } from "../../../components";
 import "./CatalogPage.css";
 
 export class CatalogPage extends Component {

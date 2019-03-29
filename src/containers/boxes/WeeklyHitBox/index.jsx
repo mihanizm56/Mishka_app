@@ -2,7 +2,6 @@
 import React from "react";
 import MediaQuery from "react-responsive";
 import { ImageForPage, SVGForPage, OpenSansText, VerdanaText } from "../../../components";
-import { ButtonForWeeklyHitBox } from "../../../components";
 import { TableForHitItem } from "../";
 import { configForWeeklyHitBoxImage, configForZigzagImage } from "./constants";
 import {
@@ -12,6 +11,8 @@ import {
 	SMALL_MEDIA_SIZE_FROM,
 	SMALL_MEDIA_SIZE_TO,
 } from "../../../constants";
+
+import { Button } from '../../../components/buttons'
 
 import "./WeeklyHitBox.css";
 
@@ -24,14 +25,14 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 				<div className="hit-box-main-box">
 					<div className="hit-box-title">
 						<SVGForPage icon="hit" />
-						<VerdanaText text={itemName} classname='main-title' bold/>
+						<VerdanaText text={itemName} classname='main-title' bold />
 					</div>
 					<div className="hit-box-text-container">
 						<div className="hit-box-text-wrapper">
 							<OpenSansText classname='text-video' text={descriptionOfItem} />
 							<TableForHitItem />
-							<VerdanaText text={`Цена: ${price}`} classname='footer__text-logo' bold/>
-							<ButtonForWeeklyHitBox />
+							<VerdanaText text={`Цена: ${price}`} classname='footer__text-logo' bold />
+							<Button classname='button-weekly' text='заказать' />
 						</div>
 					</div>
 					<ImageForPage image={image} configForImage={configForWeeklyHitBoxImage} />
@@ -43,15 +44,15 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 			<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 				<div className="hit-box-main-box">
 					<div className="hit-box-title">
-						<VerdanaText text={itemName} classname='main-title' bold/>
+						<VerdanaText text={itemName} classname='main-title' bold />
 						<SVGForPage icon="hit" />
 					</div>
 					<div className="hit-box-text-container">
 						<div className="hit-box-text-wrapper">
 							<OpenSansText classname='text-video' text={descriptionOfItem} />
 							<TableForHitItem />
-							<VerdanaText text={`Цена: ${price}`} classname='footer__text-logo' bold/>
-							<ButtonForWeeklyHitBox />
+							<VerdanaText text={`Цена: ${price}`} classname='footer__text-logo' bold />
+							<Button classname='button-weekly' text='заказать' />
 						</div>
 						<ImageForPage image={image} configForImage={configForWeeklyHitBoxImage} />
 					</div>
@@ -60,10 +61,9 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 					<ImageForPage image="zigzag-index" configForImage={configForZigzagImage} />
 				</div>
 			</MediaQuery>
-
 			<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
 				<div className="hit-box-title">
-					<VerdanaText text={itemName} classname='main-title' bold/>
+					<VerdanaText text={itemName} classname='main-title' bold />
 					<OpenSansText text="Товар недели" classname="green-paragraph-index-small" />
 				</div>
 				<div className="hit-box-text-wrapper">
@@ -73,8 +73,8 @@ export const WeeklyHitBox = ({ itemName, image, price }) => {
 				<div className="small-hit-image-wrapper">
 					<ImageForPage image={image} configForImage={configForWeeklyHitBoxImage} />
 				</div>
-				<VerdanaText text={`Цена: ${price}`} classname='footer__text-logo' bold/>
-				<ButtonForWeeklyHitBox />
+				<VerdanaText text={`Цена: ${price}`} classname='footer__text-logo' bold />
+				<Button classname='button-weekly' text='заказать' />
 				<div className="zig-zag-container zig-zag-container--small">
 					<ImageForPage image="zigzag-index" configForImage={configForZigzagImage} />
 				</div>
