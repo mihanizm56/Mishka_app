@@ -1,7 +1,7 @@
 // @flow
 import React from "react";
 import { ItemCard } from "../../cards";
-import "./ItemsCatalogContainer.css";
+import "./ItemsCatalog.css";
 
 type itemType = {
 	image: string,
@@ -12,14 +12,17 @@ type itemType = {
 	id: number,
 };
 
-type ItemsCatalogContainerType = {
-	items: Array<itemType>,
+type ItemsCatalogType = {
+	shopItems: Array<itemType>,
 };
 
-export const ItemsCatalogContainer = ({ items }: ItemsCatalogContainerType) => {
+export const ItemsCatalog = (props: ItemsCatalogType) => {
+	console.log("ItemsCatalog props");
+	console.log(props);
+	const { shopItems } = props;
 	return (
 		<div className="catalog__shop-items">
-			{items.map(item => {
+			{shopItems.map(item => {
 				return (
 					<ItemCard
 						key={item.id}
@@ -35,8 +38,8 @@ export const ItemsCatalogContainer = ({ items }: ItemsCatalogContainerType) => {
 	);
 };
 
-ItemsCatalogContainer.defaultProps = {
-	items: [
+ItemsCatalog.defaultProps = {
+	shopItems: [
 		{
 			image: "big-basket",
 			name: "Большая корзинка для игрушек",

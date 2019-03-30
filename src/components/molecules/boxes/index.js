@@ -1,6 +1,6 @@
 export * from "./ItemPriceBox";
 export * from "./ItemDescriptionBox";
-export * from "./ItemsCatalogContainer";
+export * from "./ItemsCatalog";
 export * from "./VideoBox";
 export * from "./UserBasketBox";
 export * from "./UnderHeaderBox";

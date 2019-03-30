@@ -4,8 +4,7 @@ import { registerApp } from "../../utils";
 import { MainWrapper } from "../../components/organisms";
 import "./App.css";
 
-
-import {OpenSansText} from '../../components'
+import { OpenSansText } from "../../components";
 
 class AppContainer extends Component {
 	componentDidMount() {
@@ -29,7 +28,7 @@ class AppContainer extends Component {
 }
 
 const mapStateToProps = store => {
-	return { router: store.router, loginState: store.loginState };
+	return { router: store.router, loginState: store.loginState, appLoading: store.appLoading };
 };
 
 export const App = connect(mapStateToProps)(AppContainer);

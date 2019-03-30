@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Reostat, FormMultiselect } from "../../../../components";
-import { ItemsCatalogContainer, VideoBox } from "../../../molecules";
+import { ItemsCatalog, VideoBox } from "../../../molecules";
+import { ShopItemsProvider } from "../../../../containers";
 import "./CatalogPage.css";
 
 export class CatalogPage extends Component {
@@ -12,6 +13,8 @@ export class CatalogPage extends Component {
 		console.log(this.props);
 		return (
 			<div className="catalog-wrapper">
+				<ShopItemsProvider component={ItemsCatalog} />
+				<VideoBox />
 				{/* <Reostat
 				shopItems={shopItems}
 				changeMaxFilterValue={changeMaxFilterValue}
@@ -19,8 +22,6 @@ export class CatalogPage extends Component {
 				minValue={itemsFilters.rangeMin}
 				maxValue={itemsFilters.rangeMax}
 			/> */}
-				<ItemsCatalogContainer />
-				<VideoBox />
 				{/* <FormMultiselect nameOfSortType={itemsFilters.selectedFilter} changeTypeOfSort={changeTypeOfSort} /> */}
 				{/* <Link to="/hiddenpage">To hidden page</Link> */}
 			</div>

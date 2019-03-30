@@ -1,2 +1,3 @@
 export * from "./app";
-export * from "./ContainerReviews";
+export * from "./Reviews";
+export * from "./ShopItems";

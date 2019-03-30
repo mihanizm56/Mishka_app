@@ -4,7 +4,7 @@ import { addReview } from "../../actions";
 
 class WrappedContainer extends Component {
 	render() {
-		console.log("test ContainerReviews props");
+		console.log("test ReviewsProvider props");
 		console.log(this.props);
 
 		const { component: WrappedComponent, reviews } = this.props;
@@ -25,7 +25,7 @@ const mapDispatchToProps = dispatch => {
 	};
 };
 
-export const ContainerReviews = connect(
+export const ReviewsProvider = connect(
 	mapStateToProps,
 	mapDispatchToProps
 )(WrappedContainer);

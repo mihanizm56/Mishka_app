@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import MediaQuery from "react-responsive";
 import { SVGIcon, OpenSansText, ImageForPage, VerdanaText } from "../../../../components";
 import { Button } from "../../../atoms/buttons";
+import appConfig from "../../../../appConfig";
 // import {MapContainer} from '../'
 import {
 	BIG_MEDIA_SIZE,
@@ -91,7 +92,9 @@ export class ContactBox extends Component<propsType> {
 	};
 
 	render() {
+		////написать парсер для адреса
 		const { emailAdress, adressCityValue, adressStreetValue, adressBlockValue } = this.props;
+
 		return (
 			<div className="contact-box-wrapper">
 				<MediaQuery minWidth={BIG_MEDIA_SIZE}>
@@ -125,7 +128,7 @@ export class ContactBox extends Component<propsType> {
 								</div>
 							</div>
 							<div className="contacts-button">
-								<Button text="check" classname="button-offer-wrapper" text="сделать заказ" />
+								<Button classname="button-offer-wrapper" text="сделать заказ" />
 							</div>
 						</div>
 						<div className="contact-box__image-imitation" />

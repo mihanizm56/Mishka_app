@@ -4,7 +4,7 @@ import "./IndexPage.css";
 import { connect } from "react-redux";
 import { AboutBox, ListReviewsBox, ContactBox, WeeklyHitBox, HouseBox } from "../../../molecules";
 
-import { ContainerReviews } from "../../../../containers";
+import { ReviewsProvider } from "../../../../containers";
 
 type IndexPagePropTypes = {};
 
@@ -17,7 +17,7 @@ export const IndexPage = (props: IndexPagePropTypes) => {
 			<HouseBox />
 			<WeeklyHitBox />
 			<AboutBox />
-			<ContainerReviews component={ListReviewsBox} />
+			<ReviewsProvider component={ListReviewsBox} />
 			<ContactBox />
 		</div>
 	);
