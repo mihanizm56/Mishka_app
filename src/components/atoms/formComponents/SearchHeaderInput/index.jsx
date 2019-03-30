@@ -2,7 +2,7 @@
 import React, { Node } from "react";
 import MediaQuery from "react-responsive";
 import { InputComponent } from "../";
-import { getClass } from "../../../../../utils";
+import { getClass } from "../../../../utils";
 import {
 	BIG_MEDIA_SIZE,
 	MIDDLE_MEDIA_SIZE_FROM,

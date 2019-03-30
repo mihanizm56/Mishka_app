@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { addReview } from "../../../../actions";
 import { connect } from "react-redux";
+import { addReview } from "../../actions";
 
 class WrappedContainer extends Component {
 	render() {

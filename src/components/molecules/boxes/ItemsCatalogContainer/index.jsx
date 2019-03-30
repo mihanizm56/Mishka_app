@@ -34,3 +34,16 @@ export const ItemsCatalogContainer = ({ items }: ItemsCatalogContainerType) => {
 		</div>
 	);
 };
+
+ItemsCatalogContainer.defaultProps = {
+	items: [
+		{
+			image: "big-basket",
+			name: "Большая корзинка для игрушек",
+			sizes: ["Диаметр", "высота"],
+			sizeValues: ["30 см", "30 см"],
+			price: 1500,
+			id: 3,
+		},
+	],
+};

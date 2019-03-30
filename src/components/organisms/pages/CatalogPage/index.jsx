@@ -5,10 +5,7 @@ import { ItemsCatalogContainer, VideoBox } from "../../../molecules";
 import "./CatalogPage.css";
 
 export class CatalogPage extends Component {
-	componentDidMount() {}
-
 	render() {
-		const { changeMinFilterValue, changeMaxFilterValue, itemsFilters, shopItems, changeTypeOfSort } = this.props;
 		//console.log("TEST ROUTER MATCH");
 		//console.log(window.history);
 		console.log("test CatalogPage props");
@@ -22,7 +19,7 @@ export class CatalogPage extends Component {
 				minValue={itemsFilters.rangeMin}
 				maxValue={itemsFilters.rangeMax}
 			/> */}
-				<ItemsCatalogContainer items={shopItems} />
+				<ItemsCatalogContainer />
 				<VideoBox />
 				{/* <FormMultiselect nameOfSortType={itemsFilters.selectedFilter} changeTypeOfSort={changeTypeOfSort} /> */}
 				{/* <Link to="/hiddenpage">To hidden page</Link> */}
@@ -30,12 +27,3 @@ export class CatalogPage extends Component {
 		);
 	}
 }
-
-// export const CatalogPage = ({
-// 	changeMinFilterValue,
-// 	changeMaxFilterValue,
-// 	itemsFilters,
-// 	shopItems,
-// 	changeTypeOfSort,
-// }) => {
-// };
