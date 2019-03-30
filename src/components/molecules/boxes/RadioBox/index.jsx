@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { InteractiveSVGIcon, LabelForOrderForm } from "../../../components";
+import { InteractiveSVGIcon, LabelForOrderForm } from "../../../../components";
 import "./RadioBox.css";
 
 export class RadioBox extends Component {

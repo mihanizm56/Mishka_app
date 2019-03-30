@@ -1,7 +1,7 @@
 // @flow
 import React from "react";
-import appConfig from "../../../appConfig.json";
-import { ACReturns } from "../../../actions";
+import appConfig from "../../../../appConfig.json";
+import { ACReturns } from "../../../../actions";
 
 type FormMultiselectProps = {
 	changeTypeOfSort: (value: string) => ACReturns,

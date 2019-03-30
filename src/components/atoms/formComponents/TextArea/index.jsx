@@ -1,6 +1,6 @@
 // @flow
 import React, { Node } from "react";
-import { getClass } from "../../../utils";
+import { getClass } from "../../../../utils";
 import "./TextArea.css";
 
 type TextAreaProps = {

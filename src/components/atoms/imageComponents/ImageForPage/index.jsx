@@ -2,14 +2,14 @@
 import React from "react";
 import MediaQuery from "react-responsive";
 import { ImageComponent } from "../";
-import { getSmallImage, getMiddleImage, getBigImage } from "../../../utils";
+import { getSmallImage, getMiddleImage, getBigImage } from "../../../../utils";
 import {
 	BIG_MEDIA_SIZE,
 	MIDDLE_MEDIA_SIZE_FROM,
 	MIDDLE_MEDIA_SIZE_TO,
 	SMALL_MEDIA_SIZE_FROM,
 	SMALL_MEDIA_SIZE_TO,
-} from "../../../constants";
+} from "../../../../constants";
 
 type ImageForPageProps = {
 	image: string,

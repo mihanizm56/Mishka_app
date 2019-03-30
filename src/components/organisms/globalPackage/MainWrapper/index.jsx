@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { MainLayout } from "../../../router/MainLayout";
+import { MainLayout } from "../../../../routes/";
 import { Footer, Header } from "../";
 import "./MainWrapper.css";
 

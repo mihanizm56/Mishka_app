@@ -1,6 +1,6 @@
 import React from "react";
 import { SVGIcon } from "../";
-import { getClass } from "../../../utils";
+import { getClass } from "../../../../utils";
 import "./InteractiveSVGIcon.css";
 
 export const InteractiveSVGIcon = ({ icon, handleClick, noOpacityChange }) => {

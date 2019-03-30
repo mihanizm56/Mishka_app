@@ -1,8 +1,15 @@
 // @flow
 import React, { Component } from "react";
-import { SVGIcon, ImageForPage, LinkComponent, InteractiveSVGIcon, SearchHeaderInput, VerdanaText } from "../../../../../components";
-import { UserBasketBox, UnderHeaderBox } from "../../../../boxes";
-import { getHeaderTitle, getClass } from "../../../../../utils";
+import {
+	SVGIcon,
+	ImageForPage,
+	LinkComponent,
+	InteractiveSVGIcon,
+	SearchHeaderInput,
+	VerdanaText,
+} from "../../../../../../components";
+import { UserBasketBox, UnderHeaderBox } from "../../../../../molecules/boxes";
+import { getHeaderTitle, getClass } from "../../../../../../utils";
 import { WIDTH_FOR_ICON, HEIGTH_FOR_ICON } from "./constants";
 import "./SmallHeader.css";
 
@@ -20,7 +27,7 @@ export class SmallHeader extends Component {
 		super();
 		this.state = {
 			isSmallMenuOpened: false,
-			searchInputOpened: false
+			searchInputOpened: false,
 		};
 	}
 
@@ -28,7 +35,7 @@ export class SmallHeader extends Component {
 		const { page: prevPage } = this.props;
 		const { page: nextPage } = prevProps;
 		if (prevPage !== nextPage) {
-			this.setState({ isSmallMenuOpened: false })
+			this.setState({ isSmallMenuOpened: false });
 		}
 	}
 
@@ -37,25 +44,39 @@ export class SmallHeader extends Component {
 	};
 
 	handleToggleInput = () => {
-		this.setState(prevState => ({ searchInputOpened: !prevState.searchInputOpened }))
-	}
+		this.setState(prevState => ({ searchInputOpened: !prevState.searchInputOpened }));
+	};
 
-	getSearchItem = (searchInputOpened) => {
-		return searchInputOpened ?
+	getSearchItem = searchInputOpened => {
+		return searchInputOpened ? (
 			<div className={getClass({ initialClass: "first-line-small-header__search-input", active: searchInputOpened })}>
 				<SearchHeaderInput />
 			</div>
-			: <VerdanaText text='Поиск по сайту' bold classname='bold-paragraph'/>
-	}
+		) : (
+			<VerdanaText text="Поиск по сайту" bold classname="bold-paragraph" />
+		);
+	};
 
-	showSmallMenu = (searchInputOpened) => {
+	showSmallMenu = searchInputOpened => {
 		return (
 			<>
 				<div className="small-header__catalog-title">
-					<LinkComponent text="Каталог товаров" WrappedComponent={VerdanaText} classname='bold-paragraph' bold route="catalog" />
+					<LinkComponent
+						text="Каталог товаров"
+						WrappedComponent={VerdanaText}
+						classname="bold-paragraph"
+						bold
+						route="catalog"
+					/>
 				</div>
 				<div className="small-header__knitting-title">
-					<LinkComponent text="Вазание на заказ" WrappedComponent={VerdanaText} bold classname='bold-paragraph' route="orderpage" />
+					<LinkComponent
+						text="Вазание на заказ"
+						WrappedComponent={VerdanaText}
+						bold
+						classname="bold-paragraph"
+						route="orderpage"
+					/>
 				</div>
 				<div className="small-header__zoom-wrapper">
 					<div className="zoom-wrapper__zoom-text">

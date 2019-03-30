@@ -2,14 +2,14 @@
 import React, { Node } from "react";
 import MediaQuery from "react-responsive";
 import { InputComponent } from "../";
-import { getClass } from "../../../utils";
+import { getClass } from "../../../../../utils";
 import {
 	BIG_MEDIA_SIZE,
 	MIDDLE_MEDIA_SIZE_FROM,
 	MIDDLE_MEDIA_SIZE_TO,
 	SMALL_MEDIA_SIZE_FROM,
 	SMALL_MEDIA_SIZE_TO,
-} from "../../../constants";
+} from "../../../../constants";
 import "./SearchHeaderInput.css";
 
 type SearchHeaderInputProps = {

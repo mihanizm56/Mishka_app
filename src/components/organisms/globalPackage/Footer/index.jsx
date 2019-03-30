@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkComponent, InteractiveSVGIcon, VerdanaText } from "../../../components";
+import { LinkComponent, InteractiveSVGIcon, VerdanaText } from "../../../../components";
 import "./Footer.css";
 
 export const Footer = props => {

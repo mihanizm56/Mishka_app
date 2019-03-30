@@ -1,5 +1,5 @@
 import React from "react";
-import { GreenCardParagraph, SVGIcon, TahomaText } from "../../../components";
+import { GreenCardParagraph, SVGIcon, TahomaText } from "../../../../components";
 import "./GreenCard.css";
 
 export const GreenCard = ({ text, icon, backgroundColor }) => {

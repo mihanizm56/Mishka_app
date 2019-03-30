@@ -1,13 +1,8 @@
 // @flow
 import React, { Component } from "react";
 import MediaQuery from "react-responsive";
-import {
-	SVGIcon,
-	OpenSansText,
-	ImageForPage,
-	VerdanaText
-} from "../../../components";
-import {Button} from '../../../components/buttons'
+import { SVGIcon, OpenSansText, ImageForPage, VerdanaText } from "../../../../components";
+import { Button } from "../../../atoms/buttons";
 // import {MapContainer} from '../'
 import {
 	BIG_MEDIA_SIZE,
@@ -15,7 +10,7 @@ import {
 	MIDDLE_MEDIA_SIZE_TO,
 	SMALL_MEDIA_SIZE_FROM,
 	SMALL_MEDIA_SIZE_TO,
-} from "../../../constants";
+} from "../../../../constants";
 import {
 	ZIGZAG_WIDTH_BIG,
 	ZIGZAG_HEIGHT_BIG,
@@ -50,48 +45,50 @@ export class ContactBox extends Component<propsType> {
 		adressBlockValue: "д. 19/8, test 101",
 	};
 
-	handleClick = (ref) => {
+	handleClick = ref => {
 		if (ref) {
-			const { current: { innerText } } = ref;
-			if(innerText) {
-				this.copyTextToClipboard(innerText)
-				console.log('check element', innerText)
+			const {
+				current: { innerText },
+			} = ref;
+			if (innerText) {
+				this.copyTextToClipboard(innerText);
+				console.log("check element", innerText);
 			}
 		}
-	}
+	};
 
-	copyTextToClipboard = (text) => {
+	copyTextToClipboard = text => {
 		const textArea = document.createElement("textarea");
-	
+
 		textArea.style = {
-			position: 'fixed',
+			position: "fixed",
 			top: 0,
 			left: 0,
-			width: '2em',
-			height: '2em',
+			width: "2em",
+			height: "2em",
 			padding: 0,
-			border: 'none',
-			outline: 'none',
-			boxShadow: 'none',
-			background: 'transparent'
-		}
+			border: "none",
+			outline: "none",
+			boxShadow: "none",
+			background: "transparent",
+		};
 
 		textArea.value = text;
 
 		document.body.appendChild(textArea);
 		textArea.focus();
 		textArea.select();
-	  
+
 		try {
-		  var successful = document.execCommand('copy');
-		  var msg = successful ? 'successful' : 'unsuccessful';
-		  console.log('Copying text command was ' + msg);
+			var successful = document.execCommand("copy");
+			var msg = successful ? "successful" : "unsuccessful";
+			console.log("Copying text command was " + msg);
 		} catch (err) {
-		  console.log('Oops, unable to copy');
+			console.log("Oops, unable to copy");
 		}
-	  
+
 		document.body.removeChild(textArea);
-	  }
+	};
 
 	render() {
 		const { emailAdress, adressCityValue, adressStreetValue, adressBlockValue } = this.props;
@@ -106,25 +103,29 @@ export class ContactBox extends Component<propsType> {
 						<div className="contacts-container">
 							<div className="contacts-title-container">
 								<SVGIcon icon="flag" />
-								<VerdanaText text="Контакты" classname='main-title' bold/>
+								<VerdanaText text="Контакты" classname="main-title" bold />
 							</div>
 							<div className="contacts-email-container">
-								<OpenSansText classname='text-video' text="e-mail" />
+								<OpenSansText classname="text-video" text="e-mail" />
 								<span className="email-wrapper">
-									<OpenSansText classname="text-email-contact" text={emailAdress} handleClick={this.handleClick} needRef />
-
+									<OpenSansText
+										classname="text-email-contact"
+										text={emailAdress}
+										handleClick={this.handleClick}
+										needRef
+									/>
 								</span>
 							</div>
 							<div className="contacts-adress">
-								<OpenSansText classname='text-video' text="адрес:" />
+								<OpenSansText classname="text-video" text="адрес:" />
 								<div className="contacts-adress__text-value">
-									<OpenSansText classname='text-video' text={adressCityValue} />
-									<OpenSansText classname='text-video' text={adressStreetValue} />
-									<OpenSansText classname='text-video' text={adressBlockValue} />
+									<OpenSansText classname="text-video" text={adressCityValue} />
+									<OpenSansText classname="text-video" text={adressStreetValue} />
+									<OpenSansText classname="text-video" text={adressBlockValue} />
 								</div>
 							</div>
 							<div className="contacts-button">
-								<Button text='check' classname="button-offer-wrapper" text='сделать заказ'/>
+								<Button text="check" classname="button-offer-wrapper" text="сделать заказ" />
 							</div>
 						</div>
 						<div className="contact-box__image-imitation" />
@@ -132,26 +133,26 @@ export class ContactBox extends Component<propsType> {
 				</MediaQuery>
 				<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
 					<div className="contacts-title-container">
-						<VerdanaText text="Контакты" classname='main-title' bold/>
+						<VerdanaText text="Контакты" classname="main-title" bold />
 						<SVGIcon icon="flag" />
 					</div>
 					<div className="contacts-additional-wrapper">
 						<div className="contacts-email-container">
-							<OpenSansText classname='text-video' text="e-mail" />
+							<OpenSansText classname="text-video" text="e-mail" />
 							<OpenSansText classname="text-email-contact" text={emailAdress} handleClick={this.handleClick} needRef />
 						</div>
 						<div className="contacts-adress">
-							<OpenSansText classname='text-video' text="адрес:" />
+							<OpenSansText classname="text-video" text="адрес:" />
 							<div className="contacts-adress__text-value">
-								<OpenSansText classname='text-video' text={adressCityValue} />
-								<OpenSansText classname='text-video' text={adressStreetValue} />
-								<OpenSansText classname='text-video' text={adressBlockValue} />
+								<OpenSansText classname="text-video" text={adressCityValue} />
+								<OpenSansText classname="text-video" text={adressStreetValue} />
+								<OpenSansText classname="text-video" text={adressBlockValue} />
 							</div>
 						</div>
 					</div>
 					<div className="contact-box__image-imitation" />
 					<div className="contacts-button">
-						<Button text='check' classname="button-offer-wrapper" text='сделать заказ'/>
+						<Button text="check" classname="button-offer-wrapper" text="сделать заказ" />
 					</div>
 					<div className="zig-zag-second-container zig-zag-second-container--mid">
 						<ImageForPage image="zigzag-index" configForImage={configForZigzagImage} />
@@ -159,25 +160,25 @@ export class ContactBox extends Component<propsType> {
 				</MediaQuery>
 				<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
 					<div className="contacts-title-container">
-						<VerdanaText text="Контакты" classname='main-title' bold/>
+						<VerdanaText text="Контакты" classname="main-title" bold />
 					</div>
 					<div className="contacts-additional-wrapper">
 						<div className="contacts-email-container">
-							<OpenSansText classname='text-video' text="e-mail" />
+							<OpenSansText classname="text-video" text="e-mail" />
 							<OpenSansText classname="text-email-contact" text={emailAdress} handleClick={this.handleClick} needRef />
 						</div>
 						<div className="contacts-adress">
-							<OpenSansText classname='text-video' text="адрес:" />
+							<OpenSansText classname="text-video" text="адрес:" />
 							<div className="contacts-adress__text-value">
-								<OpenSansText classname='text-video' text={adressCityValue} />
-								<OpenSansText classname='text-video' text={adressStreetValue} />
-								<OpenSansText classname='text-video' text={adressBlockValue} />
+								<OpenSansText classname="text-video" text={adressCityValue} />
+								<OpenSansText classname="text-video" text={adressStreetValue} />
+								<OpenSansText classname="text-video" text={adressBlockValue} />
 							</div>
 						</div>
 					</div>
 					<div className="contact-box__image-imitation" />
 					<div className="contacts-button">
-						<Button text='check' classname="button-offer-wrapper" text='Напишите нам'/>
+						<Button text="check" classname="button-offer-wrapper" text="Напишите нам" />
 					</div>
 					<div className="zig-zag-second-container zig-zag-second-container--small">
 						<ImageForPage image="zigzag-index" configForImage={configForZigzagImage} />

@@ -1,7 +1,7 @@
 // @flow
 import React, { Node, createRef } from "react";
 import "./TahomaText.css";
-import { getClass } from "../../../utils";
+import { getClass } from "../../../../utils";
 
 type TahomaTextProps = {
     text: string,

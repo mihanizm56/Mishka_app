@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { InteractiveSVGIcon, LabelForOrderForm } from "../../../components";
+import { InteractiveSVGIcon, LabelForOrderForm } from "../../../../components";
 import "./CheckBox.css";
 
 export class CheckBox extends Component {

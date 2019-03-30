@@ -1,14 +1,14 @@
 // @flow
 import React from "react";
 import MediaQuery from "react-responsive";
-import { OpenSansText } from "../../../components";
+import { OpenSansText } from "../../../../components";
 import {
 	BIG_MEDIA_SIZE,
 	MIDDLE_MEDIA_SIZE_FROM,
 	MIDDLE_MEDIA_SIZE_TO,
 	SMALL_MEDIA_SIZE_FROM,
 	SMALL_MEDIA_SIZE_TO,
-} from "../../../constants";
+} from "../../../../constants";
 import "./HitItemBox.css";
 
 export const HitItemBox = ({ characteristics }) => {

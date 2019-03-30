@@ -4,8 +4,8 @@ import "rc-slider/assets/index.css";
 import "rc-tooltip/assets/bootstrap.css";
 import "./reostat.css";
 import Slider from "rc-slider";
-import { findTopPrice } from "../../../utils";
-import { ACReturns } from "../../../actions";
+import { findTopPrice } from "../../../../utils";
+import { ACReturns } from "../../../../actions";
 
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const Range = createSliderWithTooltip(Slider.Range);

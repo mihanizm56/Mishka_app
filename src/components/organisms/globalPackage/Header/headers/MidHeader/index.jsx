@@ -1,35 +1,34 @@
 // @flow
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
 	SVGIcon,
 	VerdanaText,
 	LinkComponent,
 	InteractiveSVGIcon,
 	SearchHeaderInput,
-} from "../../../../../components";
-import { UserBasketBox, UnderHeaderBox } from "../../../../boxes";
+} from "../../../../../../components";
+import { UserBasketBox, UnderHeaderBox } from "../../../../../molecules/boxes";
 import { FONT_SIZE_FOR_SECOND_LINE_IN_HEADER } from "./constants";
-import { getHeaderTitle, getSpecialClassForHeader, getClass } from "../../../../../utils";
+import { getHeaderTitle, getSpecialClassForHeader, getClass } from "../../../../../../utils";
 import "./MidHeader.css";
-
 
 export class MidHeader extends Component {
 	static defaultProps = {
-		page:'index-page'
-	}
+		page: "index-page",
+	};
 
 	state = {
-		searchInputOpened: false
-	}
+		searchInputOpened: false,
+	};
 
 	handleToggleInput = () => {
-		console.log('//////')
-		this.setState(prevState => ({searchInputOpened: !prevState.searchInputOpened}))
-	}
+		console.log("//////");
+		this.setState(prevState => ({ searchInputOpened: !prevState.searchInputOpened }));
+	};
 
 	render() {
-		const {searchInputOpened} = this.state
-		const {page} = this.props;
+		const { searchInputOpened } = this.state;
+		const { page } = this.props;
 		return (
 			<div
 				className={getSpecialClassForHeader({
@@ -44,9 +43,14 @@ export class MidHeader extends Component {
 					<div className="middle-header__rigth-container">
 						<div className="first-line-middle-header__zoom-wrapper">
 							<div className="first-line-middle-header__zoom-icon">
-								<InteractiveSVGIcon icon="zoom" handleClick={this.handleToggleInput}/>
+								<InteractiveSVGIcon icon="zoom" handleClick={this.handleToggleInput} />
 							</div>
-							<div className={getClass({initialClass:"first-line-middle-header__search-input", active:searchInputOpened})}>
+							<div
+								className={getClass({
+									initialClass: "first-line-middle-header__search-input",
+									active: searchInputOpened,
+								})}
+							>
 								<SearchHeaderInput />
 							</div>
 						</div>
@@ -62,25 +66,25 @@ export class MidHeader extends Component {
 								text="Каталог товаров"
 								WrappedComponent={VerdanaText}
 								route="catalog"
-								classname='bold-paragraph'
+								classname="bold-paragraph"
 								bold
-								inlineStyles={{fontSize:FONT_SIZE_FOR_SECOND_LINE_IN_HEADER}}
+								inlineStyles={{ fontSize: FONT_SIZE_FOR_SECOND_LINE_IN_HEADER }}
 							/>
 						</div>
 						<div className="second-line-middle-header__knitting-title">
 							<LinkComponent
 								text="Вязание на заказ"
 								WrappedComponent={VerdanaText}
-								classname='bold-paragraph'
+								classname="bold-paragraph"
 								bold
 								route="orderpage"
-								inlineStyles={{fontSize: FONT_SIZE_FOR_SECOND_LINE_IN_HEADER}}
+								inlineStyles={{ fontSize: FONT_SIZE_FOR_SECOND_LINE_IN_HEADER }}
 							/>
 						</div>
 					</div>
 					<div className="middle-header__second-container">
 						<div className="second-line-middle-header__delivery-info">
-							<VerdanaText text="Бесплатная доставка по России" classname='regular-additional-paragraph'/>
+							<VerdanaText text="Бесплатная доставка по России" classname="regular-additional-paragraph" />
 						</div>
 					</div>
 				</div>

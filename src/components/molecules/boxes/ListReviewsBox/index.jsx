@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { ReviewBox } from "../";
-import { getUserName, getUserSurname } from "../../../utils";
+import { getUserName, getUserSurname } from "../../../../utils";
 
 export class ListReviewsBox extends Component {
 	static defaultProps = {

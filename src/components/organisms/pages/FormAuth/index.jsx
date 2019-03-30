@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
-import { FormTextField } from "../../../components";
+import { FormTextField } from "../../../../components";
 import { Redirect } from "react-router-dom";
 
 class FormAuthComponent extends Component {

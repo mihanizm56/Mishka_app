@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { VerdanaText } from "../../../components";
+import { VerdanaText } from "../../../../components";
 import { IndexItemBox } from "../";
 import "./AboutBox.css";
 
@@ -8,7 +8,7 @@ export const AboutBox = ({ iconsInBox }) => {
 	return (
 		<div className="about-box-wrapper">
 			<div className="about-box__title">
-				<VerdanaText text="Коротко о нас:" classname='main-title' bold/>
+				<VerdanaText text="Коротко о нас:" classname="main-title" bold />
 			</div>
 			<div className="about-box__item-box">
 				{iconsInBox.map(item => {

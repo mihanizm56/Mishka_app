@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { ACReturns } from "../../../actions";
+import { ACReturns } from "../../../../actions";
 
 type SearchFieldProps = {
 	callback: (value: string) => ACReturns,

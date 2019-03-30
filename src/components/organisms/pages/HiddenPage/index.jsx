@@ -1,5 +1,5 @@
 import React from "react";
-import { VerdanaText } from "../../../components";
+import { VerdanaText } from "../../../../components";
 import { Link, Redirect } from "react-router-dom";
 
 const checkLogin = parameter => {

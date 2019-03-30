@@ -8,7 +8,7 @@ import {
 	MIDDLE_MEDIA_SIZE_TO,
 	SMALL_MEDIA_SIZE_FROM,
 	SMALL_MEDIA_SIZE_TO,
-} from "../../../constants";
+} from "../../../../constants";
 import "./FormTextInput.css";
 
 type FormTextInputProps = {

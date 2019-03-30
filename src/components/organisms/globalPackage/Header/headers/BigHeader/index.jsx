@@ -1,14 +1,8 @@
 // @flow
 import React, { PureComponent } from "react";
-import {
-	SVGIcon,
-	LinkComponent,
-	InteractiveSVGIcon,
-	SearchHeaderInput,
-	VerdanaText
-} from "../../../../../components";
-import { UserBasketBox, UnderHeaderBox } from "../../../../boxes";
-import { getHeaderTitle, getSpecialClassForHeader, getClass } from "../../../../../utils";
+import { LinkComponent, InteractiveSVGIcon, SearchHeaderInput, VerdanaText } from "../../../../../../components";
+import { UserBasketBox, UnderHeaderBox } from "../../../../../molecules/boxes";
+import { getHeaderTitle, getSpecialClassForHeader, getClass } from "../../../../../../utils";
 import "./BigHeader.css";
 
 export class BigHeader extends PureComponent {
@@ -38,10 +32,22 @@ export class BigHeader extends PureComponent {
 			>
 				<div className="big-header__first-line-big-header">
 					<div className="first-line-big-header__catalog-title">
-						<LinkComponent text="Каталог товаров" WrappedComponent={VerdanaText} classname='bold-paragraph' bold route="catalog" />
+						<LinkComponent
+							text="Каталог товаров"
+							WrappedComponent={VerdanaText}
+							classname="bold-paragraph"
+							bold
+							route="catalog"
+						/>
 					</div>
 					<div className="first-line-big-header__knitting-title">
-						<LinkComponent text="Вазание на заказ" WrappedComponent={VerdanaText} bold classname='bold-paragraph' route="orderpage" />
+						<LinkComponent
+							text="Вазание на заказ"
+							WrappedComponent={VerdanaText}
+							bold
+							classname="bold-paragraph"
+							route="orderpage"
+						/>
 					</div>
 					<div className="first-line-big-header__logo">
 						<LinkComponent WrappedComponent={InteractiveSVGIcon} icon="main-logo" route="index" />
@@ -62,13 +68,13 @@ export class BigHeader extends PureComponent {
 				</div>
 				<div className="big-header__second-line-header">
 					<div className="second-line-big-header__new-items">
-						<VerdanaText text="Новые поступления" classname='regular-additional-paragraph'/>
+						<VerdanaText text="Новые поступления" classname="regular-additional-paragraph" />
 					</div>
 					<div className="second-line-big-header__discount">
-						<VerdanaText text="Распродажа" classname='regular-additional-paragraph'/>
+						<VerdanaText text="Распродажа" classname="regular-additional-paragraph" />
 					</div>
 					<div className="second-line-big-header__delivery-info">
-						<VerdanaText text="Бесплатная доставка по России" classname='regular-additional-paragraph'/>
+						<VerdanaText text="Бесплатная доставка по России" classname="regular-additional-paragraph" />
 					</div>
 				</div>
 				{page !== "index-page" && (

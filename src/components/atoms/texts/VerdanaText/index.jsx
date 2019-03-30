@@ -1,7 +1,7 @@
 // @flow
 import React, { Node, createRef } from "react";
 import "./VerdanaText.css";
-import { getClass } from "../../../utils";
+import { getClass } from "../../../../utils";
 
 type VerdanaTextProps = {
     text: string,

@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { OpenSansText, TextForLoginInReview, NameForReview, VerdanaText } from "../../../components";
+import { OpenSansText, TextForLoginInReview, NameForReview, VerdanaText } from "../../../../components";
 import "./ReviewTextBox.css";
 
 export const ReviewTextBox = ({ review, name, surname, login }) => {

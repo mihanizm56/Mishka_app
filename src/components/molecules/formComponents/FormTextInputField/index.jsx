@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from "react";
-import { FormTextInput, SVGIcon, FormFieldBoldParagraph, VerdanaText } from "../../../components";
-import { getClass } from "../../../utils";
+import { FormTextInput, SVGIcon, FormFieldBoldParagraph, VerdanaText } from "../../../../components";
+import { getClass } from "../../../../utils";
 import "./FormTextInputField.css";
 
 export class FormTextInputField extends Component {
@@ -41,7 +41,7 @@ export class FormTextInputField extends Component {
 			<div className={getClass({ initialClass: "form-text-input-field-wrapper", noMarginTop })}>
 				{!noTitle ? (
 					<div className="form-text-input-field__label">
-						<VerdanaText text={fieldLabelText} classname='form-name-field-label' bold/>
+						<VerdanaText text={fieldLabelText} classname="form-name-field-label" bold />
 					</div>
 				) : null}
 

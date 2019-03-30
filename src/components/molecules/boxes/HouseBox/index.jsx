@@ -3,14 +3,14 @@ import React from "react";
 import MediaQuery from "react-responsive";
 import { GreenCard } from "../../";
 import "./HouseBox.css";
-import { ImageForPage, VerdanaText } from "../../../components";
+import { ImageForPage, VerdanaText } from "../../../../components";
 import {
 	BIG_MEDIA_SIZE,
 	MIDDLE_MEDIA_SIZE_FROM,
 	MIDDLE_MEDIA_SIZE_TO,
 	SMALL_MEDIA_SIZE_FROM,
 	SMALL_MEDIA_SIZE_TO,
-} from "../../../constants";
+} from "../../../../constants";
 import {
 	HOUSE_WIDTH_SMALL,
 	HOUSE_HEIGHT_SMALL,
@@ -19,8 +19,8 @@ import {
 	HOUSE_WIDTH_BIG,
 	HOUSE_HEIGHT_BIG,
 } from "./constants";
-import zigzagPhotoBig from "../../../images/pictures/zigZag/img/zigzag-big.png";
-import zigzagPhotoMiddle from "../../../images/pictures/zigZag/img/zigzag-mid.png";
+import zigzagPhotoBig from "../../../../images/pictures/zigZag/img/zigzag-big.png";
+import zigzagPhotoMiddle from "../../../../images/pictures/zigZag/img/zigzag-mid.png";
 
 const dataForGreenCards = {
 	first: {
@@ -54,7 +54,7 @@ export const HouseBox = () => {
 						<div className="fake-photo-house fake-photo-house--big">
 							<ImageForPage image="house-index" configForImage={configForHouseImage} />
 							<div className="house-box-main-title house-box-main-title--big">
-								<VerdanaText text="Милые штуки ручной работы для дома" classname='main-title' bold/>
+								<VerdanaText text="Милые штуки ручной работы для дома" classname="main-title" bold />
 							</div>
 						</div>
 						<div className="house-box-cards-container house-box-cards-container--big">
@@ -85,7 +85,7 @@ export const HouseBox = () => {
 						<div className="fake-photo-house fake-photo-house--mid">
 							<ImageForPage image="house-index" configForImage={configForHouseImage} />
 							<div className="house-box-main-title house-box-main-title--mid">
-								<VerdanaText text="Милые штуки ручной работы для дома" classname='main-title' bold/>
+								<VerdanaText text="Милые штуки ручной работы для дома" classname="main-title" bold />
 							</div>
 						</div>
 						<div className="house-box-cards-container house-box-cards-container--mid">
@@ -115,7 +115,7 @@ export const HouseBox = () => {
 					<div className="fake-photo-house fake-photo-house--small">
 						<ImageForPage image="house-index" configForImage={configForHouseImage} />
 						<div className="house-box-main-title house-box-main-title--small">
-							<VerdanaText text="Милые штуки ручной работы для дома" classname='main-title' bold/>
+							<VerdanaText text="Милые штуки ручной работы для дома" classname="main-title" bold />
 						</div>
 					</div>
 					<div className="house-box-cards-container house-box-cards-container--small">

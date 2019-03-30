@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Reostat, FormMultiselect } from "../../../components";
-import { ItemsCatalogContainer, VideoBox } from "../../boxes";
+import { Reostat, FormMultiselect } from "../../../../components";
+import { ItemsCatalogContainer, VideoBox } from "../../../molecules";
 import "./CatalogPage.css";
 
 export class CatalogPage extends Component {

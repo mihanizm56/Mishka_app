@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import MediaQuery from "react-responsive";
-import { FormLabelParagraph, OpenSansText, TextArea } from "../../../components";
-import { FormTextInputField } from "../../cards";
+import { FormLabelParagraph, OpenSansText, TextArea } from "../../../../components";
+import { FormTextInputField } from "../../../molecules";
 import {
 	BIG_MEDIA_SIZE,
 	MIDDLE_MEDIA_SIZE_FROM,
 	MIDDLE_MEDIA_SIZE_TO,
 	SMALL_MEDIA_SIZE_FROM,
 	SMALL_MEDIA_SIZE_TO,
-} from "../../../constants";
-import { CheckBox, RadioBox } from "../../boxes";
+} from "../../../../constants";
+import { CheckBox, RadioBox } from "../../../molecules";
 import "./OrderPage.css";
 
-import {Button} from '../../../components/buttons'
+import { Button } from "../../../atoms/buttons";
 
 const backgroundColors = {
 	grey: "#F1F1F1",
@@ -42,12 +42,15 @@ export class OrderPage extends Component {
 			<div className="order-page-wrapper">
 				<div className="order-page-container">
 					<div className="order-page__text">
-						<OpenSansText classname='text-video' text="Мы будем рады воплотить в жизнь ваши пожелания!" />
-						<OpenSansText classname='text-video' text="Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали." />
+						<OpenSansText classname="text-video" text="Мы будем рады воплотить в жизнь ваши пожелания!" />
+						<OpenSansText
+							classname="text-video"
+							text="Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали."
+						/>
 					</div>
 					<div className="order-page-radio-container">
 						<div className="radio-container__title">
-							<OpenSansText classname='title-form-label-paragraph' bold text="тип" />
+							<OpenSansText classname="title-form-label-paragraph" bold text="тип" />
 						</div>
 						<div className="radio-container__buttons">
 							<RadioBox text="Аксессуар для интерьера" />
@@ -62,7 +65,7 @@ export class OrderPage extends Component {
 							<div className="background-grey-container background-grey-container__check-container background-grey-container__check-container--middle" />
 						</MediaQuery>
 						<div className="check-container__title">
-							<OpenSansText classname='title-form-label-paragraph' bold text="цвет" />
+							<OpenSansText classname="title-form-label-paragraph" bold text="цвет" />
 						</div>
 						<div className="check-container__buttons">
 							<MediaQuery minWidth={BIG_MEDIA_SIZE}>
@@ -105,7 +108,7 @@ export class OrderPage extends Component {
 					</div>
 					<div className="order-page-name-container">
 						<div className="order-page-name-container__title">
-							<OpenSansText classname='title-form-label-paragraph' bold text="фио" />
+							<OpenSansText classname="title-form-label-paragraph" bold text="фио" />
 						</div>
 						<div className="order-page-name-container__fields">
 							<FormTextInputField />
@@ -122,7 +125,7 @@ export class OrderPage extends Component {
 						</MediaQuery>
 						<div className="contact-fields-first-field">
 							<div className="contact-fields-first-field__title">
-								<OpenSansText classname='title-form-label-paragraph' bold text="тел" />
+								<OpenSansText classname="title-form-label-paragraph" bold text="тел" />
 							</div>
 							<div className="contact-fields-first-field__fields">
 								<FormTextInputField icon="phone" noTitle noMarginTop backgroundColor={backgroundColors.grey} />
@@ -130,7 +133,7 @@ export class OrderPage extends Component {
 						</div>
 						<div className="contact-fields-second-field">
 							<div className="contact-fields-second-field__title">
-								<OpenSansText classname='title-form-label-paragraph' bold text="e-mail" />
+								<OpenSansText classname="title-form-label-paragraph" bold text="e-mail" />
 							</div>
 							<div className="contact-fields-second-field__fields">
 								<FormTextInputField icon="mail" noTitle noMarginTop backgroundColor={backgroundColors.grey} />
@@ -139,7 +142,7 @@ export class OrderPage extends Component {
 					</div>
 					<div className="order-page-textarea-container">
 						<div className="order-page-textarea-container__title">
-							<OpenSansText classname='title-form-label-paragraph' bold text="доп	" />
+							<OpenSansText classname="title-form-label-paragraph" bold text="доп	" />
 						</div>
 						<div className="order-page-textarea-container__fields">
 							<TextArea />
@@ -147,15 +150,15 @@ export class OrderPage extends Component {
 					</div>
 					<div className="order-page-send-container">
 						<MediaQuery minWidth={BIG_MEDIA_SIZE}>
-							<Button classname='button-send' text='отправить заказ' />
-							<OpenSansText classname='form-additional-paragraph' />
+							<Button classname="button-send" text="отправить заказ" />
+							<OpenSansText classname="form-additional-paragraph" />
 						</MediaQuery>
 						<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
-							<Button classname='button-send' text='отправить заказ' />
-							<OpenSansText classname='form-additional-paragraph' />
+							<Button classname="button-send" text="отправить заказ" />
+							<OpenSansText classname="form-additional-paragraph" />
 						</MediaQuery>
 						<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
-							<Button classname='button-send' text='отправить заказ' />
+							<Button classname="button-send" text="отправить заказ" />
 						</MediaQuery>
 					</div>
 				</div>

@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { OpenSansText } from "../../../components";
+import { OpenSansText } from "../../../../components";
 
 type ItemDescriptionBoxType = {
 	sizes: Array<string>,

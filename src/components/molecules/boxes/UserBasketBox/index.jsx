@@ -1,5 +1,5 @@
 import React from "react";
-import { SVGIcon, TextForHeaderBasketIcon, VerdanaText } from "../../../components";
+import { SVGIcon, TextForHeaderBasketIcon, VerdanaText } from "../../../../components";
 import "./UserBasketBox.css";
 
 const getNormalizedItems = value => value;
