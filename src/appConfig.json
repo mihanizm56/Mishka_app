@@ -1,21 +1,2 @@
 {
-  "contacts": {
-    "email": "info@mimimishkashop.ru",
-    "address": {
-      "city": "Санкт-Петербург",
-      "street": "Большая Конюшенная",
-      "house": "19/8",
-      "office": "101"
-    }
-  },
-  "hitItem": {
-    "name": "Вязаные корзинки",
-    "description": "Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.",
-    "color": "«Тиффани»/серый",
-    "diameter": "25 см",
-    "height": "15 см",
-    "price": "990 руб.",
-    "classForImage": "baskets-image",
-    "classForIcon": "top-week-item"
-  }
 }

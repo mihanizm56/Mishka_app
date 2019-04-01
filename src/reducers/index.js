@@ -6,6 +6,8 @@ import { appLoading } from "./appLoading";
 import { shopItems } from "./shopItems";
 import { userItems } from "./userItems";
 import { reviews } from "./reviews";
+import { contacts } from "./contacts";
+import { topItem } from "./topItem";
 import { itemsFilters } from "./itemsFilters";
 
 export const rootReducer = history =>
@@ -18,4 +20,6 @@ export const rootReducer = history =>
 		userItems,
 		reviews,
 		itemsFilters,
+		contacts,
+		topItem,
 	});
