@@ -49,8 +49,8 @@ export class ListReviewsBox extends Component {
 	};
 
 	render() {
-		console.log("ListReviewsBox props");
-		console.log(this.props);
+		// console.log("ListReviewsBox props");
+		// console.log(this.props);
 
 		const { reviews, indexOfReview } = this.state;
 		const activeReview = reviews[indexOfReview];

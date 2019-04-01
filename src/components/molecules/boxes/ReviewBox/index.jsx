@@ -24,8 +24,8 @@ const configForReviewImage = {
 // type ReviewBoxPropTypes = { review, name, surname, login, onNextClick, onPrevClick }
 
 export const ReviewBox = (props: ReviewBoxPropTypes) => {
-	console.log("ReviewBox props");
-	console.log(props);
+	// console.log("ReviewBox props");
+	// console.log(props);
 	const { review, name, surname, login, onNextClick, onPrevClick } = props;
 	return (
 		<div className="review-wrapper">

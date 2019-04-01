@@ -6,14 +6,22 @@ class WrappedContainer extends Component {
 		console.log("test TopItemProvider props");
 		console.log(this.props);
 
-		const { component: WrappedComponent, topItem } = this.props;
+		const { component: WrappedComponent, ...restProps } = this.props;
 
-		return <WrappedComponent topItem={topItem} />;
+		return <WrappedComponent {...restProps} />;
 	}
 }
 
 const mapStateToProps = store => {
-	return { topItem: store.topItem };
+	return {
+		itemName: store.topItem.name,
+		description: store.topItem.description,
+		color: store.topItem.color,
+		diameter: store.topItem.diameter,
+		height: store.topItem.height,
+		price: store.topItem.price,
+		image: store.topItem.image,
+	};
 };
 
 export const TopItemProvider = connect(mapStateToProps)(WrappedContainer);

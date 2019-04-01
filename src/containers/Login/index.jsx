@@ -4,8 +4,8 @@ import { addReview } from "../../actions";
 
 class WrappedContainer extends Component {
 	render() {
-		console.log("test ReviewsProvider props");
-		console.log(this.props);
+		// console.log("test AuthProvider props");
+		// console.log(this.props);
 
 		const { component: WrappedComponent, reviews } = this.props;
 

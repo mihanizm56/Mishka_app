@@ -5,8 +5,7 @@ const initialState = {
 	diameter: "25 см",
 	height: "15 см",
 	price: "990 руб.",
-	classForImage: "baskets-image",
-	classForIcon: "top-week-item",
+	image: "baskets-image",
 };
 
 export const topItem = (state = initialState, action) => state;

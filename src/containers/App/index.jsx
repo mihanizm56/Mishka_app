@@ -13,8 +13,8 @@ class AppContainer extends Component {
 	}
 
 	render() {
-		console.log("test App props");
-		console.log(this.props);
+		// console.log("test App props");
+		// console.log(this.props);
 		const { loginState, router } = this.props;
 		const userIsLoggedIn = loginState.login || localStorage.login === "true";
 		return (

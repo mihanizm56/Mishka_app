@@ -18,7 +18,11 @@ import "./WeeklyHitBox.css";
 
 const descriptionOfItem = "Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.";
 
-export const WeeklyHitBox = ({ itemName, image, price }) => {
+export const WeeklyHitBox = props => {
+	const { itemName, image, price } = props;
+	console.log("check WeeklyHitBox props");
+	console.log(props);
+
 	return (
 		<div className="hit-box-wrapper">
 			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
