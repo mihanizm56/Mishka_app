@@ -1,3 +1,3 @@
 export * from "./globalPackage";
 export * from "./pages";
-export * from "./BigForm";
+export * from "./BigForm/Form";

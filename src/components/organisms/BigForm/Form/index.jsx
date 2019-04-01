@@ -1,17 +1,15 @@
 import React, { Component } from "react";
 import MediaQuery from "react-responsive";
 import { Field } from "redux-form";
-import { Button, OpenSansText, TextArea, CheckBox, RadioBox, FormTextInputField } from "../../../components";
-import {BigCheckBoxContainer,
-    MidCheckBoxContainer,
-    SmallCheckBoxContainer} from './'
+import { Button, OpenSansText, TextArea, CheckBox, RadioBox, FormTextInputField } from "../../..";
+import {BigCheckBoxContainer, MidCheckBoxContainer, SmallCheckBoxContainer} from '.'
 import {
     BIG_MEDIA_SIZE,
     MIDDLE_MEDIA_SIZE_FROM,
     MIDDLE_MEDIA_SIZE_TO,
     SMALL_MEDIA_SIZE_FROM,
     SMALL_MEDIA_SIZE_TO,
-} from "../../../constants";
+} from "../../../../constants";
 import "./BigForm.css";
 
 const backgroundColors = {
