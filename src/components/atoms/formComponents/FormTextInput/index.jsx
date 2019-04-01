@@ -17,7 +17,7 @@ type FormTextInputProps = {
 	backgroundColor?: string,
 };
 
-export const FormTextInput = ({ placeholder, getRef, backgroundColor }: FormTextInputProps): Node => {
+export const FormTextInput = ({ placeholder, getRef, backgroundColor, input }: FormTextInputProps): Node => {
 	return (
 		<>
 			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
@@ -26,6 +26,7 @@ export const FormTextInput = ({ placeholder, getRef, backgroundColor }: FormText
 					className="form-input"
 					getRef={getRef}
 					backgroundColor={backgroundColor}
+					input={input}
 				/>
 			</MediaQuery>
 			<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
@@ -34,10 +35,11 @@ export const FormTextInput = ({ placeholder, getRef, backgroundColor }: FormText
 					className="form-input"
 					getRef={getRef}
 					backgroundColor={backgroundColor}
+					input={input}
 				/>
 			</MediaQuery>
 			<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
-				<InputComponent placeholder={placeholder} className="form-input" getRef={getRef} />
+				<InputComponent placeholder={placeholder} input={input} className="form-input" getRef={getRef} />
 			</MediaQuery>
 		</>
 	);

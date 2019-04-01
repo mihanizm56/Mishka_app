@@ -9,8 +9,8 @@ type TextAreaProps = {
 	height: string,
 };
 
-export const TextArea = ({ placeholder, width, height, isError }: TextAreaProps): Node => (
-	<textarea className={getClass({ initialClass: "textarea", error: isError })} placeholder={placeholder} />
+export const TextArea = ({ placeholder, width, height, isError, input }: TextAreaProps): Node => (
+	<textarea {...input} className={getClass({ initialClass: "textarea", error: isError })} placeholder={placeholder} />
 );
 
 TextArea.defaultProps = {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {OrderFormProvider} from '../../../../containers';
-import {BigForm} from '../../BigForm/Form';
+import {BigForm} from '../../BigForm';
 
 export class OrderPage extends Component {
 	render() {

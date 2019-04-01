@@ -18,9 +18,9 @@ export class FormTextInputField extends Component {
 		this.inputRef = React.createRef();
 	}
 
-	componentDidMount(){
-		console.log('check FormTextInputField props')
-		console.log(this.props)
+	componentDidMount() {
+		console.log("check FormTextInputField props");
+		console.log(this.props);
 	}
 
 	inputRef = null;
@@ -39,9 +39,19 @@ export class FormTextInputField extends Component {
 
 	render() {
 		const { inputIsActive } = this.state;
-		const { formatter, icon, text, error, fieldLabelText, noTitle, backgroundColor, noMarginTop } = this.props;
-		// console.log("check props FormTextInputField");
-		// console.log(this.props);
+		const {
+			formatter,
+			icon,
+			text,
+			error,
+			fieldLabelText,
+			noTitle,
+			backgroundColor,
+			noMarginTop,
+			...restProps
+		} = this.props;
+		console.log("check restProps FormTextInputField");
+		console.log({ ...restProps });
 		return (
 			<div className={getClass({ initialClass: "form-text-input-field-wrapper", noMarginTop })}>
 				{!noTitle ? (
@@ -55,7 +65,7 @@ export class FormTextInputField extends Component {
 					onClick={this.focusInput}
 					onBlur={this.blurInput}
 				>
-					<FormTextInput text={text} getRef={this.getInputRef} backgroundColor={backgroundColor} />
+					<FormTextInput text={text} getRef={this.getInputRef} backgroundColor={backgroundColor} {...restProps} />
 					{icon && <SVGIcon icon={icon} />}
 				</div>
 			</div>

@@ -23,9 +23,12 @@ export class InputComponent extends Component<InputComponentProps> {
 	}
 
 	render() {
-		const { type, className, placeholder, customFontSize, getRef, backgroundColor } = this.props;
+		const { type, className, placeholder, customFontSize, getRef, backgroundColor, input } = this.props;
+		console.log("check InputComponent input");
+		console.log({ ...input });
 		return (
 			<input
+				{...input}
 				ref={this.inputRef}
 				type={type}
 				className={className}
