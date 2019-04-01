@@ -1,4 +1,11 @@
 
+/* убрать после рефакторинга стилей */
+
+button{
+    background-color: #fff;
+    outline: none;
+}
+
 /* ButtonForOffer */
 
 .button-offer-wrapper{
