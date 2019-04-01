@@ -10,6 +10,11 @@ class FormAuthComponent extends Component {
 		signInFunc(email, password);
 	};
 
+	componentDidMount() {
+		console.log("FormAuthComponent props");
+		console.log(this.props);
+	}
+
 	render() {
 		const { handleSubmit, login, isLoading } = this.props;
 

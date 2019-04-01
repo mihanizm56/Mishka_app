@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import MediaQuery from "react-responsive";
-import { FormLabelParagraph, OpenSansText, TextArea } from "../../../../components";
+import { reduxForm, Field } from "redux-form";
+import { OpenSansText, TextArea } from "../../../../components";
 import { FormTextInputField } from "../../../molecules";
 import {
 	BIG_MEDIA_SIZE,
@@ -20,16 +21,18 @@ const backgroundColors = {
 };
 
 export class OrderPage extends Component {
-	static defaultProps = {
-		arrayOfCheckValues: [
+	constructor() {
+		super();
+
+		this.arrayOfCheckValues = [
 			{ title: "Белый" },
 			{ title: "«Тиффани»" },
 			{ title: "Розовый" },
 			{ title: "Серый" },
 			{ title: "Черный" },
 			{ title: "Оранжевый" },
-		],
-	};
+		];
+	}
 
 	componentDidMount() {
 		console.log("test OrderPage props");
@@ -111,7 +114,7 @@ export class OrderPage extends Component {
 							<OpenSansText classname="title-form-label-paragraph" bold text="фио" />
 						</div>
 						<div className="order-page-name-container__fields">
-							<FormTextInputField />
+							<Field component={FormTextInputField} label="test_field" type="text" name="test_field" />
 							<FormTextInputField />
 							<FormTextInputField />
 						</div>

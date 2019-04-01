@@ -1,6 +1,3 @@
-export * from "./AuthPageRoute";
-export * from "./CatalogPageRoute";
-export * from "./ErrorPageRoute";
-export * from "./IndexPageRoute";
-export * from "./MainLayout";
-export * from "./OrderPageRoute";
+import { MainLayout } from "./MainLayout";
+
+export default MainLayout;

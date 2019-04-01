@@ -1,7 +1,11 @@
 // @flow
 import React from "react";
 import { Switch } from "react-router-dom";
-import { AuthPageRoute, CatalogPageRoute, ErrorPageRoute, IndexPageRoute, OrderPageRoute } from "../";
+import { AuthPageRoute } from "../AuthPageRoute";
+import { CatalogPageRoute } from "../CatalogPageRoute";
+import { ErrorPageRoute } from "../ErrorPageRoute";
+import { IndexPageRoute } from "../IndexPageRoute";
+import { OrderPageRoute } from "../OrderPageRoute";
 
 type MainLayoutPropTypes = {};
 
