@@ -1,11 +1,22 @@
 const initialState = {
 	name: "Вязаные корзинки",
 	description: "Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.",
-	color: "«Тиффани»/серый",
-	diameter: "25 см",
-	height: "15 см",
 	price: "990 руб.",
-	image: "baskets-image",
+	image: "index-basket",
+	characteristics: [
+		{
+			name: "Цвет",
+			value: "«Тиффани»/серый",
+		},
+		{
+			name: "Диаметр",
+			value: "25 см",
+		},
+		{
+			name: "Высота",
+			value: "15 см",
+		},
+	],
 };
 
 export const topItem = (state = initialState, action) => state;

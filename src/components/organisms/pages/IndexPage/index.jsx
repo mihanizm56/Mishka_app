@@ -2,7 +2,7 @@
 import React from "react";
 import "./IndexPage.css";
 import { AboutBox, ListReviewsBox, ContactBox, WeeklyHitBox, HouseBox } from "../../../molecules";
-import { ReviewsProvider, TopItemProvider } from "../../../../containers";
+import { ReviewsProvider, TopItemProvider, ShopContactsProvider } from "../../../../containers";
 
 type IndexPagePropTypes = {};
 
@@ -15,7 +15,7 @@ export const IndexPage = (props: IndexPagePropTypes) => {
 			<TopItemProvider component={WeeklyHitBox} />
 			<AboutBox />
 			<ReviewsProvider component={ListReviewsBox} />
-			<ContactBox />
+			<ShopContactsProvider component={ContactBox} />
 		</div>
 	);
 };

@@ -23,10 +23,10 @@ import {
 import "./ContactBox.css";
 
 type propsType = {
-	emailAdress: string,
-	adressCityValue: string,
-	adressStreetValue: string,
-	adressBlockValue: string,
+	email: string,
+	city: string,
+	street: string,
+	block: string,
 };
 
 const configForZigzagImage = {
@@ -40,10 +40,10 @@ const configForZigzagImage = {
 
 export class ContactBox extends Component<propsType> {
 	static defaultProps = {
-		emailAdress: "test-email",
-		adressCityValue: "г. Dafault-Петербург,",
-		adressStreetValue: "ул. Dafault Конюшенная,",
-		adressBlockValue: "д. 19/8, test 101",
+		email: "test-email",
+		city: "г. Dafault-Петербург,",
+		street: "ул. Dafault Конюшенная,",
+		block: "д. 19/8, test 101",
 	};
 
 	handleClick = ref => {
@@ -93,7 +93,7 @@ export class ContactBox extends Component<propsType> {
 
 	render() {
 		////написать парсер для адреса
-		const { emailAdress, adressCityValue, adressStreetValue, adressBlockValue } = this.props;
+		const { email, city, street, block } = this.props;
 
 		return (
 			<div className="contact-box-wrapper">
@@ -111,20 +111,15 @@ export class ContactBox extends Component<propsType> {
 							<div className="contacts-email-container">
 								<OpenSansText classname="text-video" text="e-mail" />
 								<span className="email-wrapper">
-									<OpenSansText
-										classname="text-email-contact"
-										text={emailAdress}
-										handleClick={this.handleClick}
-										needRef
-									/>
+									<OpenSansText classname="text-email-contact" text={email} handleClick={this.handleClick} needRef />
 								</span>
 							</div>
 							<div className="contacts-adress">
 								<OpenSansText classname="text-video" text="адрес:" />
 								<div className="contacts-adress__text-value">
-									<OpenSansText classname="text-video" text={adressCityValue} />
-									<OpenSansText classname="text-video" text={adressStreetValue} />
-									<OpenSansText classname="text-video" text={adressBlockValue} />
+									<OpenSansText classname="text-video" text={city} />
+									<OpenSansText classname="text-video" text={street} />
+									<OpenSansText classname="text-video" text={block} />
 								</div>
 							</div>
 							<div className="contacts-button">
@@ -142,14 +137,14 @@ export class ContactBox extends Component<propsType> {
 					<div className="contacts-additional-wrapper">
 						<div className="contacts-email-container">
 							<OpenSansText classname="text-video" text="e-mail" />
-							<OpenSansText classname="text-email-contact" text={emailAdress} handleClick={this.handleClick} needRef />
+							<OpenSansText classname="text-email-contact" text={email} handleClick={this.handleClick} needRef />
 						</div>
 						<div className="contacts-adress">
 							<OpenSansText classname="text-video" text="адрес:" />
 							<div className="contacts-adress__text-value">
-								<OpenSansText classname="text-video" text={adressCityValue} />
-								<OpenSansText classname="text-video" text={adressStreetValue} />
-								<OpenSansText classname="text-video" text={adressBlockValue} />
+								<OpenSansText classname="text-video" text={city} />
+								<OpenSansText classname="text-video" text={street} />
+								<OpenSansText classname="text-video" text={block} />
 							</div>
 						</div>
 					</div>
@@ -168,14 +163,14 @@ export class ContactBox extends Component<propsType> {
 					<div className="contacts-additional-wrapper">
 						<div className="contacts-email-container">
 							<OpenSansText classname="text-video" text="e-mail" />
-							<OpenSansText classname="text-email-contact" text={emailAdress} handleClick={this.handleClick} needRef />
+							<OpenSansText classname="text-email-contact" text={email} handleClick={this.handleClick} needRef />
 						</div>
 						<div className="contacts-adress">
 							<OpenSansText classname="text-video" text="адрес:" />
 							<div className="contacts-adress__text-value">
-								<OpenSansText classname="text-video" text={adressCityValue} />
-								<OpenSansText classname="text-video" text={adressStreetValue} />
-								<OpenSansText classname="text-video" text={adressBlockValue} />
+								<OpenSansText classname="text-video" text={city} />
+								<OpenSansText classname="text-video" text={street} />
+								<OpenSansText classname="text-video" text={block} />
 							</div>
 						</div>
 					</div>

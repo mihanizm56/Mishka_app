@@ -11,7 +11,11 @@ import {
 } from "../../../../constants";
 import "./HitItemBox.css";
 
-export const HitItemBox = ({ characteristics }) => {
+export const HitItemBox = props => {
+	const { characteristics } = props;
+	// console.log("HitItemBox props");
+	// console.log(props);
+
 	return (
 		<>
 			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
@@ -20,10 +24,10 @@ export const HitItemBox = ({ characteristics }) => {
 						return (
 							<div className="table-row" key={index}>
 								<div className="table-row__block-name">
-									<OpenSansText classname='text-video' text={item.name} />
+									<OpenSansText classname="text-video" text={item.name} />
 								</div>
 								<div className="table-row__block-value">
-									<OpenSansText classname='text-video' text={item.value} />
+									<OpenSansText classname="text-video" text={item.value} />
 								</div>
 							</div>
 						);
@@ -36,10 +40,10 @@ export const HitItemBox = ({ characteristics }) => {
 						return (
 							<div className="table-row" key={index}>
 								<div className="table-row__block-name">
-									<OpenSansText classname='text-video' text={item.name} />
+									<OpenSansText classname="text-video" text={item.name} />
 								</div>
 								<div className="table-row__block-value">
-									<OpenSansText classname='text-video' text={item.value} />
+									<OpenSansText classname="text-video" text={item.value} />
 								</div>
 							</div>
 						);
@@ -52,10 +56,10 @@ export const HitItemBox = ({ characteristics }) => {
 						return (
 							<div className="table-row" key={index}>
 								<div className="table-row__block-name">
-									<OpenSansText classname='text-video' text={item.name} />
+									<OpenSansText classname="text-video" text={item.name} />
 								</div>
 								<div className="table-row__block-value">
-									<OpenSansText classname='text-video' text={item.value} />
+									<OpenSansText classname="text-video" text={item.value} />
 								</div>
 							</div>
 						);

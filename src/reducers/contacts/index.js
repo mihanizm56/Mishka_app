@@ -1,10 +1,11 @@
+// @flow
 const initialState = {
 	email: "info@mimimishkashop.ru",
 	address: {
 		city: "Санкт-Петербург",
 		street: "Большая Конюшенная",
-		house: "19/8",
-		office: "101",
+		block: "19/8",
+		room: "101",
 	},
 };
 

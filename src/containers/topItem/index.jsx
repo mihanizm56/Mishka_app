@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 
 class WrappedContainer extends Component {
 	render() {
-		console.log("test TopItemProvider props");
-		console.log(this.props);
+		// console.log("test TopItemProvider props");
+		// console.log(this.props);
 
 		const { component: WrappedComponent, ...restProps } = this.props;
 
@@ -16,9 +16,7 @@ const mapStateToProps = store => {
 	return {
 		itemName: store.topItem.name,
 		description: store.topItem.description,
-		color: store.topItem.color,
-		diameter: store.topItem.diameter,
-		height: store.topItem.height,
+		characteristics: store.topItem.characteristics,
 		price: store.topItem.price,
 		image: store.topItem.image,
 	};

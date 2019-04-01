@@ -12,6 +12,10 @@ export const changeRangeMaxValue = "CHANGE_RANGE_MAX";
 export const changeSelectedFilter = "CHANGE_SELECTED_FITER";
 export const changeSearchFilter = "CHANGE_SEARCH_FITER";
 export const addTheReview = "ADD_THE_REVIEW";
+export const block = "BLOCK";
+export const street = "STREET";
+export const city = "CITY";
+export const emptyString = "";
 
 // numbers
 

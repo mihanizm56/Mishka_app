@@ -16,12 +16,10 @@ import { Button } from "../../../atoms/buttons";
 
 import "./WeeklyHitBox.css";
 
-const descriptionOfItem = "Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.";
-
 export const WeeklyHitBox = props => {
-	const { itemName, image, price } = props;
-	console.log("check WeeklyHitBox props");
-	console.log(props);
+	const { itemName, image, price, description, ...restProps } = props;
+	// console.log("check WeeklyHitBox props");
+	// console.log(props);
 
 	return (
 		<div className="hit-box-wrapper">
@@ -33,8 +31,8 @@ export const WeeklyHitBox = props => {
 					</div>
 					<div className="hit-box-text-container">
 						<div className="hit-box-text-wrapper">
-							<OpenSansText classname="text-video" text={descriptionOfItem} />
-							<HitItemBox />
+							<OpenSansText classname="text-video" text={description} />
+							<HitItemBox {...restProps} />
 							<VerdanaText text={`Цена: ${price}`} classname="footer__text-logo" bold />
 							<Button classname="button-weekly" text="заказать" />
 						</div>
@@ -53,7 +51,7 @@ export const WeeklyHitBox = props => {
 					</div>
 					<div className="hit-box-text-container">
 						<div className="hit-box-text-wrapper">
-							<OpenSansText classname="text-video" text={descriptionOfItem} />
+							<OpenSansText classname="text-video" text={description} />
 							<HitItemBox />
 							<VerdanaText text={`Цена: ${price}`} classname="footer__text-logo" bold />
 							<Button classname="button-weekly" text="заказать" />
@@ -71,7 +69,7 @@ export const WeeklyHitBox = props => {
 					<OpenSansText text="Товар недели" classname="green-paragraph-index-small" />
 				</div>
 				<div className="hit-box-text-wrapper">
-					<OpenSansText classname="text-video" text={descriptionOfItem} />
+					<OpenSansText classname="text-video" text={description} />
 					<HitItemBox />
 				</div>
 				<div className="small-hit-image-wrapper">
@@ -91,4 +89,5 @@ WeeklyHitBox.defaultProps = {
 	itemName: "Вязаные корзинки",
 	image: "index-basket",
 	price: "0 рублей",
+	description: "Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.",
 };
