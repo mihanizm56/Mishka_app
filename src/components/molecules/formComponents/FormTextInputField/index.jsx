@@ -18,6 +18,11 @@ export class FormTextInputField extends Component {
 		this.inputRef = React.createRef();
 	}
 
+	componentDidMount(){
+		console.log('check FormTextInputField props')
+		console.log(this.props)
+	}
+
 	inputRef = null;
 
 	focusInput = () => {

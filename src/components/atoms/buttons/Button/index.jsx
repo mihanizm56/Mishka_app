@@ -12,7 +12,7 @@ type ButtonPropsType = {
 export const Button = ({ handleClick, text, classname }: ButtonPropsType) => {
 	return (
 		<button className={classname} onClick={handleClick}>
-			<OpenSansText classname='text-button' bold text={text} />
+			{<OpenSansText bold text={text} classname='text-button'/>}
 		</button>
 	);
 };

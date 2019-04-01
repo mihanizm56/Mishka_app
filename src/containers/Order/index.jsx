@@ -3,8 +3,8 @@ import { reduxForm } from "redux-form";
 
 class WrappedContainer extends Component {
 	render() {
-		console.log("test OrderFormProvider props");
-		console.log(this.props);
+		// console.log("test OrderFormProvider props");
+		// console.log(this.props);
 
 		const { component: WrappedComponent, ...restProps } = this.props;
 
