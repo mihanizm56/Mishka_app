@@ -1,7 +1,7 @@
 // @flow
 import { React } from 'react';
 import { Field } from 'redux-form';
-import { CheckBox } from '../../../components'
+import { CheckBox } from '../..'
 
 
 
