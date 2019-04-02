@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { registerApp } from "../../utils";
 import { MainWrapper } from "../../components/organisms";
+import { TrueCheckBox } from "../../components/atoms";
 import "./App.css";
 
 import { OpenSansText } from "../../components";
@@ -19,7 +20,8 @@ class AppContainer extends Component {
 		const userIsLoggedIn = loginState.login || localStorage.login === "true";
 		return (
 			<div className="global-wrapper">
-				<MainWrapper userIsLoggedIn={userIsLoggedIn} router={router} />
+				{/* <MainWrapper userIsLoggedIn={userIsLoggedIn} router={router} /> */}
+				<TrueCheckBox />
 				{/* <SearchField callback={changeSearchFilter} /> */}
 				{/* <button onClick={() => userIsLoggedIn && userSignOut()}>Выйти</button> */}
 			</div>

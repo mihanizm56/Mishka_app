@@ -1,0 +1,52 @@
+.check__input{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0)
+}
+
+.check {
+  padding-left: 60px;
+  padding-right: 30px;
+  display: flex;
+  align-items: center;
+  height: 54px;
+  background-color: #fff;
+  border: 1px solid red;
+}
+
+.check__box {
+  height: 50px;
+  width: 50px;
+  background-size: contain;
+  position: absolute;
+  margin-left: -60px;
+  
+  background-color: #fff;
+  border: 2px solid black;
+}
+
+
+.check__input:hover + .check__box {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='33' height='22' viewBox='0 0 33 22'%3E%3Cmetadata%3E%3C%3Fxpacket begin='﻿' id='W5M0MpCehiHzreSzNTczkc9d'%3F%3E%3Cx:xmpmeta xmlns:x='adobe:ns:meta/' x:xmptk='Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39 '%3E%3Crdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23'%3E%3Crdf:Description rdf:about=''/%3E%3C/rdf:RDF%3E%3C/x:xmpmeta%3E%3C%3Fxpacket end='w'%3F%3E%3C/metadata%3E%3Cimage id='Vector_Smart_Object' data-name='Vector Smart Object' width='33' height='22' xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAWBAMAAAC8tehJAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAALVBMVEUAAAAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAAAABzvbT2AAAADXRSTlMAMO9gUM8gEI+fv4BA1DyE8AAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAwkCDiG3wh9oAAAAgElEQVQY02NgQAVCBmgCLLoKaCK2lwRQBZjvKqIruZqAriQcQ0kBqgAHhpK5ECXMcAHOu8shEhPgSm5C6LU34UomoDLYYUrgikvvTkAYOB2kJPYmmqWldzcwINkaDlRyGdlle68WlN5FCSnmuzGoSoA+vIuqBKQITQkDgxFSWAIAxJkqlSg5smYAAAAASUVORK5CYII='/%3E%3C/svg%3E%0A");
+}
+
+.check:active{border-color: #62D1BA;}
+.check__input:active + .check__box {
+  border-color: #62D1BA;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='33' height='22' viewBox='0 0 33 22'%3E%3Cmetadata%3E%3C%3Fxpacket begin='﻿' id='W5M0MpCehiHzreSzNTczkc9d'%3F%3E%3Cx:xmpmeta xmlns:x='adobe:ns:meta/' x:xmptk='Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39 '%3E%3Crdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23'%3E%3Crdf:Description rdf:about=''/%3E%3C/rdf:RDF%3E%3C/x:xmpmeta%3E%3C%3Fxpacket end='w'%3F%3E%3C/metadata%3E%3Cimage id='Vector_Smart_Object' data-name='Vector Smart Object' width='33' height='22' xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAWBAMAAAC8tehJAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAALVBMVEUAAAAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAjHyAAAABzvbT2AAAADXRSTlMAMO9gUM8gEI+fv4BA1DyE8AAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAwkCDiG3wh9oAAAAgElEQVQY02NgQAVCBmgCLLoKaCK2lwRQBZjvKqIruZqAriQcQ0kBqgAHhpK5ECXMcAHOu8shEhPgSm5C6LU34UomoDLYYUrgikvvTkAYOB2kJPYmmqWldzcwINkaDlRyGdlle68WlN5FCSnmuzGoSoA+vIuqBKQITQkDgxFSWAIAxJkqlSg5smYAAAAASUVORK5CYII='/%3E%3C/svg%3E%0A");
+}
+
+.check:disabled + .check__box {
+
+}
+
+.check:disabled:active + .check__box {
+
+}
+
+.check__box{
+  
+}
+
