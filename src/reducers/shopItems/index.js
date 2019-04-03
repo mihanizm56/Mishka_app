@@ -1,4 +1,6 @@
-export const shopItemsToSell = [
+import {getShopItems} from '../../constants';
+
+export const initialState = [
 	{
 		image: "hare",
 		name: "Зайчик-попрыгайчик",
@@ -25,4 +27,12 @@ export const shopItemsToSell = [
 	},
 ];
 
-export const shopItems = (state = shopItemsToSell, action) => state;
+export const shopItems = (state = initialState, action) => {
+	switch (action.type) {
+		case getShopItems:
+			return { ...state, ...action.payload };
+
+		default:
+			return state;
+	}
+};

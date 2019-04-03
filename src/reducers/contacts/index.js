@@ -1,4 +1,6 @@
 // @flow
+import {getContacts} from '../../constants';
+
 const initialState = {
 	email: "info@mimimishkashop.ru",
 	address: {
@@ -9,14 +11,12 @@ const initialState = {
 	},
 };
 
-export const contacts = (state = initialState, action) => state;
+export const contacts = (state = initialState, action) => {
+	switch (action.type) {
+		case getContacts:
+			return { ...state, ...action.payload };
 
-// export const contacts = (state = initialState, action) => {
-// 	switch (action.type) {
-// 		case getContacts:
-// 			return { ...state, data: action.payload };
-
-// 		default:
-// 			return state;
-// 	}
-// };
+		default:
+			return state;
+	}
+};

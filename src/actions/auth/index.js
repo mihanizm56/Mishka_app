@@ -36,6 +36,8 @@ export const loginRequestAction = (email, password) => {
 	console.log(`email = ${email}, password = ${password}`);
 	if (email !== "" && password !== "") {
 		return dispatch => {
+			dispatch(loadingAppDoneAction())
+			
 			return firebase
 				.auth()
 				.signInWithEmailAndPassword(email, password)
