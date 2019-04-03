@@ -32,15 +32,15 @@ export class BigForm extends Component {
 		<>
 			<div className="buttons-big-first-column">
 				<Field component={CheckBox} type="checkbox" name="first_checkbox" text="Белый" />
-				<Field component={CheckBox} type="checkbox" name="first_checkbox" text="«Тиффани»" />
+				<Field component={CheckBox} type="checkbox" name="second_checkbox" text="«Тиффани»" />
 			</div>
 			<div className="buttons-big-second-column">
-				<Field component={CheckBox} type="checkbox" name="first_checkbox" text="Розовый" />
-				<Field component={CheckBox} type="checkbox" name="first_checkbox" text="Серый" />
+				<Field component={CheckBox} type="checkbox" name="third_checkbox" text="Розовый" />
+				<Field component={CheckBox} type="checkbox" name="fourth_checkbox" text="Серый" />
 			</div>
 			<div className="buttons-big-third-column">
-				<Field component={CheckBox} type="checkbox" name="first_checkbox" text="Черный" />
-				<Field component={CheckBox} type="checkbox" name="first_checkbox" text="Оранжевый" />
+				<Field component={CheckBox} type="checkbox" name="fifth_checkbox" text="Черный" />
+				<Field component={CheckBox} type="checkbox" name="sixth_checkbox" text="Оранжевый" />
 			</div>
 		</>
 	);
@@ -49,13 +49,13 @@ export class BigForm extends Component {
 		<>
 			<div className="buttons-mid-first-column">
 				<Field component={CheckBox} type="checkbox" name="first_checkbox" text="Белый" />
-				<Field component={CheckBox} type="checkbox" name="first_checkbox" text="«Тиффани»" />
-				<Field component={CheckBox} type="checkbox" name="first_checkbox" text="Розовый" />
+				<Field component={CheckBox} type="checkbox" name="second_checkbox" text="«Тиффани»" />
+				<Field component={CheckBox} type="checkbox" name="third_checkbox" text="Розовый" />
 			</div>
 			<div className="buttons-mid-second-column">
-				<Field component={CheckBox} type="checkbox" name="first_checkbox" text="Серый" />
-				<Field component={CheckBox} type="checkbox" name="first_checkbox" text="Черный" />
-				<Field component={CheckBox} type="checkbox" name="first_checkbox" text="Оранжевый" />
+				<Field component={CheckBox} type="checkbox" name="fourth_checkbox" text="Серый" />
+				<Field component={CheckBox} type="checkbox" name="fifth_checkbox" text="Черный" />
+				<Field component={CheckBox} type="checkbox" name="sixth_checkbox" text="Оранжевый" />
 			</div>
 		</>
 	);
@@ -64,11 +64,11 @@ export class BigForm extends Component {
 		<>
 			<div className="buttons-small-column">
 				<Field component={CheckBox} type="checkbox" name="first_checkbox" text="Белый" />
-				<Field component={CheckBox} type="checkbox" name="first_checkbox" text="«Тиффани»" />
-				<Field component={CheckBox} type="checkbox" name="first_checkbox" text="Розовый" />
-				<Field component={CheckBox} type="checkbox" name="first_checkbox" text="Серый" />
-				<Field component={CheckBox} type="checkbox" name="first_checkbox" text="Черный" />
-				<Field component={CheckBox} type="checkbox" name="first_checkbox" text="Оранжевый" />
+				<Field component={CheckBox} type="checkbox" name="second_checkbox" text="«Тиффани»" />
+				<Field component={CheckBox} type="checkbox" name="third_checkbox" text="Розовый" />
+				<Field component={CheckBox} type="checkbox" name="fourth_checkbox" text="Серый" />
+				<Field component={CheckBox} type="checkbox" name="fifth_checkbox" text="Черный" />
+				<Field component={CheckBox} type="checkbox" name="sixth_checkbox" text="Оранжевый" />
 			</div>
 		</>
 	);
@@ -111,8 +111,8 @@ export class BigForm extends Component {
 							<OpenSansText classname="title-form-label-paragraph" bold text="тип" />
 						</div>
 						<div className="radio-container__buttons">
-							<Field component={RadioBox} type="radio" name="first_radiobox" text="Аксессуар для интерьера" />
-							<Field component={RadioBox} type="radio" name="first_radiobox" text="Детская игрушка" />
+							<Field component={RadioBox} type="radio" name="form__radiobox" text="Аксессуар для интерьера" value='interier_accessory'/>
+							<Field component={RadioBox} type="radio" name="form__radiobox" text="Детская игрушка" value='child_toy' />
 						</div>
 					</div>
 					<div className="order-page-check-container">

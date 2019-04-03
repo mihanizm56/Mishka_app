@@ -7,26 +7,20 @@ export class RadioBox extends Component {
 		text: "default text",
 	};
 
-	state = {
-		checked: true,
-	};
-
-	handleRadioBoxChange = () => {
-		this.setState(prevState => ({ checked: !prevState.checked }));
-	};
-
 	render() {
-		const { text } = this.props;
-		const { checked } = this.state;
+		const { text, input:{checked} } = this.props;
+		console.log('check RadioBox props')
+		console.log(this.props)
 		return (
-			<div className="radio-box-container">
-				<div className="radio-box-wrapper" onClick={this.handleRadioBoxChange}>
+			<label className="radio-box-container">
+			<input className="radio-box-input" type="radio" {...this.props.input}/>
+				<div className="radio-box-wrapper">
 					{checked && <InteractiveSVGIcon icon="radio" />}
 				</div>
 				<div className="label-wrapper-radiobox">
 					<LabelForOrderForm text={text} />
 				</div>
-			</div>
+			</label>
 		);
 	}
 }

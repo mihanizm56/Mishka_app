@@ -5,29 +5,20 @@ import "./CheckBox.css";
 export class CheckBox extends Component {
 	static defaultProps = {
 		text: "default text",
-		withRef: () => {},
-	};
-
-	state = {
-		checked: true,
-	};
-
-	handleCheckBoxChange = () => {
-		this.setState(prevState => ({ checked: !prevState.checked }));
 	};
 
 	render() {
-		const { text } = this.props;
-		const { checked } = this.state;
+		const { text, input:{checked} } = this.props;
 		return (
-			<div className="check-box-container">
-				<div className="check-box-wrapper" onClick={this.handleCheckBoxChange}>
+			<label className="check-box-container">
+				<input className="check-box-input" type="checkbox" {...this.props.input}/>
+				<div className="check-box-wrapper" >
 					{checked && <InteractiveSVGIcon icon="check" />}
 				</div>
-				<div className="label-wrapper-checkbox">
+				<span className="label-wrapper-checkbox">
 					<LabelForOrderForm text={text} />
-				</div>
-			</div>
+				</span>
+			</label>
 		);
 	}
 }
