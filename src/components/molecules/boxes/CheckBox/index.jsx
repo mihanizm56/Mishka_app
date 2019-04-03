@@ -13,7 +13,7 @@ export class CheckBox extends Component {
 			<label className="check-box-container">
 				<input className="check-box-input" type="checkbox" {...this.props.input}/>
 				<div className="check-box-wrapper" >
-					{checked && <InteractiveSVGIcon icon="check" />}
+					{checked && <InteractiveSVGIcon icon="check" noOpacityChange/>}
 				</div>
 				<span className="label-wrapper-checkbox">
 					<LabelForOrderForm text={text} />

@@ -15,7 +15,7 @@ export class RadioBox extends Component {
 			<label className="radio-box-container">
 			<input className="radio-box-input" type="radio" {...this.props.input}/>
 				<div className="radio-box-wrapper">
-					{checked && <InteractiveSVGIcon icon="radio" />}
+					{checked && <InteractiveSVGIcon icon="radio" noOpacityChange/>}
 				</div>
 				<div className="label-wrapper-radiobox">
 					<LabelForOrderForm text={text} />
