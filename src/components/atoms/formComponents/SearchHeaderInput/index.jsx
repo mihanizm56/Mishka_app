@@ -1,15 +1,6 @@
 // @flow
-import React, { Node } from "react";
-import MediaQuery from "react-responsive";
+import React, { Node, memo } from "react";
 import { InputComponent } from "../";
-import { getClass } from "../../../../utils";
-import {
-	BIG_MEDIA_SIZE,
-	MIDDLE_MEDIA_SIZE_FROM,
-	MIDDLE_MEDIA_SIZE_TO,
-	SMALL_MEDIA_SIZE_FROM,
-	SMALL_MEDIA_SIZE_TO,
-} from "../../../../constants";
 import "./SearchHeaderInput.css";
 
 type SearchHeaderInputProps = {
@@ -18,16 +9,18 @@ type SearchHeaderInputProps = {
 	backgroundColor?: string,
 };
 
-export const SearchHeaderInput = ({ placeholder, getRef, backgroundColor }: SearchHeaderInputProps): Node => {
-	return (
-		<InputComponent
-			placeholder={placeholder}
-			className="form-input-header"
-			getRef={getRef}
-			backgroundColor={backgroundColor}
-		/>
-	);
-};
+export const SearchHeaderInput = memo(
+	({ placeholder, getRef, backgroundColor }: SearchHeaderInputProps): Node => {
+		return (
+			<InputComponent
+				placeholder={placeholder}
+				className="form-input-header"
+				getRef={getRef}
+				backgroundColor={backgroundColor}
+			/>
+		);
+	}
+);
 
 SearchHeaderInput.defaultProps = {
 	placeholder: "Поиск default",

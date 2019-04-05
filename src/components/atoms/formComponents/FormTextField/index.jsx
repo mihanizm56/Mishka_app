@@ -1,6 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 
-export const FormTextField = ({ input, type, label, meta: { error, touched } }) => (
+export const FormTextField = memo(({ input, type, label, meta: { error, touched } }) => (
 	<label>
 		{label}:
 		<div>
@@ -8,4 +8,4 @@ export const FormTextField = ({ input, type, label, meta: { error, touched } }) 
 			{error && touched && <p>{error}</p>}
 		</div>
 	</label>
-);
+));

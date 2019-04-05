@@ -1,5 +1,5 @@
 // @flow
-import React, { Node } from "react";
+import React, { Node, memo } from "react";
 import MediaQuery from "react-responsive";
 import { InputComponent } from "../";
 import {
@@ -17,33 +17,35 @@ type FormTextInputProps = {
 	backgroundColor?: string,
 };
 
-export const FormTextInput = ({ placeholder, getRef, backgroundColor, input }: FormTextInputProps): Node => {
-	return (
-		<>
-			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
-				<InputComponent
-					placeholder={placeholder}
-					className="form-input"
-					getRef={getRef}
-					backgroundColor={backgroundColor}
-					input={input}
-				/>
-			</MediaQuery>
-			<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
-				<InputComponent
-					placeholder={placeholder}
-					className="form-input"
-					getRef={getRef}
-					backgroundColor={backgroundColor}
-					input={input}
-				/>
-			</MediaQuery>
-			<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
-				<InputComponent placeholder={placeholder} input={input} className="form-input" getRef={getRef} />
-			</MediaQuery>
-		</>
-	);
-};
+export const FormTextInput = memo(
+	({ placeholder, getRef, backgroundColor, input }: FormTextInputProps): Node => {
+		return (
+			<>
+				<MediaQuery minWidth={BIG_MEDIA_SIZE}>
+					<InputComponent
+						placeholder={placeholder}
+						className="form-input"
+						getRef={getRef}
+						backgroundColor={backgroundColor}
+						input={input}
+					/>
+				</MediaQuery>
+				<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
+					<InputComponent
+						placeholder={placeholder}
+						className="form-input"
+						getRef={getRef}
+						backgroundColor={backgroundColor}
+						input={input}
+					/>
+				</MediaQuery>
+				<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
+					<InputComponent placeholder={placeholder} input={input} className="form-input" getRef={getRef} />
+				</MediaQuery>
+			</>
+		);
+	}
+);
 
 FormTextInput.defaultProps = {
 	placeholder: "default form placeholder",

@@ -1,5 +1,5 @@
 // @flow
-import React from "react";
+import React, { memo } from "react";
 import MediaQuery from "react-responsive";
 import { ImageComponent } from "../";
 import { getSmallImage, getMiddleImage, getBigImage } from "../../../../utils";
@@ -15,7 +15,7 @@ type ImageForPageProps = {
 	image: string,
 };
 
-export const ImageForPage = ({ image, configForImage }: ImageForPageProps) => {
+export const ImageForPage = memo(({ image, configForImage }: ImageForPageProps) => {
 	const bigImage = getBigImage(`${image}-big`);
 	const middleImage = getMiddleImage(`${image}-middle`);
 	const smallImage = getSmallImage(`${image}-small`);
@@ -48,4 +48,4 @@ export const ImageForPage = ({ image, configForImage }: ImageForPageProps) => {
 			</MediaQuery>
 		</>
 	);
-};
+});

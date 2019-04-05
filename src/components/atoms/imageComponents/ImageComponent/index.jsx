@@ -1,5 +1,5 @@
 // @flow
-import React from "react";
+import React, { memo } from "react";
 import "./ImageComponent.css";
 
 type imageProps = {
@@ -9,7 +9,7 @@ type imageProps = {
 	alt: string,
 };
 
-export const ImageComponent = (props: imageProps) => {
+export const ImageComponent = memo((props: imageProps) => {
 	const { image, widthOfImage, heigthOfImage, alt } = props;
 	return <img src={image} style={{ width: widthOfImage, heigth: heigthOfImage }} alt={alt} />;
-};
+});

@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import MediaQuery from "react-responsive";
 import { SVGIcon, OpenSansText, ImageForPage, VerdanaText } from "../../../../components";
 import { Button } from "../../../atoms/buttons";
-import appConfig from "../../../../appConfig";
 // import {MapContainer} from '../'
 import {
 	BIG_MEDIA_SIZE,
@@ -150,7 +149,7 @@ export class ContactBox extends Component<propsType> {
 					</div>
 					<div className="contact-box__image-imitation" />
 					<div className="contacts-button">
-						<Button text="check" classname="button-offer-wrapper" text="сделать заказ" />
+						<Button classname="button-offer-wrapper" text="сделать заказ" />
 					</div>
 					<div className="zig-zag-second-container zig-zag-second-container--mid">
 						<ImageForPage image="zigzag-index" configForImage={configForZigzagImage} />
@@ -176,7 +175,7 @@ export class ContactBox extends Component<propsType> {
 					</div>
 					<div className="contact-box__image-imitation" />
 					<div className="contacts-button">
-						<Button text="check" classname="button-offer-wrapper" text="Напишите нам" />
+						<Button classname="button-offer-wrapper" text="Напишите нам" />
 					</div>
 					<div className="zig-zag-second-container zig-zag-second-container--small">
 						<ImageForPage image="zigzag-index" configForImage={configForZigzagImage} />

@@ -1,7 +1,7 @@
 // @flow
 import React from "react";
 import MediaQuery from "react-responsive";
-import { ImageForPage, OpenSansText, SVGIcon, VerdanaText } from "../../../../components";
+import { OpenSansText, SVGIcon, VerdanaText } from "../../../../components";
 import { VideoPlayerComponent } from "../../../../components";
 import {
 	BIG_MEDIA_SIZE,

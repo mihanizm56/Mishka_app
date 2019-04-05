@@ -1,5 +1,5 @@
 // @flow
-import React, { Node } from "react";
+import React, { Node, memo } from "react";
 import { getClass } from "../../../../utils";
 import "./TextArea.css";
 
@@ -9,8 +9,10 @@ type TextAreaProps = {
 	height: string,
 };
 
-export const TextArea = ({ placeholder, width, height, isError, input }: TextAreaProps): Node => (
-	<textarea {...input} className={getClass({ initialClass: "textarea", error: isError })} placeholder={placeholder} />
+export const TextArea = memo(
+	({ placeholder, width, height, isError, input }: TextAreaProps): Node => (
+		<textarea {...input} className={getClass({ initialClass: "textarea", error: isError })} placeholder={placeholder} />
+	)
 );
 
 TextArea.defaultProps = {

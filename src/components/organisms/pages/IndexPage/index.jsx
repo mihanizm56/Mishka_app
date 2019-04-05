@@ -7,8 +7,6 @@ import { ReviewsProvider, TopItemProvider, ShopContactsProvider } from "../../..
 type IndexPagePropTypes = {};
 
 export const IndexPage = (props: IndexPagePropTypes) => {
-	// console.log("props in index page");
-	// console.log(props);
 	return (
 		<div className="index-page-wrapper">
 			<HouseBox />

@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from "react";
 import ReactPlayer from "react-player";
-import { ImageForPage, ButtonPlayVideo } from "../../../../components";
+import { ImageForPage } from "../../../../components";
 import "./VideoPlayerComponent.css";
 import { getClass } from "../../../../utils";
 

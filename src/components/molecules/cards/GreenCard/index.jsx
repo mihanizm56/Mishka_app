@@ -1,12 +1,12 @@
 import React from "react";
-import { GreenCardParagraph, SVGIcon, TahomaText } from "../../../../components";
+import { SVGIcon, TahomaText } from "../../../../components";
 import "./GreenCard.css";
 
 export const GreenCard = ({ text, icon, backgroundColor }) => {
 	//console.log("text", text, "icon", icon, "backgroundColor", backgroundColor);
 	return (
 		<div className="green-card-wrapper" style={{ backgroundColor: `${backgroundColor}` }}>
-			<TahomaText bold text={text} classname="green-card-paragraph"/>
+			<TahomaText bold text={text} classname="green-card-paragraph" />
 			<SVGIcon icon={icon} />
 		</div>
 	);

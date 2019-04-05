@@ -1,7 +1,6 @@
 // @flow
 import React, { Component } from "react";
 import {
-	SVGIcon,
 	ImageForPage,
 	LinkComponent,
 	InteractiveSVGIcon,

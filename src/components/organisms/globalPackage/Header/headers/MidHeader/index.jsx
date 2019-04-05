@@ -1,12 +1,6 @@
 // @flow
 import React, { Component } from "react";
-import {
-	SVGIcon,
-	VerdanaText,
-	LinkComponent,
-	InteractiveSVGIcon,
-	SearchHeaderInput,
-} from "../../../../../../components";
+import { VerdanaText, LinkComponent, InteractiveSVGIcon, SearchHeaderInput } from "../../../../../../components";
 import { UserBasketBox, UnderHeaderBox } from "../../../../../molecules/boxes";
 import { FONT_SIZE_FOR_SECOND_LINE_IN_HEADER } from "./constants";
 import { getHeaderTitle, getSpecialClassForHeader, getClass } from "../../../../../../utils";

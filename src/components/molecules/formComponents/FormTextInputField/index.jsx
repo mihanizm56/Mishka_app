@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from "react";
-import { FormTextInput, SVGIcon, FormFieldBoldParagraph, VerdanaText } from "../../../../components";
+import { FormTextInput, SVGIcon, VerdanaText } from "../../../../components";
 import { getClass } from "../../../../utils";
 import "./FormTextInputField.css";
 

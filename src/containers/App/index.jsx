@@ -4,8 +4,6 @@ import { registerApp } from "../../utils";
 import { MainWrapper } from "../../components/organisms";
 import "./App.css";
 
-import { OpenSansText } from "../../components";
-
 class AppContainer extends Component {
 	componentDidMount() {
 		registerApp();

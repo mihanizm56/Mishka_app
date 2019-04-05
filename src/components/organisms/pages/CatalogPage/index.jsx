@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Reostat, FormMultiselect } from "../../../../components";
 import { ItemsCatalog, VideoBox } from "../../../molecules";
 import { ShopItemsProvider } from "../../../../containers";
 import "./CatalogPage.css";

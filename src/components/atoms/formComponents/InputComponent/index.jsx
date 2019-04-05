@@ -1,12 +1,12 @@
 // @flow
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 
 type InputComponentProps = {
 	text: string,
 	className: string,
 };
 
-export class InputComponent extends Component<InputComponentProps> {
+export class InputComponent extends PureComponent<InputComponentProps> {
 	static defaultProps = {
 		type: "text",
 		placeholder: "default placeholder",
@@ -23,7 +23,7 @@ export class InputComponent extends Component<InputComponentProps> {
 	}
 
 	render() {
-		const { type, className, placeholder, customFontSize, getRef, backgroundColor, input } = this.props;
+		const { type, className, placeholder, customFontSize, backgroundColor, input } = this.props;
 		console.log("check InputComponent input");
 		console.log({ ...input });
 		return (

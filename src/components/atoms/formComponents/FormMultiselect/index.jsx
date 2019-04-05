@@ -1,5 +1,5 @@
 // @flow
-import React from "react";
+import React, { memo } from "react";
 import appConfig from "../../../../appConfig.json";
 import { ACReturns } from "../../../../actions";
 
@@ -8,7 +8,7 @@ type FormMultiselectProps = {
 	nameOfSortType: string,
 };
 
-export const FormMultiselect = (props: FormMultiselectProps) => {
+export const FormMultiselect = memo((props: FormMultiselectProps) => {
 	const { changeTypeOfSort, nameOfSortType } = props;
 	const listOfTypes: Array<string> = appConfig["sortTypes"];
 	let _select = React.createRef();
@@ -28,4 +28,4 @@ export const FormMultiselect = (props: FormMultiselectProps) => {
 			))}
 		</select>
 	);
-};
+});
