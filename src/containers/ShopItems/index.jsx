@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { shopItemsSelector } from "../../selectors";
 
 class WrappedContainer extends Component {
 	render() {
@@ -13,7 +14,7 @@ class WrappedContainer extends Component {
 }
 
 const mapStateToProps = store => {
-	return { shopItems: store.shopItems };
+	return { shopItems: shopItemsSelector(store) };
 };
 
 export const ShopItemsProvider = connect(mapStateToProps)(WrappedContainer);

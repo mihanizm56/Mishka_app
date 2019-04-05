@@ -1,5 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import {
+	topItemNameSelector,
+	topItemDescriptionSelector,
+	topItemPriceSelector,
+	topItemImageSelector,
+	topItemCharacteristicsSelector,
+} from "../../selectors";
 
 class WrappedContainer extends Component {
 	render() {
@@ -14,11 +21,11 @@ class WrappedContainer extends Component {
 
 const mapStateToProps = store => {
 	return {
-		itemName: store.topItem.name,
-		description: store.topItem.description,
-		characteristics: store.topItem.characteristics,
-		price: store.topItem.price,
-		image: store.topItem.image,
+		itemName: topItemNameSelector(store),
+		description: topItemDescriptionSelector(store),
+		characteristics: topItemCharacteristicsSelector(store),
+		price: topItemPriceSelector(store),
+		image: topItemImageSelector(store),
 	};
 };
 

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { registerApp } from "../../utils";
 import { MainWrapper } from "../../components/organisms";
+import { loginStateSelector, loadingSelector } from "../../selectors";
 import "./App.css";
 
 class AppContainer extends Component {
@@ -27,7 +28,7 @@ class AppContainer extends Component {
 }
 
 const mapStateToProps = store => {
-	return { router: store.router, loginState: store.loginState, appLoading: store.appLoading };
+	return { router: store.router, loginState: loginStateSelector(store), appLoading: loadingSelector(store) };
 };
 
 export const App = connect(mapStateToProps)(AppContainer);

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addReview } from "../../actions";
+import { reviewSelector } from "../../selectors";
 
 class WrappedContainer extends Component {
 	render() {
@@ -14,7 +15,7 @@ class WrappedContainer extends Component {
 }
 
 const mapStateToProps = store => {
-	return { reviews: store.reviews.reviewList };
+	return { reviews: reviewSelector(store) };
 };
 
 const mapDispatchToProps = dispatch => {

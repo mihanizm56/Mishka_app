@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { BLOCK, STREET, CITY } from "../../constants";
 import { adressParser } from "../../utils";
+import { emailSelector, citySelector, streetSelector, blockSelector, roomSelector } from "../../selectors";
 
 class WrappedContainer extends Component {
 	render() {
@@ -23,11 +24,11 @@ class WrappedContainer extends Component {
 
 const mapStateToProps = store => {
 	return {
-		email: store.contacts.email,
-		city: store.contacts.address.city,
-		street: store.contacts.address.street,
-		block: store.contacts.address.block,
-		room: store.contacts.address.room,
+		email: emailSelector(store),
+		city: citySelector(store),
+		street: streetSelector(store),
+		block: blockSelector(store),
+		room: roomSelector(store),
 	};
 };
 
