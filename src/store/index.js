@@ -8,10 +8,10 @@ export const history = createBrowserHistory();
 export const store = createStore(
 	rootReducer(history), // root reducer with router state
 	compose(
-		window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 		applyMiddleware(
 			routerMiddleware(history), // for dispatching history actions
 			thunk
-		)
+		),
+		window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 	)
 );

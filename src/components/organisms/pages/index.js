@@ -4,3 +4,5 @@ export * from "./HiddenPage";
 export * from "./FormAuth";
 export * from "./ErrorPage";
 export * from "./CatalogPage";
+
+export * from "./FormAuthTest";

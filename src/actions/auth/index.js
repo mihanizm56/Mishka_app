@@ -1,7 +1,7 @@
 // @flow
 import firebase from "firebase";
 import { LOGIN_SUCCESS, SIGN_OUT } from "../../constants";
-import { loadingAppDoneAction, loadingAppAction } from "../loading";
+import { loadingAppAction, loadingAppDoneAction } from "../loading";
 
 export const loginCorrectAction = () => {
 	console.log("test loginSuccess");
@@ -36,6 +36,7 @@ export const loginRequestAction = (email, password) => {
 	console.log(`email = ${email}, password = ${password}`);
 	if (email !== "" && password !== "") {
 		return dispatch => {
+			console.log('прошёл')
 			dispatch(loadingAppAction());
 
 			return firebase

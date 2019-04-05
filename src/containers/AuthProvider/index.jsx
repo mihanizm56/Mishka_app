@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addReview } from "../../actions";
-import { loginStateSelector } from "../../selectors";
+import { loginRequestAction } from "../../actions";
 
 class WrappedContainer extends Component {
 	render() {
@@ -14,19 +13,15 @@ class WrappedContainer extends Component {
 	}
 }
 
-const mapStateToProps = store => {
-	return { loginState: loginStateSelector(store) };
-};
-
 const mapDispatchToProps = dispatch => {
 	return {
-		addReviewInList(newArray) {
-			dispatch(addReview(newArray));
+		signInFunc(email, password) {
+			dispatch(loginRequestAction(email, password));
 		},
 	};
 };
 
 export const AuthProvider = connect(
-	mapStateToProps,
+	null,
 	mapDispatchToProps
 )(WrappedContainer);
