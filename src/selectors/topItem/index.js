@@ -7,26 +7,26 @@ const getTopItemImage = state => state.topItem.image;
 const getTopItemCharacteristics = state => state.topItem.characteristics;
 
 export const topItemNameSelector = createSelector(
-	getTopItemName,
+	[getTopItemName],
 	name => name
 );
 
 export const topItemDescriptionSelector = createSelector(
-	getTopItemDescription,
+	[getTopItemDescription],
 	description => description
 );
 
 export const topItemPriceSelector = createSelector(
-	getTopItemPrice,
+	[getTopItemPrice],
 	price => price
 );
 
 export const topItemImageSelector = createSelector(
-	getTopItemImage,
+	[getTopItemImage],
 	image => image
 );
 
 export const topItemCharacteristicsSelector = createSelector(
-	getTopItemCharacteristics,
+	[getTopItemCharacteristics],
 	characteristics => characteristics
 );

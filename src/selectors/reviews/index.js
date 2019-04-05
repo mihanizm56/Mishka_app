@@ -3,6 +3,6 @@ import { createSelector } from "reselect";
 const getReviewList = state => state.reviews.reviewList;
 
 export const reviewSelector = createSelector(
-	getReviewList,
+	[getReviewList],
 	reviewList => reviewList
 );

@@ -1,5 +1,5 @@
 // @flow
-import React, { PureComponent } from "react";
+import React, { Component } from "react";
 import MediaQuery from "react-responsive";
 import { BigHeader, MidHeader, SmallHeader } from "./headers";
 import {
@@ -24,13 +24,23 @@ type HeaderPropType = {
 	pageName: string,
 };
 
-export class Header extends PureComponent<HeaderPropType> {
+export class Header extends Component<HeaderPropType> {
 	static defaultProps = {
 		pageName: "catalog-page",
 	};
 
 	shouldComponentUpdate(prevProps) {
-		if (prevProps.route.location.pathname === this.props.route.location.pathname) {
+		const {
+			route: {
+				location: { pathname: prevPathName },
+			},
+		} = prevProps;
+		const {
+			route: {
+				location: { pathname: nextPathName },
+			},
+		} = this.props;
+		if (prevPathName === nextPathName) {
 			return false;
 		}
 

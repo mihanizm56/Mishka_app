@@ -3,6 +3,6 @@ import { createSelector } from "reselect";
 const getLoadingState = state => state.appLoading.loading;
 
 export const loadingSelector = createSelector(
-	getLoadingState,
+	[getLoadingState],
 	isloading => isloading
 );
