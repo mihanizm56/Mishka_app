@@ -19,6 +19,7 @@ export const getClass = ({
 	bold,
 	hovered,
 	ligth,
+	noBorderBottom,
 	additionalClass
 }: getClassParametersType): string => {
 	let resultClass = initialClass;
@@ -65,6 +66,10 @@ export const getClass = ({
 
 	if (ligth) {
 		resultClass += ` ${initialClass}--ligth`;
+	}
+
+	if (noBorderBottom) {
+		resultClass += ` ${initialClass}--no-border-bottom`;
 	}
 
 	return resultClass;

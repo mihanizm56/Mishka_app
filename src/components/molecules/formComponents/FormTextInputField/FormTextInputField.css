@@ -56,27 +56,13 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .form-text-input-field__field:hover{
     border-bottom: 2px solid #62D1BA;
     cursor: pointer;
+}
+
+.form-text-input-field__field--no-border-bottom{
+    border-bottom: none!important;
 }
 
 .form-text-input-field__field--active{

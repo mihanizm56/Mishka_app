@@ -11,8 +11,8 @@ class FormAuthComponent extends PureComponent {
 	};
 
 	componentDidMount() {
-		console.log("FormAuthComponent props");
-		console.log(this.props);
+		// console.log("FormAuthComponent props");
+		// console.log(this.props);
 	}
 
 	render() {

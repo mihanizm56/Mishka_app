@@ -19,8 +19,8 @@ export class FormTextInputField extends PureComponent {
 	}
 
 	componentDidMount() {
-		console.log("check FormTextInputField props");
-		console.log(this.props);
+		// console.log("check FormTextInputField props");
+		// console.log(this.props);
 	}
 
 	inputRef = null;
@@ -47,11 +47,12 @@ export class FormTextInputField extends PureComponent {
 			fieldLabelText,
 			noTitle,
 			backgroundColor,
+			noBorderBottom,
 			noMarginTop,
 			...restProps
 		} = this.props;
-		console.log("check restProps FormTextInputField");
-		console.log({ ...restProps });
+		// console.log("check restProps FormTextInputField");
+		// console.log({ ...restProps });
 		return (
 			<div className={getClass({ initialClass: "form-text-input-field-wrapper", noMarginTop })}>
 				{!noTitle ? (
@@ -61,7 +62,7 @@ export class FormTextInputField extends PureComponent {
 				) : null}
 
 				<div
-					className={getClass({ initialClass: "form-text-input-field__field", inputIsActive, error })}
+					className={getClass({ initialClass: "form-text-input-field__field", error, noBorderBottom })}
 					onClick={this.focusInput}
 					onBlur={this.blurInput}
 				>

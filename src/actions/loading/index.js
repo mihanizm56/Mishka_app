@@ -2,15 +2,20 @@
 import { APP_IS_LOADING, APP_HAS_LOADED } from "../../constants";
 
 export const loadingAppAction = () => {
-	console.log("test loadingApp");
-	return {
-		type: APP_IS_LOADING,
-	};
+	setTimeout(() => {
+		console.log("test loadingApp");
+		return {
+			type: APP_IS_LOADING,
+		};
+	}, 2000)
+
 };
 
 export const loadingAppDoneAction = () => {
-	console.log("test loadingAppDone");
-	return {
-		type: APP_HAS_LOADED,
-	};
+	setTimeout(() => {
+		console.log("test loadingAppDone");
+		return {
+			type: APP_HAS_LOADED,
+		};
+	}, 2000)
 };

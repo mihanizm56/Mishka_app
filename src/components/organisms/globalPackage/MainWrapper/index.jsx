@@ -4,8 +4,11 @@ import MainLayout from "../../../../routes/";
 import { Footer, Header } from "../";
 import "./MainWrapper.css";
 
+import { FormAuth } from '../'
+import { Portal } from '../../../../containers';
+
 export const MainWrapper = memo(props => {
-	const { router, ...restProps } = props;
+	const { router, userIsLoggedIn, ...restProps } = props;
 	//console.log(props);
 	//console.log(router);
 	return (
@@ -13,6 +16,12 @@ export const MainWrapper = memo(props => {
 			<Header route={router} />
 			<MainLayout {...restProps} />
 			<Footer />
+
+			{!userIsLoggedIn &&
+				<Portal>
+					<FormAuth />
+				</Portal>
+			}
 		</div>
 	);
 });

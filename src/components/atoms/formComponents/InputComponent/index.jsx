@@ -24,8 +24,8 @@ export class InputComponent extends PureComponent<InputComponentProps> {
 
 	render() {
 		const { type, className, placeholder, customFontSize, backgroundColor, input } = this.props;
-		console.log("check InputComponent input");
-		console.log({ ...input });
+		// console.log("check InputComponent input");
+		// console.log({ ...input });
 		return (
 			<input
 				{...input}

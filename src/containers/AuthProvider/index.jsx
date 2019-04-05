@@ -5,12 +5,12 @@ import { loginStateSelector } from "../../selectors";
 
 class WrappedContainer extends Component {
 	render() {
-		// console.log("test AuthProvider props");
+		// console.log("test OrderFormProvider props");
 		// console.log(this.props);
 
-		const { component: WrappedComponent, reviews } = this.props;
+		const { component: WrappedComponent, ...restProps } = this.props;
 
-		return <WrappedComponent reviews={reviews} />;
+		return <WrappedComponent {...restProps} />;
 	}
 }
 

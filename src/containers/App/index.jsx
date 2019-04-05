@@ -11,11 +11,16 @@ class AppContainer extends Component {
 		console.log("app registered in firebase");
 	}
 
+	componentDidUpdate() {
+		console.log('app updated')
+		console.log(this.props)
+	}
+
 	render() {
 		// console.log("test App props");
 		// console.log(this.props);
 		const { loginState, router } = this.props;
-		const userIsLoggedIn = loginState.login || localStorage.login === "true";
+		const userIsLoggedIn = loginState.login && localStorage.login === "true";
 		return (
 			<div className="global-wrapper">
 				<MainWrapper userIsLoggedIn={userIsLoggedIn} router={router} />
