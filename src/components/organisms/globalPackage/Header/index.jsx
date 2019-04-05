@@ -1,5 +1,5 @@
 // @flow
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import MediaQuery from "react-responsive";
 import { BigHeader, MidHeader, SmallHeader } from "./headers";
 import {
@@ -24,7 +24,7 @@ type HeaderPropType = {
 	pageName: string,
 };
 
-export class Header extends Component<HeaderPropType> {
+export class Header extends PureComponent<HeaderPropType> {
 	static defaultProps = {
 		pageName: "catalog-page",
 	};

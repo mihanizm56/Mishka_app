@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { reduxForm, Field } from "redux-form";
 import { FormTextField } from "../../../../components";
 import { Redirect } from "react-router-dom";
 
-class FormAuthComponent extends Component {
+class FormAuthComponent extends PureComponent {
 	signInUser = ({ email, password }) => {
 		const { signInFunc, appToLoad } = this.props; ///////////////переделать и сделать асинхронным
 		appToLoad();

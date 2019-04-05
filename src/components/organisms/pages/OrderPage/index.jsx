@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import {OrderFormProvider} from '../../../../containers';
-import {BigForm} from '../../BigForm';
+import React, { PureComponent } from "react";
+import { OrderFormProvider } from "../../../../containers";
+import { BigForm } from "../../BigForm";
 
-export class OrderPage extends Component {
+export class OrderPage extends PureComponent {
 	render() {
 		return (
 			<div className="order-page-wrapper">

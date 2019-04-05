@@ -1,5 +1,5 @@
 // @flow
-import React from "react";
+import React, { memo } from "react";
 import MediaQuery from "react-responsive";
 import { ImageForPage, SVGIcon, OpenSansText, VerdanaText } from "../../../../components";
 import { HitItemBox } from "../";
@@ -16,7 +16,7 @@ import { Button } from "../../../atoms/buttons";
 
 import "./WeeklyHitBox.css";
 
-export const WeeklyHitBox = props => {
+export const WeeklyHitBox = memo(props => {
 	const { itemName, image, price, description, ...restProps } = props;
 	// console.log("check WeeklyHitBox props");
 	// console.log(props);
@@ -83,7 +83,7 @@ export const WeeklyHitBox = props => {
 			</MediaQuery>
 		</div>
 	);
-};
+});
 
 WeeklyHitBox.defaultProps = {
 	itemName: "Вязаные корзинки",

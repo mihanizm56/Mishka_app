@@ -1,4 +1,4 @@
-import {getTopItem} from '../../constants';
+import { GET_TOP_ITEM } from "../../constants";
 
 const initialState = {
 	name: "Вязаные корзинки",
@@ -23,7 +23,7 @@ const initialState = {
 
 export const topItem = (state = initialState, action) => {
 	switch (action.type) {
-		case getTopItem:
+		case GET_TOP_ITEM:
 			return { ...state, ...action.payload };
 
 		default:

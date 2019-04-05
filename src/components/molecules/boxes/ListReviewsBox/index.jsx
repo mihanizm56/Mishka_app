@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { ReviewBox } from "../";
 import { getUserName, getUserSurname } from "../../../../utils";
 
-export class ListReviewsBox extends Component {
+export class ListReviewsBox extends PureComponent {
 	static defaultProps = {
 		reviews: [
 			{

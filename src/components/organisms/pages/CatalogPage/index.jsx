@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { ItemsCatalog, VideoBox } from "../../../molecules";
 import { ShopItemsProvider } from "../../../../containers";
 import "./CatalogPage.css";
 
-export class CatalogPage extends Component {
+export class CatalogPage extends PureComponent {
 	render() {
 		//console.log("TEST ROUTER MATCH");
 		//console.log(window.history);

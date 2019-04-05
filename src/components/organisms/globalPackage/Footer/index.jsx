@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import { LinkComponent, InteractiveSVGIcon, VerdanaText } from "../../../../components";
 import "./Footer.css";
 
-export const Footer = props => {
+export const Footer = memo(props => {
 	return (
 		<div className="footer-container">
 			<div className="footer-container__special-background" />
@@ -30,9 +30,9 @@ export const Footer = props => {
 				<LinkComponent WrappedComponent={InteractiveSVGIcon} icon="twitter" route="https://www.twitter.com" usualLink />
 			</div>
 			<div className="footer-container__academy-container">
-				<VerdanaText text="Разработано" classname='footer__text-logo' bold/>
+				<VerdanaText text="Разработано" classname="footer__text-logo" bold />
 				<InteractiveSVGIcon icon="academy" />
 			</div>
 		</div>
 	);
-};
+});

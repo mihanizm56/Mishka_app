@@ -1,5 +1,5 @@
 // @flow
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import MediaQuery from "react-responsive";
 import { SVGIcon, OpenSansText, ImageForPage, VerdanaText } from "../../../../components";
 import { Button } from "../../../atoms/buttons";
@@ -37,7 +37,7 @@ const configForZigzagImage = {
 	heightBig: ZIGZAG_HEIGHT_BIG,
 };
 
-export class ContactBox extends Component<propsType> {
+export class ContactBox extends PureComponent<propsType> {
 	static defaultProps = {
 		email: "test-email",
 		city: "г. Dafault-Петербург,",

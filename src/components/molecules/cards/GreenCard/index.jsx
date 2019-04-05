@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import { SVGIcon, TahomaText } from "../../../../components";
 import "./GreenCard.css";
 
-export const GreenCard = ({ text, icon, backgroundColor }) => {
+export const GreenCard = memo(({ text, icon, backgroundColor }) => {
 	//console.log("text", text, "icon", icon, "backgroundColor", backgroundColor);
 	return (
 		<div className="green-card-wrapper" style={{ backgroundColor: `${backgroundColor}` }}>
@@ -10,7 +10,7 @@ export const GreenCard = ({ text, icon, backgroundColor }) => {
 			<SVGIcon icon={icon} />
 		</div>
 	);
-};
+});
 
 GreenCard.defaultProps = {
 	text: "default text",

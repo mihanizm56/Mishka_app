@@ -1,5 +1,5 @@
 // @flow
-import React from "react";
+import React, { memo } from "react";
 import MediaQuery from "react-responsive";
 import { GreenCard } from "../../";
 import "./HouseBox.css";
@@ -44,7 +44,7 @@ const configForHouseImage = {
 	heightBig: HOUSE_HEIGHT_BIG,
 };
 
-export const HouseBox = () => {
+export const HouseBox = memo(() => {
 	return (
 		<>
 			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
@@ -134,4 +134,4 @@ export const HouseBox = () => {
 			</MediaQuery>
 		</>
 	);
-};
+});

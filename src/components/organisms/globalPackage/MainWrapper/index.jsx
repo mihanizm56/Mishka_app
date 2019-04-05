@@ -1,10 +1,10 @@
 // @flow
-import React from "react";
+import React, { memo } from "react";
 import MainLayout from "../../../../routes/";
 import { Footer, Header } from "../";
 import "./MainWrapper.css";
 
-export const MainWrapper = props => {
+export const MainWrapper = memo(props => {
 	const { router, ...restProps } = props;
 	//console.log(props);
 	//console.log(router);
@@ -15,4 +15,4 @@ export const MainWrapper = props => {
 			<Footer />
 		</div>
 	);
-};
+});

@@ -1,5 +1,5 @@
 // @flow
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import ReactPlayer from "react-player";
 import { ImageForPage } from "../../../../components";
 import "./VideoPlayerComponent.css";
@@ -31,7 +31,7 @@ const SIZES = {
 	SMALL: "small",
 };
 
-export class VideoPlayerComponent extends Component {
+export class VideoPlayerComponent extends PureComponent {
 	state = {
 		isPlaying: false,
 	};

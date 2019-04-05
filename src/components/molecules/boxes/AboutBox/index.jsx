@@ -1,10 +1,10 @@
 // @flow
-import React from "react";
+import React, { memo } from "react";
 import { VerdanaText } from "../../../../components";
 import { IndexItemBox } from "../";
 import "./AboutBox.css";
 
-export const AboutBox = ({ iconsInBox }) => {
+export const AboutBox = memo(({ iconsInBox }) => {
 	return (
 		<div className="about-box-wrapper">
 			<div className="about-box__title">
@@ -17,7 +17,7 @@ export const AboutBox = ({ iconsInBox }) => {
 			</div>
 		</div>
 	);
-};
+});
 
 AboutBox.defaultProps = {
 	iconsInBox: [

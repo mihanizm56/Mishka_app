@@ -1,5 +1,5 @@
 // @flow
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import {
 	ImageForPage,
 	LinkComponent,
@@ -17,7 +17,7 @@ const configForImage = {
 	heigth: HEIGTH_FOR_ICON,
 };
 
-export class SmallHeader extends Component {
+export class SmallHeader extends PureComponent {
 	static defaultProps = {
 		page: "index-page",
 	};

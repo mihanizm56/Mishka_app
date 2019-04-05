@@ -1,5 +1,5 @@
 // @flow
-import React from "react";
+import React, { memo } from "react";
 import MediaQuery from "react-responsive";
 import { OpenSansText, SVGIcon, VerdanaText } from "../../../../components";
 import { VideoPlayerComponent } from "../../../../components";
@@ -14,7 +14,7 @@ import "./VideoBox.css";
 
 import { Button } from "../../../atoms/buttons";
 
-export const VideoBox = props => {
+export const VideoBox = memo(props => {
 	return (
 		<div className="video-wrapper">
 			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
@@ -97,4 +97,4 @@ export const VideoBox = props => {
 			</MediaQuery>
 		</div>
 	);
-};
+});

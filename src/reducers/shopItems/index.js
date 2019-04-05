@@ -1,4 +1,4 @@
-import {getShopItems} from '../../constants';
+import { GET_SHOP_ITEMS } from "../../constants";
 
 export const initialState = [
 	{
@@ -7,7 +7,7 @@ export const initialState = [
 		sizes: ["Рост", "вес"],
 		sizeValues: ["30 см", "200 г"],
 		price: 1200,
-		id:1
+		id: 1,
 	},
 	{
 		image: "basket",
@@ -15,7 +15,7 @@ export const initialState = [
 		sizes: ["Диаметр", "высота"],
 		sizeValues: ["30 см", "10 см"],
 		price: 690,
-		id:2
+		id: 2,
 	},
 	{
 		image: "big-basket",
@@ -23,13 +23,13 @@ export const initialState = [
 		sizes: ["Диаметр", "высота"],
 		sizeValues: ["30 см", "30 см"],
 		price: 1500,
-		id:3
+		id: 3,
 	},
 ];
 
 export const shopItems = (state = initialState, action) => {
 	switch (action.type) {
-		case getShopItems:
+		case GET_SHOP_ITEMS:
 			return { ...state, ...action.payload };
 
 		default:

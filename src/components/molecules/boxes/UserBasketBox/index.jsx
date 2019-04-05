@@ -1,10 +1,10 @@
-import React from "react";
+import React, { memo } from "react";
 import { SVGIcon, VerdanaText } from "../../../../components";
 import "./UserBasketBox.css";
 
 const getNormalizedItems = value => value;
 
-export const UserBasketBox = ({ numberOfItems }) => {
+export const UserBasketBox = memo(({ numberOfItems }) => {
 	return (
 		<div className="basket-box-wrapper">
 			<div className="basket-box__icon">
@@ -15,7 +15,7 @@ export const UserBasketBox = ({ numberOfItems }) => {
 			</div>
 		</div>
 	);
-};
+});
 
 UserBasketBox.defaultProps = {
 	numberOfItems: "пока пуста",

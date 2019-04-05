@@ -1,4 +1,4 @@
-import { addReview, getReviews } from "../../constants";
+import { ADD_REVIEW, GET_REVIEWS } from "../../constants";
 
 const initialState = {
 	reviewList: [
@@ -23,9 +23,9 @@ const initialState = {
 
 export const reviews = (state = initialState, action) => {
 	switch (action.type) {
-		case addReview:
+		case ADD_REVIEW:
 			return { ...state, reviewList: action.payload };
-		case getReviews:
+		case GET_REVIEWS:
 			return { ...state, reviewList: action.payload };
 
 		default:

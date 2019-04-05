@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { block as blockConstant, street as streetConstant, city as cityConstant } from "../../constants";
+import { BLOCK, STREET, CITY } from "../../constants";
 import { adressParser } from "../../utils";
 
 class WrappedContainer extends Component {
@@ -12,10 +12,10 @@ class WrappedContainer extends Component {
 
 		return (
 			<WrappedComponent
-				block={adressParser(blockConstant, { block, room })}
+				block={adressParser(BLOCK, { block, room })}
 				email={email}
-				street={adressParser(streetConstant, { street })}
-				city={adressParser(cityConstant, { city })}
+				street={adressParser(STREET, { street })}
+				city={adressParser(CITY, { city })}
 			/>
 		);
 	}

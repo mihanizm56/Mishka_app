@@ -1,4 +1,4 @@
-import { appIsLoading, appHasLoaded } from "../../constants";
+import { APP_IS_LOADING, APP_HAS_LOADED } from "../../constants";
 
 const initState = {
 	loading: false,
@@ -6,9 +6,9 @@ const initState = {
 
 export const appLoading = (state = initState, action) => {
 	switch (action.type) {
-		case appIsLoading:
+		case APP_IS_LOADING:
 			return { ...state, loading: true };
-		case appHasLoaded:
+		case APP_HAS_LOADED:
 			return { ...state, loading: false };
 
 		default:

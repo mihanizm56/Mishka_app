@@ -1,4 +1,4 @@
-import { loginSuccess, signOut } from "../../constants";
+import { LOGIN_SUCCESS, SIGN_OUT } from "../../constants";
 
 const initState = {
 	login: false,
@@ -6,9 +6,9 @@ const initState = {
 
 export const loginReducer = (state = initState, action) => {
 	switch (action.type) {
-		case loginSuccess:
+		case LOGIN_SUCCESS:
 			return { ...state, login: true };
-		case signOut:
+		case SIGN_OUT:
 			return { ...state, login: false };
 
 		default:

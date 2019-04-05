@@ -1,5 +1,5 @@
 // @flow
-import React from "react";
+import React, { memo } from "react";
 import { IconButton } from "../../../atoms/buttons";
 import "./ListButtonsBox.css";
 
@@ -8,7 +8,7 @@ type ListButtonsBoxPropTypes = {
 	onPrevClick: () => void,
 };
 
-export const ListButtonsBox = (props: ListButtonsBoxPropTypes) => {
+export const ListButtonsBox = memo((props: ListButtonsBoxPropTypes) => {
 	const { onNextClick, onPrevClick } = props;
 	return (
 		<div className="list-buttons-container">
@@ -16,7 +16,7 @@ export const ListButtonsBox = (props: ListButtonsBoxPropTypes) => {
 			<IconButton classname="button-arrow_next" icon="arrow" handleClick={onNextClick} />
 		</div>
 	);
-};
+});
 
 ListButtonsBox.defaultProps = {
 	onNextClick: () => {},

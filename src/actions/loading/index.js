@@ -1,16 +1,16 @@
 // @flow
-import { appIsLoading, appHasLoaded } from "../../constants";
+import { APP_IS_LOADING, APP_HAS_LOADED } from "../../constants";
 
 export const loadingAppAction = () => {
 	console.log("test loadingApp");
 	return {
-		type: appIsLoading,
+		type: APP_IS_LOADING,
 	};
 };
 
 export const loadingAppDoneAction = () => {
 	console.log("test loadingAppDone");
 	return {
-		type: appHasLoaded,
+		type: APP_HAS_LOADED,
 	};
 };

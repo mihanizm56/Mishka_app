@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { ImageForPage, VerdanaText } from "../../../../components";
 import { ItemPriceBox, ItemDescriptionBox } from "../../../molecules";
 import "./ItemCard.css";
@@ -20,22 +20,24 @@ const configForCardCatalogImage = {
 	heightBig: "464px",
 };
 
-export const ItemCard = ({ image, name, sizes, sizeValues, price }): ItemCardType => {
-	return (
-		<>
-			<div className="item-card-wrapper">
-				<ImageForPage image={image} configForImage={configForCardCatalogImage} />
-				<div className="item-card-text-wrapper">
-					<div className="item-card-textbox">
-						<VerdanaText text={name} classname="paragraph-card" bold />
-						<ItemDescriptionBox sizes={sizes} values={sizeValues} />
+export const ItemCard = memo(
+	({ image, name, sizes, sizeValues, price }): ItemCardType => {
+		return (
+			<>
+				<div className="item-card-wrapper">
+					<ImageForPage image={image} configForImage={configForCardCatalogImage} />
+					<div className="item-card-text-wrapper">
+						<div className="item-card-textbox">
+							<VerdanaText text={name} classname="paragraph-card" bold />
+							<ItemDescriptionBox sizes={sizes} values={sizeValues} />
+						</div>
+						<ItemPriceBox price={price} />
 					</div>
-					<ItemPriceBox price={price} />
 				</div>
-			</div>
-		</>
-	);
-};
+			</>
+		);
+	}
+);
 
 ItemCard.defaultProps = {
 	image: "hare",

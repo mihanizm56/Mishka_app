@@ -1,4 +1,4 @@
-import { addUserItem, removeUserItem } from "../../constants";
+import { ADD_USER_ITEM, REMOVE_USER_ITEM } from "../../constants";
 
 const initialState = {
 	items: [{}],
@@ -6,9 +6,9 @@ const initialState = {
 
 export const userItems = (state = initialState, action) => {
 	switch (action.type) {
-		case addUserItem:
+		case ADD_USER_ITEM:
 			return { ...state, items: action.payload };
-		case removeUserItem:
+		case REMOVE_USER_ITEM:
 			return { ...state, items: action.payload };
 
 		default:

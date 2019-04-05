@@ -1,12 +1,12 @@
 // @flow
-import React from "react";
+import React, { memo } from "react";
 import "./IndexPage.css";
 import { AboutBox, ListReviewsBox, ContactBox, WeeklyHitBox, HouseBox } from "../../../molecules";
 import { ReviewsProvider, TopItemProvider, ShopContactsProvider } from "../../../../containers";
 
 type IndexPagePropTypes = {};
 
-export const IndexPage = (props: IndexPagePropTypes) => {
+export const IndexPage = memo((props: IndexPagePropTypes) => {
 	return (
 		<div className="index-page-wrapper">
 			<HouseBox />
@@ -16,4 +16,4 @@ export const IndexPage = (props: IndexPagePropTypes) => {
 			<ShopContactsProvider component={ContactBox} />
 		</div>
 	);
-};
+});

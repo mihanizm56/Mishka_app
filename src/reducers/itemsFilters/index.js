@@ -1,4 +1,9 @@
-import { changeRangeMinValue, changeRangeMaxValue, changeSelectedFilter, changeSearchFilter } from "../../constants";
+import {
+	CHANGE_RANGE_MIN_VALUE,
+	CHANGE_RANGE_MAX_VALUE,
+	CHANGE_SELECTED_FILTER,
+	CHANGE_SEARCH_FILTER,
+} from "../../constants";
 
 const initialState = {
 	rangeMin: null,
@@ -9,13 +14,13 @@ const initialState = {
 
 export const itemsFilters = (state = initialState, action) => {
 	switch (action.type) {
-		case changeRangeMinValue:
+		case CHANGE_RANGE_MIN_VALUE:
 			return { ...state, rangeMin: action.payload };
-		case changeRangeMaxValue:
+		case CHANGE_RANGE_MAX_VALUE:
 			return { ...state, rangeMax: action.payload };
-		case changeSelectedFilter:
+		case CHANGE_SELECTED_FILTER:
 			return { ...state, selectedFilter: action.payload };
-		case changeSearchFilter:
+		case CHANGE_SEARCH_FILTER:
 			return { ...state, searchFilter: action.payload };
 
 		default:

@@ -1,10 +1,10 @@
 // @flow
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { FormTextInput, SVGIcon, VerdanaText } from "../../../../components";
 import { getClass } from "../../../../utils";
 import "./FormTextInputField.css";
 
-export class FormTextInputField extends Component {
+export class FormTextInputField extends PureComponent {
 	static defaultProps = {
 		icon: null,
 		error: false,

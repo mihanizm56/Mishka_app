@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import MediaQuery from "react-responsive";
 import { VerdanaText } from "../../../../components";
 import {
@@ -12,7 +12,7 @@ import "./UnderHeaderBox.css";
 import zigzagPhotoBig from "../../../../images/pictures/zigZag/img/zigzag-big.png";
 import zigzagPhotoMiddle from "../../../../images/pictures/zigZag/img/zigzag-mid.png";
 
-export const UnderHeaderBox = ({ text }) => {
+export const UnderHeaderBox = memo(({ text }) => {
 	return (
 		<div className="under-header-box">
 			<div className="under-header-box__back-box" />
@@ -30,4 +30,4 @@ export const UnderHeaderBox = ({ text }) => {
 			</MediaQuery>
 		</div>
 	);
-};
+});

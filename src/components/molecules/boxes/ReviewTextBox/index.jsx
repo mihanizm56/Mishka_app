@@ -1,9 +1,9 @@
 // @flow
-import React from "react";
+import React, { memo } from "react";
 import { OpenSansText, VerdanaText } from "../../../../components";
 import "./ReviewTextBox.css";
 
-export const ReviewTextBox = ({ review, name, surname, login }) => {
+export const ReviewTextBox = memo(({ review, name, surname, login }) => {
 	return (
 		<div className="review-text-box-wrapper">
 			<div className="review-text-box__main-title">
@@ -18,7 +18,7 @@ export const ReviewTextBox = ({ review, name, surname, login }) => {
 			</div>
 		</div>
 	);
-};
+});
 
 ReviewTextBox.defaultProps = {
 	review: "default-review-text",

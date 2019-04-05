@@ -1,20 +1,20 @@
 // @flow
 import firebase from "firebase";
-import { loginSuccess, signOut } from "../../constants";
+import { LOGIN_SUCCESS, SIGN_OUT } from "../../constants";
 import { loadingAppDoneAction } from "../loading";
 
 export const loginCorrectAction = () => {
 	console.log("test loginSuccess");
 	localStorage.login = "true";
 	return {
-		type: loginSuccess,
+		type: LOGIN_SUCCESS,
 	};
 };
 export const signOutLocalAction = () => {
 	console.log("test signOut");
 	localStorage.login = "";
 	return {
-		type: signOut,
+		type: SIGN_OUT,
 	};
 };
 export const signOutFirebaseAction = () => {
@@ -36,8 +36,8 @@ export const loginRequestAction = (email, password) => {
 	console.log(`email = ${email}, password = ${password}`);
 	if (email !== "" && password !== "") {
 		return dispatch => {
-			dispatch(loadingAppDoneAction())
-			
+			dispatch(loadingAppDoneAction());
+
 			return firebase
 				.auth()
 				.signInWithEmailAndPassword(email, password)

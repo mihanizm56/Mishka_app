@@ -1,5 +1,5 @@
 // @flow
-import React from "react";
+import React, { memo } from "react";
 import MediaQuery from "react-responsive";
 import { OpenSansText } from "../../../../components";
 import {
@@ -11,7 +11,7 @@ import {
 } from "../../../../constants";
 import "./HitItemBox.css";
 
-export const HitItemBox = props => {
+export const HitItemBox = memo(props => {
 	const { characteristics } = props;
 	// console.log("HitItemBox props");
 	// console.log(props);
@@ -68,7 +68,7 @@ export const HitItemBox = props => {
 			</MediaQuery>
 		</>
 	);
-};
+});
 
 HitItemBox.defaultProps = {
 	characteristics: [
