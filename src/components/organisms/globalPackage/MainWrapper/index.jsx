@@ -2,13 +2,12 @@
 import React, { memo } from "react";
 import MainLayout from "../../../../routes/";
 import { Footer, Header } from "../";
+import { ModalAuthForm } from "../../FormComponents";
+import { Portal } from "../../../../containers";
 import "./MainWrapper.css";
 
-// import { FormAuth } from '../'
-// import { Portal } from '../../../../containers';
-
 export const MainWrapper = memo(props => {
-	const { router, userIsLoggedIn, ...restProps } = props;
+	const { router, userIsLoggedIn, modalAuthIsOpen, ...restProps } = props;
 	//console.log(props);
 	//console.log(router);
 	return (
@@ -17,11 +16,11 @@ export const MainWrapper = memo(props => {
 			<MainLayout {...restProps} />
 			<Footer />
 
-			{/* {!userIsLoggedIn &&
+			{/* {modalAuthIsOpen && (
 				<Portal>
-					<FormAuth />
+					<ModalAuthForm />
 				</Portal>
-			} */}
+			)} */}
 		</div>
 	);
 });

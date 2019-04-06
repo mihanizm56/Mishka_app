@@ -9,9 +9,9 @@ type ButtonPropsType = {
 	classname: string,
 };
 
-export const Button = memo(({ handleClick, text, classname }: ButtonPropsType) => {
+export const Button = memo(({ handleClick, text, classname, buttonType }: ButtonPropsType) => {
 	return (
-		<button className={classname} onClick={handleClick}>
+		<button className={classname} onClick={handleClick} type={buttonType}>
 			{<OpenSansText bold text={text} classname="text-button" />}
 		</button>
 	);

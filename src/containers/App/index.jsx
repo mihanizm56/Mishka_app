@@ -6,24 +6,29 @@ import { loginStateSelector, loadingSelector } from "../../selectors";
 import "./App.css";
 
 class AppContainer extends Component {
+	state = {
+		modalAuthIsOpen: false,
+	};
+
 	componentDidMount() {
 		registerApp();
 		console.log("app registered in firebase");
 	}
 
 	componentDidUpdate() {
-		console.log('app updated')
-		console.log(this.props)
+		console.log("app updated");
+		console.log(this.props);
 	}
 
 	render() {
 		// console.log("test App props");
 		// console.log(this.props);
+		const { modalAuthIsOpen } = this.state;
 		const { loginState, router } = this.props;
 		const userIsLoggedIn = loginState.login && localStorage.login === "true";
 		return (
 			<div className="global-wrapper">
-				<MainWrapper userIsLoggedIn={userIsLoggedIn} router={router} />
+				<MainWrapper userIsLoggedIn={userIsLoggedIn} router={router} modalAuthIsOpen={modalAuthIsOpen} />
 				{/* <TrueCheckBox /> */}
 				{/* <SearchField callback={changeSearchFilter} /> */}
 				{/* <button onClick={() => userIsLoggedIn && userSignOut()}>Выйти</button> */}
