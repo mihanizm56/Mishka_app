@@ -18,6 +18,9 @@ export const ADD_THE_REVIEW = "ADD_THE_REVIEW";
 export const BLOCK = "BLOCK";
 export const STREET = "STREET";
 export const CITY = "CITY";
+export const AUTH_MODAL_OPEN = "AUTH_MODAL_OPEN";
+export const AUTH_MODAL_CLOSE = "AUTH_MODAL_CLOSE";
+
 export const emptyString = "";
 
 // numbers

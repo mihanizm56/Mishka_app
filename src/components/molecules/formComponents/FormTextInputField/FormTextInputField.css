@@ -73,4 +73,8 @@
     border-bottom: 2px solid #F0B1B1;
 }
 
+.form-text-input-field__field--no-padding{
+    padding:0;
+}
+
 

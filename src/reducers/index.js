@@ -9,6 +9,7 @@ import { reviews } from "./reviews";
 import { contacts } from "./contacts";
 import { topItem } from "./topItem";
 import { itemsFilters } from "./itemsFilters";
+import { modalAuthStateReducer } from "./modalAuth";
 
 export const rootReducer = history =>
 	combineReducers({
@@ -22,4 +23,5 @@ export const rootReducer = history =>
 		itemsFilters,
 		contacts,
 		topItem,
+		modalAuthStateReducer,
 	});

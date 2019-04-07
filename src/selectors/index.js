@@ -6,3 +6,4 @@ export * from "./reviews";
 export * from "./shopItems";
 export * from "./topItem";
 export * from "./userItems";
+export * from "./auth";

@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { OrderFormProvider } from "../../../../containers";
-import { BigForm } from "../../BigForm";
+import { BigForm } from "../../FormComponents";
 
 export class OrderPage extends PureComponent {
 	render() {

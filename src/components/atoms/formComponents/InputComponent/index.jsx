@@ -23,9 +23,10 @@ export class InputComponent extends PureComponent<InputComponentProps> {
 	}
 
 	render() {
-		const { type, className, placeholder, customFontSize, backgroundColor, input } = this.props;
+		const { type, className, placeholder, customFontSize, backgroundColor, input, autocompleteOff } = this.props;
 		// console.log("check InputComponent input");
 		// console.log({ ...input });
+		const dragOff = type === "password" ? true : false;
 		return (
 			<input
 				{...input}
@@ -33,6 +34,8 @@ export class InputComponent extends PureComponent<InputComponentProps> {
 				type={type}
 				className={className}
 				placeholder={placeholder}
+				autoComplete={autocompleteOff && "off"}
+				onDrop={dragOff ? event => event.preventDefault() : null}
 				style={
 					customFontSize
 						? { fontSize: customFontSize }

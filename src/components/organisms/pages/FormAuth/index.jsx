@@ -5,7 +5,7 @@ import { Redirect } from "react-router-dom";
 
 class FormAuthComponent extends PureComponent {
 	signInUser = ({ email, password }) => {
-		const { signInFunc, appToLoad } = this.props; ///////////////переделать и сделать асинхронным
+		const { signInFunc } = this.props; ///////////////переделать и сделать асинхронным
 		signInFunc(email, password);
 	};
 

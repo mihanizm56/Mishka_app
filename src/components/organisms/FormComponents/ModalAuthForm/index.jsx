@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-import { reduxForm, Field } from "redux-form";
+import { Field } from "redux-form";
 import { FormTextInputField, Button } from "../../../../components";
 import "./ModalAuthForm.css";
-
-import { loginRequestAction } from "../../../../actions";
-import { connect } from "react-redux";
 
 export class ModalAuthForm extends Component {
 	static defaultProps = {
@@ -22,46 +19,49 @@ export class ModalAuthForm extends Component {
 	}
 
 	render() {
-		const { handleSubmit } = this.props;
-
-		// if (login || localStorage.login === "true") return <Redirect to="/hiddenPage" />;
+		const { handleSubmit, closeModal } = this.props;
 
 		return (
-			<div className="auth-form-overlay">
+			<div className="auth-form-layout">
+				<div className="auth-form-overlay" onClick={closeModal} />
 				<form className="auth-form-wrapper" onSubmit={handleSubmit(this.signInUser)}>
-					<Field component={FormTextInputField} noBorderBottom noTitle label="мыло" type="text" name="email" />
-					<Field component={FormTextInputField} noBorderBottom noTitle label="пароль" type="password" name="password" />
+					<div className="auth-form__email">
+						<Field
+							component={FormTextInputField}
+							placeholder="Введите e-mail"
+							noBorderBottom
+							noMarginTop
+							noPadding
+							noTitle
+							label="мыло"
+							type="text"
+							name="email"
+						/>
+					</div>
+					<div className="auth-form__password">
+						<Field
+							component={FormTextInputField}
+							noBorderBottom
+							noMarginTop
+							noPadding
+							noTitle
+							label="пароль"
+							type="password"
+							name="password"
+							autocompleteOff
+							placeholder="Введите пароль"
+						/>
+					</div>
+
 					<Button
 						buttonType="submit"
 						classname="button-send"
 						text="Отправить"
 						handleClick={handleSubmit(this.signInUser)}
+						autocompleteOff
 					/>
 				</form>
 			</div>
 		);
 	}
 }
-
-// export const ModalAuthFormContainer = reduxForm({
-// 	validate: ({ email, password }) => {
-// 		const errors = {};
-// 		if (!email || email === "") errors.email = "Failed email";
-// 		if (!password || password === "") errors.password = "Failed password";
-// 		return errors;
-// 	},
-// 	form: "auth",
-// })(ModalAuthFormComponent);
-
-// const mapDispatchToProps = dispatch => {
-// 	return {
-// 		signInFunc(email, password) {
-// 			dispatch(loginRequestAction(email, password));
-// 		},
-// 	};
-// };
-
-// export const ModalAuthForm = connect(
-// 	null,
-// 	mapDispatchToProps
-// )(ModalAuthFormContainer);

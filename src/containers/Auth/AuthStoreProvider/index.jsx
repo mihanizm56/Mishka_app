@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { loginRequestAction } from "../../../actions";
-import { loginStateSelector } from "../../../selectors";
+import { loginRequestAction, closeAuthModalAction } from "../../../actions";
 
 class WrappedContainer extends Component {
 	static defaultProps = {
@@ -14,28 +13,25 @@ class WrappedContainer extends Component {
 	}
 
 	render = () => {
-		const { children, signInFunc, loggedIn } = this.props;
+		const { children, signInFunc, closeModal } = this.props;
 		return React.Children.map(children, child =>
-			React.cloneElement(child, { signInFunc: signInFunc, loggedIn: loggedIn })
+			React.cloneElement(child, { signInFunc: signInFunc, closeModal: closeModal })
 		);
 	};
 }
-
-const mapStateToProps = store => {
-	return {
-		loggedIn: loginStateSelector(store),
-	};
-};
 
 const mapDispatchToProps = dispatch => {
 	return {
 		signInFunc(email, password) {
 			dispatch(loginRequestAction(email, password));
 		},
+		closeModal() {
+			dispatch(closeAuthModalAction());
+		},
 	};
 };
 
 export const AuthStoreProvider = connect(
-	mapStateToProps,
+	null,
 	mapDispatchToProps
 )(WrappedContainer);

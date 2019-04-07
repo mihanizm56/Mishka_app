@@ -1,11 +1,11 @@
-import React, { PureComponent } from "react";
-import ReactDOM from 'react-dom';
-const modalRoot = document.getElementById('modal');
+import { PureComponent } from "react";
+import ReactDOM from "react-dom";
+const modalRoot = document.getElementById("modal");
 
 export class Portal extends PureComponent {
 	constructor() {
 		super();
-		this.modalDiv = document.createElement('div');
+		this.modalDiv = document.createElement("div");
 	}
 
 	componentDidMount() {
@@ -17,9 +17,6 @@ export class Portal extends PureComponent {
 	}
 
 	render() {
-		return ReactDOM.createPortal(
-			this.props.children,
-			this.modalDiv,
-		);
+		return ReactDOM.createPortal(this.props.children, this.modalDiv);
 	}
 }

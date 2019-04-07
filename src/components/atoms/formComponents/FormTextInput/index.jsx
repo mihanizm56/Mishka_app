@@ -18,7 +18,7 @@ type FormTextInputProps = {
 };
 
 export const FormTextInput = memo(
-	({ placeholder, getRef, backgroundColor, input }: FormTextInputProps): Node => {
+	({ placeholder, getRef, backgroundColor, input, autocompleteOff, type }: FormTextInputProps): Node => {
 		return (
 			<>
 				<MediaQuery minWidth={BIG_MEDIA_SIZE}>
@@ -28,6 +28,8 @@ export const FormTextInput = memo(
 						getRef={getRef}
 						backgroundColor={backgroundColor}
 						input={input}
+						autocompleteOff={autocompleteOff}
+						type={type}
 					/>
 				</MediaQuery>
 				<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
@@ -37,10 +39,19 @@ export const FormTextInput = memo(
 						getRef={getRef}
 						backgroundColor={backgroundColor}
 						input={input}
+						autocompleteOff={autocompleteOff}
+						type={type}
 					/>
 				</MediaQuery>
 				<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
-					<InputComponent placeholder={placeholder} input={input} className="form-input" getRef={getRef} />
+					<InputComponent
+						placeholder={placeholder}
+						input={input}
+						className="form-input"
+						getRef={getRef}
+						autocompleteOff={autocompleteOff}
+						type={type}
+					/>
 				</MediaQuery>
 			</>
 		);

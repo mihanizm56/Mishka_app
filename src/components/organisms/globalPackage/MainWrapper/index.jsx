@@ -12,9 +12,9 @@ export const MainWrapper = memo(props => {
 	//console.log(router);
 	return (
 		<div className="main-wrapper">
-			{/* <Header route={router} />
+			<Header route={router} />
 			<MainLayout {...restProps} />
-			<Footer /> */}
+			<Footer />
 
 			{modalAuthIsOpen && (
 				<Portal>

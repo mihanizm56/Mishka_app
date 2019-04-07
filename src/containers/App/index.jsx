@@ -2,14 +2,10 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { registerApp } from "../../utils";
 import { MainWrapper } from "../../components/organisms";
-import { loginStateSelector, loadingSelector } from "../../selectors";
+import { loginStateSelector, loadingSelector, modalAuthStateSelector } from "../../selectors";
 import "./App.css";
 
 class AppContainer extends Component {
-	state = {
-		modalAuthIsOpen: true,
-	};
-
 	componentDidMount() {
 		registerApp();
 		console.log("app registered in firebase");
@@ -23,8 +19,7 @@ class AppContainer extends Component {
 	render() {
 		// console.log("test App props");
 		// console.log(this.props);
-		const { modalAuthIsOpen } = this.state;
-		const { loginState, router } = this.props;
+		const { loginState, router, modalAuthIsOpen } = this.props;
 		const userIsLoggedIn = loginState.login && localStorage.login === "true";
 		return (
 			<div className="global-wrapper">
@@ -35,7 +30,12 @@ class AppContainer extends Component {
 }
 
 const mapStateToProps = store => {
-	return { router: store.router, loginState: loginStateSelector(store), appLoading: loadingSelector(store) };
+	return {
+		router: store.router,
+		loginState: loginStateSelector(store),
+		appLoading: loadingSelector(store),
+		modalAuthIsOpen: modalAuthStateSelector(store),
+	};
 };
 
 export const App = connect(mapStateToProps)(AppContainer);

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import MediaQuery from "react-responsive";
 import { Field } from "redux-form";
-import { Button, OpenSansText, TextArea, CheckBox, RadioBox, FormTextInputField } from "../../../";
+import { Button, OpenSansText, TextArea, CheckBox, RadioBox, FormTextInputField } from "../../../../";
 // import { BigCheckBoxContainer, MidCheckBoxContainer, SmallCheckBoxContainer } from "../";
 import {
 	BIG_MEDIA_SIZE,
@@ -9,7 +9,7 @@ import {
 	MIDDLE_MEDIA_SIZE_TO,
 	SMALL_MEDIA_SIZE_FROM,
 	SMALL_MEDIA_SIZE_TO,
-} from "../../../../constants";
+} from "../../../../../constants";
 import "./BigForm.css";
 
 const backgroundColors = {
@@ -111,8 +111,14 @@ export class BigForm extends Component {
 							<OpenSansText classname="title-form-label-paragraph" bold text="тип" />
 						</div>
 						<div className="radio-container__buttons">
-							<Field component={RadioBox} type="radio" name="form__radiobox" text="Аксессуар для интерьера" value='interier_accessory'/>
-							<Field component={RadioBox} type="radio" name="form__radiobox" text="Детская игрушка" value='child_toy' />
+							<Field
+								component={RadioBox}
+								type="radio"
+								name="form__radiobox"
+								text="Аксессуар для интерьера"
+								value="interier_accessory"
+							/>
+							<Field component={RadioBox} type="radio" name="form__radiobox" text="Детская игрушка" value="child_toy" />
 						</div>
 					</div>
 					<div className="order-page-check-container">

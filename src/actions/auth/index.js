@@ -1,42 +1,56 @@
 // @flow
 import firebase from "firebase";
-import { LOGIN_SUCCESS, SIGN_OUT } from "../../constants";
+import { LOGIN_SUCCESS, SIGN_OUT, AUTH_MODAL_OPEN, AUTH_MODAL_CLOSE } from "../../constants";
 import { loadingAppAction, loadingAppDoneAction } from "../loading";
 
 export const loginCorrectAction = () => {
-	console.log("test loginSuccess");
+	// console.log("test loginSuccess");
 	localStorage.login = "true";
 	return {
 		type: LOGIN_SUCCESS,
 	};
 };
+
 export const signOutLocalAction = () => {
-	console.log("test signOut");
+	// console.log("test signOut");
 	localStorage.login = "";
 	return {
 		type: SIGN_OUT,
 	};
 };
+
 export const signOutFirebaseAction = () => {
 	return dispatch => {
 		firebase
 			.auth()
 			.signOut()
-			.then(() => {
-				dispatch(signOutLocalAction());
-				console.log("signOutUser done");
-			})
+			.then(() => dispatch(signOutLocalAction()))
 			.catch(function(error) {
 				console.error("signOutFirebase failed");
 			});
 	};
 };
+
+export const openAuthModalAction = () => {
+	// console.log("test openAuthModalAction");
+	return {
+		type: AUTH_MODAL_OPEN,
+	};
+};
+
+export const closeAuthModalAction = () => {
+	// console.log("test closeAuthModalAction");
+	return {
+		type: AUTH_MODAL_CLOSE,
+	};
+};
+
 export const loginRequestAction = (email, password) => {
 	console.log("check loginRequest");
 	console.log(`email = ${email}, password = ${password}`);
 	if (email !== "" && password !== "") {
 		return dispatch => {
-			console.log('прошёл')
+			console.log("прошёл");
 			dispatch(loadingAppAction());
 
 			return firebase
@@ -51,6 +65,7 @@ export const loginRequestAction = (email, password) => {
 		};
 	}
 };
+
 //import { authentificate} from '../utils'
 // export function signUpFirebase(email, password) {
 // 	console.log("check signUpFirebase request");

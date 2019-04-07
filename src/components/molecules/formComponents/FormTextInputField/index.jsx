@@ -49,6 +49,7 @@ export class FormTextInputField extends PureComponent {
 			backgroundColor,
 			noBorderBottom,
 			noMarginTop,
+			noPadding,
 			...restProps
 		} = this.props;
 		// console.log("check restProps FormTextInputField");
@@ -62,7 +63,7 @@ export class FormTextInputField extends PureComponent {
 				) : null}
 
 				<div
-					className={getClass({ initialClass: "form-text-input-field__field", error, noBorderBottom })}
+					className={getClass({ initialClass: "form-text-input-field__field", error, noBorderBottom, noPadding })}
 					onClick={this.focusInput}
 					onBlur={this.blurInput}
 				>

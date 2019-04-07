@@ -1,3 +1,6 @@
+.main-wrapper{
+  position: relative;
+}
 
 @media (max-width: 767px) {    
     .main-wrapper{
