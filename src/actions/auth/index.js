@@ -42,6 +42,7 @@ export const closeAuthModalAction = () => {
 
 export const setUserName = (name) => {
 	console.log("test setUserName");
+	localStorage.userName = `${name}`;
 	return {
 		type: SAVE_NAME,
 		payload: name
@@ -75,7 +76,7 @@ export const loginRequestAction = (email, password, name) => {
 				})
 				.catch(error => {
 					dispatch(loadingAppDoneAction());
-					// alert(error.message);
+					alert(error.message);
 				});
 		};
 	}

@@ -7,13 +7,13 @@ import { Portal, AuthStoreProvider, AuthReduxFormProvider } from "../../../../co
 import "./MainWrapper.css";
 
 export const MainWrapper = memo(props => {
-	const { router, loginState, modalAuthIsOpen, ...restProps } = props;
+	const { router, loginStateApp, modalAuthIsOpen, ...restProps } = props;
 	//console.log(props);
 	//console.log(router);
 	return (
 		<div className="main-wrapper">
 			<AuthStoreProvider>
-				<Header route={router} />
+				<Header route={router} loginStateApp={loginStateApp}/>
 			</AuthStoreProvider>
 			<MainLayout {...restProps} />
 			<Footer />
@@ -22,7 +22,7 @@ export const MainWrapper = memo(props => {
 				<Portal>
 					<AuthStoreProvider>
 						<AuthReduxFormProvider>
-							<ModalAuthForm loginState={loginState} />
+							<ModalAuthForm loginStateApp={loginStateApp} />
 						</AuthReduxFormProvider>
 					</AuthStoreProvider>
 				</Portal>

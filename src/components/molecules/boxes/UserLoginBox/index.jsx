@@ -16,20 +16,20 @@ const getEmptyCard = (signIn) => (
 );
 
 export const UserLoginBox = memo((props) => {
-    const { userIsLogged, userName, openModal, signOutFunc } = props
+    const { loginStateApp, userName, openModal, signOutFunc } = props
     console.log('check UserLoginBox props')
     console.log(props)
 	return (
 		<div className='user-box-wrapper'>
             {
-                userIsLogged ? getUserCard(userName,signOutFunc) : getEmptyCard(openModal)
+                loginStateApp ? getUserCard(userName,signOutFunc) : getEmptyCard(openModal)
             }
         </div>
 	);
 });
 
 UserLoginBox.defaultProps = {
-    userIsLogged: false, 
+    loginStateApp: false, 
     userName: 'test Name',
     openModal: ()=>console.log('check signIn'), 
     signOutFunc: ()=>console.log('check signOut'), 

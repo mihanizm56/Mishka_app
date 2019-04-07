@@ -48,10 +48,12 @@ export class Header extends Component<HeaderPropType> {
 	}
 
 	componentDidUpdate(prevProps) {
-		console.log("PREV ROUTE");
-		console.log(prevProps.route.location.pathname);
-		console.log("NEXT ROUTE");
-		console.log(this.props.route.location.pathname);
+		// console.log("PREV ROUTE");
+		// console.log(prevProps.route.location.pathname);
+		// console.log("NEXT ROUTE");
+		// console.log(this.props.route.location.pathname);
+			console.log('update Header')
+			console.log(this.props)
 	}
 
 	getPageName = (pageHash: string) => {
@@ -74,21 +76,22 @@ export class Header extends Component<HeaderPropType> {
 			route: {
 				location: { pathname },
 			},
+			loginStateApp,
 			...restProps
 		} = this.props;
 		//const pageHash = "catalog-page";
-		console.log('Header props');
-		console.log(this.props);
+		console.log('Header loginStateApp');
+		console.log(loginStateApp);
 		return (
 			<div className="header-wrapper">
 				<MediaQuery minWidth={BIG_MEDIA_SIZE}>
-					<BigHeader page={this.getPageName(pathname)} {...restProps}/>
+					<BigHeader page={this.getPageName(pathname)} {...restProps} loginStateApp={loginStateApp}/>
 				</MediaQuery>
 				<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
-					<MidHeader page={this.getPageName(pathname)} {...restProps}/>
+					<MidHeader page={this.getPageName(pathname)} {...restProps} loginStateApp={loginStateApp}/>
 				</MediaQuery>
 				<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
-					<SmallHeader page={this.getPageName(pathname)} {...restProps}/>
+					<SmallHeader page={this.getPageName(pathname)} {...restProps} loginStateApp={loginStateApp}/>
 				</MediaQuery>
 			</div>
 		);

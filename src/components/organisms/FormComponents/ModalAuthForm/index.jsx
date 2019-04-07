@@ -84,20 +84,20 @@ export class ModalAuthForm extends Component {
 		</>
 	);
 
-	getFormLayout = ({ isLoading, loginState }) => {
+	getFormLayout = ({ isLoading, loginStateApp }) => {
 		if (isLoading) return this.loadingLayout();
-		else if (loginState) return this.successLayout();
+		else if (loginStateApp) return this.successLayout();
 		else return this.normalLayout();
 	};
 
 	render() {
-		const { handleSubmit, closeModal, isLoading, loginState } = this.props;
+		const { handleSubmit, closeModal, isLoading, loginStateApp } = this.props;
 
 		return (
 			<div className="auth-form-layout">
 				<div className="auth-form-overlay" onClick={closeModal} />
 				<form className="auth-form-wrapper" onSubmit={handleSubmit(this.signInUser)}>
-					{this.getFormLayout({ isLoading: isLoading, loginState: loginState })}
+					{this.getFormLayout({ isLoading: isLoading, loginState: loginStateApp })}
 				</form>
 			</div>
 		);

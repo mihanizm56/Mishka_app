@@ -18,13 +18,13 @@ class AppContainer extends Component {
 	}
 
 	render() {
-		// console.log("test App props");
-		// console.log(this.props);
+		console.log("test App props");
+		console.log(this.props);
 		const { loginState, ...restProps } = this.props;
 		const loginSucceed = loginState || localStorage.login === "true";
 		return (
 			<div className="global-wrapper">
-				<MainWrapper loginState={loginSucceed} {...restProps} />
+				<MainWrapper loginStateApp={loginSucceed} {...restProps} />
 			</div>
 		);
 	}

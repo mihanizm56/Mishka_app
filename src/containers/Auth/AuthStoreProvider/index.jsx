@@ -22,8 +22,8 @@ class WrappedContainer extends Component {
 const mapStateToProps = store => {
 	return {
 		isLoading: loadingSelector(store),
-		userIsLogged: loginStateSelector(store),
-		userName: userNameSelector(store)
+		loginState: loginStateSelector(store),
+		userName: userNameSelector(store) || localStorage.userName
 	};
 };
 
