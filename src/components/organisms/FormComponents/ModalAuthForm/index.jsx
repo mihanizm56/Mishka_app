@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Field } from "redux-form";
-import { FormTextInputField, Button } from "../../../../components";
+import { FormTextInputField, Button, SVGIcon } from "../../../../components";
 import "./ModalAuthForm.css";
 
 export class ModalAuthForm extends Component {
@@ -18,49 +18,73 @@ export class ModalAuthForm extends Component {
 		console.log(this.props);
 	}
 
+	loadingLayout = () => (
+		<div className="loading-icon">
+			<SVGIcon icon="loading" />
+		</div>
+	);
+
+	successLayout = () => (
+		<div className="success-icon">
+			<SVGIcon icon="success" />
+		</div>
+	);
+
+	normalLayout = () => (
+		<>
+			<div className="auth-form__email">
+				<Field
+					component={FormTextInputField}
+					placeholder="Введите e-mail"
+					noBorderBottom
+					noMarginTop
+					noPadding
+					noTitle
+					label="мыло"
+					type="text"
+					name="email"
+				/>
+			</div>
+			<div className="auth-form__password">
+				<Field
+					component={FormTextInputField}
+					noBorderBottom
+					noMarginTop
+					noPadding
+					noTitle
+					label="пароль"
+					type="password"
+					name="password"
+					autocompleteOff
+					placeholder="Введите пароль"
+				/>
+			</div>
+			<div className="auth-form__button">
+				<Button
+					buttonType="submit"
+					classname="button-auth-modal"
+					text="Войти"
+					// handleClick={this.handleSubmit(this.signInUser)}
+					autocompleteOff
+				/>
+			</div>
+		</>
+	);
+
+	getFormLayout = ({ isLoading, loginSucceed }) => {
+		if (isLoading) return this.successLayout();
+		else if (loginSucceed) return this.successLayout();
+		else return this.normalLayout();
+	};
+
 	render() {
-		const { handleSubmit, closeModal } = this.props;
+		const { handleSubmit, closeModal, isLoading, loginSucceed } = this.props;
 
 		return (
 			<div className="auth-form-layout">
 				<div className="auth-form-overlay" onClick={closeModal} />
 				<form className="auth-form-wrapper" onSubmit={handleSubmit(this.signInUser)}>
-					<div className="auth-form__email">
-						<Field
-							component={FormTextInputField}
-							placeholder="Введите e-mail"
-							noBorderBottom
-							noMarginTop
-							noPadding
-							noTitle
-							label="мыло"
-							type="text"
-							name="email"
-						/>
-					</div>
-					<div className="auth-form__password">
-						<Field
-							component={FormTextInputField}
-							noBorderBottom
-							noMarginTop
-							noPadding
-							noTitle
-							label="пароль"
-							type="password"
-							name="password"
-							autocompleteOff
-							placeholder="Введите пароль"
-						/>
-					</div>
-					<div className="auth-form__button">
-						<Button
-							buttonType="submit"
-							classname="button-auth-modal"
-							text="Войти"
-							handleClick={handleSubmit(this.signInUser)}
-							autocompleteOff
-						/>
-					</div>
+					{this.getFormLayout({ isLoading: isLoading, loginSucceed: loginSucceed })}
 				</form>
 			</div>
 		);

@@ -79,6 +79,10 @@ import iconRadio from "../../images/icons/icon-radio.svg";
 import iconPhone from "../../images/icons/icon-phone.svg";
 import iconMail from "../../images/icons/icon-mail.svg";
 
+////// Loader icons
+import LoaderIcon from "../../images/icons/bounce.svg";
+import LoaderSuccessIcon from "../../images/icons/success.svg";
+
 export const getSmallImage = (name: string) => {
 	// console.log(`test getSmallImage, image-name=${name}`);
 	switch (name) {
@@ -152,6 +156,10 @@ export const getSmallImage = (name: string) => {
 			return iconPhone;
 		case "icon-mail-small":
 			return iconMail;
+		case "icon-loading-small":
+			return LoaderIcon;
+		case "icon-success-small":
+			return LoaderSuccessIcon;
 
 		default:
 			return null;
@@ -235,6 +243,10 @@ export const getMiddleImage = (name: string) => {
 			return iconPhone;
 		case "icon-mail-middle":
 			return iconMail;
+		case "icon-loading-middle":
+			return LoaderIcon;
+		case "icon-success-middle":
+			return LoaderSuccessIcon;
 
 		default:
 			return null;
@@ -318,6 +330,10 @@ export const getBigImage = (name: string) => {
 			return iconPhone;
 		case "icon-mail-big":
 			return iconMail;
+		case "icon-loading-big":
+			return LoaderIcon;
+		case "icon-success-big":
+			return LoaderSuccessIcon;
 
 		default:
 			return null;

@@ -57,6 +57,14 @@
     width: 90%;
 }
 
+.loading-icon {
+    animation: circleFull 2.2s linear infinite;
+}
+
+.success-icon {
+    animation: fadeIn .5s linear both;
+}
+
 @media (max-width: 767px) {
     .auth-form-wrapper {
         width: 90%;

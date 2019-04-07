@@ -20,7 +20,7 @@ export const MainWrapper = memo(props => {
 				<Portal>
 					<AuthStoreProvider>
 						<AuthReduxFormProvider>
-							<ModalAuthForm />
+							<ModalAuthForm isLoading />
 						</AuthReduxFormProvider>
 					</AuthStoreProvider>
 				</Portal>
