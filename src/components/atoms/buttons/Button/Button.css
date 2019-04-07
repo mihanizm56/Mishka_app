@@ -179,3 +179,55 @@ button{
         width: 230px;
     }
 }
+
+
+/* ButtonForAuthModal */
+
+.button-auth-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: .5s;
+    height: 50px;
+    width: 100%;
+}
+
+.button-auth-modal:hover{
+    background-color: #444444;
+}
+
+.button-auth-modal:active{
+    background-color: #444444;
+}
+
+.button-auth-modal:hover .open-sans-text--text-button{
+    color: #fff;
+}
+
+.button-auth-modal:active .text-button{
+    color: #fff;
+    opacity: 0.3;
+}
+
+/* @media (max-width: 767px) {
+    .button-auth-modal{
+        height: 50px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .button-auth-modal{
+        height: 50px;
+        width: 230px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .button-auth-modal{
+        height: 50px;
+        width: 230px;
+    }
+} */

@@ -24,12 +24,13 @@
     border: 1px solid blue;
     z-index: 10;
     cursor: pointer;
+    animation: fadeInOverLay .8s ease-in-out both;
 }
 
 .auth-form-wrapper{
-    border: 1px solid #62D1BA;
+    border: 3px solid #62D1BA;
     background-color: #fff;
-    width:300px;
+    width: 300px;
     height: 300px;
     padding: 100px 50px;
     display: flex;
@@ -38,17 +39,37 @@
     align-items: center;
     border-radius: 15px;
     z-index: 11;
+    animation: fadeIn .4s .8s ease-in-out both;
 }
 
 .auth-form__email {
-    height: 50px;
+    height: 55px;
+    width: 90%;
     border: 1px solid black;
     padding-left: 10px;
+    box-sizing: border-box;
 }
 
 .auth-form__password {
     height: 55px;
+    width: 90%;
     border: 1px solid black;
     padding-left: 10px;
+    box-sizing: border-box;
 }
 
+.auth-form__button{
+    width: 90%;
+    
+}
+
+
+
+@keyframes fadeInOverLay {
+    from { 
+        opacity: 0;
+     }
+    to { 
+        opacity: 0.8;
+     }
+   }

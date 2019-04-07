@@ -52,14 +52,15 @@ export class ModalAuthForm extends Component {
 							placeholder="Введите пароль"
 						/>
 					</div>
-
-					<Button
-						buttonType="submit"
-						classname="button-send"
-						text="Отправить"
-						handleClick={handleSubmit(this.signInUser)}
-						autocompleteOff
-					/>
+					<div className="auth-form__button">
+						<Button
+							buttonType="submit"
+							classname="button-auth-modal"
+							text="Отправить"
+							handleClick={handleSubmit(this.signInUser)}
+							autocompleteOff
+						/>
+					</div>
 				</form>
 			</div>
 		);
