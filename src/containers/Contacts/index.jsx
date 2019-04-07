@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { BLOCK, STREET, CITY } from "../../constants";
 import { adressParser } from "../../utils";
-import { emailSelector, citySelector, streetSelector, blockSelector, roomSelector } from "../../selectors";
+import { emailSelector, citySelector, streetSelector, blockSelector, roomSelector } from "../../store/selectors";
 
 class WrappedContainer extends Component {
 	render() {

@@ -1,4 +1,4 @@
-import { APP_IS_LOADING, APP_HAS_LOADED } from "../../constants";
+import { APP_IS_LOADING, APP_HAS_LOADED } from "../../../constants";
 
 const initState = {
 	loading: false,

@@ -1,7 +1,8 @@
-import { LOGIN_SUCCESS, SIGN_OUT } from "../../constants";
+import { LOGIN_SUCCESS, SIGN_OUT, SAVE_NAME, CLEAR_NAME } from "../../../constants";
 
 const initState = {
 	login: false,
+	name: null
 };
 
 export const loginReducer = (state = initState, action) => {
@@ -10,6 +11,10 @@ export const loginReducer = (state = initState, action) => {
 			return { ...state, login: true };
 		case SIGN_OUT:
 			return { ...state, login: false };
+		case SAVE_NAME:
+			return { ...state, name: action.payload };
+		case CLEAR_NAME:
+			return { ...state, name: action.payload };
 
 		default:
 			return state;

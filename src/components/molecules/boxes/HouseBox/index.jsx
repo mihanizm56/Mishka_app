@@ -19,8 +19,8 @@ import {
 	HOUSE_WIDTH_BIG,
 	HOUSE_HEIGHT_BIG,
 } from "./constants";
-import zigzagPhotoBig from "../../../../images/pictures/zigZag/img/zigzag-big.png";
-import zigzagPhotoMiddle from "../../../../images/pictures/zigZag/img/zigzag-mid.png";
+import zigzagPhotoBig from "../../../../assets/images/pictures/zigZag/img/zigzag-big.png";
+import zigzagPhotoMiddle from "../../../../assets/images/pictures/zigZag/img/zigzag-mid.png";
 
 const dataForGreenCards = {
 	first: {

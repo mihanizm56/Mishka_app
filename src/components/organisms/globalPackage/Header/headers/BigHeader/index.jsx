@@ -1,18 +1,31 @@
 // @flow
 import React, { PureComponent } from "react";
 import { LinkComponent, InteractiveSVGIcon, SearchHeaderInput, VerdanaText } from "../../../../../../components";
-import { UserBasketBox, UnderHeaderBox } from "../../../../../molecules/boxes";
+import { UserBasketBox, UnderHeaderBox, UserLoginBox } from "../../../../../molecules/boxes";
 import { getHeaderTitle, getSpecialClassForHeader, getClass } from "../../../../../../utils";
 import "./BigHeader.css";
 
 export class BigHeader extends PureComponent {
 	static defaultProps = {
 		page: "index-page",
+		userIsLogged: false,
+		userName: "default user",
+		openModal: () => {
+			console.log("default openModal");
+		},
+		signOutFunc: () => {
+			console.log("default signOutFunc");
+		},
 	};
 
 	state = {
 		searchInputOpened: false,
 	};
+
+	componentDidUpdate(){
+		console.log('update BigHeader')
+		console.log(this.props)
+	}
 
 	handleToggleInput = () => {
 		this.setState(prevState => ({ searchInputOpened: !prevState.searchInputOpened }));
@@ -20,7 +33,13 @@ export class BigHeader extends PureComponent {
 
 	render() {
 		const { searchInputOpened } = this.state;
-		const { page } = this.props;
+		const { page, userIsLogged, userName, openModal, signOutFunc } = this.props;
+		const authProps = {
+			userIsLogged,
+			userName,
+			openModal,
+			signOutFunc,
+		};
 		console.log("//////////////////////");
 		console.log("получил страницу ", page);
 		return (
@@ -72,6 +91,9 @@ export class BigHeader extends PureComponent {
 					</div>
 					<div className="second-line-big-header__discount">
 						<VerdanaText text="Распродажа" classname="regular-additional-paragraph" />
+					</div>
+					<div className="second-line-big-header__login-container">
+						<UserLoginBox {...authProps}/>
 					</div>
 					<div className="second-line-big-header__delivery-info">
 						<VerdanaText text="Бесплатная доставка по России" classname="regular-additional-paragraph" />

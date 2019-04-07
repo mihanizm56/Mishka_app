@@ -9,8 +9,8 @@ import {
 	SMALL_MEDIA_SIZE_TO,
 } from "../../../../constants";
 import "./UnderHeaderBox.css";
-import zigzagPhotoBig from "../../../../images/pictures/zigZag/img/zigzag-big.png";
-import zigzagPhotoMiddle from "../../../../images/pictures/zigZag/img/zigzag-mid.png";
+import zigzagPhotoBig from "../../../../assets/images/pictures/zigZag/img/zigzag-big.png";
+import zigzagPhotoMiddle from "../../../../assets/images/pictures/zigZag/img/zigzag-mid.png";
 
 export const UnderHeaderBox = memo(({ text }) => {
 	return (

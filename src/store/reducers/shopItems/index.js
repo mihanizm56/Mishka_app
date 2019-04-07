@@ -1,4 +1,4 @@
-import { GET_SHOP_ITEMS } from "../../constants";
+import { GET_SHOP_ITEMS } from "../../../constants";
 
 export const initialState = [
 	{

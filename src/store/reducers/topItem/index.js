@@ -1,4 +1,4 @@
-import { GET_TOP_ITEM } from "../../constants";
+import { GET_TOP_ITEM } from "../../../constants";
 
 const initialState = {
 	name: "Вязаные корзинки",

@@ -2,86 +2,86 @@
 
 // картиинки
 
-import { hareSmallImage } from "../../images/pictures";
-import { hareMiddleImage } from "../../images/pictures";
-import { hareBigImage } from "../../images/pictures";
+import { hareSmallImage } from "../../assets/images/pictures";
+import { hareMiddleImage } from "../../assets/images/pictures";
+import { hareBigImage } from "../../assets/images/pictures";
 
-import { basketSmallImage } from "../../images/pictures";
-import { basketMiddleImage } from "../../images/pictures";
-import { basketBigImage } from "../../images/pictures";
+import { basketSmallImage } from "../../assets/images/pictures";
+import { basketMiddleImage } from "../../assets/images/pictures";
+import { basketBigImage } from "../../assets/images/pictures";
 
-import { bigBasketSmallImage } from "../../images/pictures";
-import { bigBasketMiddleImage } from "../../images/pictures";
-import { bigBasketBigImage } from "../../images/pictures";
+import { bigBasketSmallImage } from "../../assets/images/pictures";
+import { bigBasketMiddleImage } from "../../assets/images/pictures";
+import { bigBasketBigImage } from "../../assets/images/pictures";
 
-import { videoBackSmallImage } from "../../images/pictures";
-import { videoBackMiddleImage } from "../../images/pictures";
-import { videoBackBigImage } from "../../images/pictures";
+import { videoBackSmallImage } from "../../assets/images/pictures";
+import { videoBackMiddleImage } from "../../assets/images/pictures";
+import { videoBackBigImage } from "../../assets/images/pictures";
 
-import { BackgroundImageForReview } from "../../images/pictures";
+import { BackgroundImageForReview } from "../../assets/images/pictures";
 
-import { basketIndexSmallImage } from "../../images/pictures";
-import { basketIndexMiddleImage } from "../../images/pictures";
-import { basketIndexBigImage } from "../../images/pictures";
+import { basketIndexSmallImage } from "../../assets/images/pictures";
+import { basketIndexMiddleImage } from "../../assets/images/pictures";
+import { basketIndexBigImage } from "../../assets/images/pictures";
 
-import { mapBackSmallImage } from "../../images/pictures";
-import { mapBackMiddleImage } from "../../images/pictures";
-import { mapBackBigImage } from "../../images/pictures";
+import { mapBackSmallImage } from "../../assets/images/pictures";
+import { mapBackMiddleImage } from "../../assets/images/pictures";
+import { mapBackBigImage } from "../../assets/images/pictures";
 
-import { houseIndexSmallImage } from "../../images/pictures";
-import { houseIndexMiddleImage } from "../../images/pictures";
-import { houseIndexBigImage } from "../../images/pictures";
+import { houseIndexSmallImage } from "../../assets/images/pictures";
+import { houseIndexMiddleImage } from "../../assets/images/pictures";
+import { houseIndexBigImage } from "../../assets/images/pictures";
 
-import { zigzagIndexImageBig } from "../../images/pictures";
-import { zigzagIndexImageMiddle } from "../../images/pictures";
-import { zigzagIndexImageSmall } from "../../images/pictures";
+import { zigzagIndexImageBig } from "../../assets/images/pictures";
+import { zigzagIndexImageMiddle } from "../../assets/images/pictures";
+import { zigzagIndexImageSmall } from "../../assets/images/pictures";
 
 //иконки вставляем через export default
 
-import mainLogoSmallIcon from "../../images/icons/main-logo/img/main-logo-small.svg";
-import mainLogoMiddleIcon from "../../images/icons/main-logo/img/main-logo-mid.svg";
-import mainLogoBigIcon from "../../images/icons/main-logo/img/main-logo-big.svg";
+import mainLogoSmallIcon from "../../assets/images/icons/main-logo/img/main-logo-small.svg";
+import mainLogoMiddleIcon from "../../assets/images/icons/main-logo/img/main-logo-mid.svg";
+import mainLogoBigIcon from "../../assets/images/icons/main-logo/img/main-logo-big.svg";
 
-import iconVideoSmall from "../../images/icons/icon-video-small.svg";
-import iconVideoMiddle from "../../images/icons/icon-video-mid.svg";
-import iconVideoBig from "../../images/icons/icon-video-big.svg";
+import iconVideoSmall from "../../assets/images/icons/icon-video-small.svg";
+import iconVideoMiddle from "../../assets/images/icons/icon-video-mid.svg";
+import iconVideoBig from "../../assets/images/icons/icon-video-big.svg";
 
-import iconBasket from "../../images/icons/icon-basket.svg";
-import iconAcademy from "../../images/icons/icon-acagemy.svg";
-import iconFacebook from "../../images/icons/icon-fb.svg";
-import iconInstagram from "../../images/icons/icon-insta.svg";
-import iconTwitter from "../../images/icons/icon-twitter.svg";
-import iconLogoFooter from "../../images/icons/icon-logo-footer.svg";
-import iconSearch from "../../images/icons/icon-search.svg";
-import iconCamera from "../../images/icons/icon-camera.svg";
-import iconZoom from "../../images/icons/icon-zoom.svg";
+import iconBasket from "../../assets/images/icons/icon-basket.svg";
+import iconAcademy from "../../assets/images/icons/icon-acagemy.svg";
+import iconFacebook from "../../assets/images/icons/icon-fb.svg";
+import iconInstagram from "../../assets/images/icons/icon-insta.svg";
+import iconTwitter from "../../assets/images/icons/icon-twitter.svg";
+import iconLogoFooter from "../../assets/images/icons/icon-logo-footer.svg";
+import iconSearch from "../../assets/images/icons/icon-search.svg";
+import iconCamera from "../../assets/images/icons/icon-camera.svg";
+import iconZoom from "../../assets/images/icons/icon-zoom.svg";
 
 /// Icons Special For Interactive Actions
-import iconCross from "../../images/pictures/forSpecialIcons/menu-icon-close.png";
-import iconMenu from "../../images/pictures/forSpecialIcons/menu-icon.png";
+import iconCross from "../../assets/images/pictures/forSpecialIcons/menu-icon-close.png";
+import iconMenu from "../../assets/images/pictures/forSpecialIcons/menu-icon.png";
 
 /// Icons Index Page
-import iconFlower from "../../images/icons/icon-flower.svg";
-import iconBall from "../../images/icons/icon-ball.svg";
-import iconGift from "../../images/icons/icon-gift.svg";
-import iconHeart from "../../images/icons/icon-heart.svg";
-import iconRocket from "../../images/icons/icon-rocket.svg";
-import iconStyle from "../../images/icons/icon-style.svg";
-import iconArrow from "../../images/icons/icon-arrow.svg";
-import iconFlag from "../../images/icons/icon-flag.svg";
-import iconHitTitle from "../../images/icons/icon-week-hit.svg";
-import iconVase from "../../images/icons/icon-vase.svg";
-import iconToy from "../../images/icons/icon-toy.svg";
+import iconFlower from "../../assets/images/icons/icon-flower.svg";
+import iconBall from "../../assets/images/icons/icon-ball.svg";
+import iconGift from "../../assets/images/icons/icon-gift.svg";
+import iconHeart from "../../assets/images/icons/icon-heart.svg";
+import iconRocket from "../../assets/images/icons/icon-rocket.svg";
+import iconStyle from "../../assets/images/icons/icon-style.svg";
+import iconArrow from "../../assets/images/icons/icon-arrow.svg";
+import iconFlag from "../../assets/images/icons/icon-flag.svg";
+import iconHitTitle from "../../assets/images/icons/icon-week-hit.svg";
+import iconVase from "../../assets/images/icons/icon-vase.svg";
+import iconToy from "../../assets/images/icons/icon-toy.svg";
 
 ///// Icons form page
-import iconCheck from "../../images/icons/icon-check.svg";
-import iconRadio from "../../images/icons/icon-radio.svg";
-import iconPhone from "../../images/icons/icon-phone.svg";
-import iconMail from "../../images/icons/icon-mail.svg";
+import iconCheck from "../../assets/images/icons/icon-check.svg";
+import iconRadio from "../../assets/images/icons/icon-radio.svg";
+import iconPhone from "../../assets/images/icons/icon-phone.svg";
+import iconMail from "../../assets/images/icons/icon-mail.svg";
 
 ////// Loader icons
-import LoaderIcon from "../../images/icons/bounce.svg";
-import LoaderSuccessIcon from "../../images/icons/success.svg";
+import LoaderIcon from "../../assets/images/icons/bounce.svg";
+import LoaderSuccessIcon from "../../assets/images/icons/success.svg";
 
 export const getSmallImage = (name: string) => {
 	// console.log(`test getSmallImage, image-name=${name}`);

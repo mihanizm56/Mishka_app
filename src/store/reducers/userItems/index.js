@@ -1,4 +1,4 @@
-import { ADD_USER_ITEM, REMOVE_USER_ITEM } from "../../constants";
+import { ADD_USER_ITEM, REMOVE_USER_ITEM } from "../../../constants";
 
 const initialState = {
 	items: [{}],

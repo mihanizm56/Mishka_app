@@ -1,6 +1,13 @@
 // @flow
 import firebase from "firebase";
-import { LOGIN_SUCCESS, SIGN_OUT, AUTH_MODAL_OPEN, AUTH_MODAL_CLOSE } from "../../constants";
+import {
+	LOGIN_SUCCESS, 
+	SIGN_OUT, 
+	AUTH_MODAL_OPEN, 
+	AUTH_MODAL_CLOSE, 
+	SAVE_NAME,
+	CLEAR_NAME
+} from "../../constants";
 import { loadingAppAction, loadingAppDoneAction } from "../loading";
 
 export const loginCorrectAction = () => {
@@ -19,18 +26,6 @@ export const signOutLocalAction = () => {
 	};
 };
 
-export const signOutFirebaseAction = () => {
-	return dispatch => {
-		firebase
-			.auth()
-			.signOut()
-			.then(() => dispatch(signOutLocalAction()))
-			.catch(function(error) {
-				console.error("signOutFirebase failed");
-			});
-	};
-};
-
 export const openAuthModalAction = () => {
 	// console.log("test openAuthModalAction");
 	return {
@@ -45,12 +40,26 @@ export const closeAuthModalAction = () => {
 	};
 };
 
-export const loginRequestAction = (email, password) => {
+export const setUserName = (name) => {
+	console.log("test setUserName");
+	return {
+		type: SAVE_NAME,
+		payload: name
+	};
+};
+
+export const clearUserName = () => {
+	console.log("test clearUserName");
+	return {
+		type: CLEAR_NAME
+	};
+};
+
+export const loginRequestAction = (email, password, name) => {
 	console.log("check loginRequest");
-	console.log(`email = ${email}, password = ${password}`);
-	if (email !== "" && password !== "") {
+	console.log(`email = ${email}, password = ${password}, name=${name}`);
+	if (email && password && name) {
 		return dispatch => {
-			console.log("прошёл");
 			dispatch(loadingAppAction());
 
 			return firebase
@@ -58,6 +67,7 @@ export const loginRequestAction = (email, password) => {
 				.signInWithEmailAndPassword(email, password)
 				.then(() => dispatch(loginCorrectAction()))
 				.then(() => dispatch(loadingAppDoneAction()))
+				.then(() => dispatch(setUserName(name)))
 				.then(() => {
 					setTimeout(() => {
 						dispatch(closeAuthModalAction());
@@ -69,6 +79,19 @@ export const loginRequestAction = (email, password) => {
 				});
 		};
 	}
+};
+
+export const signOutFirebaseAction = () => {
+	return dispatch => {
+		firebase
+			.auth()
+			.signOut()
+			.then(()=>dispatch(clearUserName()))
+			.then(() => dispatch(signOutLocalAction()))
+			.catch(function (error) {
+				console.error("signOutFirebase failed");
+			});
+	};
 };
 
 //import { authentificate} from '../utils'

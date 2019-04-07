@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { shopItemsSelector } from "../../selectors";
+import { shopItemsSelector } from "../../store/selectors";
 
 class WrappedContainer extends Component {
 	render() {

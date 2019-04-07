@@ -1,4 +1,4 @@
-import { ADD_REVIEW, GET_REVIEWS } from "../../constants";
+import { ADD_REVIEW, GET_REVIEWS } from "../../../constants";
 
 const initialState = {
 	reviewList: [

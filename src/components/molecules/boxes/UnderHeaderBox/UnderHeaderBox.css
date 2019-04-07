@@ -51,7 +51,7 @@
     .under-header-box__zigzag-box{
         bottom: -10px;
         left: -31%;
-        width: 161%;
+        width: 200%;
         height: 24px;
     }
 }
@@ -75,7 +75,6 @@
     .under-header-box__zigzag-box{
         bottom: -16px;
         left: -31%;
-        width: 161%;
         height: 34px;
     }
 }

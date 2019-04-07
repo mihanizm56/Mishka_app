@@ -12,7 +12,9 @@ export const MainWrapper = memo(props => {
 	//console.log(router);
 	return (
 		<div className="main-wrapper">
-			<Header route={router} />
+			<AuthStoreProvider>
+				<Header route={router} />
+			</AuthStoreProvider>
 			<MainLayout {...restProps} />
 			<Footer />
 

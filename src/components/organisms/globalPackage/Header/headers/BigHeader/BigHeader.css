@@ -77,7 +77,14 @@
 .second-line-big-header__delivery-info {
     width: 250px;
     height: 100%;
-    margin-left: 469px;
+    margin: 0 35px 0 auto;
+}
+
+.second-line-big-header__login-container{
+    border: 1px solid red;
+    height: 100%;
+    width: 220px;
+    margin-left: 45px;
 }
 
 .big-header-wrapper--index-page {

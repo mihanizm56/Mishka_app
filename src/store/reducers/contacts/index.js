@@ -1,5 +1,5 @@
 // @flow
-import { GET_CONTACTS } from "../../constants";
+import { GET_CONTACTS } from "../../../constants";
 
 const initialState = {
 	email: "info@mimimishkashop.ru",

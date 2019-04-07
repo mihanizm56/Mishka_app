@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { registerApp } from "../../utils";
 import { MainWrapper } from "../../components/organisms";
-import { loginStateSelector, loadingSelector, modalAuthStateSelector } from "../../selectors";
+import { loginStateSelector, loadingSelector, modalAuthStateSelector } from "../../store/selectors";
 import "./App.css";
 import "../../styles/keyframes/keyframes.css";
 

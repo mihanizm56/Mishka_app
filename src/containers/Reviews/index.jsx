@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addReview } from "../../actions";
-import { reviewSelector } from "../../selectors";
+import { reviewSelector } from "../../store/selectors";
 
 class WrappedContainer extends Component {
 	render() {

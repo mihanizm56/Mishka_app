@@ -20,6 +20,8 @@ export const STREET = "STREET";
 export const CITY = "CITY";
 export const AUTH_MODAL_OPEN = "AUTH_MODAL_OPEN";
 export const AUTH_MODAL_CLOSE = "AUTH_MODAL_CLOSE";
+export const SAVE_NAME = "SAVE_NAME";
+export const CLEAR_NAME = "CLEAR_NAME";
 
 export const emptyString = "";
 

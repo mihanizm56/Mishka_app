@@ -35,6 +35,15 @@
     animation: fadeIn .4s .8s ease-in-out both;
 }
 
+.auth-form__name {
+    height: 55px;
+    width: 90%;
+    border: 1px solid black;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
 .auth-form__email {
     height: 55px;
     width: 90%;
@@ -68,8 +77,8 @@
 @media (max-width: 767px) {
     .auth-form-wrapper {
         width: 90%;
-        height: 290px;
-        padding: 40px 10px;
+        height: 350px;
+        padding: 20px 10px;
     }
     .auth-form__email, .auth-form__password {
         height: 65px;
@@ -79,15 +88,15 @@
 @media (min-width: 768px) {
     .auth-form-wrapper {
         width: 60%;
-        height: 300px;
-        padding: 100px 50px;
+        height: 400px;
+        padding: 50px 50px;
     }
 }
 
 @media (min-width: 1200px) {
     .auth-form-wrapper {
         width: 300px;
-        height: 300px;
-        padding: 100px 50px;
+        height: 400px;
+        padding: 50px 50px;
     }
 }

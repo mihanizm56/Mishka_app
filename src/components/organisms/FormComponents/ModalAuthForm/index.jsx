@@ -8,9 +8,9 @@ export class ModalAuthForm extends Component {
 		signInFunc: () => console.log("default signInUser"),
 	};
 
-	signInUser = ({ email, password }) => {
+	signInUser = ({ email, password, name }) => {
 		const { signInFunc } = this.props; ///////////////переделать и сделать асинхронным
-		signInFunc(email, password);
+		signInFunc(email, password, name);
 	};
 
 	componentDidMount() {
@@ -32,6 +32,19 @@ export class ModalAuthForm extends Component {
 
 	normalLayout = () => (
 		<>
+			<div className="auth-form__name">
+				<Field
+					component={FormTextInputField}
+					placeholder="Введите ваше Имя"
+					noBorderBottom
+					noMarginTop
+					noPadding
+					noTitle
+					label="имя"
+					type="text"
+					name="name"
+				/>
+			</div>
 			<div className="auth-form__email">
 				<Field
 					component={FormTextInputField}

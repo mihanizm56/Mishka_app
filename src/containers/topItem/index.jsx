@@ -6,7 +6,7 @@ import {
 	topItemPriceSelector,
 	topItemImageSelector,
 	topItemCharacteristicsSelector,
-} from "../../selectors";
+} from "../../store/selectors";
 
 class WrappedContainer extends Component {
 	render() {

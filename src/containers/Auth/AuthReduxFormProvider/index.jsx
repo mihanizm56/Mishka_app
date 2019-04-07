@@ -15,10 +15,11 @@ class WrappedContainer extends Component {
 }
 
 export const AuthReduxFormProvider = reduxForm({
-	validate: ({ email, password }) => {
+	validate: ({ email, password, name }) => {
 		const errors = {};
-		if (!email || email === "") errors.email = "Failed email";
-		if (!password || password === "") errors.password = "Failed password";
+		if (!email) errors.email = "Failed email";
+		if (!password) errors.password = "Failed password";
+		if (!name) errors.password = "Failed name";
 		return errors;
 	},
 	form: "auth",
