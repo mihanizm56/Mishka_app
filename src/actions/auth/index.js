@@ -58,7 +58,11 @@ export const loginRequestAction = (email, password) => {
 				.signInWithEmailAndPassword(email, password)
 				.then(() => dispatch(loginCorrectAction()))
 				.then(() => dispatch(loadingAppDoneAction()))
-				.then(() => dispatch(closeAuthModalAction()))
+				.then(() => {
+					setTimeout(() => {
+						dispatch(closeAuthModalAction());
+					}, 2000);
+				})
 				.catch(error => {
 					dispatch(loadingAppDoneAction());
 					// alert(error.message);

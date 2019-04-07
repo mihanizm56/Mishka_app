@@ -20,11 +20,11 @@ class AppContainer extends Component {
 	render() {
 		// console.log("test App props");
 		// console.log(this.props);
-		const { loginState, router, modalAuthIsOpen } = this.props;
-		const userIsLoggedIn = loginState.login && localStorage.login === "true";
+		const { loginState, ...restProps } = this.props;
+		const loginSucceed = loginState || localStorage.login === "true";
 		return (
 			<div className="global-wrapper">
-				<MainWrapper userIsLoggedIn={userIsLoggedIn} router={router} modalAuthIsOpen={modalAuthIsOpen} />
+				<MainWrapper loginState={loginSucceed} {...restProps} />
 			</div>
 		);
 	}

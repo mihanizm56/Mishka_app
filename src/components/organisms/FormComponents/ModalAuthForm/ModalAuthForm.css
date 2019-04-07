@@ -62,7 +62,7 @@
 }
 
 .success-icon {
-    animation: fadeIn .5s linear both;
+    animation: fadeIn .5s .3s linear both;
 }
 
 @media (max-width: 767px) {
