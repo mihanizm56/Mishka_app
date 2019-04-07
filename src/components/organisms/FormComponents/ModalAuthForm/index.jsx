@@ -56,7 +56,7 @@ export class ModalAuthForm extends Component {
 						<Button
 							buttonType="submit"
 							classname="button-auth-modal"
-							text="Отправить"
+							text="Войти"
 							handleClick={handleSubmit(this.signInUser)}
 							autocompleteOff
 						/>

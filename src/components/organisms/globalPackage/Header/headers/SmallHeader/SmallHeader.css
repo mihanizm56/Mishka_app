@@ -1,34 +1,34 @@
-.small-header__nav{
+.small-header__nav {
     display: flex;
     flex-direction: column;
 }
 
-.small-header__small-header-logo-wrapper{
+.small-header__small-header-logo-wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: relative;
 }
 
-.small-header__zoom-wrapper{
+.small-header__zoom-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
-.zoom-wrapper__zoom-icon{
+.zoom-wrapper__zoom-icon {
     position: absolute;
     top: 3px;
     left: -50px;
 }
 
-.zoom-wrapper__zoom-text{
+.zoom-wrapper__zoom-text {
     display: flex;
     position: relative;
 }
 
-.small-header-logo-wrapper__menu-icon{
+.small-header-logo-wrapper__menu-icon {
     position: absolute;
     top: 32px;
     right: 50px;
@@ -36,7 +36,7 @@
     animation: curcleIn .5s ease-in-out both;
 }
 
-.small-header-logo-wrapper__cross-icon{
+.small-header-logo-wrapper__cross-icon {
     display: none;
     position: absolute;
     top: 32px;
@@ -45,28 +45,21 @@
     animation: curcleIn .6s ease-in-out both;
 }
 
-.small-menu-wrapper{
+.small-menu-wrapper {
     display: none;
 }
 
-.small-header__catalog-title,
-.small-header__catalog-title,
-.small-header__knitting-title{
+.small-header__catalog-title, .small-header__catalog-title, .small-header__knitting-title {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.small-header__small-header-logo-wrapper{
+.small-header__small-header-logo-wrapper {
     border-top: 1px solid #ECECEC;
 }
 
-.small-header__small-header-logo-wrapper,
-.small-header__catalog-title,
-.small-header__catalog-title,
-.small-header__knitting-title,
-.small-header__zoom-wrapper,
-.small-header__basket-wrapper {
+.small-header__small-header-logo-wrapper, .small-header__catalog-title, .small-header__catalog-title, .small-header__knitting-title, .small-header__zoom-wrapper, .small-header__basket-wrapper {
     border-bottom: 1px solid #ECECEC;
 }
 
@@ -76,57 +69,52 @@
     border-bottom: 1px solid #ECECEC;
 }
 
-.small-header__small-header-logo-wrapper,
-.small-header__catalog-title,
-.small-header__catalog-title,
-.small-header__knitting-title,
-.small-header__zoom-wrapper,
-.small-header__basket-wrapper {
+.small-header__small-header-logo-wrapper, .small-header__catalog-title, .small-header__catalog-title, .small-header__knitting-title, .small-header__zoom-wrapper, .small-header__basket-wrapper {
     height: 80px;
 }
 
-.small-menu-wrapper--opened{
+.small-menu-wrapper--opened {
     display: block;
     animation: openIn 1s ease-in-out forwards;
 }
 
-.small-header__catalog-title{
+.small-header__catalog-title {
     display: none;
 }
 
-.small-header__knitting-title{
+.small-header__knitting-title {
     display: none;
 }
 
-.small-header__zoom-wrapper{
+.small-header__zoom-wrapper {
     display: none;
 }
 
-.small-header__basket-wrapper{
+.small-header__basket-wrapper {
     display: none;
 }
 
-.small-menu-wrapper--opened .small-header__catalog-title{
+.small-menu-wrapper--opened .small-header__catalog-title {
     display: flex;
     animation: fadeIn .3s ease-in-out both;
 }
 
-.small-menu-wrapper--opened .small-header__knitting-title{
+.small-menu-wrapper--opened .small-header__knitting-title {
     display: flex;
     animation: fadeIn .3s ease-in-out 0.3s both;
 }
 
-.small-menu-wrapper--opened .small-header__zoom-wrapper{
+.small-menu-wrapper--opened .small-header__zoom-wrapper {
     display: flex;
     animation: fadeIn .3s ease-in-out 0.6s both;
 }
 
-.small-menu-wrapper--opened .small-header__basket-wrapper{
+.small-menu-wrapper--opened .small-header__basket-wrapper {
     display: flex;
     animation: fadeIn .3s ease-in-out 0.9s both;
 }
 
-.first-line-small-header__search-input{
+.first-line-small-header__search-input {
     align-items: center;
     overflow: hidden;
     background-color: white;
@@ -135,57 +123,3 @@
     margin-right: -45px;
     animation: fadeInInputHeaderSmall .2s ease-in-out both;
 }
-
-@keyframes fadeIn {
-    from { 
-        opacity: 0;
-     }
-    to { 
-        opacity: 1;
-     }
-   }
-
-   @keyframes openIn {
-    from { 
-        opacity: 0;
-        height: 0;
-     }
-    to { 
-        opacity: 1;
-        height: 100%;
-     }
-   }
-
-   @keyframes curcleIn {
-    from { 
-        opacity: 0;
-        transform: rotate(90deg)
-     }
-    to { 
-        opacity: 1;
-        transform: rotate(0deg)
-     }
-   }
-
-   @keyframes curcleOut {
-    from { 
-        opacity: 1;
-        transform: rotate(0deg)
-     }
-    to { 
-        opacity: 0;
-        transform: rotate(90deg)
-     }
-   }
-
-   
-@keyframes fadeInInputHeaderSmall {
-    from { 
-        opacity: 0;
-        transform: translate3d(50px, 0, 0)
-     }
-    to { 
-        opacity: 1;
-        transform: translate3d(0, 0, 0)
-     }
-   }

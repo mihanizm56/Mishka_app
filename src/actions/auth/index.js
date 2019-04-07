@@ -61,7 +61,7 @@ export const loginRequestAction = (email, password) => {
 				.then(() => dispatch(closeAuthModalAction()))
 				.catch(error => {
 					dispatch(loadingAppDoneAction());
-					alert(error.message);
+					// alert(error.message);
 				});
 		};
 	}

@@ -4,6 +4,7 @@ import { registerApp } from "../../utils";
 import { MainWrapper } from "../../components/organisms";
 import { loginStateSelector, loadingSelector, modalAuthStateSelector } from "../../selectors";
 import "./App.css";
+import "../../styles/keyframes/keyframes.css";
 
 class AppContainer extends Component {
 	componentDidMount() {
