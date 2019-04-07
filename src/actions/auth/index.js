@@ -1,13 +1,6 @@
 // @flow
 import firebase from "firebase";
-import {
-	LOGIN_SUCCESS, 
-	SIGN_OUT, 
-	AUTH_MODAL_OPEN, 
-	AUTH_MODAL_CLOSE, 
-	SAVE_NAME,
-	CLEAR_NAME
-} from "../../constants";
+import { LOGIN_SUCCESS, SIGN_OUT, AUTH_MODAL_OPEN, AUTH_MODAL_CLOSE, SAVE_NAME, CLEAR_NAME } from "../../constants";
 import { loadingAppAction, loadingAppDoneAction } from "../loading";
 
 export const loginCorrectAction = () => {
@@ -40,19 +33,19 @@ export const closeAuthModalAction = () => {
 	};
 };
 
-export const setUserName = (name) => {
+export const setUserName = name => {
 	console.log("test setUserName");
 	localStorage.userName = `${name}`;
 	return {
 		type: SAVE_NAME,
-		payload: name
+		payload: name,
 	};
 };
 
 export const clearUserName = () => {
 	console.log("test clearUserName");
 	return {
-		type: CLEAR_NAME
+		type: CLEAR_NAME,
 	};
 };
 
@@ -68,12 +61,12 @@ export const loginRequestAction = (email, password, name) => {
 				.signInWithEmailAndPassword(email, password)
 				.then(() => dispatch(loginCorrectAction()))
 				.then(() => dispatch(loadingAppDoneAction()))
-				.then(() => dispatch(setUserName(name)))
 				.then(() => {
 					setTimeout(() => {
 						dispatch(closeAuthModalAction());
 					}, 2000);
 				})
+				.then(() => dispatch(setUserName(name)))
 				.catch(error => {
 					dispatch(loadingAppDoneAction());
 					alert(error.message);
@@ -87,9 +80,9 @@ export const signOutFirebaseAction = () => {
 		firebase
 			.auth()
 			.signOut()
-			.then(()=>dispatch(clearUserName()))
+			.then(() => dispatch(clearUserName()))
 			.then(() => dispatch(signOutLocalAction()))
-			.catch(function (error) {
+			.catch(function(error) {
 				console.error("signOutFirebase failed");
 			});
 	};

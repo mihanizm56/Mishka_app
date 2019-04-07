@@ -2,7 +2,7 @@ import { LOGIN_SUCCESS, SIGN_OUT, SAVE_NAME, CLEAR_NAME } from "../../../constan
 
 const initState = {
 	login: false,
-	name: ''
+	name: "",
 };
 
 export const loginReducer = (state = initState, action) => {

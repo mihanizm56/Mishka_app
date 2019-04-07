@@ -245,7 +245,14 @@ button {
     background-color: #fff;
 }
 
+.sign-in-button:hover .open-sans-text--text-button {
+    color: #fff;
+}
 
+.sign-in-button:active .text-button {
+    color: #fff;
+    opacity: 0.3;
+}
 
 @media (max-width: 767px) {
     .sign-in-button{}
@@ -272,7 +279,6 @@ button {
     border: 1px solid black;
     transition: .5s;
     border-radius: 10px;
-    
 }
 
 .sign-out-button:hover {
@@ -281,6 +287,15 @@ button {
 
 .sign-out-button:active {
     background-color: #fff;
+}
+
+.sign-out-button:hover .open-sans-text--text-button {
+    color: #fff;
+}
+
+.sign-out-button:active .text-button {
+    color: #fff;
+    opacity: 0.3;
 }
 
 @media (max-width: 767px) {

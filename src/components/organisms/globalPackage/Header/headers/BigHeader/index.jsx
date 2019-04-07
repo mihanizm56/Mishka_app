@@ -22,9 +22,9 @@ export class BigHeader extends PureComponent {
 		searchInputOpened: false,
 	};
 
-	componentDidUpdate(){
-		console.log('update BigHeader')
-		console.log(this.props)
+	componentDidUpdate() {
+		console.log("update BigHeader");
+		console.log(this.props);
 	}
 
 	handleToggleInput = () => {

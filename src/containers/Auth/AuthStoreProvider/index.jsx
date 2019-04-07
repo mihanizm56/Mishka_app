@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { loginRequestAction, closeAuthModalAction, signOutFirebaseAction, openAuthModalAction } from "../../../actions";
-import { loadingSelector,loginStateSelector, userNameSelector } from "../../../store/selectors";
+import { loadingSelector, loginStateSelector, userNameSelector } from "../../../store/selectors";
 
 class WrappedContainer extends Component {
 	static defaultProps = {
@@ -23,7 +23,7 @@ const mapStateToProps = store => {
 	return {
 		isLoading: loadingSelector(store),
 		loginState: loginStateSelector(store),
-		userName: userNameSelector(store) || localStorage.userName
+		userName: userNameSelector(store),
 	};
 };
 

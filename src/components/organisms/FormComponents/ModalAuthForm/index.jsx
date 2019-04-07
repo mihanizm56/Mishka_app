@@ -84,9 +84,9 @@ export class ModalAuthForm extends Component {
 		</>
 	);
 
-	getFormLayout = ({ isLoading, loginStateApp }) => {
+	getFormLayout = ({ isLoading, loginState }) => {
 		if (isLoading) return this.loadingLayout();
-		else if (loginStateApp) return this.successLayout();
+		else if (loginState) return this.successLayout();
 		else return this.normalLayout();
 	};
 
