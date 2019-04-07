@@ -6,7 +6,7 @@ import "./ModalAuthForm.css";
 import { loginRequestAction } from "../../../../actions";
 import { connect } from "react-redux";
 
-class ModalAuthFormComponent extends Component {
+export class ModalAuthForm extends Component {
 	static defaultProps = {
 		signInFunc: () => console.log("default signInUser"),
 	};
@@ -43,25 +43,25 @@ class ModalAuthFormComponent extends Component {
 	}
 }
 
-const ModalAuthFormContainer = reduxForm({
-	validate: ({ email, password }) => {
-		const errors = {};
-		if (!email || email === "") errors.email = "Failed email";
-		if (!password || password === "") errors.password = "Failed password";
-		return errors;
-	},
-	form: "auth",
-})(ModalAuthFormComponent);
+// export const ModalAuthFormContainer = reduxForm({
+// 	validate: ({ email, password }) => {
+// 		const errors = {};
+// 		if (!email || email === "") errors.email = "Failed email";
+// 		if (!password || password === "") errors.password = "Failed password";
+// 		return errors;
+// 	},
+// 	form: "auth",
+// })(ModalAuthFormComponent);
 
-const mapDispatchToProps = dispatch => {
-	return {
-		signInFunc(email, password) {
-			dispatch(loginRequestAction(email, password));
-		},
-	};
-};
+// const mapDispatchToProps = dispatch => {
+// 	return {
+// 		signInFunc(email, password) {
+// 			dispatch(loginRequestAction(email, password));
+// 		},
+// 	};
+// };
 
-export const ModalAuthForm = connect(
-	null,
-	mapDispatchToProps
-)(ModalAuthFormContainer);
+// export const ModalAuthForm = connect(
+// 	null,
+// 	mapDispatchToProps
+// )(ModalAuthFormContainer);

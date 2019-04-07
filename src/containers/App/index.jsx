@@ -7,7 +7,7 @@ import "./App.css";
 
 class AppContainer extends Component {
 	state = {
-		modalAuthIsOpen: false,
+		modalAuthIsOpen: true,
 	};
 
 	componentDidMount() {
@@ -29,9 +29,6 @@ class AppContainer extends Component {
 		return (
 			<div className="global-wrapper">
 				<MainWrapper userIsLoggedIn={userIsLoggedIn} router={router} modalAuthIsOpen={modalAuthIsOpen} />
-				{/* <TrueCheckBox /> */}
-				{/* <SearchField callback={changeSearchFilter} /> */}
-				{/* <button onClick={() => userIsLoggedIn && userSignOut()}>Выйти</button> */}
 			</div>
 		);
 	}

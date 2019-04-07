@@ -2,8 +2,8 @@
 import React, { memo } from "react";
 import MainLayout from "../../../../routes/";
 import { Footer, Header } from "../";
-import { ModalAuthForm } from "../../FormComponents";
-import { Portal } from "../../../../containers";
+import { ModalAuthForm } from "../../";
+import { Portal, AuthStoreProvider, AuthReduxFormProvider } from "../../../../containers";
 import "./MainWrapper.css";
 
 export const MainWrapper = memo(props => {
@@ -12,15 +12,19 @@ export const MainWrapper = memo(props => {
 	//console.log(router);
 	return (
 		<div className="main-wrapper">
-			<Header route={router} />
+			{/* <Header route={router} />
 			<MainLayout {...restProps} />
-			<Footer />
+			<Footer /> */}
 
-			{/* {modalAuthIsOpen && (
+			{modalAuthIsOpen && (
 				<Portal>
-					<ModalAuthForm />
+					<AuthStoreProvider>
+						<AuthReduxFormProvider>
+							<ModalAuthForm />
+						</AuthReduxFormProvider>
+					</AuthStoreProvider>
 				</Portal>
-			)} */}
+			)}
 		</div>
 	);
 });
