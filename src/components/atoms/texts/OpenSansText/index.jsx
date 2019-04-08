@@ -1,5 +1,5 @@
-//
-import React, { Node, createRef } from "react";
+// @flow
+import React, { createRef } from "react";
 import "./OpenSansText.css";
 import { getClass } from "../../../../utils";
 
@@ -24,11 +24,11 @@ export const OpenSansText = ({
 	hovered,
 	ligth,
 	title,
-	needRef,
+	// needRef,
 	handleClick,
 	withRefClick,
-}: OpenSansTextProps): Node => {
-	const OpenSansRef = needRef ? createRef() : null;
+}: OpenSansTextProps) => {
+	// const OpenSansRef = needRef ? createRef() : null;
 
 	return (
 		<p
@@ -41,8 +41,8 @@ export const OpenSansText = ({
 				ligth: ligth,
 				additionalClass: classname,
 			})}
-			ref={needRef && OpenSansRef}
-			onClick={needRef && withRefClick ? () => withRefClick(OpenSansRef) : handleClick}
+			// ref={needRef && OpenSansRef}
+			// onClick={needRef && withRefClick ? () => withRefClick(OpenSansRef) : handleClick}
 		>
 			{text}
 		</p>
