@@ -1,4 +1,4 @@
-// @flow
+//
 export const getHeaderTitle = (nameOfPage: string) => {
 	switch (nameOfPage) {
 		case "order-page":

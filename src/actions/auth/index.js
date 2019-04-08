@@ -1,4 +1,4 @@
-// @flow
+//
 import firebase from "firebase";
 import { LOGIN_SUCCESS, SIGN_OUT, AUTH_MODAL_OPEN, AUTH_MODAL_CLOSE, SAVE_NAME, CLEAR_NAME } from "../../constants";
 import { loadingAppAction, loadingAppDoneAction } from "../loading";

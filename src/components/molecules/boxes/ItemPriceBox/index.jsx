@@ -1,4 +1,4 @@
-// @flow
+//
 import React, { memo } from "react";
 import { VerdanaText } from "../../../../components";
 import "./ItemPriceBox.css";

@@ -1,4 +1,4 @@
-// @flow
+//
 import React, { PureComponent } from "react";
 import { LinkComponent, InteractiveSVGIcon, SearchHeaderInput, VerdanaText } from "../../../../../../components";
 import { UserBasketBox, UnderHeaderBox, UserLoginBox } from "../../../../../molecules/boxes";

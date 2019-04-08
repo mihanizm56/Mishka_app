@@ -1,4 +1,4 @@
-// @flow
+//
 import { ADD_THE_REVIEW } from "../../constants";
 import { loadingAppDoneAction, loadingAppAction } from "../loading";
 import { GET_REVIEWS } from "../../constants";

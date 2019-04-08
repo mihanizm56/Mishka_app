@@ -1,4 +1,4 @@
-// @flow
+//
 import React from "react";
 import MediaQuery from "react-responsive";
 import { ImageForPage } from "../../../../components";

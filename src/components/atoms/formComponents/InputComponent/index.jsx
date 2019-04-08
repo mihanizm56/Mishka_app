@@ -1,4 +1,4 @@
-// @flow
+//
 import React, { PureComponent } from "react";
 
 type InputComponentProps = {

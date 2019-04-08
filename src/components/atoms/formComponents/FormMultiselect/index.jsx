@@ -1,4 +1,4 @@
-// @flow
+//
 import React, { memo } from "react";
 import appConfig from "../../../../appConfig.json";
 import { ACReturns } from "../../../../actions";

@@ -1,4 +1,4 @@
-// @flow
+//
 import React, { memo } from "react";
 import MediaQuery from "react-responsive";
 import { OpenSansText, SVGIcon, VerdanaText } from "../../../../components";

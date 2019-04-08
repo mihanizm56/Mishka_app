@@ -1,4 +1,4 @@
-// @flow
+//
 import React, { memo } from "react";
 import { SVGIcon, VerdanaText } from "../../../../components";
 import "./IndexItemBox.css";

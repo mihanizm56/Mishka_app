@@ -1,4 +1,4 @@
-// @flow
+//
 import {
 	CHANGE_RANGE_MIN_VALUE,
 	CHANGE_RANGE_MAX_VALUE,

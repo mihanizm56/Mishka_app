@@ -1,4 +1,4 @@
-// @flow
+//
 
 type getClassParametersType = {
 	initialClass: string,

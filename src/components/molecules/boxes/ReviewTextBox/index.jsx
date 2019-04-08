@@ -1,4 +1,4 @@
-// @flow
+//
 import React, { memo } from "react";
 import { OpenSansText, VerdanaText } from "../../../../components";
 import "./ReviewTextBox.css";

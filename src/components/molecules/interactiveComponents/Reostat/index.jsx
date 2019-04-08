@@ -1,4 +1,4 @@
-// @flow
+//
 import React from "react";
 import "rc-slider/assets/index.css";
 import "rc-tooltip/assets/bootstrap.css";

@@ -1,4 +1,4 @@
-// @flow
+//
 import React, { Node, memo } from "react";
 import { getClass } from "../../../../utils";
 import "./TextArea.css";

@@ -1,4 +1,4 @@
-// @flow
+//
 import { APP_IS_LOADING, APP_HAS_LOADED } from "../../constants";
 
 export const loadingAppAction = () => {

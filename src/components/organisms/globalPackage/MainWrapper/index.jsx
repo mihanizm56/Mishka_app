@@ -1,4 +1,4 @@
-// @flow
+//
 import React, { memo } from "react";
 import MainLayout from "../../../../routes/";
 import { Footer, Header } from "../";
@@ -13,7 +13,7 @@ export const MainWrapper = memo(props => {
 	return (
 		<div className="main-wrapper">
 			<AuthStoreProvider>
-				<Header route={router} loginStateApp={loginStateApp}/>
+				<Header route={router} loginStateApp={loginStateApp} />
 			</AuthStoreProvider>
 			<MainLayout {...restProps} />
 			<Footer />

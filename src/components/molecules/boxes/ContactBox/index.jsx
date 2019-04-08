@@ -1,4 +1,4 @@
-// @flow
+//
 import React, { PureComponent } from "react";
 import MediaQuery from "react-responsive";
 import { SVGIcon, OpenSansText, ImageForPage, VerdanaText } from "../../../../components";

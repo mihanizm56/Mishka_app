@@ -1,4 +1,4 @@
-// @flow
+//
 import { loadingAppDoneAction, loadingAppAction } from "../loading";
 import { getShopItems } from '../../constants'
 import { myFetch } from '../../utils/requests'

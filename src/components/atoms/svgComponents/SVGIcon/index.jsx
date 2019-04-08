@@ -1,4 +1,4 @@
-// @flow
+//
 import React from "react";
 import "./SVGIcon.css";
 import MediaQuery from "react-responsive";

@@ -1,4 +1,4 @@
-// @flow
+//
 import React, { memo } from "react";
 import "./IndexPage.css";
 import { AboutBox, ListReviewsBox, ContactBox, WeeklyHitBox, HouseBox } from "../../../molecules";

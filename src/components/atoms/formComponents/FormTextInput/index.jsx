@@ -1,4 +1,4 @@
-// @flow
+//
 import React, { Node, memo } from "react";
 import MediaQuery from "react-responsive";
 import { InputComponent } from "../";

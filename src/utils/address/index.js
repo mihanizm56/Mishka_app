@@ -1,4 +1,4 @@
-// @flow
+//
 
 import { BLOCK, STREET, CITY } from "../../constants";
 

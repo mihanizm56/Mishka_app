@@ -1,4 +1,4 @@
-// @flow
+//
 import React, { memo } from "react";
 import { IconButton } from "../../../atoms/buttons";
 import "./ListButtonsBox.css";

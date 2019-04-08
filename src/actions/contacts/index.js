@@ -1,4 +1,4 @@
-// @flow
+//
 import { loadingAppDoneAction, loadingAppAction } from "../loading";
 import { getContacts } from '../../constants'
 import { myFetch } from '../../utils/requests'

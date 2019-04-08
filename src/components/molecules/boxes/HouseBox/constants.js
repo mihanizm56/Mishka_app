@@ -1,4 +1,4 @@
-// @flow
+//
 export const HOUSE_WIDTH_BIG = "550px";
 export const HOUSE_HEIGHT_BIG = "600px";
 export const HOUSE_WIDTH_MIDDLE = "100%";

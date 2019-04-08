@@ -1,4 +1,4 @@
-// @flow
+//
 import React, { PureComponent } from "react";
 import ReactPlayer from "react-player";
 import { ImageForPage } from "../../../../components";

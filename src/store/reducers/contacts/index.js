@@ -1,4 +1,4 @@
-// @flow
+//
 import { GET_CONTACTS } from "../../../constants";
 
 const initialState = {
