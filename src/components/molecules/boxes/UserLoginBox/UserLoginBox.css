@@ -1,5 +1,4 @@
 .user-box-wrapper{
-    border: 1px solid green;
     height: 100%;
     width: 100%;
 }
@@ -15,58 +14,4 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border: 1px solid blue;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 767px) {
-    .user-box-wrapper{
-
-    }
-    
-    .empty-box-wrapper{
-
-    }
-    
-    .user-box-wrapper{
-    
-    }
-}
-
-@media (min-width: 768px) {
-    .user-box-wrapper{
-
-    }
-    
-    .empty-box-wrapper{
-
-    }
-    
-    .user-box-wrapper{
-    
-    }
-}
-
-@media (min-width: 1200px) {
-    .user-box-wrapper{
-
-    }
-    
-    .empty-box-wrapper{
-
-    }
-    
-    .user-box-wrapper{
-    
-    }
 }
