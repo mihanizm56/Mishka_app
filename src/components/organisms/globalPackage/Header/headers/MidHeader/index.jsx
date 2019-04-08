@@ -1,7 +1,7 @@
 // @flow
 import React, { PureComponent } from "react";
 import { VerdanaText, LinkComponent, InteractiveSVGIcon, SearchHeaderInput } from "../../../../../../components";
-import { UserBasketBox, UnderHeaderBox } from "../../../../../molecules/boxes";
+import { UserBasketBox, UnderHeaderBox, UserLoginBox } from "../../../../../molecules/boxes";
 import { FONT_SIZE_FOR_SECOND_LINE_IN_HEADER } from "./constants";
 import { getHeaderTitle, getSpecialClassForHeader, getClass } from "../../../../../../utils";
 import "./MidHeader.css";
@@ -22,7 +22,13 @@ export class MidHeader extends PureComponent {
 
 	render() {
 		const { searchInputOpened } = this.state;
-		const { page } = this.props;
+		const { page, loginStateApp, userName, openModal, signOutFunc } = this.props;
+		const authProps = {
+			loginStateApp,
+			userName,
+			openModal,
+			signOutFunc,
+		};
 		return (
 			<div
 				className={getSpecialClassForHeader({
@@ -31,9 +37,14 @@ export class MidHeader extends PureComponent {
 				})}
 			>
 				<div className="middle-header__first-line-header">
+				<div className='middle-header-logo-box'>
 					<div className="first-line-middle-header__logo">
 						<LinkComponent WrappedComponent={InteractiveSVGIcon} icon="main-logo" route="index" />
 					</div>
+					<div className="second-line-midde-header__login-container">
+						<UserLoginBox {...authProps} />
+					</div>
+				</div>
 					<div className="middle-header__rigth-container">
 						<div className="first-line-middle-header__zoom-wrapper">
 							<div className="first-line-middle-header__zoom-icon">

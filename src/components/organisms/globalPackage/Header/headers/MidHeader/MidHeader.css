@@ -11,6 +11,18 @@
     border-bottom: 1px solid #ECECEC;
 }
 
+.middle-header-logo-box{
+    display: flex;
+    border: 1px solid red;
+}
+
+.second-line-midde-header__login-container{
+    border: 1px solid red;
+    height: 100%;
+    width: 220px;
+    margin-left: 45px;
+}
+
 .middle-header__rigth-container {
     display: flex;
     height: 100%;

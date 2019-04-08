@@ -7,7 +7,7 @@ import {
 	SearchHeaderInput,
 	VerdanaText,
 } from "../../../../../../components";
-import { UserBasketBox, UnderHeaderBox } from "../../../../../molecules/boxes";
+import { UserBasketBox, UnderHeaderBox, UserLoginBox } from "../../../../../molecules/boxes";
 import { getHeaderTitle, getClass } from "../../../../../../utils";
 import { WIDTH_FOR_ICON, HEIGTH_FOR_ICON } from "./constants";
 import "./SmallHeader.css";
@@ -56,7 +56,7 @@ export class SmallHeader extends PureComponent {
 		);
 	};
 
-	showSmallMenu = searchInputOpened => {
+	showSmallMenu = (searchInputOpened, authProps) => {
 		return (
 			<>
 				<div className="small-header__catalog-title">
@@ -88,13 +88,23 @@ export class SmallHeader extends PureComponent {
 				<div className="small-header__basket-wrapper">
 					<UserBasketBox />
 				</div>
+				<div className="small-header__login-container">
+					<UserLoginBox {...authProps} />
+				</div>
 			</>
 		);
 	};
 
 	render() {
 		const { isSmallMenuOpened, searchInputOpened } = this.state;
-		const { page } = this.props;
+		const { page, loginStateApp, userName, openModal, signOutFunc } = this.props;
+		const authProps = {
+			loginStateApp,
+			userName,
+			openModal,
+			signOutFunc,
+		};
+
 		return (
 			<div className="small-header-wrapper">
 				<div className="small-header__small-header-logo-wrapper">
@@ -117,7 +127,7 @@ export class SmallHeader extends PureComponent {
 					</div>
 				</div>
 				<div className={`small-menu-wrapper${isSmallMenuOpened ? "--opened" : ""}`}>
-					{isSmallMenuOpened ? this.showSmallMenu(searchInputOpened) : null}
+					{isSmallMenuOpened ? this.showSmallMenu(searchInputOpened, authProps) : null}
 				</div>
 				{page !== "index-page" && (
 					<div>

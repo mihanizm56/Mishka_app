@@ -235,6 +235,8 @@ button {
     border: 1px solid black;
     transition: .5s;
     border-radius: 10px;
+    height: 50px;
+    width: 100px;
 }
 
 .sign-in-button:hover {
@@ -258,17 +260,6 @@ button {
     .sign-in-button{}
 }
 
-@media (min-width: 768px) {
-    .sign-in-button{}
-}
-
-@media (min-width: 1200px) {
-    .sign-in-button{
-        height: 50px;
-        width: 100px;
-    }
-}
-
 /* ButtonForSignOut */
 
 .sign-out-button {
@@ -279,6 +270,8 @@ button {
     border: 1px solid black;
     transition: .5s;
     border-radius: 10px;
+    height: 40px;
+    width: 70px;
 }
 
 .sign-out-button:hover {
@@ -300,17 +293,6 @@ button {
 
 @media (max-width: 767px) {
     .sign-out-button{}
-}
-
-@media (min-width: 768px) {
-    .sign-out-button{}
-}
-
-@media (min-width: 1200px) {
-    .sign-out-button{
-        height: 40px;
-        width: 70px;
-    }
 }
 
 

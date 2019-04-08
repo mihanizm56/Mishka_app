@@ -80,7 +80,10 @@
         height: 350px;
         padding: 20px 10px;
     }
-    .auth-form__email, .auth-form__password {
+    
+    .auth-form__email,
+    .auth-form__password,
+    .auth-form__name {
         height: 65px;
     }
 }
