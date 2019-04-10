@@ -23,6 +23,9 @@ export const AUTH_MODAL_CLOSE = "AUTH_MODAL_CLOSE";
 export const SAVE_NAME = "SAVE_NAME";
 export const CLEAR_NAME = "CLEAR_NAME";
 export const OPEN_MODAL_REVIEW = "OPEN_MODAL_REVIEW";
+export const CLOSE_MODAL_REVIEW = "CLOSE_MODAL_REVIEW";
+export const SET_SENDING_STATE = "SET_SENDING_STATE";
+
 export const emptyString = "";
 
 // numbers

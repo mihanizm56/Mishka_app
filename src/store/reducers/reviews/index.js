@@ -1,4 +1,10 @@
-import { ADD_REVIEW, GET_REVIEWS } from "../../../constants";
+import {
+	ADD_THE_REVIEW,
+	GET_REVIEWS,
+	OPEN_MODAL_REVIEW,
+	CLOSE_MODAL_REVIEW,
+	SET_SENDING_STATE,
+} from "../../../constants";
 
 const initialState = {
 	reviewList: [
@@ -20,12 +26,19 @@ const initialState = {
 		},
 	],
 	modalReviewsState: true,
+	sendingState: false,
 };
 
 export const reviews = (state = initialState, action) => {
 	switch (action.type) {
-		case ADD_REVIEW:
+		case ADD_THE_REVIEW:
 			return { ...state, reviewList: action.payload };
+		case OPEN_MODAL_REVIEW:
+			return { ...state, modalReviewsState: true };
+		case CLOSE_MODAL_REVIEW:
+			return { ...state, modalReviewsState: false };
+		case SET_SENDING_STATE:
+			return { ...state, sendingState: action.payload };
 		case GET_REVIEWS:
 			return { ...state, reviewList: action.payload };
 

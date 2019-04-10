@@ -14,7 +14,7 @@ import {
 import "./MainWrapper.css";
 
 export const MainWrapper = memo(props => {
-	const { router, loginStateApp, modalAuthIsOpen, modalReviewIsOpen, ...restProps } = props;
+	const { router, loginStateApp, modalAuthIsOpen, modalReviewIsOpen, sendingReviewState, ...restProps } = props;
 	console.log(props);
 	//console.log(router);
 	return (
@@ -39,7 +39,7 @@ export const MainWrapper = memo(props => {
 				<ModalReviewPortal>
 					<ReviewsStoreProvider>
 						<ReviewsReduxFormProvider>
-							<ModalReviewForm />
+							<ModalReviewForm sendingReviewState={sendingReviewState} />
 						</ReviewsReduxFormProvider>
 					</ReviewsStoreProvider>
 				</ModalReviewPortal>

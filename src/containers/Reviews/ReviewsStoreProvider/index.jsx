@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addReview } from "../../../actions";
+import {
+	addReviewRequestAction,
+	openModalReviewAction,
+	closeModalReviewAction,
+	setSendingStateAction,
+} from "../../../actions";
 import { reviewSelector, modalStateSelector } from "../../../store/selectors";
 
 class WrappedContainer extends Component {
@@ -25,8 +30,17 @@ const mapStateToProps = store => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-		addReviewInList(newArray) {
-			dispatch(addReview(newArray));
+		openReviewsModal() {
+			dispatch(openModalReviewAction());
+		},
+		closeReviewsModal() {
+			dispatch(closeModalReviewAction());
+		},
+		setSendingState(value) {
+			dispatch(setSendingStateAction(value));
+		},
+		addReviewInList(value) {
+			dispatch(addReviewRequestAction(value));
 		},
 	};
 };

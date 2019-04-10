@@ -2,7 +2,13 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { registerApp } from "../../utils";
 import { MainWrapper } from "../../components/organisms";
-import { loginStateSelector, loadingSelector, modalAuthStateSelector, modalStateSelector } from "../../store/selectors";
+import {
+	loginStateSelector,
+	loadingSelector,
+	modalAuthStateSelector,
+	modalStateSelector,
+	sendingRequestStateSelector,
+} from "../../store/selectors";
 import "./App.css";
 import "../../styles/keyframes/keyframes.css";
 
@@ -20,11 +26,11 @@ class AppContainer extends Component {
 	render() {
 		console.log("test App props");
 		console.log(this.props);
-		const { loginState, ...restProps } = this.props;
+		const { loginState, sendingSucceed, ...restProps } = this.props;
 		const loginSucceed = loginState || localStorage.login === "true";
 		return (
 			<div className="global-wrapper">
-				<MainWrapper loginStateApp={loginSucceed} {...restProps} />
+				<MainWrapper loginStateApp={loginSucceed} sendingReviewState={sendingSucceed} {...restProps} />
 			</div>
 		);
 	}
@@ -37,6 +43,7 @@ const mapStateToProps = store => {
 		appLoading: loadingSelector(store),
 		modalAuthIsOpen: modalAuthStateSelector(store),
 		modalReviewIsOpen: modalStateSelector(store),
+		sendingSucceed: sendingRequestStateSelector(store),
 	};
 };
 

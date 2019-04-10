@@ -5,11 +5,15 @@ import { FormTextInputField, Button, SVGIcon, TextArea } from "../../../../compo
 import "./ModalReviewForm.css";
 
 export class ModalReviewForm extends Component {
-	sendReview = ({ text, user, login }) => {
+	static defaultProps = {
+		addReviewInList: () => console.log("default addReviewInList"),
+	};
+
+	sendReview = ({ review, user, login }) => {
 		console.log("check sendReview");
-		console.log(text, user, login);
-		const { addReviewInList } = this.props; ///////////////переделать и сделать асинхронным
-		addReviewInList([...this.props.reviews, { text, user, login }]);
+		console.log(this.props.reviews);
+		const { addReviewInList } = this.props;
+		addReviewInList([...this.props.reviews, { review, user, login }]);
 	};
 
 	componentDidMount() {
@@ -69,23 +73,26 @@ export class ModalReviewForm extends Component {
 					name="review"
 				/>
 			</div>
+			<div className="review-form__button">
+				<Button buttonType="submit" classname="button-auth-modal" text="Отправить отзыв" />
+			</div>
 		</>
 	);
 
-	getFormLayout = ({ isLoading, loginState }) => {
+	getFormLayout = ({ isLoading, sendingReviewState }) => {
 		if (isLoading) return this.loadingLayout();
-		else if (loginState) return this.successLayout();
+		else if (sendingReviewState) return this.successLayout();
 		else return this.normalLayout();
 	};
 
 	render() {
-		const { closeModal, isLoading, loginStateApp } = this.props;
+		const { handleSubmit, closeReviewsModal, isLoading, sendingReviewState } = this.props;
 
 		return (
 			<div className="review-form-layout">
-				<div className="review-form-overlay" onClick={closeModal} />
-				<form className="review-form-wrapper">
-					{this.getFormLayout({ isLoading: isLoading, loginState: loginStateApp })}
+				<div className="review-form-overlay" onClick={closeReviewsModal} />
+				<form className="review-form-wrapper" onSubmit={handleSubmit(this.sendReview)}>
+					{this.getFormLayout({ isLoading: isLoading, sendingReviewState: sendingReviewState })}
 				</form>
 			</div>
 		);

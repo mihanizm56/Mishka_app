@@ -73,7 +73,7 @@ export class ModalAuthForm extends Component {
 				/>
 			</div>
 			<div className="auth-form__button">
-				<Button buttonType="submit" classname="button-auth-modal" text="Войти" autocompleteOff />
+				<Button buttonType="submit" classname="button-auth-modal" text="Войти" />
 			</div>
 		</>
 	);
