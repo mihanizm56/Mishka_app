@@ -24,9 +24,9 @@ const configForReviewImage = {
 // type ReviewBoxPropTypes = { review, name, surname, login, onNextClick, onPrevClick }
 
 export const ReviewBox = (props: ReviewBoxPropTypes) => {
-	// console.log("ReviewBox props");
-	// console.log(props);
-	const { review, name, surname, login, onNextClick, onPrevClick } = props;
+	console.log("ReviewBox props");
+	console.log(props);
+	const { review, name, surname, login, onNextClick, onPrevClick, addReview } = props;
 	return (
 		<div className="review-wrapper">
 			<MediaQuery minWidth={BIG_MEDIA_SIZE}>
@@ -37,7 +37,7 @@ export const ReviewBox = (props: ReviewBoxPropTypes) => {
 					<ReviewTextBox review={review} name={name} surname={surname} login={login} />
 				</div>
 				<div className="review__buttons-wrapper">
-					<Button classname="button-write-wrapper" text="написать" />
+					<Button classname="button-write-wrapper" text="написать" handleClick={addReview}/>
 					<ListButtonsBox onNextClick={onNextClick} onPrevClick={onPrevClick} />
 				</div>
 			</MediaQuery>
@@ -49,7 +49,7 @@ export const ReviewBox = (props: ReviewBoxPropTypes) => {
 					<ReviewTextBox review={review} name={name} surname={surname} login={login} />
 				</div>
 				<div className="review__buttons-wrapper">
-					<Button classname="button-write-wrapper" text="написать" />
+					<Button classname="button-write-wrapper" text="написать" handleClick={addReview}/>
 					<ListButtonsBox onNextClick={onNextClick} onPrevClick={onPrevClick} />
 				</div>
 			</MediaQuery>
@@ -62,7 +62,7 @@ export const ReviewBox = (props: ReviewBoxPropTypes) => {
 				</div>
 				<div className="review__buttons-wrapper">
 					<ListButtonsBox onNextClick={onNextClick} onPrevClick={onPrevClick} />
-					<Button classname="button-write-wrapper" text="написать" />
+					<Button classname="button-write-wrapper" text="написать" handleClick={addReview}/>
 				</div>
 			</MediaQuery>
 		</div>

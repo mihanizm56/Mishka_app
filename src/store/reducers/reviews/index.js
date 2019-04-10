@@ -27,7 +27,7 @@ const initialState = {
 			login: "@nasiwin",
 		},
 	],
-	modalReviewsState: true,
+	modalReviewsState: false,
 	sendingLoading: false,
 	sendingIsSuccess: false
 };

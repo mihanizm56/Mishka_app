@@ -12,7 +12,10 @@ export const IndexPage = memo((props: IndexPagePropTypes) => {
 			<HouseBox />
 			<TopItemProvider component={WeeklyHitBox} />
 			<AboutBox />
-			<ReviewsStoreProvider component={ListReviewsBox} />
+			<ReviewsStoreProvider>
+				<ListReviewsBox />
+			</ReviewsStoreProvider>
+			/>
 			<ShopContactsProvider component={ContactBox} />
 		</div>
 	);

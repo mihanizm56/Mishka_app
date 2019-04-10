@@ -9,11 +9,11 @@ export class ModalReviewForm extends Component {
 		addReviewInList: () => console.log("default addReviewInList"),
 	};
 
-	sendReview = ({ review, user, login }) => {
+	sendReview = ({ review : text, user, login }) => {
 		console.log("check sendReview");
 		console.log(this.props.reviews);
 		const { addReviewInList } = this.props;
-		addReviewInList([...this.props.reviews, { review, user, login }]);
+		addReviewInList([...this.props.reviews, { text, user, login }]);
 	};
 
 	componentDidMount() {

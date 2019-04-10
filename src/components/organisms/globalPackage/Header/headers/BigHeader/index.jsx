@@ -8,7 +8,7 @@ import "./BigHeader.css";
 export class BigHeader extends PureComponent {
 	static defaultProps = {
 		page: "index-page",
-		loginStateApp: false,
+		loginState: false,
 		userName: "default user",
 		openModal: () => {
 			console.log("default openModal");
@@ -33,9 +33,9 @@ export class BigHeader extends PureComponent {
 
 	render() {
 		const { searchInputOpened } = this.state;
-		const { page, loginStateApp, userName, openModal, signOutFunc } = this.props;
+		const { page, loginState, userName, openModal, signOutFunc } = this.props;
 		const authProps = {
-			loginStateApp,
+			loginState,
 			userName,
 			openModal,
 			signOutFunc,

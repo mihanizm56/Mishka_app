@@ -30,7 +30,7 @@ class AppContainer extends Component {
 		const loginSucceed = loginState || localStorage.login === "true";
 		return (
 			<div className="global-wrapper">
-				<MainWrapper loginStateApp={loginSucceed} sendingLoading={sendingLoading} {...restProps} />
+				<MainWrapper loginState={loginSucceed} sendingLoading={sendingLoading} {...restProps} />
 			</div>
 		);
 	}

@@ -95,22 +95,22 @@ export class Header extends Component<HeaderPropType> {
 			route: {
 				location: { pathname },
 			},
-			loginStateApp,
+			loginState,
 			...restProps
 		} = this.props;
 		//const pageHash = "catalog-page";
-		console.log("Header loginStateApp");
+		console.log("Header loginState");
 		console.log(this.props);
 		return (
 			<div className="header-wrapper">
 				<MediaQuery minWidth={BIG_MEDIA_SIZE}>
-					<BigHeader page={this.getPageName(pathname)} {...restProps} loginStateApp={loginStateApp} />
+					<BigHeader page={this.getPageName(pathname)} {...restProps} loginState={loginState} />
 				</MediaQuery>
 				<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
-					<MidHeader page={this.getPageName(pathname)} {...restProps} loginStateApp={loginStateApp} />
+					<MidHeader page={this.getPageName(pathname)} {...restProps} loginState={loginState} />
 				</MediaQuery>
 				<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
-					<SmallHeader page={this.getPageName(pathname)} {...restProps} loginStateApp={loginStateApp} />
+					<SmallHeader page={this.getPageName(pathname)} {...restProps} loginState={loginState} />
 				</MediaQuery>
 			</div>
 		);

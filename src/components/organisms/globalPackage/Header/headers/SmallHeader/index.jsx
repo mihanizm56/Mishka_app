@@ -97,9 +97,9 @@ export class SmallHeader extends PureComponent {
 
 	render() {
 		const { isSmallMenuOpened, searchInputOpened } = this.state;
-		const { page, loginStateApp, userName, openModal, signOutFunc } = this.props;
+		const { page, loginState, userName, openModal, signOutFunc } = this.props;
 		const authProps = {
-			loginStateApp,
+			loginState,
 			userName,
 			openModal,
 			signOutFunc,

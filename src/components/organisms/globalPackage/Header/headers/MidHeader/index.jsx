@@ -22,9 +22,9 @@ export class MidHeader extends PureComponent {
 
 	render() {
 		const { searchInputOpened } = this.state;
-		const { page, loginStateApp, userName, openModal, signOutFunc } = this.props;
+		const { page, loginState, userName, openModal, signOutFunc } = this.props;
 		const authProps = {
-			loginStateApp,
+			loginState,
 			userName,
 			openModal,
 			signOutFunc,

@@ -55,6 +55,7 @@ export class ListReviewsBox extends PureComponent {
 		const { reviews, indexOfReview } = this.state;
 		const activeReview = reviews[indexOfReview];
 		const { text, user, login } = activeReview;
+		const { openReviewsModal } = this.props;
 
 		return (
 			<ReviewBox
@@ -64,6 +65,7 @@ export class ListReviewsBox extends PureComponent {
 				login={login}
 				onNextClick={this.onNextClick}
 				onPrevClick={this.onPrevClick}
+				addReview={openReviewsModal}
 			/>
 		);
 	}

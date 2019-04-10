@@ -14,13 +14,13 @@ import {
 import "./MainWrapper.css";
 
 export const MainWrapper = memo(props => {
-	const { router, loginStateApp, modalAuthIsOpen, modalReviewIsOpen, sendingLoading, ...restProps } = props;
-	console.log(props);
+	const { router, loginState, modalAuthIsOpen, modalReviewIsOpen, ...restProps } = props;
+	// console.log(props);
 	//console.log(router);
 	return (
 		<div className="main-wrapper">
-			{/* <AuthStoreProvider>
-				<Header route={router} loginStateApp={loginStateApp} />
+			<AuthStoreProvider>
+				<Header route={router} loginState={loginState} />
 			</AuthStoreProvider>
 			<MainLayout {...restProps} />
 			<Footer />
@@ -29,11 +29,11 @@ export const MainWrapper = memo(props => {
 				<ModalAuthPortal>
 					<AuthStoreProvider>
 						<AuthReduxFormProvider>
-							<ModalAuthForm loginStateApp={loginStateApp} />
+							<ModalAuthForm loginState={loginState} />
 						</AuthReduxFormProvider>
 					</AuthStoreProvider>
 				</ModalAuthPortal>
-			)} */}
+			)}
 
 			{modalReviewIsOpen && (
 				<ModalReviewPortal>
