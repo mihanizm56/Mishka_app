@@ -1,7 +1,14 @@
 //
 import { ADD_THE_REVIEW } from "../../constants";
 import { loadingAppDoneAction, loadingAppAction } from "../loading";
-import { GET_REVIEWS, OPEN_MODAL_REVIEW, CLOSE_MODAL_REVIEW, SET_SENDING_STATE } from "../../constants";
+import {
+	GET_REVIEWS,
+	OPEN_MODAL_REVIEW,
+	CLOSE_MODAL_REVIEW,
+	SET_SENDING_STATE_LOADING,
+	SET_SENDING_STATE_DONE,
+	SET_SUCCESS_SENDING_STATE_DONE,
+} from "../../constants";
 import { myFetch, sleep } from "../../utils/requests";
 
 export const addReviewAction = value => {
@@ -23,13 +30,23 @@ export const closeModalReviewAction = () => {
 	};
 };
 
-export const setSendingStateAction = value => {
+export const setSendingStateLoading = () => {
 	return {
-		type: SET_SENDING_STATE,
-		payload: value,
+		type: SET_SENDING_STATE_LOADING,
 	};
 };
 
+export const setSendingStateDone = () => {
+	return {
+		type: SET_SENDING_STATE_DONE,
+	};
+};
+
+export const setSendingStateSuccess = () => {
+	return {
+		type: SET_SUCCESS_SENDING_STATE_DONE,
+	};
+};
 export const getReviews = data => ({
 	type: GET_REVIEWS,
 	payload: { ...data },
@@ -42,24 +59,26 @@ export const fetchReviews = () => dispatch => {
 		.then(dispatch(loadingAppDoneAction()));
 };
 
-// export const addReviewRequestAction = (review, name, login) => {
-// 	if (review && name && login) {
-// 		return dispatch => {
-// 			dispatch(loadingAppAction());
+export const addReviewRequestAction = value => {
+	console.log("check addReviewRequestAction");
+	console.log("value", value);
+	if (value) {
+		return dispatch => {
+			dispatch(setSendingStateLoading());
 
-// 			return sleep
-// 				.then(() => dispatch(loginCorrectAction()))
-// 				.then(() => dispatch(loadingAppDoneAction()))
-// 				.then(() => {
-// 					setTimeout(() => {
-// 						dispatch(closeAuthModalAction());
-// 					}, 2000);
-// 				})
-// 				.then(() => dispatch(setUserName(name)))
-// 				.catch(error => {
-// 					dispatch(loadingAppDoneAction());
-// 					alert(error.message);
-// 				});
-// 		};
-// 	}
-// };
+			return sleep()
+				.then(() => dispatch(addReviewAction(value)))
+				.then(() => dispatch(setSendingStateSuccess()))
+				.then(() => dispatch(setSendingStateDone()))
+				.then(() => {
+					setTimeout(() => {
+						dispatch(closeModalReviewAction());
+					}, 2000);
+				})
+				.catch(error => {
+					dispatch(setSendingStateDone());
+					alert(error.message);
+				});
+		};
+	}
+};

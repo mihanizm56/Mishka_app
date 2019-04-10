@@ -26,11 +26,11 @@ class AppContainer extends Component {
 	render() {
 		console.log("test App props");
 		console.log(this.props);
-		const { loginState, sendingSucceed, ...restProps } = this.props;
+		const { loginState, sendingLoading, ...restProps } = this.props;
 		const loginSucceed = loginState || localStorage.login === "true";
 		return (
 			<div className="global-wrapper">
-				<MainWrapper loginStateApp={loginSucceed} sendingReviewState={sendingSucceed} {...restProps} />
+				<MainWrapper loginStateApp={loginSucceed} sendingLoading={sendingLoading} {...restProps} />
 			</div>
 		);
 	}
@@ -43,7 +43,7 @@ const mapStateToProps = store => {
 		appLoading: loadingSelector(store),
 		modalAuthIsOpen: modalAuthStateSelector(store),
 		modalReviewIsOpen: modalStateSelector(store),
-		sendingSucceed: sendingRequestStateSelector(store),
+		sendingLoading: sendingRequestStateSelector(store),
 	};
 };
 

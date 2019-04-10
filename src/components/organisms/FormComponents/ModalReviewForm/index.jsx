@@ -79,20 +79,20 @@ export class ModalReviewForm extends Component {
 		</>
 	);
 
-	getFormLayout = ({ isLoading, sendingReviewState }) => {
+	getFormLayout = ({ isLoading, sendingIsSuccess }) => {
 		if (isLoading) return this.loadingLayout();
-		else if (sendingReviewState) return this.successLayout();
+		else if (sendingIsSuccess) return this.successLayout();
 		else return this.normalLayout();
 	};
 
 	render() {
-		const { handleSubmit, closeReviewsModal, isLoading, sendingReviewState } = this.props;
+		const { handleSubmit, closeReviewsModal, reviewIsSending, sendingIsSuccess } = this.props;
 
 		return (
 			<div className="review-form-layout">
 				<div className="review-form-overlay" onClick={closeReviewsModal} />
 				<form className="review-form-wrapper" onSubmit={handleSubmit(this.sendReview)}>
-					{this.getFormLayout({ isLoading: isLoading, sendingReviewState: sendingReviewState })}
+					{this.getFormLayout({ isLoading: reviewIsSending, sendingIsSuccess: sendingIsSuccess })}
 				</form>
 			</div>
 		);

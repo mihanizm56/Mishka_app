@@ -3,7 +3,9 @@ import {
 	GET_REVIEWS,
 	OPEN_MODAL_REVIEW,
 	CLOSE_MODAL_REVIEW,
-	SET_SENDING_STATE,
+	SET_SENDING_STATE_LOADING,
+	SET_SENDING_STATE_DONE,
+	SET_SUCCESS_SENDING_STATE_DONE,
 } from "../../../constants";
 
 const initialState = {
@@ -26,7 +28,8 @@ const initialState = {
 		},
 	],
 	modalReviewsState: true,
-	sendingState: false,
+	sendingLoading: false,
+	sendingIsSuccess: false
 };
 
 export const reviews = (state = initialState, action) => {
@@ -37,8 +40,12 @@ export const reviews = (state = initialState, action) => {
 			return { ...state, modalReviewsState: true };
 		case CLOSE_MODAL_REVIEW:
 			return { ...state, modalReviewsState: false };
-		case SET_SENDING_STATE:
-			return { ...state, sendingState: action.payload };
+		case SET_SENDING_STATE_LOADING:
+			return { ...state, sendingLoading: true };
+		case SET_SENDING_STATE_DONE:
+			return { ...state, sendingLoading: false };
+		case SET_SUCCESS_SENDING_STATE_DONE:
+			return { ...state, sendingIsSuccess: true };
 		case GET_REVIEWS:
 			return { ...state, reviewList: action.payload };
 
