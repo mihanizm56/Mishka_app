@@ -19,6 +19,7 @@ const initialState = {
 			login: "@nasiwin",
 		},
 	],
+	modalReviewsState: true,
 };
 
 export const reviews = (state = initialState, action) => {

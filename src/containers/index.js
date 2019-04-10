@@ -4,5 +4,5 @@ export * from "./TopItem";
 export * from "./Contacts";
 export * from "./ShopItems";
 export * from "./Order";
-export * from "./Portal";
+export * from "./Portals";
 export * from "./Auth";

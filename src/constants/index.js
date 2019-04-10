@@ -22,7 +22,7 @@ export const AUTH_MODAL_OPEN = "AUTH_MODAL_OPEN";
 export const AUTH_MODAL_CLOSE = "AUTH_MODAL_CLOSE";
 export const SAVE_NAME = "SAVE_NAME";
 export const CLEAR_NAME = "CLEAR_NAME";
-
+export const OPEN_MODAL_REVIEW = "OPEN_MODAL_REVIEW";
 export const emptyString = "";
 
 // numbers

@@ -10,8 +10,29 @@ type TextAreaProps = {
 };
 
 export const TextArea = memo(
-	({ placeholder, width, height, isError, input }: TextAreaProps): Node => (
-		<textarea {...input} className={getClass({ initialClass: "textarea", error: isError })} placeholder={placeholder} />
+	({
+		placeholder,
+		customStyle,
+		isError,
+		input,
+		noPadding,
+		noBorder,
+		withBorderRadius,
+		customPadding,
+	}: TextAreaProps): Node => (
+		<textarea
+			{...input}
+			style={customStyle}
+			className={getClass({
+				initialClass: "textarea",
+				error: isError,
+				noPadding,
+				noBorder,
+				withBorderRadius,
+				customPadding,
+			})}
+			placeholder={placeholder}
+		/>
 	)
 );
 

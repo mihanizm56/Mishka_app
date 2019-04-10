@@ -5,6 +5,18 @@ type getClassParametersType = {
 	active?: boolean,
 	error?: boolean,
 	noMarginTop?: boolean,
+	noOpacityChange?: boolean,
+	big?: boolean,
+	middle?: boolean,
+	small?: boolean,
+	bold?: boolean,
+	hovered?: boolean,
+	ligth?: boolean,
+	noBorderBottom?: boolean,
+	additionalClass?: boolean,
+	noBorder?: boolean,
+	noPadding?: boolean,
+	withBorderRadius?: boolean,
 };
 
 export const getClass = ({
@@ -21,7 +33,10 @@ export const getClass = ({
 	ligth,
 	noBorderBottom,
 	additionalClass,
+	noBorder,
 	noPadding,
+	withBorderRadius,
+	customPadding,
 }: getClassParametersType): string => {
 	let resultClass = initialClass;
 
@@ -69,12 +84,24 @@ export const getClass = ({
 		resultClass += ` ${initialClass}--ligth`;
 	}
 
+	if (noBorder) {
+		resultClass += ` ${initialClass}--no-border`;
+	}
+
 	if (noBorderBottom) {
 		resultClass += ` ${initialClass}--no-border-bottom`;
 	}
 
 	if (noPadding) {
 		resultClass += ` ${initialClass}--no-padding`;
+	}
+
+	if (customPadding) {
+		resultClass += ` ${initialClass}--custom-padding`;
+	}
+
+	if (withBorderRadius) {
+		resultClass += ` ${initialClass}--with-border-radius`;
 	}
 
 	return resultClass;

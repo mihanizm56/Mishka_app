@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { registerApp } from "../../utils";
 import { MainWrapper } from "../../components/organisms";
-import { loginStateSelector, loadingSelector, modalAuthStateSelector } from "../../store/selectors";
+import { loginStateSelector, loadingSelector, modalAuthStateSelector, modalStateSelector } from "../../store/selectors";
 import "./App.css";
 import "../../styles/keyframes/keyframes.css";
 
@@ -36,6 +36,7 @@ const mapStateToProps = store => {
 		loginState: loginStateSelector(store),
 		appLoading: loadingSelector(store),
 		modalAuthIsOpen: modalAuthStateSelector(store),
+		modalReviewIsOpen: modalStateSelector(store),
 	};
 };
 

@@ -1,19 +1,19 @@
 import { PureComponent } from "react";
 import ReactDOM from "react-dom";
-const modalRoot = document.getElementById("modal");
+const modalReview = document.getElementById("modal-review");
 
-export class Portal extends PureComponent {
+export class ModalReviewPortal extends PureComponent {
 	constructor() {
 		super();
 		this.modalDiv = document.createElement("div");
 	}
 
 	componentDidMount() {
-		modalRoot.appendChild(this.modalDiv);
+		modalReview.appendChild(this.modalDiv);
 	}
 
 	componentWillUnmount() {
-		modalRoot.removeChild(this.modalDiv);
+		modalReview.removeChild(this.modalDiv);
 	}
 
 	render() {

@@ -32,7 +32,7 @@ export class ModalAuthForm extends Component {
 
 	normalLayout = () => (
 		<>
-			<div className="auth-form__name">
+			<div className="auth-form__field">
 				<Field
 					component={FormTextInputField}
 					placeholder="Введите ваше Имя"
@@ -45,7 +45,7 @@ export class ModalAuthForm extends Component {
 					name="name"
 				/>
 			</div>
-			<div className="auth-form__email">
+			<div className="auth-form__field">
 				<Field
 					component={FormTextInputField}
 					placeholder="Введите e-mail"
@@ -58,7 +58,7 @@ export class ModalAuthForm extends Component {
 					name="email"
 				/>
 			</div>
-			<div className="auth-form__password">
+			<div className="auth-form__field">
 				<Field
 					component={FormTextInputField}
 					noBorderBottom
@@ -73,13 +73,7 @@ export class ModalAuthForm extends Component {
 				/>
 			</div>
 			<div className="auth-form__button">
-				<Button
-					buttonType="submit"
-					classname="button-auth-modal"
-					text="Войти"
-					// handleClick={this.handleSubmit(this.signInUser)}
-					autocompleteOff
-				/>
+				<Button buttonType="submit" classname="button-auth-modal" text="Войти" autocompleteOff />
 			</div>
 		</>
 	);

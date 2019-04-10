@@ -11,6 +11,7 @@
     resize: none;
     overflow: hidden;
     width: 100%;
+    height: 100%;
 }
 
 .textarea:hover{
@@ -19,4 +20,17 @@
   
 .textarea--error{
     border: 2px solid #F0B1B1;
+}
+
+.textarea--custom-padding{
+    padding: 15px 10px;
+    box-sizing: border-box;
+}
+
+.textarea--with-border-radius{
+    border-radius: 15px;
+}
+
+.textarea--no-border, .textarea--no-border:hover{
+    border: none;
 }

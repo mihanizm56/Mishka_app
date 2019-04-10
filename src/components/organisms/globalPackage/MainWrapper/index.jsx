@@ -2,30 +2,47 @@
 import React, { memo } from "react";
 import MainLayout from "../../../../routes/";
 import { Footer, Header } from "../";
-import { ModalAuthForm } from "../../";
-import { Portal, AuthStoreProvider, AuthReduxFormProvider } from "../../../../containers";
+import { ModalAuthForm, ModalReviewForm } from "../../";
+import {
+	ModalAuthPortal,
+	AuthStoreProvider,
+	AuthReduxFormProvider,
+	ReviewsStoreProvider,
+	ReviewsReduxFormProvider,
+	ModalReviewPortal,
+} from "../../../../containers";
 import "./MainWrapper.css";
 
 export const MainWrapper = memo(props => {
-	const { router, loginStateApp, modalAuthIsOpen, ...restProps } = props;
-	//console.log(props);
+	const { router, loginStateApp, modalAuthIsOpen, modalReviewIsOpen, ...restProps } = props;
+	console.log(props);
 	//console.log(router);
 	return (
 		<div className="main-wrapper">
-			<AuthStoreProvider>
+			{/* <AuthStoreProvider>
 				<Header route={router} loginStateApp={loginStateApp} />
 			</AuthStoreProvider>
 			<MainLayout {...restProps} />
 			<Footer />
 
 			{modalAuthIsOpen && (
-				<Portal>
+				<ModalAuthPortal>
 					<AuthStoreProvider>
 						<AuthReduxFormProvider>
 							<ModalAuthForm loginStateApp={loginStateApp} />
 						</AuthReduxFormProvider>
 					</AuthStoreProvider>
-				</Portal>
+				</ModalAuthPortal>
+			)} */}
+
+			{modalReviewIsOpen && (
+				<ModalReviewPortal>
+					<ReviewsStoreProvider>
+						<ReviewsReduxFormProvider>
+							<ModalReviewForm />
+						</ReviewsReduxFormProvider>
+					</ReviewsStoreProvider>
+				</ModalReviewPortal>
 			)}
 		</div>
 	);
