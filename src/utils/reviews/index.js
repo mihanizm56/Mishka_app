@@ -3,5 +3,6 @@ export const getUserName = string => {
 };
 
 export const getUserSurname = string => {
-	return string ? string.split(" ")[1] : "no surname";
+	console.log('test parser surname', string ? string.split(" ")[1] : "")
+	return string ? string.split(" ")[1] : "";
 };

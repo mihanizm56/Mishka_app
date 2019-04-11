@@ -22,6 +22,10 @@ export class SmallHeader extends PureComponent {
 		page: "index-page",
 	};
 
+	static getDerivedStateFromProps({closeSmallMenu}){
+		return closeSmallMenu ? ({isSmallMenuOpened: false}) : null
+	}
+
 	constructor() {
 		super();
 		this.state = {

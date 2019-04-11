@@ -67,7 +67,7 @@
 @media (max-width: 767px) {
     .review-form-wrapper {
         width: 90%;
-        height: 350px;
+        height: 500px;
         padding: 20px 10px;
     }
     
@@ -78,9 +78,8 @@
 
 @media (min-width: 768px) {
     .review-form-wrapper {
-        width: 60%;
-        height: 400px;
-        padding: 50px 50px;
+        width: 480px;
+        height: 560px;
     }
 }
 

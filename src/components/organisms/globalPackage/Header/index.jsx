@@ -40,6 +40,7 @@ export class Header extends Component<HeaderPropType> {
 			modalAuthIsOpen: modalAuthIsOpenPrev,
 			pageName: pageNamePrev,
 			userName: userNamePrev,
+			closeSmallMenu: closeSmallMenuPrev
 		} = prevProps;
 		const {
 			route: {
@@ -50,6 +51,7 @@ export class Header extends Component<HeaderPropType> {
 			modalAuthIsOpen: modalAuthIsOpenNext,
 			pageName: pageNameNext,
 			userName: userNameNext,
+			closeSmallMenu: closeSmallMenuNext
 		} = this.props;
 
 		if (
@@ -58,7 +60,8 @@ export class Header extends Component<HeaderPropType> {
 			loginStatePrev === loginStateNext &&
 			modalAuthIsOpenPrev === modalAuthIsOpenNext &&
 			pageNamePrev === pageNameNext &&
-			userNamePrev === userNameNext
+			userNamePrev === userNameNext &&
+			closeSmallMenuPrev === closeSmallMenuNext
 		) {
 			return false;
 		}

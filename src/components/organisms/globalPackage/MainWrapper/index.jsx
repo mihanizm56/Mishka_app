@@ -15,12 +15,13 @@ import "./MainWrapper.css";
 
 export const MainWrapper = memo(props => {
 	const { router, loginState, modalAuthIsOpen, modalReviewIsOpen, ...restProps } = props;
+	const closeSmallMenu = modalAuthIsOpen || modalReviewIsOpen;
 	// console.log(props);
 	//console.log(router);
 	return (
 		<div className="main-wrapper">
 			<AuthStoreProvider>
-				<Header route={router} loginState={loginState} />
+				<Header route={router} loginState={loginState} closeSmallMenu={closeSmallMenu}/>
 			</AuthStoreProvider>
 			<MainLayout {...restProps} />
 			<Footer />

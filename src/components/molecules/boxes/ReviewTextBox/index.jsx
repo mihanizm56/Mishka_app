@@ -3,6 +3,12 @@ import React, { memo } from "react";
 import { OpenSansText, VerdanaText } from "../../../../components";
 import "./ReviewTextBox.css";
 
+const getAuthorName = (name, surname) => {
+	return name && surname 
+	? (<VerdanaText text={`${name} ${surname}`} classname="review-text-value" bold />) 
+	: (<VerdanaText text={`${name}`} classname="review-text-value" bold />)
+}
+
 export const ReviewTextBox = memo(({ review, name, surname, login }) => {
 	return (
 		<div className="review-text-box-wrapper">
@@ -13,7 +19,7 @@ export const ReviewTextBox = memo(({ review, name, surname, login }) => {
 				<OpenSansText classname="text-video" text={review} />
 			</div>
 			<div className="review-text__login-wrapper">
-				<VerdanaText text={`${name} ${surname}`} classname="review-text-value" bold />
+				{getAuthorName(name, surname)}
 				<OpenSansText classname="review-login-text" text={login} ligth />
 			</div>
 		</div>
@@ -23,6 +29,5 @@ export const ReviewTextBox = memo(({ review, name, surname, login }) => {
 ReviewTextBox.defaultProps = {
 	review: "default-review-text",
 	name: "default-firtsname",
-	surname: "default-surname",
 	login: "default-login",
 };

@@ -15,7 +15,6 @@ export const IndexPage = memo((props: IndexPagePropTypes) => {
 			<ReviewsStoreProvider>
 				<ListReviewsBox />
 			</ReviewsStoreProvider>
-			/>
 			<ShopContactsProvider component={ContactBox} />
 		</div>
 	);
