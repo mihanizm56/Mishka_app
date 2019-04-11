@@ -28,7 +28,7 @@ const initialState = {
 			login: "@nasiwin",
 		},
 	],
-	modalReviewsState: false,
+	modalReviewsOpen: false,
 	sendingLoading: false,
 	sendingIsSuccess: null
 };
@@ -38,9 +38,9 @@ export const reviews = (state = initialState, action) => {
 		case ADD_THE_REVIEW:
 			return { ...state, reviewList: action.payload };
 		case OPEN_MODAL_REVIEW:
-			return { ...state, modalReviewsState: true };
+			return { ...state, modalReviewsOpen: true };
 		case CLOSE_MODAL_REVIEW:
-			return { ...state, modalReviewsState: false };
+			return { ...state, modalReviewsOpen: false };
 		case SET_SENDING_STATE_LOADING:
 			return { ...state, sendingLoading: true };
 		case SET_SENDING_STATE_DONE:
