@@ -6,6 +6,7 @@ import {
 	SET_SENDING_STATE_LOADING,
 	SET_SENDING_STATE_DONE,
 	SET_SUCCESS_SENDING_STATE_DONE,
+	RESET_SUCCESS_SENDING_STATE_DONE
 } from "../../../constants";
 
 const initialState = {
@@ -29,7 +30,7 @@ const initialState = {
 	],
 	modalReviewsState: false,
 	sendingLoading: false,
-	sendingIsSuccess: false
+	sendingIsSuccess: null
 };
 
 export const reviews = (state = initialState, action) => {
@@ -44,6 +45,8 @@ export const reviews = (state = initialState, action) => {
 			return { ...state, sendingLoading: true };
 		case SET_SENDING_STATE_DONE:
 			return { ...state, sendingLoading: false };
+		case RESET_SUCCESS_SENDING_STATE_DONE:
+			return { ...state, sendingIsSuccess: null };
 		case SET_SUCCESS_SENDING_STATE_DONE:
 			return { ...state, sendingIsSuccess: true };
 		case GET_REVIEWS:

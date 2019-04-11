@@ -8,6 +8,7 @@ import {
 	SET_SENDING_STATE_LOADING,
 	SET_SENDING_STATE_DONE,
 	SET_SUCCESS_SENDING_STATE_DONE,
+	RESET_SUCCESS_SENDING_STATE_DONE
 } from "../../constants";
 import { myFetch, sleep } from "../../utils/requests";
 
@@ -47,6 +48,13 @@ export const setSendingStateSuccess = () => {
 		type: SET_SUCCESS_SENDING_STATE_DONE,
 	};
 };
+
+export const resetSendingStateSuccess = () => {
+	return {
+		type: RESET_SUCCESS_SENDING_STATE_DONE,
+	};
+};
+
 export const getReviews = data => ({
 	type: GET_REVIEWS,
 	payload: { ...data },
@@ -73,6 +81,7 @@ export const addReviewRequestAction = value => {
 				.then(() => {
 					setTimeout(() => {
 						dispatch(closeModalReviewAction());
+						dispatch(resetSendingStateSuccess())
 					}, 2000);
 				})
 				.catch(error => {

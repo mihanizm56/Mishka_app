@@ -24,6 +24,7 @@
 }
 
 .review-form-wrapper {
+    position: fixed;
     border: 3px solid #62D1BA;
     background-color: #fff;
     display: flex;
