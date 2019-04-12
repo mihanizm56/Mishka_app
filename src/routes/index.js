@@ -1,3 +1,5 @@
-import { MainLayout } from "./MainLayout";
-
-export default MainLayout;
+export * from './CatalogPageRoute'
+export * from './ErrorPageRoute'
+export * from './IndexPageRoute'
+export * from './MainLayout'
+export * from './OrderPageRoute'

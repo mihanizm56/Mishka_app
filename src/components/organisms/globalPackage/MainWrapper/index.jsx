@@ -1,6 +1,6 @@
 //
 import React, { memo } from "react";
-import MainLayout from "../../../../routes/";
+import {MainLayout} from "../../../../routes/";
 import { Footer, Header } from "../";
 import { ModalAuthForm, ModalReviewForm } from "../../";
 import {

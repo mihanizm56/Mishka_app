@@ -1,11 +1,11 @@
 //
-import React, { PureComponent } from "react";
+import React, { Component } from "react";
 import { LinkComponent, InteractiveSVGIcon, SearchHeaderInput, VerdanaText } from "../../../../../../components";
 import { UserBasketBox, UnderHeaderBox, UserLoginBox } from "../../../../../molecules/boxes";
 import { getHeaderTitle, getSpecialClassForHeader, getClass } from "../../../../../../utils";
 import "./BigHeader.css";
 
-export class BigHeader extends PureComponent {
+export class BigHeader extends Component {
 	static defaultProps = {
 		page: "index-page",
 		loginState: false,
@@ -22,10 +22,20 @@ export class BigHeader extends PureComponent {
 		searchInputOpened: false,
 	};
 
-	componentDidUpdate() {
-		console.log("update BigHeader");
-		console.log(this.props);
-	}
+	// scrollView = (element,block,behavior ) => {
+	// 	console.log('scrolled')
+	// 	console.log(element)
+	// 	element.scrollIntoView('alignToTop');
+	// }
+
+	// componentDidUpdate() {
+	// 	console.log("update BigHeader");
+	// 	console.count("Header");
+	// 	const {current: initialPoint} = this.initialVIewPoint
+	// 	if(initialPoint) {
+	// 		this.scrollView(initialPoint,'start','smooth')
+	// 	}
+	// }
 
 	handleToggleInput = () => {
 		this.setState(prevState => ({ searchInputOpened: !prevState.searchInputOpened }));
@@ -33,7 +43,7 @@ export class BigHeader extends PureComponent {
 
 	render() {
 		const { searchInputOpened } = this.state;
-		const { page, loginState, userName, openModal, signOutFunc } = this.props;
+		const { page, loginState, userName, openModal, signOutFunc, initialPoint } = this.props;
 		const authProps = {
 			loginState,
 			userName,
@@ -49,7 +59,7 @@ export class BigHeader extends PureComponent {
 					isIndexPage: page === "index-page",
 				})}
 			>
-				<div className="big-header__first-line-big-header">
+				<div className="big-header__first-line-big-header" ref={initialPoint}>
 					<div className="first-line-big-header__catalog-title">
 						<LinkComponent
 							text="Каталог товаров"

@@ -1,5 +1,6 @@
 //
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
+import {isEqual} from 'lodash';
 import MediaQuery from "react-responsive";
 import { BigHeader, MidHeader, SmallHeader } from "./headers";
 import {
@@ -30,53 +31,30 @@ export class Header extends Component<HeaderPropType> {
 	};
 
 	///////переписать
-	shouldComponentUpdate(prevProps) {
-		const {
-			route: {
-				location: { pathname: prevPathName },
-			},
-			appLoading: appLoadingPrev,
-			loginState: loginStatePrev,
-			modalAuthIsOpen: modalAuthIsOpenPrev,
-			pageName: pageNamePrev,
-			userName: userNamePrev,
-			closeSmallMenu: closeSmallMenuPrev
-		} = prevProps;
-		const {
-			route: {
-				location: { pathname: nextPathName },
-			},
-			appLoading: appLoadingNext,
-			loginState: loginStateNext,
-			modalAuthIsOpen: modalAuthIsOpenNext,
-			pageName: pageNameNext,
-			userName: userNameNext,
-			closeSmallMenu: closeSmallMenuNext
-		} = this.props;
+	shouldComponentUpdate(nextProps, nextState) {
 
-		if (
-			prevPathName === nextPathName &&
-			appLoadingPrev === appLoadingNext &&
-			loginStatePrev === loginStateNext &&
-			modalAuthIsOpenPrev === modalAuthIsOpenNext &&
-			pageNamePrev === pageNameNext &&
-			userNamePrev === userNameNext &&
-			closeSmallMenuPrev === closeSmallMenuNext
-		) {
-			return false;
-		}
+		console.log('test ////////////////////////////', !isEqual(this.props, nextProps))
 
-		return true;
+		return !isEqual(this.props, nextProps)
 	}
 
-	componentDidUpdate(prevProps) {
-		// console.log("PREV ROUTE");
-		// console.log(prevProps.route.location.pathname);
-		// console.log("NEXT ROUTE");
-		// console.log(this.props.route.location.pathname);
-		// console.log("update Header");
+	scrollView = (element,block,behavior ) => {
+		console.log('scrolled')
+		console.log(element)
+		element.scrollIntoView('alignToTop');
+	}
+
+	componentDidUpdate() {
+		console.log("update BigHeader");
 		console.count("Header");
+		const {current: initialPoint} = this.initialVIewPoint
+		if(initialPoint) {
+			this.scrollView(initialPoint,'start','smooth')
+		}
 	}
+
+	initialVIewPoint = createRef();
+
 
 	getPageName = (pageHash: string) => {
 		console.log("test pageHash in getPageName = ", pageHash);
@@ -107,13 +85,13 @@ export class Header extends Component<HeaderPropType> {
 		return (
 			<div className="header-wrapper">
 				<MediaQuery minWidth={BIG_MEDIA_SIZE}>
-					<BigHeader page={this.getPageName(pathname)} {...restProps} loginState={loginState} />
+					<BigHeader page={this.getPageName(pathname)} {...restProps} loginState={loginState} initialPoint={this.initialVIewPoint}/>
 				</MediaQuery>
 				<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
-					<MidHeader page={this.getPageName(pathname)} {...restProps} loginState={loginState} />
+					<MidHeader page={this.getPageName(pathname)} {...restProps} loginState={loginState} initialPoint={this.initialVIewPoint}/>
 				</MediaQuery>
 				<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
-					<SmallHeader page={this.getPageName(pathname)} {...restProps} loginState={loginState} />
+					<SmallHeader page={this.getPageName(pathname)} {...restProps} loginState={loginState} initialPoint={this.initialVIewPoint}/>
 				</MediaQuery>
 			</div>
 		);

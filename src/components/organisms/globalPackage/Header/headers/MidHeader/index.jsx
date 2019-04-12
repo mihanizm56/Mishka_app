@@ -22,7 +22,7 @@ export class MidHeader extends PureComponent {
 
 	render() {
 		const { searchInputOpened } = this.state;
-		const { page, loginState, userName, openModal, signOutFunc } = this.props;
+		const { page, loginState, userName, openModal, signOutFunc, initialPoint } = this.props;
 		const authProps = {
 			loginState,
 			userName,
@@ -36,7 +36,7 @@ export class MidHeader extends PureComponent {
 					isIndexPage: page === "index-page",
 				})}
 			>
-				<div className="middle-header__first-line-header">
+				<div className="middle-header__first-line-header" ref={initialPoint}>
 					<div className="middle-header-logo-box">
 						<div className="first-line-middle-header__logo">
 							<LinkComponent WrappedComponent={InteractiveSVGIcon} icon="main-logo" route="index" />
