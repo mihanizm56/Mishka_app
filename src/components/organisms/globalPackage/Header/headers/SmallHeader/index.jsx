@@ -101,7 +101,7 @@ export class SmallHeader extends PureComponent {
 
 	render() {
 		const { isSmallMenuOpened, searchInputOpened } = this.state;
-		const { page, loginState, userName, openModal, signOutFunc } = this.props;
+		const { page, loginState, userName, openModal, signOutFunc, initialPoint } = this.props;
 		const authProps = {
 			loginState,
 			userName,
@@ -110,7 +110,7 @@ export class SmallHeader extends PureComponent {
 		};
 
 		return (
-			<div className="small-header-wrapper">
+			<div className="small-header-wrapper" ref={initialPoint}>
 				<div className="small-header__small-header-logo-wrapper">
 					<div className="small-header-logo-wrapper__logo-icon">
 						<LinkComponent WrappedComponent={InteractiveSVGIcon} icon="main-logo" route="index" />

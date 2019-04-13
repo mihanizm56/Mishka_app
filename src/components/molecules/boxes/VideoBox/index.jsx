@@ -12,7 +12,7 @@ import {
 } from "../../../../constants";
 import "./VideoBox.css";
 
-import { Button } from "../../../atoms/buttons";
+import { LinkComponent, Button } from "../../../atoms";
 
 export const VideoBox = memo(props => {
 	return (
@@ -37,7 +37,12 @@ export const VideoBox = memo(props => {
 								/>
 							</div>
 							<div className="video-container__button">
-								<Button classname="button-offer-wrapper" text="сделать заказ" />
+								<LinkComponent
+									WrappedComponent={Button}
+									classname="button-offer-wrapper"
+									text="сделать заказ"
+									route="orderpage"
+								/>
 							</div>
 						</div>
 					</div>
@@ -61,7 +66,12 @@ export const VideoBox = memo(props => {
 								/>
 							</div>
 							<div className="video-container__button">
-								<Button classname="button-offer-wrapper" text="сделать заказ" />
+								<LinkComponent
+									WrappedComponent={Button}
+									classname="button-offer-wrapper"
+									text="сделать заказ"
+									route="orderpage"
+								/>
 							</div>
 						</div>
 					</div>
@@ -90,7 +100,12 @@ export const VideoBox = memo(props => {
 							/>
 						</div>
 						<div className="video-container__button">
-							<Button classname="button-offer-wrapper" text="сделать заказ" />
+							<LinkComponent
+								WrappedComponent={Button}
+								classname="button-offer-wrapper"
+								text="сделать заказ"
+								route="orderpage"
+							/>
 						</div>
 					</div>
 				</div>
