@@ -5,6 +5,7 @@
   "dependencies": {
     "connected-react-router": "^6.3.2",
     "eslint-plugin-notice": "^0.7.7",
+    "express": "^4.16.4",
     "firebase": "^5.7.2",
     "normalize.css": "^8.0.1",
     "rc-slider": "^8.6.4",
