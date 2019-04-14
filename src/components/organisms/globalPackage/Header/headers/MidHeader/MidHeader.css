@@ -30,7 +30,6 @@
     position: relative;
     display: flex;
     justify-content: flex-end;
-    width: 150px;
 }
 
 .first-line-middle-header__search-input {
@@ -39,11 +38,13 @@
     align-items: center;
     overflow: hidden;
     background-color: white;
-    top: 0;
-    left: -150px;
-    height: 98%;
+    border-radius: 10px;
+    border: 1px solid grey;
+    top: 160px;
+    left: -60px;
     width: 220px;
     animation: fadeInInputHeaderMiddle .2s ease-in-out both;
+    z-index: 3;
 }
 
 .first-line-middle-header__search-input--active {
