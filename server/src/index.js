@@ -5,5 +5,5 @@ const router = require("./routes");
 app.use("/data", router);
 
 app.listen(3001, () => {
-	console.log("Example app listening on port 3001!");
+	console.log("Server for Mishka is listening on port 3001!");
 });
