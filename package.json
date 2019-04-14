@@ -23,7 +23,7 @@
     "reselect": "^4.0.0"
   },
   "scripts": {
-    "start": "react-scripts start && npm run start:server",
+    "start": "react-scripts start",
     "start:server": "node server/src",
     "build": "react-scripts build",
     "test:run": "react-scripts test",
