@@ -9,7 +9,7 @@ import {
 	AuthReduxFormProvider,
 	ReviewsStoreProvider,
 	ReviewsReduxFormProvider,
-	ModalReviewPortal,
+	ModalPortal,
 } from "../../../../containers";
 import "./MainWrapper.css";
 
@@ -27,23 +27,23 @@ export const MainWrapper = memo(props => {
 			<Footer />
 
 			{modalAuthIsOpen && (
-				<ModalAuthPortal>
+				<ModalPortal show={modalAuthIsOpen}>
 					<AuthStoreProvider>
 						<AuthReduxFormProvider>
 							<ModalAuthForm loginState={loginState} />
 						</AuthReduxFormProvider>
 					</AuthStoreProvider>
-				</ModalAuthPortal>
+				</ModalPortal>
 			)}
 
 			{modalReviewIsOpen && (
-				<ModalReviewPortal>
+				<ModalPortal show={modalReviewIsOpen}>
 					<ReviewsStoreProvider>
 						<ReviewsReduxFormProvider>
 							<ModalReviewForm />
 						</ReviewsReduxFormProvider>
 					</ReviewsStoreProvider>
-				</ModalReviewPortal>
+				</ModalPortal>
 			)}
 		</div>
 	);
