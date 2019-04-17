@@ -1,6 +1,6 @@
 //
 import React, { Component, createRef } from "react";
-import {isEqual} from 'lodash';
+import { isEqual } from "lodash";
 import MediaQuery from "react-responsive";
 import { BigHeader, MidHeader, SmallHeader } from "./headers";
 import {
@@ -32,29 +32,27 @@ export class Header extends Component<HeaderPropType> {
 
 	///////переписать
 	shouldComponentUpdate(nextProps, nextState) {
+		console.log("test ////////////////////////////", !isEqual(this.props, nextProps));
 
-		console.log('test ////////////////////////////', !isEqual(this.props, nextProps))
-
-		return !isEqual(this.props, nextProps)
+		return !isEqual(this.props, nextProps);
 	}
 
-	scrollView = (element,block,behavior ) => {
-		console.log('scrolled')
-		console.log(element)
-		element.scrollIntoView('alignToTop');
-	}
+	scrollView = (element, block, behavior) => {
+		console.log("scrolled");
+		console.log(element);
+		element.scrollIntoView("alignToTop");
+	};
 
 	componentDidUpdate() {
 		console.log("update BigHeader");
 		console.count("Header");
-		const {current: initialPoint} = this.initialVIewPoint
-		if(initialPoint) {
-			this.scrollView(initialPoint,'start','smooth')
+		const { current: initialPoint } = this.initialVIewPoint;
+		if (initialPoint) {
+			this.scrollView(initialPoint, "start", "smooth");
 		}
 	}
 
 	initialVIewPoint = createRef();
-
 
 	getPageName = (pageHash: string) => {
 		console.log("test pageHash in getPageName = ", pageHash);
@@ -80,18 +78,33 @@ export class Header extends Component<HeaderPropType> {
 			...restProps
 		} = this.props;
 		//const pageHash = "catalog-page";
-		console.log("Header loginState");
+		console.log("Header props");
 		console.log(this.props);
 		return (
 			<div className="header-wrapper">
 				<MediaQuery minWidth={BIG_MEDIA_SIZE}>
-					<BigHeader page={this.getPageName(pathname)} {...restProps} loginState={loginState} initialPoint={this.initialVIewPoint}/>
+					<BigHeader
+						page={this.getPageName(pathname)}
+						{...restProps}
+						loginState={loginState}
+						initialPoint={this.initialVIewPoint}
+					/>
 				</MediaQuery>
 				<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
-					<MidHeader page={this.getPageName(pathname)} {...restProps} loginState={loginState} initialPoint={this.initialVIewPoint}/>
+					<MidHeader
+						page={this.getPageName(pathname)}
+						{...restProps}
+						loginState={loginState}
+						initialPoint={this.initialVIewPoint}
+					/>
 				</MediaQuery>
 				<MediaQuery minWidth={SMALL_MEDIA_SIZE_FROM} maxWidth={SMALL_MEDIA_SIZE_TO}>
-					<SmallHeader page={this.getPageName(pathname)} {...restProps} loginState={loginState} initialPoint={this.initialVIewPoint}/>
+					<SmallHeader
+						page={this.getPageName(pathname)}
+						{...restProps}
+						loginState={loginState}
+						initialPoint={this.initialVIewPoint}
+					/>
 				</MediaQuery>
 			</div>
 		);

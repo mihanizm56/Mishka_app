@@ -6,3 +6,4 @@ export * from "./ShopItems";
 export * from "./Order";
 export * from "./Portals";
 export * from "./Auth";
+export * from "./FilterItems";

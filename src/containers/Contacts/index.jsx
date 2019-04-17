@@ -5,11 +5,11 @@ import { adressParser } from "../../utils";
 import { emailSelector, citySelector, streetSelector, blockSelector, roomSelector } from "../../store/selectors";
 
 class WrappedContainer extends Component {
-	componentDidMount(){
-		var myInit = { method: 'GET', mode: 'no-cors', cache: 'default' };
+	componentDidMount() {
+		var myInit = { method: "GET", mode: "no-cors", cache: "default" };
 
-		console.warn('mounted, send fetch')
-		fetch('http://localhost:3001/data/reviews', myInit).then(()=>console.log('check done request'))
+		console.warn("mounted, send fetch");
+		fetch("http://localhost:3001/data/reviews", myInit).then(() => console.log("check done request"));
 	}
 
 	render() {

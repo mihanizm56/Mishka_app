@@ -1,6 +1,6 @@
 //
 import React, { memo } from "react";
-import {MainLayout} from "../../../../routes/";
+import { MainLayout } from "../../../../routes/";
 import { Footer, Header } from "../";
 import { ModalAuthForm, ModalReviewForm } from "../../";
 import {
@@ -10,6 +10,7 @@ import {
 	ReviewsStoreProvider,
 	ReviewsReduxFormProvider,
 	ModalPortal,
+	FilterItemsProvider,
 } from "../../../../containers";
 import "./MainWrapper.css";
 
@@ -20,9 +21,11 @@ export const MainWrapper = memo(props => {
 	//console.log(router);
 	return (
 		<div className="main-wrapper">
-			<AuthStoreProvider>
-				<Header route={router} loginState={loginState} closeSmallMenu={closeSmallMenu}/>
-			</AuthStoreProvider>
+			<FilterItemsProvider>
+				<AuthStoreProvider>
+					<Header route={router} loginState={loginState} closeSmallMenu={closeSmallMenu} />
+				</AuthStoreProvider>
+			</FilterItemsProvider>
 			<MainLayout {...restProps} />
 			<Footer />
 

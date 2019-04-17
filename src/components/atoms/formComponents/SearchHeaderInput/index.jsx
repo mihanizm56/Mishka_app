@@ -10,13 +10,15 @@ type SearchHeaderInputProps = {
 };
 
 export const SearchHeaderInput = memo(
-	({ placeholder, getRef, backgroundColor }: SearchHeaderInputProps): Node => {
+	({ placeholder, getRef, backgroundColor, handleChange, value }: SearchHeaderInputProps): Node => {
 		return (
 			<InputComponent
 				placeholder={placeholder}
 				className="form-input-header"
 				getRef={getRef}
 				backgroundColor={backgroundColor}
+				handleChange={handleChange}
+				value={value}
 			/>
 		);
 	}
