@@ -18,3 +18,4 @@ export * from "./ListReviewsBox";
 export * from "./ListButtonsBox";
 export * from "./UserLoginBox";
 export * from "./LoadingBox";
+export * from "./SuccessBox";

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Field } from "redux-form";
-import { FormTextInputField, Button, SVGIcon, TextArea } from "../../../../components";
-// import {ReviewsStoreProvider,ReviewReduxFormProvider } from '../../../../containers'
+import { FormTextInputField, Button, TextArea, LoadingBox, SuccessBox } from "../../../../components";
 import "./ModalReviewForm.css";
 
 export class ModalReviewForm extends Component {
@@ -20,18 +19,6 @@ export class ModalReviewForm extends Component {
 		console.log("ModalReviewForm props");
 		console.log(this.props);
 	}
-
-	loadingLayout = () => (
-		<div className="loading-icon">
-			<SVGIcon icon="loading" />
-		</div>
-	);
-
-	successLayout = () => (
-		<div className="success-icon">
-			<SVGIcon icon="success" />
-		</div>
-	);
 
 	normalLayout = () => (
 		<>
@@ -80,8 +67,8 @@ export class ModalReviewForm extends Component {
 	);
 
 	getFormLayout = ({ isLoading, sendingIsSuccess }) => {
-		if (isLoading) return this.loadingLayout();
-		else if (sendingIsSuccess) return this.successLayout();
+		if (isLoading) return <LoadingBox />;
+		else if (sendingIsSuccess) return <SuccessBox />;
 		else return this.normalLayout();
 	};
 

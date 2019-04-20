@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Field } from "redux-form";
-import { FormTextInputField, Button, SVGIcon } from "../../../../components";
+import { FormTextInputField, Button, LoadingBox, SuccessBox } from "../../../../components";
 import "./ModalAuthForm.css";
 
 export class ModalAuthForm extends Component {
@@ -17,18 +17,6 @@ export class ModalAuthForm extends Component {
 		console.log("ModalAuthForm props");
 		console.log(this.props);
 	}
-
-	loadingLayout = () => (
-		<div className="loading-icon">
-			<SVGIcon icon="loading" />
-		</div>
-	);
-
-	successLayout = () => (
-		<div className="success-icon">
-			<SVGIcon icon="success" />
-		</div>
-	);
 
 	normalLayout = () => (
 		<>
@@ -79,8 +67,8 @@ export class ModalAuthForm extends Component {
 	);
 
 	getFormLayout = ({ isLoading, loginState }) => {
-		if (isLoading) return this.loadingLayout();
-		else if (loginState) return this.successLayout();
+		if (isLoading) return <LoadingBox />;
+		else if (loginState) return <SuccessBox />;
 		else return this.normalLayout();
 	};
 

@@ -4,7 +4,6 @@ import { MainLayout } from "../../../../routes/";
 import { Footer, Header } from "../";
 import { ModalAuthForm, ModalReviewForm } from "../../";
 import {
-	ModalAuthPortal,
 	AuthStoreProvider,
 	AuthReduxFormProvider,
 	ReviewsStoreProvider,

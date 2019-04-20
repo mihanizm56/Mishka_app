@@ -49,21 +49,12 @@
     width: 90%;
 }
 
-.loading-icon {
-    animation: circleFull 2.2s linear infinite;
-}
-
-.success-icon {
-    animation: fadeIn .5s .3s linear both;
-}
-
 @media (max-width: 767px) {
     .auth-form-wrapper {
         width: 90%;
         height: 350px;
         padding: 20px 10px;
     }
-    
     .auth-form__field {
         height: 65px;
     }

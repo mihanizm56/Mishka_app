@@ -57,10 +57,6 @@
     width: 90%;
 }
 
-.success-icon {
-    animation: fadeIn .5s .3s linear both;
-}
-
 @media (max-width: 767px) {
     .review-form-wrapper {
         width: 90%;
