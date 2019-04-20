@@ -17,8 +17,8 @@ type ItemsCatalogType = {
 };
 
 export const ItemsCatalog = (props: ItemsCatalogType) => {
-	console.log("ItemsCatalog props");
-	console.log(props);
+	// console.log("ItemsCatalog props");
+	// console.log(props);
 	const { shopItems } = props;
 	return (
 		<div className="catalog__shop-items">

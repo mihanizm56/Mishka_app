@@ -8,7 +8,7 @@ import {
 	SET_SENDING_STATE_LOADING,
 	SET_SENDING_STATE_DONE,
 	SET_SUCCESS_SENDING_STATE_DONE,
-	RESET_SUCCESS_SENDING_STATE_DONE
+	RESET_SUCCESS_SENDING_STATE_DONE,
 } from "../../constants";
 import { myFetch, sleep } from "../../utils/requests";
 
@@ -68,8 +68,8 @@ export const fetchReviews = () => dispatch => {
 };
 
 export const addReviewRequestAction = value => {
-	console.log("check addReviewRequestAction");
-	console.log("value", value);
+	// console.log("check addReviewRequestAction");
+	// console.log("value", value);
 	if (value) {
 		return dispatch => {
 			dispatch(setSendingStateLoading());
@@ -81,7 +81,7 @@ export const addReviewRequestAction = value => {
 				.then(() => {
 					setTimeout(() => {
 						dispatch(closeModalReviewAction());
-						dispatch(resetSendingStateSuccess())
+						dispatch(resetSendingStateSuccess());
 					}, 2000);
 				})
 				.catch(error => {

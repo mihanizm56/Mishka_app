@@ -35,8 +35,8 @@ export class BigHeader extends Component {
 			openModal,
 			signOutFunc,
 		};
-		console.log("//////////////////////");
-		console.log("получил страницу ", page);
+		// console.log("//////////////////////");
+		// console.log("получил страницу ", page);
 		return (
 			<div
 				className={getSpecialClassForHeader({

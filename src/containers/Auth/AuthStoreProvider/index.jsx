@@ -9,8 +9,8 @@ class WrappedContainer extends Component {
 	};
 
 	componentDidMount() {
-		console.log("check AuthStoreProvider props");
-		console.log(this.props);
+		// console.log("check AuthStoreProvider props");
+		// console.log(this.props);
 	}
 
 	render = () => {

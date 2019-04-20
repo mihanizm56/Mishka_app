@@ -12,8 +12,8 @@ export class RadioBox extends PureComponent {
 			text,
 			input: { checked },
 		} = this.props;
-		console.log("check RadioBox props");
-		console.log(this.props);
+		// console.log("check RadioBox props");
+		// console.log(this.props);
 		return (
 			<label className="radio-box-container">
 				<input className="radio-box-input" type="radio" {...this.props.input} />

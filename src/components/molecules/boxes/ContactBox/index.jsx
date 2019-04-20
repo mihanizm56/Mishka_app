@@ -52,7 +52,7 @@ export class ContactBox extends PureComponent<propsType> {
 			} = ref;
 			if (innerText) {
 				this.copyTextToClipboard(innerText);
-				console.log("check element", innerText);
+				// console.log("check element", innerText);
 			}
 		}
 	};

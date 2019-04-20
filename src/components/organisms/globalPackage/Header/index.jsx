@@ -32,20 +32,20 @@ export class Header extends Component<HeaderPropType> {
 
 	///////переписать
 	shouldComponentUpdate(nextProps, nextState) {
-		console.log("test ////////////////////////////", !isEqual(this.props, nextProps));
+		// console.log("test ////////////////////////////", !isEqual(this.props, nextProps));
 
 		return !isEqual(this.props, nextProps);
 	}
 
 	scrollView = (element, block, behavior) => {
-		console.log("scrolled");
-		console.log(element);
+		// console.log("scrolled");
+		// console.log(element);
 		element.scrollIntoView("alignToTop");
 	};
 
 	componentDidUpdate() {
-		console.log("update BigHeader");
-		console.count("Header");
+		// console.log("update BigHeader");
+		// console.count("Header");
 		const { current: initialPoint } = this.initialVIewPoint;
 		if (initialPoint) {
 			this.scrollView(initialPoint, "start", "smooth");
@@ -55,7 +55,7 @@ export class Header extends Component<HeaderPropType> {
 	initialVIewPoint = createRef();
 
 	getPageName = (pageHash: string) => {
-		console.log("test pageHash in getPageName = ", pageHash);
+		// console.log("test pageHash in getPageName = ", pageHash);
 		if (pageHash === INDEX_PAGE || pageHash === EMPTY_PAGE) {
 			return INDEX_PAGE_NAME;
 		}
@@ -77,9 +77,8 @@ export class Header extends Component<HeaderPropType> {
 			loginState,
 			...restProps
 		} = this.props;
-		//const pageHash = "catalog-page";
-		console.log("Header props");
-		console.log(this.props);
+		// console.log("Header props");
+		// console.log(this.props);
 		return (
 			<div className="header-wrapper">
 				<MediaQuery minWidth={BIG_MEDIA_SIZE}>

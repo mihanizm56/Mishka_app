@@ -15,8 +15,8 @@ class WrappedContainer extends Component {
 	// };
 
 	componentDidMount() {
-		console.log("check FilterItemsProvider props");
-		console.log(this.props);
+		// console.log("check FilterItemsProvider props");
+		// console.log(this.props);
 	}
 
 	// shouldComponentUpdate(nextProps) {
@@ -27,13 +27,13 @@ class WrappedContainer extends Component {
 
 	handleChange = value => {
 		const { changeSearch } = this.props;
-		console.log("check 1 ");
+		// console.log("check 1 ");
 		changeSearch(value);
 		this.setState({ isRedirected: true });
 	};
 
 	render() {
-		console.log("check 2");
+		// console.log("check 2");
 		// const { isRedirected } = this.state;
 		const { children, searchState, ...restProps } = this.props;
 		// return searchState && !isRedirected

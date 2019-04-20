@@ -5,16 +5,25 @@ import { adressParser } from "../../utils";
 import { emailSelector, citySelector, streetSelector, blockSelector, roomSelector } from "../../store/selectors";
 
 class WrappedContainer extends Component {
-	componentDidMount() {
-		var myInit = { method: "GET", mode: "no-cors", cache: "default" };
+	state = {
+		data: null,
+	};
 
-		console.warn("mounted, send fetch");
-		fetch("http://localhost:3001/data/reviews", myInit).then(() => console.log("check done request"));
+	componentDidMount() {
+		var myInit = { mode: "cors" };
+
+		console.log("mounted, send fetch");
+		fetch("http://localhost:10000/data/contacts", myInit).then(data => this.setData(data));
 	}
 
+	setData = data => {
+		console.log(data);
+		this.setState({ data });
+	};
+
 	render() {
-		console.log("test ShopContactsProvider props");
-		console.log(this.props);
+		// console.log("test ShopContactsProvider props");
+		// console.log(this.props);
 
 		const { component: WrappedComponent, block, room, street, city, email } = this.props;
 

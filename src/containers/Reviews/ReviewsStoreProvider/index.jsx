@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { 
-	addReviewRequestAction, 
-	openModalReviewAction, 
-	closeModalReviewAction 
-} from "../../../actions";
+import { addReviewRequestAction, openModalReviewAction, closeModalReviewAction } from "../../../actions";
 import {
 	reviewSelector,
 	modalStateSelector,
@@ -18,8 +14,8 @@ class WrappedContainer extends Component {
 	};
 
 	componentDidMount() {
-		console.log("test ReviewsStoreProvider props");
-		console.log(this.props);
+		// console.log("test ReviewsStoreProvider props");
+		// console.log(this.props);
 	}
 
 	render = () => {

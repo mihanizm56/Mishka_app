@@ -3,8 +3,8 @@ import { reduxForm } from "redux-form";
 
 class WrappedContainer extends Component {
 	componentDidMount() {
-		console.log("check AuthReduxFormProvider store props");
-		console.log(this.props);
+		// console.log("check AuthReduxFormProvider store props");
+		// console.log(this.props);
 	}
 
 	render = () => {

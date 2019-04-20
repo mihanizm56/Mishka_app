@@ -16,8 +16,8 @@ export class ModalReviewForm extends Component {
 	};
 
 	componentDidMount() {
-		console.log("ModalReviewForm props");
-		console.log(this.props);
+		// console.log("ModalReviewForm props");
+		// console.log(this.props);
 	}
 
 	normalLayout = () => (
