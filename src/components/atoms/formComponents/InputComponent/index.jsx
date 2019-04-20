@@ -40,7 +40,7 @@ export class InputComponent extends PureComponent<InputComponentProps> {
 				{...input}
 				ref={this.inputRef}
 				type={type}
-				onChange={({ target: { value } }) => handleChange(value)}
+				onChange={({ target: { value } }) => (input.onChange ? input.onChange() : handleChange(value))}
 				className={className}
 				placeholder={placeholder}
 				autoComplete={autocompleteOff && "off"}

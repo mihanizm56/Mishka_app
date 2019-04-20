@@ -17,3 +17,4 @@ export * from "./RadioBox";
 export * from "./ListReviewsBox";
 export * from "./ListButtonsBox";
 export * from "./UserLoginBox";
+export * from "./LoadingBox";

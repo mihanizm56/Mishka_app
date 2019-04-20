@@ -19,13 +19,13 @@ class AppContainer extends Component {
 	}
 
 	componentDidUpdate() {
-		console.log("app updated");
-		console.log(this.props);
+		// console.log("app updated");
+		// console.log(this.props);
 	}
 
 	render() {
-		console.log("test App props");
-		console.log(this.props);
+		// console.log("test App props");
+		// console.log(this.props);
 		const { loginState, sendingLoading, ...restProps } = this.props;
 		const loginSucceed = loginState || localStorage.login === "true";
 		return (

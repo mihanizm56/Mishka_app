@@ -1,23 +1,23 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
 export class ModalPortal extends Component {
-    constructor(){
-        super()
+	constructor() {
+		super();
 
-        this.id = 'modal'
-        this.div = document.createElement('div')
-        this.div.id = this.id
+		this.id = "modal";
+		this.div = document.createElement("div");
+		this.div.id = this.id;
 
-        document.body.insertAdjacentElement('beforeend',this.div)
-    }
+		document.body.insertAdjacentElement("beforeend", this.div);
+	}
 
-    componentWillUnmount(){
-        this.div.parentNode.removeChild(this.div)
-    }
+	componentWillUnmount() {
+		this.div.parentNode.removeChild(this.div);
+	}
 
-    render(){
-        const {show,children} = this.props;
-        return show ? ReactDOM.createPortal(children, document.getElementById(this.id)) : null
-    }
+	render() {
+		const { show, children } = this.props;
+		return show ? ReactDOM.createPortal(children, document.getElementById(this.id)) : null;
+	}
 }
