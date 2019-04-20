@@ -29,7 +29,7 @@ export class InputComponent extends PureComponent<InputComponentProps> {
 			placeholder,
 			customFontSize,
 			backgroundColor,
-			input,
+			input: inputFormListeners,
 			autocompleteOff,
 			handleChange,
 			value,
@@ -37,10 +37,10 @@ export class InputComponent extends PureComponent<InputComponentProps> {
 		const dragOff = type === "password" ? true : false;
 		return (
 			<input
-				{...input}
+				{...inputFormListeners}
 				ref={this.inputRef}
 				type={type}
-				onChange={({ target: { value } }) => (input.onChange ? input.onChange() : handleChange(value))}
+				onChange={({ target: { value } }) => (handleChange ? handleChange(value) : inputFormListeners.onChange(value))}
 				className={className}
 				placeholder={placeholder}
 				autoComplete={autocompleteOff && "off"}

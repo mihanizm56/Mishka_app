@@ -22,21 +22,6 @@ export class BigHeader extends Component {
 		searchInputOpened: false,
 	};
 
-	// scrollView = (element,block,behavior ) => {
-	// 	console.log('scrolled')
-	// 	console.log(element)
-	// 	element.scrollIntoView('alignToTop');
-	// }
-
-	// componentDidUpdate() {
-	// 	console.log("update BigHeader");
-	// 	console.count("Header");
-	// 	const {current: initialPoint} = this.initialVIewPoint
-	// 	if(initialPoint) {
-	// 		this.scrollView(initialPoint,'start','smooth')
-	// 	}
-	// }
-
 	handleToggleInput = () => {
 		this.setState(prevState => ({ searchInputOpened: !prevState.searchInputOpened }));
 	};
