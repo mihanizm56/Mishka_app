@@ -1,20 +1,19 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { shopItemsSelector } from "../../store/selectors";
+import { shopItemsSelector, searchStateSelector } from "../../store/selectors";
 
 class WrappedContainer extends Component {
 	render() {
-		console.log("test ShopItemsProvider props");
-		console.log(this.props);
+		// console.log("test ShopItemsProvider props", this.props);
 
-		const { component: WrappedComponent, shopItems } = this.props;
+		const { component: WrappedComponent, ...restProps } = this.props;
 
-		return <WrappedComponent shopItems={shopItems} />;
+		return <WrappedComponent {...restProps} />;
 	}
 }
 
 const mapStateToProps = store => {
-	return { shopItems: shopItemsSelector(store) };
+	return { shopItems: shopItemsSelector(store), searchState: searchStateSelector(store) };
 };
 
 export const ShopItemsProvider = connect(mapStateToProps)(WrappedContainer);

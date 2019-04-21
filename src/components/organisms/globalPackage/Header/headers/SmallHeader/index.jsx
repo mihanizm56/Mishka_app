@@ -35,10 +35,10 @@ export class SmallHeader extends PureComponent {
 	}
 
 	componentDidUpdate(prevProps) {
-		const { page: prevPage } = this.props;
+		const { page: prevPage, searchState } = this.props;
 		const { page: nextPage } = prevProps;
-		if (prevPage !== nextPage) {
-			this.setState({ isSmallMenuOpened: false });
+		if (prevPage !== nextPage && !searchState) {
+			this.setState({ isSmallMenuOpened: false, searchInputOpened: false });
 		}
 	}
 
@@ -47,6 +47,11 @@ export class SmallHeader extends PureComponent {
 	};
 
 	handleToggleInput = () => {
+		const { changeSearch } = this.props;
+		if (!this.state.searchInputOpened) {
+			changeSearch("");
+		}
+
 		this.setState(prevState => ({ searchInputOpened: !prevState.searchInputOpened }));
 	};
 

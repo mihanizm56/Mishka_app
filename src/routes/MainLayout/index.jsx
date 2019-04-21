@@ -9,8 +9,7 @@ import { OrderPageRoute } from "../OrderPageRoute";
 type MainLayoutPropTypes = {};
 
 export const MainLayout = (props: MainLayoutPropTypes) => {
-	//console.log("пропсы в MainLayout");
-	//console.log(props);
+	// console.log("пропсы в MainLayout", props);
 	return (
 		<Switch>
 			<IndexPageRoute exact path="/" />

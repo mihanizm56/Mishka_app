@@ -1,6 +1,8 @@
 //
 import React from "react";
+import { isEqual } from "lodash";
 import { ItemCard } from "../../cards";
+import { getClass } from "../../../../utils";
 import "./ItemsCatalog.css";
 
 type itemType = {
@@ -16,13 +18,30 @@ type ItemsCatalogType = {
 	shopItems: Array<itemType>,
 };
 
+const testFunc = (array, searchValue) => {
+	return array
+		.map(item => JSON.stringify(item))
+		.filter(item => isMatching(item, searchValue))
+		.map(item => JSON.parse(item));
+};
+
+const isMatching = (full, chunk) => {
+	return full.toUpperCase().indexOf(chunk.toUpperCase()) > -1;
+};
+
+const getShopItems = (initialItems, filter) => {
+	const result = testFunc && filter ? testFunc(initialItems, filter) : initialItems;
+	console.log("result", result);
+	return result;
+};
+
 export const ItemsCatalog = (props: ItemsCatalogType) => {
-	// console.log("ItemsCatalog props");
-	// console.log(props);
-	const { shopItems } = props;
+	console.log("ItemsCatalog props", props);
+	const { shopItems, searchState } = props;
+	const filteredItems = getShopItems(shopItems, searchState);
 	return (
-		<div className="catalog__shop-items">
-			{shopItems.map(item => {
+		<div className={getClass({ initialClass: "catalog__shop-items", center: !isEqual(shopItems, filteredItems) })}>
+			{filteredItems.map(item => {
 				return (
 					<ItemCard
 						key={item.id}

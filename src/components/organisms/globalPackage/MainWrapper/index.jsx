@@ -14,15 +14,17 @@ import {
 import "./MainWrapper.css";
 
 export const MainWrapper = memo(props => {
-	const { router, loginState, modalAuthIsOpen, modalReviewIsOpen, ...restProps } = props;
+	const { router, loginState, modalAuthIsOpen, modalReviewIsOpen, searchState, ...restProps } = props;
+	const {
+		location: { pathname },
+	} = router;
 	const closeSmallMenu = modalAuthIsOpen || modalReviewIsOpen;
-	// console.log(props);
-	//console.log(router);
+	// console.log("MainWrapper props", props);
 	return (
 		<div className="main-wrapper">
-			<FilterItemsProvider>
+			<FilterItemsProvider pagePathName={pathname}>
 				<AuthStoreProvider>
-					<Header route={router} loginState={loginState} closeSmallMenu={closeSmallMenu} />
+					<Header route={router} searchState={searchState} loginState={loginState} closeSmallMenu={closeSmallMenu} />
 				</AuthStoreProvider>
 			</FilterItemsProvider>
 			<MainLayout {...restProps} />

@@ -16,7 +16,6 @@ export class MidHeader extends PureComponent {
 	};
 
 	handleToggleInput = () => {
-		console.log("//////");
 		this.setState(prevState => ({ searchInputOpened: !prevState.searchInputOpened }));
 	};
 

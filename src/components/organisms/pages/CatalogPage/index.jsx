@@ -7,8 +7,7 @@ export class CatalogPage extends PureComponent {
 	render() {
 		//console.log("TEST ROUTER MATCH");
 		//console.log(window.history);
-		console.log("test CatalogPage props");
-		console.log(this.props);
+		console.log("test CatalogPage props", this.props);
 		return (
 			<div className="catalog-wrapper">
 				<ShopItemsProvider component={ItemsCatalog} />

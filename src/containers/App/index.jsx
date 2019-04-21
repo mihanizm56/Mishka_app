@@ -8,6 +8,7 @@ import {
 	modalAuthStateSelector,
 	modalStateSelector,
 	sendingRequestStateSelector,
+	searchStateSelector,
 } from "../../store/selectors";
 import "./App.css";
 import "../../styles/keyframes/keyframes.css";
@@ -24,13 +25,12 @@ class AppContainer extends Component {
 	}
 
 	render() {
-		// console.log("test App props");
-		// console.log(this.props);
-		const { loginState, sendingLoading, ...restProps } = this.props;
+		// console.log("test App props", this.props);
+		const { loginState, ...restProps } = this.props;
 		const loginSucceed = loginState || localStorage.login === "true";
 		return (
 			<div className="global-wrapper">
-				<MainWrapper loginState={loginSucceed} sendingLoading={sendingLoading} {...restProps} />
+				<MainWrapper loginState={loginSucceed} {...restProps} />
 			</div>
 		);
 	}
@@ -44,6 +44,7 @@ const mapStateToProps = store => {
 		modalAuthIsOpen: modalAuthStateSelector(store),
 		modalReviewIsOpen: modalStateSelector(store),
 		sendingLoading: sendingRequestStateSelector(store),
+		searchState: searchStateSelector(store),
 	};
 };
 

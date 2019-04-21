@@ -1,49 +1,35 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { push } from "connected-react-router";
 import { isEqual } from "lodash";
 import { changeSearchFieldAction } from "../../actions";
 import { searchStateSelector } from "../../store/selectors";
-import { Redirect } from "react-router-dom";
 
 class WrappedContainer extends Component {
 	static defaultProps = {
 		changeSearch: () => console.log("default changeSearch"),
 	};
 
-	// state = {
-	// 	isRedirected: false,
-	// };
-
-	componentDidMount() {
-		// console.log("check FilterItemsProvider props");
-		// console.log(this.props);
+	componentDidUpdate() {
+		console.log("check FilterItemsProvider props", this.props);
 	}
 
-	// shouldComponentUpdate(nextProps) {
-	// 	return !isEqual(this.props, nextProps);
-	// }
-
-	redirectToCatalogPage = () => <Redirect to="/catalog" />;
-
 	handleChange = value => {
-		const { changeSearch } = this.props;
-		// console.log("check 1 ");
+		const { changeSearch, redirectToCatalogPage, pagePathName } = this.props;
+		console.log("handleChange value", value);
 		changeSearch(value);
-		this.setState({ isRedirected: true });
+		if (pagePathName !== "/catalog" && value) {
+			redirectToCatalogPage();
+		}
 	};
 
 	render() {
-		// console.log("check 2");
-		// const { isRedirected } = this.state;
 		const { children, searchState, ...restProps } = this.props;
-		// return searchState && !isRedirected
-		// 	? this.redirectToCatalogPage()
-		// 	: React.Children.map(children, child =>
-		// 			React.cloneElement(child, { ...restProps, changeSearch: this.handleChange })
-		//       );
-
 		return React.Children.map(children, child =>
-			React.cloneElement(child, { ...restProps, changeSearch: this.handleChange })
+			React.cloneElement(child, {
+				...restProps,
+				changeSearch: this.handleChange,
+			})
 		);
 	}
 }
@@ -58,6 +44,9 @@ const mapDispatchToProps = dispatch => {
 	return {
 		changeSearch(value) {
 			dispatch(changeSearchFieldAction(value));
+		},
+		redirectToCatalogPage() {
+			dispatch(push("/catalog"));
 		},
 	};
 };

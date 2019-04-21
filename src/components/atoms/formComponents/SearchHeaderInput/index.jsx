@@ -25,6 +25,6 @@ export const SearchHeaderInput = memo(
 );
 
 SearchHeaderInput.defaultProps = {
-	placeholder: "Поиск default",
+	placeholder: "Поиск товаров",
 	getRef: () => {},
 };

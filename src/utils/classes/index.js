@@ -37,6 +37,7 @@ export const getClass = ({
 	noPadding,
 	withBorderRadius,
 	customPadding,
+	center,
 }: getClassParametersType): string => {
 	let resultClass = initialClass;
 
@@ -102,6 +103,10 @@ export const getClass = ({
 
 	if (withBorderRadius) {
 		resultClass += ` ${initialClass}--with-border-radius`;
+	}
+
+	if (center) {
+		resultClass += ` ${initialClass}--center`;
 	}
 
 	return resultClass;

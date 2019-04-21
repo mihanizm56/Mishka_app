@@ -6,6 +6,6 @@ const OrderPage = lazy(() => import("../../components/organisms/pages/OrderPage/
 
 export const OrderPageRoute = props => (
 	<Suspense fallback={<></>}>
-		<Route render={() => <OrderFormProvider component={OrderPage} />} />
+		<Route render={() => <OrderFormProvider component={OrderPage} {...props} />} />
 	</Suspense>
 );

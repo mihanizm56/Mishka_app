@@ -5,6 +5,6 @@ const CatalogPage = lazy(() => import("../../components/organisms/pages/CatalogP
 
 export const CatalogPageRoute = props => (
 	<Suspense fallback={<></>}>
-		<Route {...props} render={() => <CatalogPage />} />
+		<Route render={() => <CatalogPage {...props} />} />
 	</Suspense>
 );
