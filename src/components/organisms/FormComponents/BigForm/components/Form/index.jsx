@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import MediaQuery from "react-responsive";
 import { Field } from "redux-form";
-import { Button, OpenSansText, TextArea, CheckBox, RadioBox, FormTextInputField } from "../../../../";
+import { Button, OpenSansText, TextArea, CheckBox, RadioBox, FormTextInputField } from "../../../../../";
 // import { BigCheckBoxContainer, MidCheckBoxContainer, SmallCheckBoxContainer } from "../";
 import {
 	BIG_MEDIA_SIZE,
@@ -9,7 +9,7 @@ import {
 	MIDDLE_MEDIA_SIZE_TO,
 	SMALL_MEDIA_SIZE_FROM,
 	SMALL_MEDIA_SIZE_TO,
-} from "../../../../../constants";
+} from "../../../../../../constants";
 import "./BigForm.css";
 
 const backgroundColors = {
@@ -23,9 +23,9 @@ export class BigForm extends Component {
 		console.log(this.props);
 	}
 
-	testFunc = props => {
+	testFunc = values => {
 		console.log("check");
-		console.log(props);
+		console.log(values);
 	};
 
 	getBigCheckBoxContainer = () => (

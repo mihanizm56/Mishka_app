@@ -1,7 +1,7 @@
 //
 import { React } from "react";
 import { Field } from "redux-form";
-import { CheckBox } from "../..";
+import { CheckBox } from "../../../../";
 
 export const getBigCheckBoxContainer = () => (
 	<>

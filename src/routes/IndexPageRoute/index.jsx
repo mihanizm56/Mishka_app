@@ -1,9 +1,5 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import { Route } from "react-router-dom";
-const IndexPage = lazy(() => import("../../components/organisms/pages/IndexPage/indexPage"));
+import { IndexPage } from "../../components";
 
-export const IndexPageRoute = props => (
-	<Suspense fallback={<></>}>
-		<Route render={() => <IndexPage {...props} />} />
-	</Suspense>
-);
+export const IndexPageRoute = props => <Route render={() => <IndexPage {...props} />} />;

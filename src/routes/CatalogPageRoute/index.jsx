@@ -1,10 +1,6 @@
 //
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import { Route } from "react-router-dom";
-const CatalogPage = lazy(() => import("../../components/organisms/pages/CatalogPage/CatalogPage"));
+import { CatalogPage } from "../../components";
 
-export const CatalogPageRoute = props => (
-	<Suspense fallback={<></>}>
-		<Route render={() => <CatalogPage {...props} />} />
-	</Suspense>
-);
+export const CatalogPageRoute = props => <Route render={() => <CatalogPage {...props} />} />;

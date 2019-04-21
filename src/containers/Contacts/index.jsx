@@ -9,12 +9,12 @@ class WrappedContainer extends Component {
 		data: null,
 	};
 
-	componentDidMount() {
-		var myInit = { mode: "cors" };
+	// componentDidMount() {
+	// 	var myInit = { mode: "cors" };
 
-		console.log("mounted, send fetch");
-		fetch("http://localhost:10000/data/contacts", myInit).then(data => this.setData(data));
-	}
+	// 	console.log("mounted, send fetch");
+	// 	fetch("http://localhost:10000/data/contacts", myInit).then(data => this.setData(data));
+	// }
 
 	setData = data => {
 		console.log(data);
