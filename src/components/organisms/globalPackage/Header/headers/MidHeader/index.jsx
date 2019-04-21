@@ -22,7 +22,7 @@ export class MidHeader extends PureComponent {
 
 	render() {
 		const { searchInputOpened } = this.state;
-		const { page, loginState, userName, openModal, signOutFunc, initialPoint } = this.props;
+		const { page, loginState, userName, openModal, signOutFunc, initialPoint, changeSearch, searchState } = this.props;
 		const authProps = {
 			loginState,
 			userName,
@@ -56,7 +56,7 @@ export class MidHeader extends PureComponent {
 									active: searchInputOpened,
 								})}
 							>
-								<SearchHeaderInput />
+								<SearchHeaderInput handleChange={changeSearch} value={searchState} />
 							</div>
 						</div>
 						<div className="first-line-header__basket-wrapper">

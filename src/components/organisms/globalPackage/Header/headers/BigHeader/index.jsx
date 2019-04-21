@@ -26,6 +26,10 @@ export class BigHeader extends Component {
 		this.setState(prevState => ({ searchInputOpened: !prevState.searchInputOpened }));
 	};
 
+	// componentDidMount() {
+	// 	console.log("check BigHeader props", this.props);
+	// }
+
 	render() {
 		const { searchInputOpened } = this.state;
 		const { page, loginState, userName, openModal, signOutFunc, initialPoint, changeSearch, searchState } = this.props;

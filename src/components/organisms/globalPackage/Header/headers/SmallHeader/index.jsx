@@ -22,8 +22,8 @@ export class SmallHeader extends PureComponent {
 		page: "index-page",
 	};
 
-	static getDerivedStateFromProps({closeSmallMenu}){
-		return closeSmallMenu ? ({isSmallMenuOpened: false}) : null
+	static getDerivedStateFromProps({ closeSmallMenu }) {
+		return closeSmallMenu ? { isSmallMenuOpened: false } : null;
 	}
 
 	constructor() {
@@ -51,9 +51,10 @@ export class SmallHeader extends PureComponent {
 	};
 
 	getSearchItem = searchInputOpened => {
+		const { changeSearch, searchState } = this.props;
 		return searchInputOpened ? (
 			<div className={getClass({ initialClass: "first-line-small-header__search-input", active: searchInputOpened })}>
-				<SearchHeaderInput />
+				<SearchHeaderInput handleChange={changeSearch} value={searchState} />
 			</div>
 		) : (
 			<VerdanaText text="Поиск по сайту" bold classname="bold-paragraph" />
