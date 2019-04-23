@@ -1,0 +1,15 @@
+.order-page-wrapper{
+    display: flex; 
+}
+
+
+.order-page-wrapper{
+    justify-content: center;
+}
+
+@media (min-width: 1200px) {
+    .order-page-wrapper{
+        width: 93%;
+        align-self: center;
+    }
+}
