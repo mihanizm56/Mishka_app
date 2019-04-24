@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addReviewRequestAction, openModalReviewAction, closeModalReviewAction } from "../../../actions";
+import {
+	addReviewRequestAction,
+	openModalReviewAction,
+	closeModalReviewAction,
+	fetchReviewsAction,
+} from "../../../actions";
 import {
 	reviewSelector,
 	modalStateSelector,
@@ -14,12 +19,19 @@ class WrappedContainer extends Component {
 	};
 
 	componentDidMount() {
-		// console.log("test ReviewsStoreProvider props");
+		// console.log("ReviewsStoreProvider mounted");
+		// console.log(this.props);
+
+		this.props.fetchReviews();
+	}
+
+	componentDidUpdate() {
+		// console.log("ReviewsStoreProvider updated");
 		// console.log(this.props);
 	}
 
 	render = () => {
-		const { children, ...restProps } = this.props;
+		const { children, fetchReviews, ...restProps } = this.props;
 		return React.Children.map(children, child => React.cloneElement(child, { ...restProps }));
 	};
 }
@@ -43,6 +55,9 @@ const mapDispatchToProps = dispatch => {
 		},
 		addReviewInList(value) {
 			dispatch(addReviewRequestAction(value));
+		},
+		fetchReviews() {
+			dispatch(fetchReviewsAction());
 		},
 	};
 };

@@ -29,8 +29,12 @@ export class ListReviewsBox extends PureComponent {
 		indexOfReview: 0,
 	};
 
+	componentDidMount() {
+		// console.log("ListReviewsBox mounted", this.props);
+	}
+
 	onNextClick = () => {
-		console.log("handle onNextClick");
+		// console.log("handle onNextClick");
 		const { reviews, indexOfReview } = this.state;
 		const lengthOfReviewList = reviews.length;
 
@@ -40,7 +44,7 @@ export class ListReviewsBox extends PureComponent {
 	};
 
 	onPrevClick = () => {
-		console.log("handle onPrevClick");
+		// console.log("handle onPrevClick");
 		const { indexOfReview } = this.state;
 
 		if (indexOfReview) {
@@ -53,8 +57,8 @@ export class ListReviewsBox extends PureComponent {
 		// console.log(this.props);
 
 		const { reviews, indexOfReview } = this.state;
-		const activeReview = reviews[indexOfReview];
-		const { text, user, login } = activeReview;
+		const activeReview = reviews[indexOfReview] || {};
+		const { text = "", user = "", login = "" } = activeReview;
 		const { openReviewsModal } = this.props;
 
 		return (

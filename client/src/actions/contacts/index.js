@@ -1,16 +1,16 @@
 //
 import { loadingAppDoneAction, loadingAppAction } from "../loading";
 import { GET_CONTACTS } from "../../constants";
-import { myFetch } from "../../utils/requests";
 
-export const getContacts = data => ({
+export const getContactsAction = data => ({
 	type: GET_CONTACTS,
 	payload: { ...data },
 });
 
-export const fetchContacts = () => dispatch => {
+export const fetchContactsAction = () => dispatch => {
 	dispatch(loadingAppAction());
-	myFetch("GET", "localhost:3000/contacts")
-		.then(data => dispatch(getContacts(data)))
+	fetch("/data/contacts")
+		.then(data => data.json())
+		.then(data => dispatch(getContactsAction(data)))
 		.then(dispatch(loadingAppDoneAction()));
 };

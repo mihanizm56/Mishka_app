@@ -1,27 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { BLOCK, STREET, CITY } from "../../constants";
+import { fetchContactsAction } from "../../actions";
 import { adressParser } from "../../utils";
 import { emailSelector, citySelector, streetSelector, blockSelector, roomSelector } from "../../store/selectors";
 
 class WrappedContainer extends Component {
-	state = {
-		data: null,
-	};
-
 	componentDidMount() {
-		var myInit = { mode: "cors" };
-
-		console.log("mounted, send fetch");
-		fetch("http://localhost:10000/data/contacts", myInit)
-			.then(data => data.json())
-			.then(data => console.log(data));
+		this.props.fetchContacts();
 	}
-
-	setData = data => {
-		console.log(data);
-		this.setState({ data });
-	};
 
 	render() {
 		// console.log("test ShopContactsProvider props");
@@ -50,4 +37,15 @@ const mapStateToProps = store => {
 	};
 };
 
-export const ShopContactsProvider = connect(mapStateToProps)(WrappedContainer);
+const mapDispatchToProps = dispatch => {
+	return {
+		fetchContacts() {
+			dispatch(fetchContactsAction());
+		},
+	};
+};
+
+export const ShopContactsProvider = connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(WrappedContainer);

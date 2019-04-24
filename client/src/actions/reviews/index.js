@@ -55,15 +55,16 @@ export const resetSendingStateSuccess = () => {
 	};
 };
 
-export const getReviews = data => ({
+export const getReviewsAction = data => ({
 	type: GET_REVIEWS,
-	payload: { ...data },
+	payload: data,
 });
 
-export const fetchReviews = () => dispatch => {
+export const fetchReviewsAction = () => dispatch => {
 	dispatch(loadingAppAction());
-	myFetch("GET", "localhost:3000/contacts")
-		.then(data => dispatch(getReviews(data)))
+	fetch("/data/reviews")
+		.then(data => data.json())
+		.then(data => dispatch(getReviewsAction(data.reviews)))
 		.then(dispatch(loadingAppDoneAction()));
 };
 
