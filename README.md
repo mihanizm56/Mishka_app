@@ -1,15 +1,22 @@
 
 Основные команды:  
 
-"npm run start" - классический старт проекта  
+    "npm run dev" - старт всего проекта, запускаются серверная и клиентская части  
 
-"npm run build" - сборка проекта (нет настройки)  
+Основные команды внутри client :
 
-"npm run test" - запуск тестов (jest & enzyme are used)  
+    "npm run start" - старт клиентской части приложения
 
-"npm run test-cover" - запуск покрытия тестов (jest & enzyme are used)  
+    "npm run build" - сборка проекта (нет настройки)  
 
-"npm run eslint" - запуск проверки линтера (eslint & airbnb are used)  
+    "npm run test" - запуск тестов (jest & enzyme are used)  
 
-"npm run flow" - запуск проверки типизации кода (flow is used)  
+    "npm run test-cover" - запуск покрытия тестов (jest & enzyme are used)  
 
+    "npm run eslint" - запуск проверки линтера (eslint & airbnb are used)  
+
+    "npm run flow" - запуск проверки типизации кода (flow is used)
+
+Основные команды внутри server :  
+
+    "npm run start" - старт серверной части приложения
