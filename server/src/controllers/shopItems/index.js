@@ -1,31 +1,34 @@
-const initialData = [
-	{
-		image: "hare",
-		name: "Зайчик-попрыгайчик",
-		sizes: ["Рост", "вес"],
-		sizeValues: ["30 см", "200 г"],
-		price: 1200,
-		id: 1,
-	},
-	{
-		image: "basket",
-		name: "Корзинка для белья",
-		sizes: ["Диаметр", "высота"],
-		sizeValues: ["30 см", "10 см"],
-		price: 690,
-		id: 2,
-	},
-	{
-		image: "big-basket",
-		name: "Большая корзинка для игрушек",
-		sizes: ["Диаметр", "высота"],
-		sizeValues: ["30 см", "30 см"],
-		price: 1500,
-		id: 3,
-	},
-];
+const initialData = {
+	items: [
+		{
+			image: "hare",
+			name: "Зайчик-попрыгайчик",
+			sizes: ["Рост", "вес"],
+			sizeValues: ["30 см", "200 г"],
+			price: 1200,
+			id: 1,
+		},
+		{
+			image: "basket",
+			name: "Корзинка для белья",
+			sizes: ["Диаметр", "высота"],
+			sizeValues: ["30 см", "10 см"],
+			price: 690,
+			id: 2,
+		},
+		{
+			image: "big-basket",
+			name: "Большая корзинка для игрушек",
+			sizes: ["Диаметр", "высота"],
+			sizeValues: ["30 см", "30 см"],
+			price: 1500,
+			id: 3,
+		},
+	],
+};
 
 module.exports.shopItemsController = (req, res) => {
-    console.log('shopItemsController send data')
-    res.send(initialData)
-}
+	console.log("shopItemsController send data");
+	res.status(200);
+	res.json(initialData);
+};

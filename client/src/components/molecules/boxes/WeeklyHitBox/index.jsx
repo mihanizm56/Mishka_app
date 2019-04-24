@@ -1,7 +1,7 @@
 //
 import React, { memo } from "react";
 import MediaQuery from "react-responsive";
-import { ImageForPage, SVGIcon, OpenSansText, VerdanaText } from "../../../../components";
+import { ImageForPage, SVGIcon, OpenSansText, VerdanaText, LinkComponent } from "../../../../components";
 import { HitItemBox } from "..";
 import { configForWeeklyHitBoxImage, configForZigzagImage } from "./constants";
 import {
@@ -18,8 +18,8 @@ import "./WeeklyHitBox.css";
 
 export const WeeklyHitBox = memo(props => {
 	const { itemName, image, price, description, ...restProps } = props;
-	// console.log("check WeeklyHitBox props");
-	// console.log(props);
+	console.log("check WeeklyHitBox props");
+	console.log(props);
 
 	return (
 		<div className="hit-box-wrapper">
@@ -34,7 +34,11 @@ export const WeeklyHitBox = memo(props => {
 							<OpenSansText classname="text-video" text={description} />
 							<HitItemBox {...restProps} />
 							<VerdanaText text={`Цена: ${price}`} classname="footer__text-logo" bold />
-							<Button classname="button-weekly" text="заказать" />
+							{/* <Button classname="button-weekly" text="заказать" /> */}
+							{/* <Button classname="button-weekly" text="заказать" /> */}
+							<div className="hit-box__button">
+								<LinkComponent WrappedComponent={Button} classname="button-weekly" text="заказать" route="orderpage" />
+							</div>
 						</div>
 					</div>
 					<ImageForPage image={image} configForImage={configForWeeklyHitBoxImage} />
@@ -52,7 +56,7 @@ export const WeeklyHitBox = memo(props => {
 					<div className="hit-box-text-container">
 						<div className="hit-box-text-wrapper">
 							<OpenSansText classname="text-video" text={description} />
-							<HitItemBox />
+							<HitItemBox {...restProps} />
 							<VerdanaText text={`Цена: ${price}`} classname="footer__text-logo" bold />
 							<Button classname="button-weekly" text="заказать" />
 						</div>
@@ -70,7 +74,7 @@ export const WeeklyHitBox = memo(props => {
 				</div>
 				<div className="hit-box-text-wrapper">
 					<OpenSansText classname="text-video" text={description} />
-					<HitItemBox />
+					<HitItemBox {...restProps} />
 				</div>
 				<div className="small-hit-image-wrapper">
 					<ImageForPage image={image} configForImage={configForWeeklyHitBoxImage} />

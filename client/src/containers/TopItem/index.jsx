@@ -7,13 +7,19 @@ import {
 	topItemImageSelector,
 	topItemCharacteristicsSelector,
 } from "../../store/selectors";
+import { fetchTopItemAction } from "../../actions";
 
 class WrappedContainer extends Component {
-	render() {
-		// console.log("test TopItemProvider props");
-		// console.log(this.props);
+	componentDidMount() {
+		this.props.fetchTopItem();
+	}
 
-		const { component: WrappedComponent, ...restProps } = this.props;
+	componentDidUpdate() {
+		console.log("TopItemProvider updated", this.props);
+	}
+
+	render() {
+		const { component: WrappedComponent, fetchTopItem, ...restProps } = this.props;
 
 		return <WrappedComponent {...restProps} />;
 	}
@@ -29,4 +35,15 @@ const mapStateToProps = store => {
 	};
 };
 
-export const TopItemProvider = connect(mapStateToProps)(WrappedContainer);
+const mapDispatchToProps = dispatch => {
+	return {
+		fetchTopItem() {
+			dispatch(fetchTopItemAction());
+		},
+	};
+};
+
+export const TopItemProvider = connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(WrappedContainer);

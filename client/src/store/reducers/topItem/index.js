@@ -1,22 +1,22 @@
 import { GET_TOP_ITEM } from "../../../constants";
 
 const initialState = {
-	name: "Вязаные корзинки",
-	description: "Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.",
-	price: "990 руб.",
-	image: "index-basket",
+	name: "",
+	description: "",
+	price: "",
+	image: "",
 	characteristics: [
 		{
-			name: "Цвет",
-			value: "«Тиффани»/серый",
+			name: "",
+			value: "",
 		},
 		{
-			name: "Диаметр",
-			value: "25 см",
+			name: "",
+			value: "",
 		},
 		{
-			name: "Высота",
-			value: "15 см",
+			name: "",
+			value: "",
 		},
 	],
 };

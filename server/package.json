@@ -1,5 +1,5 @@
 {
-  "name": "custom_template",
+  "name": "mishka_app_server",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,7 +7,7 @@
     "express": "^4.16.4"
   },
   "scripts": {
-    "server": "nodemon ./src"
+    "start": "nodemon ./src"
   },
   "devDependencies": {
     "eslint": "^5.6.0",

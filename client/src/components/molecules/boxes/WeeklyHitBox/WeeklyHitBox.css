@@ -21,6 +21,10 @@
     margin-bottom: 35px;
 }
 
+.hit-box__button{
+    width: 100%;
+}
+
 @media (max-width: 767px) {    
     .hit-box-wrapper{
         position: relative;

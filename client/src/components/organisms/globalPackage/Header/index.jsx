@@ -44,8 +44,8 @@ export class Header extends Component<HeaderPropType> {
 	};
 
 	componentDidUpdate() {
-		// console.log("update BigHeader");
-		// console.count("Header");
+		console.log("update BigHeader");
+		console.count("Header");
 		const { current: initialPoint } = this.initialVIewPoint;
 		if (initialPoint) {
 			this.scrollView(initialPoint, "start", "smooth");

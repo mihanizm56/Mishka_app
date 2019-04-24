@@ -10,7 +10,9 @@ export const getContactsAction = data => ({
 export const fetchContactsAction = () => dispatch => {
 	dispatch(loadingAppAction());
 	fetch("/data/contacts")
-		.then(data => data.json())
-		.then(data => dispatch(getContactsAction(data)))
-		.then(dispatch(loadingAppDoneAction()));
+		.then(data => (data.status !== 200 ? null : data))
+		.then(data => (data ? data.json() : null))
+		.then(data => (data ? dispatch(getContactsAction(data)) : dispatch(getContactsAction({}))))
+		.then(dispatch(loadingAppDoneAction()))
+		.catch(error => console.warn(error));
 };

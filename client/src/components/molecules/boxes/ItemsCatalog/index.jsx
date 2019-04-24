@@ -30,7 +30,7 @@ const isMatching = (full, chunk) => {
 };
 
 const getShopItems = (initialItems, filter) => {
-	const result = testFunc && filter ? testFunc(initialItems, filter) : initialItems;
+	const result = filter && initialItems.length ? testFunc(initialItems, filter) : initialItems;
 	console.log("result", result);
 	return result;
 };
@@ -58,14 +58,5 @@ export const ItemsCatalog = (props: ItemsCatalogType) => {
 };
 
 ItemsCatalog.defaultProps = {
-	shopItems: [
-		{
-			image: "big-basket",
-			name: "Большая корзинка для игрушек",
-			sizes: ["Диаметр", "высота"],
-			sizeValues: ["30 см", "30 см"],
-			price: 1500,
-			id: 3,
-		},
-	],
+	shopItems: [],
 };

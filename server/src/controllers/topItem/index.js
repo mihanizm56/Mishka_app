@@ -20,6 +20,7 @@ const initialData = {
 };
 
 module.exports.topItemController = (req, res) => {
-    console.log('topItemController send data')
-    res.json(initialData)
-}
+	console.log("topItemController send data");
+	res.status(200);
+	res.json(initialData);
+};

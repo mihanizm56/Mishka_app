@@ -63,8 +63,9 @@ export const getReviewsAction = data => ({
 export const fetchReviewsAction = () => dispatch => {
 	dispatch(loadingAppAction());
 	fetch("/data/reviews")
-		.then(data => data.json())
-		.then(data => dispatch(getReviewsAction(data.reviews)))
+		.then(data => (data.status !== 200 ? null : data))
+		.then(data => (data ? data.json() : null))
+		.then(data => (data ? dispatch(getReviewsAction(data.reviews)) : dispatch(getReviewsAction([]))))
 		.then(dispatch(loadingAppDoneAction()));
 };
 
