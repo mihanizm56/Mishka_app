@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "connected-react-router": "^6.3.2",
-    "cors": "^2.8.5",
     "eslint-plugin-notice": "^0.7.7",
     "express": "^4.16.4",
     "firebase": "^5.7.2",
@@ -59,7 +58,6 @@
     "eslint-plugin-react": "^7.11.1",
     "flow": "^0.2.3",
     "flow-bin": "^0.89.0",
-    "husky": "^1.2.1",
     "lint-staged": "^8.1.0",
     "prettier": "^1.15.3"
   },
@@ -74,10 +72,5 @@
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm run test "
-    }
   }
 }
