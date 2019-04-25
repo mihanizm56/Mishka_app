@@ -6,6 +6,8 @@
   "scripts": {
     "client": "cd client && npm run start",
     "server": "cd server && npm run start",
+    "lint:client": "cd client && npm run lint",
+    "lint:server": "cd server && npm run lint",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "devDependencies": {
@@ -14,7 +16,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "cd client && npm run lint && cd .. && cd server && npm run lint"
+      "pre-commit": "npm run lint:client && npm run lint:server "
     }
   }
 }
