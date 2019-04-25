@@ -4,11 +4,23 @@
   "private": true,
   "dependencies": {},
   "scripts": {
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "client": "cd client && npm run start",
     "server": "cd server && npm run start",
     "lint:client": "cd client && npm run lint",
     "lint:server": "cd server && npm run lint",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+    "test:client": "cd client && npm run test",
+    "test:server": "cd server && npm run test",
+    "deploy:client": "cd client && npm run deploy",
+    "deploy:server": "cd server && npm run deploy",
+    "delete_modules:main": "rm -rf node_modules && rm -rf package-lock.json",
+    "delete_modules:client": "cd client && rm -rf node_modules && rm -rf package-lock.json",
+    "delete_modules:server": "cd server && rm -rf node_modules && rm -rf package-lock.json",
+    "delete_modules:all": "npm run delete_modules:main && npm run delete_modules:server && npm run delete_modules:client",
+    "install:main": "npm i",
+    "install:client": "cd client && npm i",
+    "install:server": "cd server && npm i",
+    "install:all": "npm run install:client && npm run install:server && npm run install:main"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
@@ -16,7 +28,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint:client && npm run lint:server "
+      "pre-commit": ""
     }
   }
 }
