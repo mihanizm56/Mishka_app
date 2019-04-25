@@ -2,18 +2,26 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { shopItemsSelector, searchStateSelector } from "../../store/selectors";
 import { fetchShopItemsAction } from "../../actions";
-
+import { getFilteredShopItems } from '../../utils'
 class WrappedContainer extends Component {
+	state = {
+		actualShopItems: this.props.shopItems
+	}
+
 	componentDidMount() {
 		this.props.fetchShopItems();
 	}
 
+	getFilteredItems = (string) => getFilteredShopItems(this.props.shopItems, string)
+
 	render() {
-		// console.log("test ShopItemsProvider props", this.props);
 
-		const { component: WrappedComponent, fetchShopItemsAction, ...restProps } = this.props;
+		const { actualShopItems } = this.state
+		console.log("test ShopItemsProvider props", this.props);
 
-		return <WrappedComponent {...restProps} />;
+		const { component: WrappedComponent, fetchShopItemsAction, shopItems, searchState, ...restProps } = this.props;
+
+		return <WrappedComponent {...restProps} shopItems={this.getFilteredItems(searchState)} />;
 	}
 }
 
@@ -33,3 +41,6 @@ export const ShopItemsProvider = connect(
 	mapStateToProps,
 	mapDispatchToProps
 )(WrappedContainer);
+
+
+

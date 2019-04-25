@@ -2,7 +2,7 @@
 import React from "react";
 import { isEqual } from "lodash";
 import { ItemCard } from "../../cards";
-import { getClass } from "../../../../utils";
+import { getClass, isDividedByThree } from "../../../../utils";
 import "./ItemsCatalog.css";
 
 type itemType = {
@@ -18,42 +18,27 @@ type ItemsCatalogType = {
 	shopItems: Array<itemType>,
 };
 
-const testFunc = (array, searchValue) => {
-	return array
-		.map(item => JSON.stringify(item))
-		.filter(item => isMatching(item, searchValue))
-		.map(item => JSON.parse(item));
-};
-
-const isMatching = (full, chunk) => {
-	return full.toUpperCase().indexOf(chunk.toUpperCase()) > -1;
-};
-
-const getShopItems = (initialItems, filter) => {
-	const result = filter && initialItems.length ? testFunc(initialItems, filter) : initialItems;
-	console.log("result", result);
-	return result;
-};
-
 export const ItemsCatalog = (props: ItemsCatalogType) => {
-	console.log("ItemsCatalog props", props);
-	const { shopItems, searchState } = props;
-	const filteredItems = getShopItems(shopItems, searchState);
+	// console.log("ItemsCatalog props", props);
+	const { shopItems } = props;
+	const length = shopItems.length
 	return (
-		<div className={getClass({ initialClass: "catalog__shop-items", center: !isEqual(shopItems, filteredItems) })}>
-			{filteredItems.map(item => {
-				return (
-					<ItemCard
-						key={item.id}
-						image={item.image}
-						name={item.name}
-						sizes={item.sizes}
-						sizeValues={item.sizeValues}
-						price={item.price}
-					/>
-				);
-			})}
-		</div>
+		<div className={getClass({ initialClass: "catalog__shop-items", center: isDividedByThree(length) })}>
+			{
+				shopItems.map(item => {
+					return (
+						<ItemCard
+							key={item.id}
+							image={item.image}
+							name={item.name}
+							sizes={item.sizes}
+							sizeValues={item.sizeValues}
+							price={item.price}
+						/>
+					);
+				})
+			}
+		</div >
 	);
 };
 
