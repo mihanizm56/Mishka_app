@@ -16,7 +16,8 @@
     "eslint-plugin-prettier": "^3.0.0",
     "husky": "^1.2.1",
     "lint-staged": "^8.1.0",
-    "prettier": "^1.15.3"
+    "prettier": "^1.15.3",
+    "lint": "node_modules/.bin/eslint src/"
   },
   "lint-staged": {
     "*.{js}": [
@@ -25,9 +26,8 @@
       "git add"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": ""
-    }
-  }
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
