@@ -25,7 +25,7 @@
     "reinstall:main": "npm run delete_modules:main && npm run install:main",
     "reinstall:client": "npm run delete_modules:client && npm run install:client",
     "reinstall:server": "npm run delete_modules:server && npm run install:server",
-    "reinstall:all": "npm run reinstall:client && npm run reinstall:server && npm run reinstall:main"
+    "reinstall:all": "npm run reinstall:client && npm run reinstall:server && npm run reinstall:main && npm run stop"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
