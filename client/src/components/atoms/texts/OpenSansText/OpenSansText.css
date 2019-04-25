@@ -3,18 +3,18 @@
 
 .open-sans-text{
     font-size: 10px;
-    font-family: "OpenSans";
+    font-family: "OpenSans", Geneva, sans-serif;
     color: red;
     margin: 0;
     padding: 0;
 }
 
 .open-sans-text--bold{
-    font-family: "OpenSans-Bold";
+    font-family: "OpenSans-Bold", Geneva, sans-serif;
 }
 
 .open-sans-text--ligth{
-    font-family: "OpenSans-Light";
+    font-family: "OpenSans-Light", Geneva, sans-serif;
 }
 
 /* FormAdditionalParagraph */
