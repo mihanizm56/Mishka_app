@@ -1,12 +1,4 @@
-const initialData = {
-	email: "info@mimimishkashop.ru",
-	address: {
-		city: "Санкт-Петербург",
-		street: "Большая Конюшенная",
-		block: "19/8",
-		room: "101",
-	},
-};
+const initialData = require('../../models/contacts')
 
 module.exports.contactsController = (req, res) => {
 	console.log("contactsController send data");
