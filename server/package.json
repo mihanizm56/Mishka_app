@@ -7,7 +7,8 @@
     "express": "^4.16.4"
   },
   "scripts": {
-    "start": "nodemon ./src"
+    "start": "nodemon ./src",
+    "lint": "node_modules/.bin/eslint src/"
   },
   "devDependencies": {
     "eslint": "^5.6.0",
@@ -16,8 +17,7 @@
     "eslint-plugin-prettier": "^3.0.0",
     "husky": "^1.2.1",
     "lint-staged": "^8.1.0",
-    "prettier": "^1.15.3",
-    "lint": "node_modules/.bin/eslint src/"
+    "prettier": "^1.15.3"
   },
   "lint-staged": {
     "*.{js}": [
@@ -26,7 +26,7 @@
       "git add"
     ]
   },
-  "main": "index.js",
+  "main": "src/index.js",
   "author": "",
   "license": "ISC",
   "description": ""

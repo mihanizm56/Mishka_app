@@ -4,6 +4,10 @@
 /node_modules
 /client/node_modules
 /server/node_modules
+package-lock.json
+/coverage
+/client/dist/
+/server/dist/
 
 # testing
 /coverage
