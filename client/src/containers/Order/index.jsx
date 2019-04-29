@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { reduxForm } from "redux-form";
-
 class WrappedContainer extends Component {
 	render() {
 		// console.log("test OrderFormProvider props");

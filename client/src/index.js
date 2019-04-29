@@ -1,12 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { store } from "./store";
+import { store, history } from "./redux/modules/STORE/index";
 import { ConnectedRouter } from "connected-react-router";
 import "./index.css";
 import "./fonts/index.css";
 import { App } from "./containers/App";
-import { history } from "./store";
 
 const ROOT_ELEMENT = document.getElementById("root");
 

@@ -1,4 +1,4 @@
-export const ADD_REVIEW = "ADD_REVIEW";
+export const ADD_THE_REVIEW = "ADD_THE_REVIEW";
 export const GET_REVIEWS = "GET_REVIEWS";
 export const OPEN_MODAL_REVIEW = "OPEN_MODAL_REVIEW";
 export const CLOSE_MODAL_REVIEW = "CLOSE_MODAL_REVIEW";

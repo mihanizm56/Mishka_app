@@ -1,3 +1,18 @@
+import {
+	addReviewAction,
+	openModalReviewAction,
+	closeModalReviewAction,
+	setSendingStateLoading,
+	setSendingStateDone,
+	setSendingStateSuccess,
+	resetSendingStateSuccess,
+	getReviewsAction,
+} from "./actions";
+
+import { sleep } from "../../../utils/requests";
+
+import { loadingAppAction, loadingAppDoneAction } from "../appLoading";
+
 export const fetchReviewsAction = () => dispatch => {
 	dispatch(loadingAppAction());
 	fetch("/data/reviews")

@@ -1,9 +1,9 @@
 import { createSelector } from "reselect";
 
-const getReviewList = state => state.reviews.reviewList;
-const getReviewModalState = state => state.reviews.modalReviewsOpen;
-const getSendingLoading = state => state.reviews.sendingLoading;
-const getSendingSuccess = state => state.reviews.sendingIsSuccess;
+const getReviewList = state => state.reviewsReducer.reviewList;
+const getReviewModalState = state => state.reviewsReducer.modalReviewsOpen;
+const getSendingLoading = state => state.reviewsReducer.sendingLoading;
+const getSendingSuccess = state => state.reviewsReducer.sendingIsSuccess;
 
 export const reviewSelector = createSelector(
 	[getReviewList],

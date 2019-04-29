@@ -1,10 +1,10 @@
 import { createSelector } from "reselect";
 
-const getEmail = state => state.contacts.email;
-const getCity = state => state.contacts.address.city;
-const getStreet = state => state.contacts.address.street;
-const getBlock = state => state.contacts.address.block;
-const getRoom = state => state.contacts.address.room;
+const getEmail = state => state.contactsReducer.email;
+const getCity = state => state.contactsReducer.address.city;
+const getStreet = state => state.contactsReducer.address.street;
+const getBlock = state => state.contactsReducer.address.block;
+const getRoom = state => state.contactsReducer.address.room;
 
 export const emailSelector = createSelector(
 	[getEmail],

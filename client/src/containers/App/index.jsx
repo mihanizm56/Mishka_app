@@ -9,7 +9,7 @@ import {
 	modalStateSelector,
 	sendingRequestStateSelector,
 	searchStateSelector,
-} from "../../store/selectors";
+} from "../../redux/modules";
 import "./App.css";
 import "../../styles/keyframes/keyframes.css";
 

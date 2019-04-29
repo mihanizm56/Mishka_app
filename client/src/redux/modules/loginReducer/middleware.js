@@ -1,13 +1,7 @@
 import firebase from "firebase";
 import { LOGIN_SUCCESS, SIGN_OUT, AUTH_MODAL_OPEN, AUTH_MODAL_CLOSE, SAVE_NAME, CLEAR_NAME } from "./constants";
-import {
-	loginCorrectAction,
-	signOutLocalAction,
-	openAuthModalAction,
-	closeAuthModalAction,
-	setUserName,
-	clearUserName,
-} from "./actions";
+import { loginCorrectAction, signOutLocalAction, setUserName, clearUserName } from "./actions";
+import { openAuthModalAction, closeAuthModalAction } from "../modalAuth";
 import { loadingAppAction, loadingAppDoneAction } from "../appLoading";
 
 export const loginRequestAction = (email, password, name) => {

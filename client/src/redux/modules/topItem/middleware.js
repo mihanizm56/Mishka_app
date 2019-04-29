@@ -1,4 +1,5 @@
 import { loadingAppDoneAction, loadingAppAction } from "../appLoading";
+import { getTopItemAction } from "./actions";
 // import { myFetch } from "../../utils/requests";
 
 export const fetchTopItemAction = () => dispatch => {

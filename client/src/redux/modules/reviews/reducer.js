@@ -16,7 +16,7 @@ const initialState = {
 	sendingIsSuccess: null,
 };
 
-export const reviews = (state = initialState, action) => {
+export const reviewsReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case ADD_THE_REVIEW:
 			return { ...state, reviewList: action.payload };

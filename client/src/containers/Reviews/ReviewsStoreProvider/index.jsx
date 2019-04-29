@@ -5,13 +5,13 @@ import {
 	openModalReviewAction,
 	closeModalReviewAction,
 	fetchReviewsAction,
-} from "../../../actions";
+} from "../../../redux/modules";
 import {
 	reviewSelector,
 	modalStateSelector,
 	sendingRequestStateSelector,
 	sendingSuccessSelector,
-} from "../../../store/selectors";
+} from "../../../redux/modules";
 
 class WrappedContainer extends Component {
 	static defaultProps = {

@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { loginRequestAction, closeAuthModalAction, signOutFirebaseAction, openAuthModalAction } from "../../../actions";
-import { loadingSelector, loginStateSelector, userNameSelector } from "../../../store/selectors";
+import {
+	loginRequestAction,
+	closeAuthModalAction,
+	signOutFirebaseAction,
+	openAuthModalAction,
+} from "../../../redux/modules";
+import { loadingSelector, loginStateSelector, userNameSelector } from "../../../redux/modules";
 
 class WrappedContainer extends Component {
 	static defaultProps = {

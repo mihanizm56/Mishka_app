@@ -4,7 +4,7 @@ const initialState = {
 	items: [{}],
 };
 
-export const userItems = (state = initialState, action) => {
+export const userItemsReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case ADD_USER_ITEM:
 			return { ...state, items: action.payload };

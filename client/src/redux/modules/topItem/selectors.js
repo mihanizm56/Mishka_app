@@ -1,10 +1,10 @@
 import { createSelector } from "reselect";
 
-const getTopItemName = state => state.topItem.name;
-const getTopItemDescription = state => state.topItem.description;
-const getTopItemPrice = state => state.topItem.price;
-const getTopItemImage = state => state.topItem.image;
-const getTopItemCharacteristics = state => state.topItem.characteristics;
+const getTopItemName = state => state.topItemReducer.name;
+const getTopItemDescription = state => state.topItemReducer.description;
+const getTopItemPrice = state => state.topItemReducer.price;
+const getTopItemImage = state => state.topItemReducer.image;
+const getTopItemCharacteristics = state => state.topItemReducer.characteristics;
 
 export const topItemNameSelector = createSelector(
 	[getTopItemName],
