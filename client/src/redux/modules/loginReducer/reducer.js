@@ -5,7 +5,7 @@ const initState = {
 	name: "",
 };
 
-export const loginReducer = (state = initState, action) => {
+const loginReducer = (state = initState, action) => {
 	switch (action.type) {
 		case LOGIN_SUCCESS:
 			return { ...state, login: true };
@@ -20,3 +20,5 @@ export const loginReducer = (state = initState, action) => {
 			return state;
 	}
 };
+
+export default loginReducer;

@@ -4,7 +4,7 @@ const initState = {
 	authModelOpened: false,
 };
 
-export const modalAuthStateReducer = (state = initState, action) => {
+const modalAuthStateReducer = (state = initState, action) => {
 	switch (action.type) {
 		case AUTH_MODAL_OPEN:
 			return { ...state, authModelOpened: true };
@@ -15,3 +15,5 @@ export const modalAuthStateReducer = (state = initState, action) => {
 			return state;
 	}
 };
+
+export default modalAuthStateReducer;

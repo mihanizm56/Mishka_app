@@ -16,7 +16,7 @@ const initialState = {
 	sendingIsSuccess: null,
 };
 
-export const reviewsReducer = (state = initialState, action) => {
+const reviewsReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case ADD_THE_REVIEW:
 			return { ...state, reviewList: action.payload };
@@ -39,3 +39,5 @@ export const reviewsReducer = (state = initialState, action) => {
 			return state;
 	}
 };
+
+export default reviewsReducer;

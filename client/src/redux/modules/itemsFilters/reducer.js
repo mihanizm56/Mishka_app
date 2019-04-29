@@ -12,7 +12,7 @@ const initialState = {
 	searchFilter: "",
 };
 
-export const itemsFiltersReducer = (state = initialState, action) => {
+const itemsFiltersReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case CHANGE_RANGE_MIN_VALUE:
 			return { ...state, rangeMin: action.payload };
@@ -27,3 +27,5 @@ export const itemsFiltersReducer = (state = initialState, action) => {
 			return state;
 	}
 };
+
+export default itemsFiltersReducer;

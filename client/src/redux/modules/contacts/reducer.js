@@ -10,7 +10,7 @@ const initialState = {
 	},
 };
 
-export const contactsReducer = (state = initialState, action) => {
+const contactsReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case GET_CONTACTS:
 			return { ...state, ...action.payload };
@@ -19,3 +19,5 @@ export const contactsReducer = (state = initialState, action) => {
 			return state;
 	}
 };
+
+export default contactsReducer;

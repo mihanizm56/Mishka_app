@@ -21,7 +21,7 @@ const initialState = {
 	],
 };
 
-export const topItemReducer = (state = initialState, action) => {
+const topItemReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case GET_TOP_ITEM:
 			return { ...state, ...action.payload };
@@ -30,3 +30,5 @@ export const topItemReducer = (state = initialState, action) => {
 			return state;
 	}
 };
+
+export default topItemReducer;

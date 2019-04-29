@@ -2,7 +2,7 @@ import { GET_SHOP_ITEMS } from "./constants";
 
 const initialState = [];
 
-export const shopItemsReducer = (state = initialState, action) => {
+const shopItemsReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case GET_SHOP_ITEMS:
 			return { ...state, items: [...action.payload] };
@@ -11,3 +11,5 @@ export const shopItemsReducer = (state = initialState, action) => {
 			return state;
 	}
 };
+
+export default shopItemsReducer;

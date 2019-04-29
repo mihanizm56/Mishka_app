@@ -4,7 +4,7 @@ const initialState = {
 	items: [{}],
 };
 
-export const userItemsReducer = (state = initialState, action) => {
+const userItemsReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case ADD_USER_ITEM:
 			return { ...state, items: action.payload };
@@ -15,3 +15,5 @@ export const userItemsReducer = (state = initialState, action) => {
 			return state;
 	}
 };
+
+export default userItemsReducer;
