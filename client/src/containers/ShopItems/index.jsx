@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { shopItemsSelector, searchStateSelector } from "../../redux/modules";
-import { fetchShopItemsAction } from "../../redux/modules";
+import { fetchShopItemsAction, shopItemsSelector } from "../../redux/modules/shopItems";
+import { searchStateSelector } from "../../redux/modules/itemsFilters";
 import { getFilteredShopItems } from "../../utils";
+
 class WrappedContainer extends Component {
 	state = {
 		actualShopItems: this.props.shopItems,

@@ -1,4 +1,4 @@
-import { AUTH_MODAL_OPEN, AUTH_MODAL_CLOSE } from "../../../constants";
+import { AUTH_MODAL_OPEN, AUTH_MODAL_CLOSE } from "./constants";
 
 const initState = {
 	authModelOpened: false,

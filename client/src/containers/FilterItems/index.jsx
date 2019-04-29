@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { push } from "connected-react-router";
 import { isEqual } from "lodash";
-import { changeSearchFieldAction } from "../../redux/modules";
-import { searchStateSelector } from "../../redux/modules";
+import { changeSearchFieldAction, searchStateSelector } from "../../redux/modules/itemsFilters";
 
 class WrappedContainer extends Component {
 	static defaultProps = {

@@ -1,12 +1,6 @@
 //
 import React, { memo } from "react";
 import appConfig from "../../../../appConfig.json";
-import { ACReturns } from "../../../../actions";
-
-type FormMultiselectProps = {
-	changeTypeOfSort: (value: string) => ACReturns,
-	nameOfSortType: string,
-};
 
 export const FormMultiselect = memo((props: FormMultiselectProps) => {
 	const { changeTypeOfSort, nameOfSortType } = props;

@@ -1,10 +1,10 @@
-import { APP_IS_LOADING, APP_HAS_LOADED } from "../../../constants";
+import { APP_IS_LOADING, APP_HAS_LOADED } from "./constants";
 
 const initState = {
 	loading: false,
 };
 
-export const appLoadingReducer = (state = initState, action) => {
+const appLoadingReducer = (state = initState, action) => {
 	switch (action.type) {
 		case APP_IS_LOADING:
 			return { ...state, loading: true };
@@ -15,3 +15,5 @@ export const appLoadingReducer = (state = initState, action) => {
 			return state;
 	}
 };
+
+export default appLoadingReducer;

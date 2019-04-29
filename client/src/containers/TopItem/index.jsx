@@ -6,8 +6,8 @@ import {
 	topItemPriceSelector,
 	topItemImageSelector,
 	topItemCharacteristicsSelector,
-} from "../../redux/modules";
-import { fetchTopItemAction } from "../../redux/modules";
+	fetchTopItemAction,
+} from "../../redux/modules/topItem";
 
 class WrappedContainer extends Component {
 	componentDidMount() {

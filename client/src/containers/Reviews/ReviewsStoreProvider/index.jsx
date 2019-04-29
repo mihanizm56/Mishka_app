@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+
 import {
 	addReviewRequestAction,
-	openModalReviewAction,
-	closeModalReviewAction,
 	fetchReviewsAction,
-} from "../../../redux/modules";
-import {
 	reviewSelector,
-	modalStateSelector,
 	sendingRequestStateSelector,
 	sendingSuccessSelector,
-} from "../../../redux/modules";
+	openModalReviewAction,
+	closeModalReviewAction,
+	modalStateSelector,
+} from "../../../redux/modules/reviews";
 
 class WrappedContainer extends Component {
 	static defaultProps = {

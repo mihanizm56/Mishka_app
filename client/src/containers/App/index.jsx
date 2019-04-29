@@ -2,14 +2,12 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { registerApp } from "../../utils";
 import { MainWrapper } from "../../components/organisms";
-import {
-	loginStateSelector,
-	loadingSelector,
-	modalAuthStateSelector,
-	modalStateSelector,
-	sendingRequestStateSelector,
-	searchStateSelector,
-} from "../../redux/modules";
+import { loginStateSelector } from "../../redux/modules/loginReducer";
+import { modalAuthStateSelector } from "../../redux/modules/modalAuth";
+import { modalStateSelector } from "../../redux/modules/reviews";
+import { searchStateSelector } from "../../redux/modules/itemsFilters";
+import { loadingSelector } from "../../redux/modules/appLoading";
+import { sendingRequestStateSelector } from "../../redux/modules/reviews";
 import "./App.css";
 import "../../styles/keyframes/keyframes.css";
 

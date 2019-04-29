@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { BLOCK, STREET, CITY } from "../../constants";
-import { fetchContactsAction } from "../../redux/modules";
 import { adressParser } from "../../utils";
-import { emailSelector, citySelector, streetSelector, blockSelector, roomSelector } from "../../redux/modules";
+import {
+	fetchContactsAction,
+	emailSelector,
+	citySelector,
+	streetSelector,
+	blockSelector,
+	roomSelector,
+} from "../../redux/modules/contacts";
 
 class WrappedContainer extends Component {
 	componentDidMount() {
