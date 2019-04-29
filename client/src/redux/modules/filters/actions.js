@@ -3,7 +3,7 @@ import {
 	CHANGE_RANGE_MAX_VALUE,
 	CHANGE_SELECTED_FILTER,
 	CHANGE_SEARCH_FILTER,
-} from "./constants";
+} from "../../constants";
 
 export const selectFilterAction = value => {
 	return {

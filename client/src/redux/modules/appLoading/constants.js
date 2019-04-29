@@ -1,0 +1,2 @@
+export const APP_IS_LOADING = "APP_IS_LOADING";
+export const APP_HAS_LOADED = "APP_HAS_LOADED";

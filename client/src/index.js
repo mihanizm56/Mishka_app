@@ -7,7 +7,6 @@ import "./index.css";
 import "./fonts/index.css";
 import { App } from "./containers/App";
 import { history } from "./store";
-import "normalize.css";
 
 const ROOT_ELEMENT = document.getElementById("root");
 

@@ -1,0 +1,2 @@
+export const AUTH_MODAL_OPEN = "AUTH_MODAL_OPEN";
+export const AUTH_MODAL_CLOSE = "AUTH_MODAL_CLOSE";
