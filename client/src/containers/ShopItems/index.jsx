@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { fetchShopItemsAction, shopItemsSelector } from "../../redux/modules/shopItems";
 import { searchStateSelector } from "../../redux/modules/itemsFilters";
 import { getFilteredShopItems } from "../../utils";
+import { addItemToCardAction } from "../../redux/modules/userItems";
 
 class WrappedContainer extends Component {
 	state = {
@@ -15,7 +16,10 @@ class WrappedContainer extends Component {
 
 	getFilteredItems = string => getFilteredShopItems(this.props.shopItems, string);
 
-	addItemToResultBasket = id => console.log("check addItemToResultBasket", id);
+	addItemToResultBasket = id => {
+		const fullItemData = this.props.shopItems.filter(item => item.id === id)[0];
+		console.log("fullItemData", fullItemData);
+	};
 
 	render() {
 		const { actualShopItems } = this.state;
@@ -41,6 +45,9 @@ const mapDispatchToProps = dispatch => {
 	return {
 		fetchShopItems() {
 			dispatch(fetchShopItemsAction());
+		},
+		addItemToCard(itemData) {
+			dispatch(addItemToCardAction(itemData));
 		},
 	};
 };
