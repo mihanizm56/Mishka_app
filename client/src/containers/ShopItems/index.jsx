@@ -15,13 +15,21 @@ class WrappedContainer extends Component {
 
 	getFilteredItems = string => getFilteredShopItems(this.props.shopItems, string);
 
+	addItemToResultBasket = id => console.log("check addItemToResultBasket", id);
+
 	render() {
 		const { actualShopItems } = this.state;
 		console.log("test ShopItemsProvider props", this.props);
 
 		const { component: WrappedComponent, fetchShopItemsAction, shopItems, searchState, ...restProps } = this.props;
 
-		return <WrappedComponent {...restProps} shopItems={this.getFilteredItems(searchState)} />;
+		return (
+			<WrappedComponent
+				{...restProps}
+				shopItems={this.getFilteredItems(searchState)}
+				addItemToResultBasket={this.addItemToResultBasket}
+			/>
+		);
 	}
 }
 

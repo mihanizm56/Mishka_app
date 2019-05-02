@@ -1,5 +1,5 @@
 //
-import React from "react";
+import React, { Component } from "react";
 import { isEqual } from "lodash";
 import { ItemCard } from "../../cards";
 import { getClass, isDividedByThree } from "../../../../utils";
@@ -18,14 +18,20 @@ type ItemsCatalogType = {
 	shopItems: Array<itemType>,
 };
 
-export const ItemsCatalog = (props: ItemsCatalogType) => {
-	// console.log("ItemsCatalog props", props);
-	const { shopItems } = props;
-	const length = shopItems.length
-	return (
-		<div className={getClass({ initialClass: "catalog__shop-items", center: isDividedByThree(length) })}>
-			{
-				shopItems.map(item => {
+//// может и functional component, подумай
+
+export class ItemsCatalog extends Component {
+	static defaultProps = {
+		shopItems: [],
+	};
+
+	render() {
+		// console.log("ItemsCatalog props", props);
+		const { shopItems } = this.props;
+		const length = shopItems.length;
+		return (
+			<div className={getClass({ initialClass: "catalog__shop-items", center: isDividedByThree(length) })}>
+				{shopItems.map(item => {
 					return (
 						<ItemCard
 							key={item.id}
@@ -34,14 +40,12 @@ export const ItemsCatalog = (props: ItemsCatalogType) => {
 							sizes={item.sizes}
 							sizeValues={item.sizeValues}
 							price={item.price}
+							id={item.id}
+							handleClickOnIconBasket={this.props.addItemToResultBasket}
 						/>
 					);
-				})
-			}
-		</div >
-	);
-};
-
-ItemsCatalog.defaultProps = {
-	shopItems: [],
-};
+				})}
+			</div>
+		);
+	}
+}

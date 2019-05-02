@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { PureComponent } from "react";
 import { ImageForPage, VerdanaText } from "../../../../components";
 import { ItemPriceBox, ItemDescriptionBox } from "../../../molecules";
 import "./ItemCard.css";
@@ -20,8 +20,31 @@ const configForCardCatalogImage = {
 	heightBig: "464px",
 };
 
-export const ItemCard = memo(
-	({ image, name, sizes, sizeValues, price }): ItemCardType => {
+export class ItemCard extends PureComponent {
+	static defaultProps = {
+		image: "hare",
+		name: "Зайчик-попрыгайчик",
+		sizes: ["Рост", "вес"],
+		sizeValues: ["30 см", "200 г"],
+		price: 1200,
+	};
+
+	handleItem = () => {
+		const { id, handleClickOnIconBasket } = this.props;
+		handleClickOnIconBasket(id);
+
+		// {
+		// 	image: "hare",
+		// 	name: "Зайчик-попрыгайчик",
+		// 	sizes: ["Рост", "вес"],
+		// 	sizeValues: ["30 см", "200 г"],
+		// 	price: 1200,
+		// 	id: 1,
+		// },
+	};
+
+	render() {
+		const { image, name, sizes, sizeValues, price, id } = this.props;
 		return (
 			<>
 				<div className="item-card-wrapper">
@@ -31,18 +54,10 @@ export const ItemCard = memo(
 							<VerdanaText text={name} classname="paragraph-card" bold />
 							<ItemDescriptionBox sizes={sizes} values={sizeValues} />
 						</div>
-						<ItemPriceBox price={price} />
+						<ItemPriceBox price={price} handleClick={this.handleItem} />
 					</div>
 				</div>
 			</>
 		);
 	}
-);
-
-ItemCard.defaultProps = {
-	image: "hare",
-	name: "Зайчик-попрыгайчик",
-	sizes: ["Рост", "вес"],
-	sizeValues: ["30 см", "200 г"],
-	price: 1200,
-};
+}
