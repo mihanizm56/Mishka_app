@@ -1,7 +1,7 @@
 import { AUTH_MODAL_OPEN, AUTH_MODAL_CLOSE } from "./constants";
 
 const initState = {
-	authModelOpened: false,
+	authModelOpened: true,
 };
 
 const modalAuthStateReducer = (state = initState, action) => {

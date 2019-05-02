@@ -1,6 +1,14 @@
 import firebase from "firebase";
-import { LOGIN_SUCCESS, SIGN_OUT, AUTH_MODAL_OPEN, AUTH_MODAL_CLOSE, SAVE_NAME, CLEAR_NAME } from "./constants";
-import { loginCorrectAction, signOutLocalAction, setUserName, clearUserName } from "./actions";
+import {
+	LOGIN_SUCCESS,
+	SIGN_OUT,
+	AUTH_MODAL_OPEN,
+	AUTH_MODAL_CLOSE,
+	SAVE_NAME,
+	CLEAR_NAME,
+	NETWORK_CONNECTION_ERROR,
+} from "./constants";
+import { loginCorrectAction, signOutLocalAction, setUserName, clearUserName, loginNetworkErrorAction } from "./actions";
 import { openAuthModalAction, closeAuthModalAction } from "../modalAuth";
 import { loadingAppAction, loadingAppDoneAction } from "../appLoading";
 
@@ -22,9 +30,16 @@ export const loginRequestAction = (email, password, name) => {
 					}, 2000);
 				})
 				.then(() => dispatch(setUserName(name)))
-				.catch(error => {
+				.catch(error => error)
+				.then(({ code, message }) => {
 					dispatch(loadingAppDoneAction());
-					alert(error.message);
+
+					if (code === NETWORK_CONNECTION_ERROR) {
+						console.log("ERROR NETWORK");
+						dispatch(loginNetworkErrorAction());
+					} else {
+						alert(message);
+					}
 				});
 		};
 	}
@@ -38,7 +53,8 @@ export const signOutFirebaseAction = () => {
 			.then(() => dispatch(clearUserName()))
 			.then(() => dispatch(signOutLocalAction()))
 			.catch(function(error) {
-				console.error("signOutFirebase failed");
+				alert("signOutFirebase failed");
+				console.error("error", error);
 			});
 	};
 };

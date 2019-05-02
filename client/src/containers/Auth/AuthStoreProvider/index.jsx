@@ -5,6 +5,8 @@ import {
 	signOutFirebaseAction,
 	loginStateSelector,
 	userNameSelector,
+	errorAuthSelector,
+	errorAuthClearAction,
 } from "../../../redux/modules/loginReducer";
 import { openAuthModalAction, closeAuthModalAction } from "../../../redux/modules/modalAuth";
 import { loadingSelector } from "../../../redux/modules/appLoading";
@@ -15,8 +17,8 @@ class WrappedContainer extends Component {
 	};
 
 	componentDidMount() {
-		// console.log("check AuthStoreProvider props");
-		// console.log(this.props);
+		console.log("check AuthStoreProvider props");
+		console.log(this.props);
 	}
 
 	render = () => {
@@ -30,6 +32,7 @@ const mapStateToProps = store => {
 		isLoading: loadingSelector(store),
 		loginState: loginStateSelector(store),
 		userName: userNameSelector(store),
+		errorAuth: errorAuthSelector(store),
 	};
 };
 
@@ -46,6 +49,7 @@ const mapDispatchToProps = dispatch => {
 		},
 		openModal() {
 			dispatch(openAuthModalAction());
+			dispatch(errorAuthClearAction());
 		},
 	};
 };

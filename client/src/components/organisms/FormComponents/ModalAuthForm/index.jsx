@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Field } from "redux-form";
-import { FormTextInputField, Button, LoadingBox, SuccessBox } from "../../../../components";
+import { FormTextInputField, Button, LoadingBox, SuccessBox, ErrorBox } from "../../../../components";
 import "./ModalAuthForm.css";
 
 export class ModalAuthForm extends Component {
@@ -14,6 +14,11 @@ export class ModalAuthForm extends Component {
 	};
 
 	componentDidMount() {
+		console.log("ModalAuthForm props");
+		console.log(this.props);
+	}
+
+	componentDidUpdate() {
 		console.log("ModalAuthForm props");
 		console.log(this.props);
 	}
@@ -66,20 +71,20 @@ export class ModalAuthForm extends Component {
 		</>
 	);
 
-	getFormLayout = ({ isLoading, loginState }) => {
+	getFormLayout = ({ isLoading, loginState, errorAuth }) => {
 		if (isLoading) return <LoadingBox />;
 		else if (loginState) return <SuccessBox />;
+		else if (errorAuth) return <ErrorBox errorType={errorAuth} />;
 		else return this.normalLayout();
 	};
 
 	render() {
-		const { handleSubmit, closeModal, isLoading, loginState } = this.props;
-
+		const { handleSubmit, closeModal, isLoading, loginState, errorAuth } = this.props;
 		return (
 			<div className="auth-form-layout">
 				<div className="auth-form-overlay" onClick={closeModal} />
 				<form className="auth-form-wrapper" onSubmit={handleSubmit(this.signInUser)}>
-					{this.getFormLayout({ isLoading: isLoading, loginState: loginState })}
+					{this.getFormLayout({ isLoading, loginState, errorAuth })}
 				</form>
 			</div>
 		);

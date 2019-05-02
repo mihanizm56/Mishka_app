@@ -80,8 +80,9 @@ import iconPhone from "../../assets/images/icons/icon-phone.svg";
 import iconMail from "../../assets/images/icons/icon-mail.svg";
 
 ////// Loader icons
-import LoaderIcon from "../../assets/images/icons/bounce.svg";
-import LoaderSuccessIcon from "../../assets/images/icons/success.svg";
+import LoaderIcon from "../../assets/images/icons/icon-bounce.svg";
+import LoaderSuccessIcon from "../../assets/images/icons/icon-success.svg";
+import ErrorIcon from "../../assets/images/icons/icon-error.svg";
 
 export const getSmallImage = (name: string) => {
 	// console.log(`test getSmallImage, image-name=${name}`);
@@ -160,6 +161,8 @@ export const getSmallImage = (name: string) => {
 			return LoaderIcon;
 		case "icon-success-small":
 			return LoaderSuccessIcon;
+		case "icon-error-small":
+			return ErrorIcon;
 
 		default:
 			return null;
@@ -247,6 +250,8 @@ export const getMiddleImage = (name: string) => {
 			return LoaderIcon;
 		case "icon-success-middle":
 			return LoaderSuccessIcon;
+		case "icon-error-middle":
+			return ErrorIcon;
 
 		default:
 			return null;
@@ -334,6 +339,8 @@ export const getBigImage = (name: string) => {
 			return LoaderIcon;
 		case "icon-success-big":
 			return LoaderSuccessIcon;
+		case "icon-error-big":
+			return ErrorIcon;
 
 		default:
 			return null;

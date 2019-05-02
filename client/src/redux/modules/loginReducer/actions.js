@@ -1,4 +1,13 @@
-import { LOGIN_SUCCESS, SIGN_OUT, AUTH_MODAL_OPEN, AUTH_MODAL_CLOSE, SAVE_NAME, CLEAR_NAME } from "./constants";
+import {
+	LOGIN_SUCCESS,
+	SIGN_OUT,
+	AUTH_MODAL_OPEN,
+	AUTH_MODAL_CLOSE,
+	SAVE_NAME,
+	CLEAR_NAME,
+	NETWORK_ERROR,
+	CLEAR_ERRORS,
+} from "./constants";
 import { loadingAppAction, loadingAppDoneAction } from "../appLoading";
 import { openAuthModalAction, closeAuthModalAction } from "../modalAuth";
 
@@ -31,5 +40,19 @@ export const clearUserName = () => {
 	console.log("test clearUserName");
 	return {
 		type: CLEAR_NAME,
+	};
+};
+
+export const loginNetworkErrorAction = () => {
+	console.log("test loginNetworkErrorAction");
+	return {
+		type: NETWORK_ERROR,
+	};
+};
+
+export const errorAuthClearAction = () => {
+	console.log("test loginNetworkErrorAction");
+	return {
+		type: CLEAR_ERRORS,
 	};
 };

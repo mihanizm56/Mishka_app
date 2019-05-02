@@ -1,0 +1,10 @@
+.error-box-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.error-box__text-container {
+    margin-top: 50px;
+}
