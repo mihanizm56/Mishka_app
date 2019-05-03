@@ -4,7 +4,6 @@ import { connectRouter } from "connected-react-router";
 import loginReducer from "../modules/loginReducer";
 import appLoadingReducer from "../modules/appLoading";
 import shopItemsReducer from "../modules/shopItems";
-import userItemsReducer from "../modules/userItems";
 import reviewsReducer from "../modules/reviews";
 import contactsReducer from "../modules/contacts";
 import topItemReducer from "../modules/topItem";
@@ -18,7 +17,6 @@ export const rootReducer = history =>
 		loginReducer,
 		appLoadingReducer,
 		shopItemsReducer,
-		userItemsReducer,
 		reviewsReducer,
 		itemsFiltersReducer,
 		contactsReducer,

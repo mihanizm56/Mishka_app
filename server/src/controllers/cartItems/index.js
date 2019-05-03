@@ -1,13 +1,15 @@
 const initialData = require("../../models/userCart");
 
-module.exports.userItemsAddController = (req, res) => {
+const getSuccessMessage = id => ({ id, message: "success" });
+
+module.exports.cartItemsAddController = (req, res) => {
 	console.log("userItemsController get item");
 	// console.log(req.body);
 	res.status(200);
-	res.send("Success");
+	res.json(getSuccessMessage(req.body.id));
 };
 
-module.exports.userItemsGetController = (req, res) => {
+module.exports.cartItemsGetController = (req, res) => {
 	console.log("userItemsController get item");
 	// console.log(req.body);
 	res.status(200);

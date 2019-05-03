@@ -10,9 +10,7 @@ export class CatalogPage extends PureComponent {
 		console.log("test CatalogPage props", this.props);
 		return (
 			<div className="catalog-wrapper">
-				<CartItemsProvider>
-					<ShopItemsProvider component={ItemsCatalog} />
-				</CartItemsProvider>
+				<ShopItemsProvider component={ItemsCatalog} />
 				<VideoBox />
 				{/* <Reostat
 				shopItems={shopItems}

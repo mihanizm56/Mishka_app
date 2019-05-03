@@ -1,4 +1,4 @@
-import { GET_SHOP_ITEMS } from "./constants";
+import { GET_SHOP_ITEMS, ADD_ITEM_TO_CART, REMOVE_ITEM_FROM_CART } from "./constants";
 
 export const getShopItemsAction = data => {
 	console.log("getShopItemsAction data", data);
@@ -7,3 +7,7 @@ export const getShopItemsAction = data => {
 		payload: data,
 	};
 };
+
+export const addItemToCartAction = id => ({ type: ADD_ITEM_TO_CART, payload: id });
+
+export const removeItemFromCartAction = id => ({ type: REMOVE_ITEM_FROM_CART, payload: id });

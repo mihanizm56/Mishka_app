@@ -1,1 +1,4 @@
 export const GET_SHOP_ITEMS = "GET_SHOP_ITEMS";
+export const GET_CART_ITEMS = "GET_CART_ITEMS";
+export const ADD_ITEM_TO_CART = "ADD_ITEM_TO_CART";
+export const REMOVE_ITEM_FROM_CART = "REMOVE_ITEM_FROM_CART";
