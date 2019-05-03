@@ -5,7 +5,8 @@ const contactsController = require("../controllers/contacts").contactsController
 const reviewsController = require("../controllers/reviews").reviewsController;
 const shopItemsController = require("../controllers/shopItems").shopItemsController;
 const topItemController = require("../controllers/topItem").topItemController;
-const userItemsController = require("../controllers/userItems").userItemsController;
+const userItemsAddController = require("../controllers/userItems").userItemsAddController;
+const userItemsGetController = require("../controllers/userItems").userItemsGetController;
 
 ///contacts
 routes.get("/contacts", contactsController);
@@ -23,7 +24,7 @@ routes.get("/topItem", topItemController);
 // routes.post("/topItem", topItemController);
 
 ///userItems
-routes.post("/userItems", userItemsController);
-// routes.post("/topItem", topItemController);
+routes.get("/userItems", userItemsGetController);
+routes.post("/userItems", userItemsAddController);
 
 module.exports = routes;

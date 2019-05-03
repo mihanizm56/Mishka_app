@@ -23,6 +23,7 @@ type ItemsCatalogType = {
 export class ItemsCatalog extends Component {
 	static defaultProps = {
 		shopItems: [],
+		addItemToResultBasket: id => console.log("default addItemToResultBasket", id),
 	};
 
 	render() {

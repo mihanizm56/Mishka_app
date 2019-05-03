@@ -7,3 +7,4 @@ export * from "./Order";
 export * from "./Portals";
 export * from "./Auth";
 export * from "./FilterItems";
+export * from "./CartItems";

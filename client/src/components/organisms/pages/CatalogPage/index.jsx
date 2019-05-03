@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { ItemsCatalog, VideoBox } from "../../../molecules";
-import { ShopItemsProvider } from "../../../../containers";
+import { ShopItemsProvider, CartItemsProvider } from "../../../../containers";
 import "./CatalogPage.css";
 
 export class CatalogPage extends PureComponent {
@@ -10,7 +10,9 @@ export class CatalogPage extends PureComponent {
 		console.log("test CatalogPage props", this.props);
 		return (
 			<div className="catalog-wrapper">
-				<ShopItemsProvider component={ItemsCatalog} />
+				<CartItemsProvider>
+					<ShopItemsProvider component={ItemsCatalog} />
+				</CartItemsProvider>
 				<VideoBox />
 				{/* <Reostat
 				shopItems={shopItems}

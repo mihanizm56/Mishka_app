@@ -4,6 +4,7 @@ import { fetchShopItemsAction, shopItemsSelector } from "../../redux/modules/sho
 import { searchStateSelector } from "../../redux/modules/itemsFilters";
 import { getFilteredShopItems } from "../../utils";
 import { addItemToCardAction } from "../../redux/modules/userItems";
+import { loginStateSelector } from "../../redux/modules/loginReducer";
 
 class WrappedContainer extends Component {
 	state = {
@@ -16,38 +17,27 @@ class WrappedContainer extends Component {
 
 	getFilteredItems = string => getFilteredShopItems(this.props.shopItems, string);
 
-	addItemToResultBasket = id => {
-		const fullItemData = this.props.shopItems.filter(item => item.id === id)[0];
-		console.log("fullItemData", fullItemData);
-	};
-
 	render() {
 		const { actualShopItems } = this.state;
 		console.log("test ShopItemsProvider props", this.props);
 
 		const { component: WrappedComponent, fetchShopItemsAction, shopItems, searchState, ...restProps } = this.props;
 
-		return (
-			<WrappedComponent
-				{...restProps}
-				shopItems={this.getFilteredItems(searchState)}
-				addItemToResultBasket={this.addItemToResultBasket}
-			/>
-		);
+		return <WrappedComponent {...restProps} shopItems={this.getFilteredItems(searchState)} />;
 	}
 }
 
 const mapStateToProps = store => {
-	return { shopItems: shopItemsSelector(store), searchState: searchStateSelector(store) };
+	return {
+		shopItems: shopItemsSelector(store),
+		searchState: searchStateSelector(store),
+	};
 };
 
 const mapDispatchToProps = dispatch => {
 	return {
 		fetchShopItems() {
 			dispatch(fetchShopItemsAction());
-		},
-		addItemToCard(itemData) {
-			dispatch(addItemToCardAction(itemData));
 		},
 	};
 };
