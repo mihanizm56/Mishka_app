@@ -18,8 +18,8 @@ import "./WeeklyHitBox.css";
 
 export const WeeklyHitBox = memo(props => {
 	const { itemName, image, price, description, ...restProps } = props;
-	console.log("check WeeklyHitBox props");
-	console.log(props);
+	// console.log("check WeeklyHitBox props");
+	// console.log(props);
 
 	return (
 		<div className="hit-box-wrapper">

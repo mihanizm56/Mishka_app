@@ -15,7 +15,7 @@ class WrappedContainer extends Component {
 	}
 
 	componentDidUpdate() {
-		console.log("TopItemProvider updated", this.props);
+		// console.log("TopItemProvider updated", this.props);
 	}
 
 	render() {

@@ -8,6 +8,6 @@ export const getShopItemsAction = data => {
 	};
 };
 
-export const addItemToCartAction = id => ({ type: ADD_ITEM_TO_CART, payload: id });
+export const addItemToCartAction = itemData => ({ type: ADD_ITEM_TO_CART, payload: itemData });
 
 export const removeItemFromCartAction = id => ({ type: REMOVE_ITEM_FROM_CART, payload: id });
