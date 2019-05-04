@@ -8,14 +8,14 @@ import { OrderPageRoute } from "../OrderPageRoute";
 
 type MainLayoutPropTypes = {};
 
-export const MainLayout = (props: MainLayoutPropTypes) => {
+export const MainLayout = props => {
 	// console.log("пропсы в MainLayout", props);
 	return (
 		<Switch>
 			<IndexPageRoute exact path="/" />
-			<IndexPageRoute path="/index" />
-			<OrderPageRoute path="/orderpage" />
-			<CatalogPageRoute path="/catalog" />
+			<IndexPageRoute path="/index" {...props} />
+			<OrderPageRoute path="/orderpage" {...props} />
+			<CatalogPageRoute path="/catalog" {...props} />
 			<ErrorPageRoute />
 		</Switch>
 	);

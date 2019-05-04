@@ -10,6 +10,7 @@ import {
 	ReviewsReduxFormProvider,
 	ModalPortal,
 	FilterItemsProvider,
+	ShopItemsProvider,
 } from "../../../../containers";
 import "./MainWrapper.css";
 
@@ -24,10 +25,12 @@ export const MainWrapper = memo(props => {
 		<div className="main-wrapper">
 			<FilterItemsProvider pagePathName={pathname}>
 				<AuthStoreProvider>
-					<Header route={router} searchState={searchState} loginState={loginState} closeSmallMenu={closeSmallMenu} />
+					<ShopItemsProvider loginState={loginState}>
+						<Header route={router} searchState={searchState} loginState={loginState} closeSmallMenu={closeSmallMenu} />
+					</ShopItemsProvider>
 				</AuthStoreProvider>
 			</FilterItemsProvider>
-			<MainLayout {...restProps} />
+			<MainLayout {...restProps} loginState={loginState} />
 			<Footer />
 
 			{modalAuthIsOpen && (

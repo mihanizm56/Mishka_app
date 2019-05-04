@@ -58,7 +58,12 @@ export class SmallHeader extends PureComponent {
 	getSearchItem = searchInputOpened => {
 		const { changeSearch, searchState } = this.props;
 		return searchInputOpened ? (
-			<div className={getClass({ initialClass: "first-line-small-header__search-input", active: searchInputOpened })}>
+			<div
+				className={getClass({
+					initialClass: "first-line-small-header__search-input",
+					active: searchInputOpened,
+				})}
+			>
 				<SearchHeaderInput handleChange={changeSearch} value={searchState} />
 			</div>
 		) : (
@@ -66,7 +71,7 @@ export class SmallHeader extends PureComponent {
 		);
 	};
 
-	showSmallMenu = (searchInputOpened, authProps) => {
+	showSmallMenu = (searchInputOpened, authProps, numberOfItemsInCart, loginState) => {
 		return (
 			<>
 				<div className="small-header__catalog-title">
@@ -96,10 +101,10 @@ export class SmallHeader extends PureComponent {
 					</div>
 				</div>
 				<div className="small-header__basket-wrapper">
-					<UserBasketBox />
+					<UserBasketBox numberOfItems={numberOfItemsInCart} loginState={loginState} />
 				</div>
 				<div className="small-header__login-container">
-					<UserLoginBox {...authProps} />
+					<UserLoginBox {...authProps} loginState={loginState} />
 				</div>
 			</>
 		);
@@ -107,7 +112,7 @@ export class SmallHeader extends PureComponent {
 
 	render() {
 		const { isSmallMenuOpened, searchInputOpened } = this.state;
-		const { page, loginState, userName, openModal, signOutFunc, initialPoint } = this.props;
+		const { page, loginState, userName, openModal, signOutFunc, initialPoint, numberOfItemsInCart } = this.props;
 		const authProps = {
 			loginState,
 			userName,
@@ -137,7 +142,7 @@ export class SmallHeader extends PureComponent {
 					</div>
 				</div>
 				<div className={`small-menu-wrapper${isSmallMenuOpened ? "--opened" : ""}`}>
-					{isSmallMenuOpened ? this.showSmallMenu(searchInputOpened, authProps) : null}
+					{isSmallMenuOpened ? this.showSmallMenu(searchInputOpened, authProps, numberOfItemsInCart, loginState) : null}
 				</div>
 				{page !== "index-page" && (
 					<div>

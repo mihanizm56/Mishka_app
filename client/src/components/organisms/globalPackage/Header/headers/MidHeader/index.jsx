@@ -21,7 +21,17 @@ export class MidHeader extends PureComponent {
 
 	render() {
 		const { searchInputOpened } = this.state;
-		const { page, loginState, userName, openModal, signOutFunc, initialPoint, changeSearch, searchState } = this.props;
+		const {
+			page,
+			loginState,
+			userName,
+			openModal,
+			signOutFunc,
+			numberOfItemsInCart,
+			initialPoint,
+			changeSearch,
+			searchState,
+		} = this.props;
 		const authProps = {
 			loginState,
 			userName,
@@ -59,7 +69,7 @@ export class MidHeader extends PureComponent {
 							</div>
 						</div>
 						<div className="first-line-header__basket-wrapper">
-							<UserBasketBox />
+							<UserBasketBox loginState={loginState} numberOfItems={numberOfItemsInCart} />
 						</div>
 					</div>
 				</div>

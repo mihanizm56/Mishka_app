@@ -32,7 +32,17 @@ export class BigHeader extends Component {
 
 	render() {
 		const { searchInputOpened } = this.state;
-		const { page, loginState, userName, openModal, signOutFunc, initialPoint, changeSearch, searchState } = this.props;
+		const {
+			page,
+			loginState,
+			userName,
+			openModal,
+			signOutFunc,
+			initialPoint,
+			numberOfItemsInCart,
+			changeSearch,
+			searchState,
+		} = this.props;
 		const authProps = {
 			loginState,
 			userName,
@@ -81,7 +91,7 @@ export class BigHeader extends Component {
 						</div>
 					</div>
 					<div className="first-line-big-header__basket-wrapper">
-						<UserBasketBox />
+						<UserBasketBox loginState={loginState} numberOfItems={numberOfItemsInCart} />
 					</div>
 				</div>
 				<div className="big-header__second-line-header">

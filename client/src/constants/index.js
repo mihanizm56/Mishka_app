@@ -4,6 +4,7 @@ export const STREET = "STREET";
 export const CITY = "CITY";
 export const FILTER_ITEM_FIELD = "name";
 export const EMPTY_STRING = "";
+export const DEFAULT_VALUE_BASKET = "пока пуста";
 
 // numbers
 export const BIG_MEDIA_SIZE = 1201;

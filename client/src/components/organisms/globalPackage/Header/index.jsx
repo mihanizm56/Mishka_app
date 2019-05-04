@@ -77,7 +77,7 @@ export class Header extends Component<HeaderPropType> {
 			loginState,
 			...restProps
 		} = this.props;
-		// console.log("Header props", this.props);
+		console.log("Header props", this.props);
 		return (
 			<div className="header-wrapper">
 				<MediaQuery minWidth={BIG_MEDIA_SIZE}>
