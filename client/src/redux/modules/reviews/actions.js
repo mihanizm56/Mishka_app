@@ -1,4 +1,3 @@
-import { loadingAppDoneAction, loadingAppAction } from "../appLoading";
 import {
 	ADD_THE_REVIEW,
 	GET_REVIEWS,
@@ -9,7 +8,6 @@ import {
 	SET_SUCCESS_SENDING_STATE_DONE,
 	RESET_SUCCESS_SENDING_STATE_DONE,
 } from "./constants";
-import { myFetch, sleep } from "../../../utils/requests";
 
 export const addReviewAction = value => {
 	return {

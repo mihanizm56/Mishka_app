@@ -15,29 +15,31 @@ import {
 import "./MainWrapper.css";
 
 export const MainWrapper = memo(props => {
-	const { router, loginState, modalAuthIsOpen, modalReviewIsOpen, searchState, ...restProps } = props;
+	const { router, modalAuthIsOpen, modalReviewIsOpen, ...restProps } = props;
 	const {
 		location: { pathname },
 	} = router;
-	const closeSmallMenu = modalAuthIsOpen || modalReviewIsOpen;
+	const smallMenuIsClosed = modalAuthIsOpen || modalReviewIsOpen;
 	// console.log("MainWrapper props", props);
 	return (
 		<div className="main-wrapper">
 			<FilterItemsProvider pagePathName={pathname}>
 				<AuthStoreProvider>
-					<ShopItemsProvider loginState={loginState}>
-						<Header route={router} searchState={searchState} loginState={loginState} closeSmallMenu={closeSmallMenu} />
+					<ShopItemsProvider>
+						<Header route={router} smallMenuIsClosed={smallMenuIsClosed} />
 					</ShopItemsProvider>
 				</AuthStoreProvider>
 			</FilterItemsProvider>
-			<MainLayout {...restProps} loginState={loginState} />
+			<AuthStoreProvider>
+				<MainLayout {...restProps} />
+			</AuthStoreProvider>
 			<Footer />
 
 			{modalAuthIsOpen && (
 				<ModalPortal show={modalAuthIsOpen}>
 					<AuthStoreProvider>
 						<AuthReduxFormProvider>
-							<ModalAuthForm loginState={loginState} />
+							<ModalAuthForm />
 						</AuthReduxFormProvider>
 					</AuthStoreProvider>
 				</ModalPortal>

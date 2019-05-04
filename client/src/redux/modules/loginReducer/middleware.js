@@ -11,6 +11,7 @@ import {
 import { loginCorrectAction, signOutLocalAction, setUserName, clearUserName, loginNetworkErrorAction } from "./actions";
 import { openAuthModalAction, closeAuthModalAction } from "../modalAuth";
 import { loadingAppAction, loadingAppDoneAction } from "../appLoading";
+import { resetUserCartAction } from "../shopItems";
 
 export const loginRequestAction = (email, password, name) => {
 	console.log("check loginRequest");
@@ -32,14 +33,12 @@ export const loginRequestAction = (email, password, name) => {
 				.then(() => dispatch(setUserName(name)))
 				.catch(error => error)
 				.then(({ code, message }) => {
-					dispatch(loadingAppDoneAction());
-
 					if (code === NETWORK_CONNECTION_ERROR) {
-						console.log("ERROR NETWORK");
+						console.error("ERROR NETWORK");
 						dispatch(loginNetworkErrorAction());
-					} else {
-						alert(message);
 					}
+
+					dispatch(loadingAppDoneAction());
 				});
 		};
 	}
@@ -52,6 +51,7 @@ export const signOutFirebaseAction = () => {
 			.signOut()
 			.then(() => dispatch(clearUserName()))
 			.then(() => dispatch(signOutLocalAction()))
+			.then(() => dispatch(resetUserCartAction()))
 			.catch(function(error) {
 				alert("signOutFirebase failed");
 				console.error("error", error);

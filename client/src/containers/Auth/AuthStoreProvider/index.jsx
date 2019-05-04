@@ -22,8 +22,10 @@ class WrappedContainer extends Component {
 	}
 
 	render = () => {
+		const loginSucceed = this.props.loginState || localStorage.login === "true";
 		const { children, ...restProps } = this.props;
-		return React.Children.map(children, child => React.cloneElement(child, { ...restProps }));
+
+		return React.Children.map(children, child => React.cloneElement(child, { loginState: loginSucceed, ...restProps }));
 	};
 }
 
