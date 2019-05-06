@@ -6,8 +6,6 @@ import { ErrorPageRoute } from "../ErrorPageRoute";
 import { IndexPageRoute } from "../IndexPageRoute";
 import { OrderPageRoute } from "../OrderPageRoute";
 
-type MainLayoutPropTypes = {};
-
 export const MainLayout = props => {
 	// console.log("пропсы в MainLayout", props);
 	return (
