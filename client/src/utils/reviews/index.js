@@ -1,5 +1,6 @@
 export const getUserName = string => {
-	return string ? string.split(" ")[0] : "no name";
+	console.log("check getUserName", string);
+	return string ? string.split(" ")[0] : "";
 };
 
 export const getUserSurname = string => (string ? string.split(" ")[1] : "");

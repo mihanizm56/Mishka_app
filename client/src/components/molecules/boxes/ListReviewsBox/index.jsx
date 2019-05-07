@@ -3,17 +3,6 @@ import { ReviewBox } from "..";
 import { getUserName, getUserSurname } from "../../../../utils";
 
 export class ListReviewsBox extends PureComponent {
-	static defaultProps = {
-		reviews: [
-			{
-				text:
-					"Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!",
-				user: "Анастасия Красильникова",
-				login: "@misssssiskras",
-			},
-		],
-	};
-
 	static getDerivedStateFromProps(nextProps, prevState) {
 		// if проверка массивов, да да!!
 

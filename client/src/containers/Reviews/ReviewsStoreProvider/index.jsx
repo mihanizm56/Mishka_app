@@ -18,8 +18,8 @@ class WrappedContainer extends Component {
 	};
 
 	componentDidMount() {
-		// console.log("ReviewsStoreProvider mounted");
-		// console.log(this.props);
+		console.log("ReviewsStoreProvider mounted");
+		console.log(this.props);
 
 		this.props.fetchReviews();
 	}

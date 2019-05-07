@@ -8,18 +8,24 @@ import {
 	resetSendingStateSuccess,
 	getReviewsAction,
 } from "./actions";
-
 import { sleep } from "../../../utils/requests";
-
 import { loadingAppAction, loadingAppDoneAction } from "../appLoading";
+
+const DEFAULT_REVIEWS = [
+	{
+		text: "Нет данных",
+		user: "Нет данных",
+		login: "Нет данных",
+	},
+];
 
 export const fetchReviewsAction = () => dispatch => {
 	dispatch(loadingAppAction());
 	fetch("/data/reviews")
-		.then(data => (data.status !== 200 ? null : data))
-		.then(data => (data ? data.json() : null))
-		.then(data => (data ? dispatch(getReviewsAction(data.reviews)) : dispatch(getReviewsAction([]))))
-		.then(dispatch(loadingAppDoneAction()));
+		.then(data => data.json())
+		.then(data => dispatch(getReviewsAction(data.reviews)))
+		.then(dispatch(loadingAppDoneAction()))
+		.catch(error => console.warn(error) || dispatch(getReviewsAction(DEFAULT_REVIEWS)));
 };
 
 export const addReviewRequestAction = value => {
