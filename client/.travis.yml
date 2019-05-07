@@ -3,25 +3,10 @@ language: node_js
 node_js:
   - 8.11.2
 
-cache:
-  directories:
-    -"node_modules"
-
 branches:
   only:
   - develop
 
-install:
-  - npm install
-
-script:
-  - npm run lint
-  - npm test
-  - npm run build
-
 
 deploy:
   provider: heroku
-  app: "mishka-react-app"
-  api_key:
-    secure: "e44a4578-6bd2-403e-8a2b-d842fa375906"
