@@ -1,24 +1,11 @@
 import { loadingAppDoneAction, loadingAppAction } from "../appLoading";
 import { resetUserCartAction, getShopItemsAction, addItemToCartAction, getUserCartAction } from "./actions";
 import { GET_SHOP_ITEMS } from "./constants";
-import { myFetch } from "../../../utils/requests";
-
-const fetchPostRequest = (url, data) => {
-	const paramsObject = {
-		method: "post",
-		headers: {
-			Accept: "application/json, text/plain, */*",
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify(data),
-	};
-
-	return fetch(url, paramsObject);
-};
+import { myFetch, fetchPostRequest } from "../../../utils/requests";
 
 export const fetchShopItemsAction = () => dispatch => {
 	dispatch(loadingAppAction());
-	fetch("/data/shopItems")
+	fetch("/api/shopItems")
 		.then(data => (data.status !== 200 ? null : data))
 		.then(data => (data ? data.json() : null))
 		.then(data => (data ? dispatch(getShopItemsAction(data.items)) : dispatch(getShopItemsAction([]))))
@@ -26,7 +13,7 @@ export const fetchShopItemsAction = () => dispatch => {
 };
 
 export const fetchAddItemInBasketAction = itemData => dispatch => {
-	fetchPostRequest("/data/cartItems", { id: itemData.id })
+	fetchPostRequest("/api/cartItems", { id: itemData.id })
 		.then(data => data.json())
 		.then(data => console.log("done", data))
 		.then(() => dispatch(addItemToCartAction(itemData)))
@@ -37,7 +24,7 @@ export const fetchAddItemInBasketAction = itemData => dispatch => {
 };
 
 export const fetchCartItemsAction = () => dispatch => {
-	fetch("/data/cartItems")
+	fetch("/api/cartItems")
 		.then(data => (data.status !== 200 ? null : data))
 		.then(data => (data ? data.json() : null))
 		.then(

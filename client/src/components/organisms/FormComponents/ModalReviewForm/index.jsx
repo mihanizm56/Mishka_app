@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Field } from "redux-form";
-import { FormTextInputField, Button, TextArea, LoadingBox, SuccessBox } from "../../../../components";
+import { FormTextInputField, Button, TextArea, LoadingBox, SuccessBox, ErrorBox } from "../../../../components";
 import "./ModalReviewForm.css";
 
 export class ModalReviewForm extends Component {
@@ -9,10 +9,10 @@ export class ModalReviewForm extends Component {
 	};
 
 	sendReview = ({ review: text, user, login }) => {
-		console.log("check sendReview");
-		console.log(this.props.reviews);
+		console.log("check sendReview", { text, user, login });
+		// console.log(this.props.reviews);
 		const { addReviewInList } = this.props;
-		addReviewInList([...this.props.reviews, { text, user, login }]);
+		addReviewInList({ text, user, login });
 	};
 
 	componentDidMount() {
@@ -66,20 +66,25 @@ export class ModalReviewForm extends Component {
 		</>
 	);
 
-	getFormLayout = ({ isLoading, sendingIsSuccess }) => {
+	getFormLayout = ({ isLoading, sendingIsSuccess, errorReviews }) => {
 		if (isLoading) return <LoadingBox />;
 		else if (sendingIsSuccess) return <SuccessBox />;
+		else if (errorReviews) return <ErrorBox errorType={errorReviews} />;
 		else return this.normalLayout();
 	};
 
 	render() {
-		const { handleSubmit, closeReviewsModal, reviewIsSending, sendingIsSuccess } = this.props;
+		const { handleSubmit, closeReviewsModal, reviewIsSending, sendingIsSuccess, errorReviews } = this.props;
 
 		return (
 			<div className="review-form-layout">
 				<div className="review-form-overlay" onClick={closeReviewsModal} />
 				<form className="review-form-wrapper" onSubmit={handleSubmit(this.sendReview)}>
-					{this.getFormLayout({ isLoading: reviewIsSending, sendingIsSuccess: sendingIsSuccess })}
+					{this.getFormLayout({
+						isLoading: reviewIsSending,
+						sendingIsSuccess: sendingIsSuccess,
+						errorReviews: errorReviews,
+					})}
 				</form>
 			</div>
 		);

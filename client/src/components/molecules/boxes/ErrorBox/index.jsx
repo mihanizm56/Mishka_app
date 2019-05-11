@@ -6,6 +6,7 @@ import "./ErrorBox.css";
 const getTextForError = value => (errors[value] ? errors[value] : EMPTY_STRING);
 
 export const ErrorBox = ({ errorType }) => {
+	console.log("/////////////////////", errorType, getTextForError(errorType));
 	return (
 		<div className="error-box-wrapper">
 			<SVGIcon icon="error" />

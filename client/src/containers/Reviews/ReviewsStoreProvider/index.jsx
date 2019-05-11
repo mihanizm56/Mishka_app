@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
 import {
 	addReviewRequestAction,
 	fetchReviewsAction,
@@ -10,6 +9,7 @@ import {
 	openModalReviewAction,
 	closeModalReviewAction,
 	modalStateSelector,
+	errorSelector,
 } from "../../../redux/modules/reviews";
 
 class WrappedContainer extends Component {
@@ -41,6 +41,7 @@ const mapStateToProps = store => {
 		modalReviewIsOpen: modalStateSelector(store),
 		reviewIsSending: sendingRequestStateSelector(store),
 		sendingIsSuccess: sendingSuccessSelector(store),
+		errorReviews: errorSelector(store),
 	};
 };
 

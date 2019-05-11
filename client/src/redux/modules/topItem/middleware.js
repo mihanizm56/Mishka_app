@@ -25,7 +25,7 @@ const DEFAULT_TOP_ITEM_VALUE = {
 
 export const fetchTopItemAction = () => dispatch => {
 	dispatch(loadingAppAction());
-	fetch("/data/topItem")
+	fetch("/api/topItem")
 		.then(data => data.json())
 		.then(data => dispatch(getTopItemAction(data)))
 		.then(dispatch(loadingAppDoneAction()))

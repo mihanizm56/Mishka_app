@@ -7,8 +7,9 @@ import {
 	setSendingStateSuccess,
 	resetSendingStateSuccess,
 	getReviewsAction,
+	contactsNetworkErrorAction,
 } from "./actions";
-import { sleep } from "../../../utils/requests";
+import { sleep, fetchPostRequest } from "../../../utils/requests";
 import { loadingAppAction, loadingAppDoneAction } from "../appLoading";
 
 const DEFAULT_REVIEWS = [
@@ -21,7 +22,7 @@ const DEFAULT_REVIEWS = [
 
 export const fetchReviewsAction = () => dispatch => {
 	dispatch(loadingAppAction());
-	fetch("/data/reviews")
+	fetch("/api/reviews")
 		.then(data => data.json())
 		.then(data => dispatch(getReviewsAction(data.reviews)))
 		.then(dispatch(loadingAppDoneAction()))
@@ -29,14 +30,17 @@ export const fetchReviewsAction = () => dispatch => {
 };
 
 export const addReviewRequestAction = value => {
-	// console.log("check addReviewRequestAction");
-	// console.log("value", value);
+	console.log("check addReviewRequestAction, value", value);
+
 	if (value) {
 		return dispatch => {
 			dispatch(setSendingStateLoading());
 
-			return sleep()
-				.then(() => dispatch(addReviewAction(value)))
+			return fetchPostRequest("/api/reviews", value)
+				.then(data => data.json())
+				.then(data => console.log("done", data) || data)
+				.then(data => sleep(data))
+				.then(data => dispatch(addReviewAction(data.reviews)))
 				.then(() => dispatch(setSendingStateSuccess()))
 				.then(() => dispatch(setSendingStateDone()))
 				.then(() => {
@@ -46,8 +50,8 @@ export const addReviewRequestAction = value => {
 					}, 2000);
 				})
 				.catch(error => {
+					dispatch(contactsNetworkErrorAction()); /////надо проверить а сервер ли даёт ошибку
 					dispatch(setSendingStateDone());
-					alert(error.message);
 				});
 		};
 	}

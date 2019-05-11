@@ -5,11 +5,11 @@ import {
 	AUTH_MODAL_CLOSE,
 	SAVE_NAME,
 	CLEAR_NAME,
-	NETWORK_ERROR,
 	CLEAR_ERRORS,
 } from "./constants";
 import { loadingAppAction, loadingAppDoneAction } from "../appLoading";
 import { openAuthModalAction, closeAuthModalAction } from "../modalAuth";
+import { errors } from "../../../constants";
 
 export const loginCorrectAction = () => {
 	// console.log("test loginSuccess");
@@ -46,7 +46,7 @@ export const clearUserName = () => {
 export const loginNetworkErrorAction = () => {
 	console.log("test loginNetworkErrorAction");
 	return {
-		type: NETWORK_ERROR,
+		type: errors.NETWORK_ERROR,
 	};
 };
 
