@@ -1,12 +1,12 @@
 import { loadingAppDoneAction, loadingAppAction } from "../appLoading";
 import { getContactsAction } from "./actions";
 import { GET_CONTACTS } from "./constants";
+import { fetchGetRequest } from "../../../utils/requests";
 
 export const fetchContactsAction = () => dispatch => {
 	dispatch(loadingAppAction());
-	fetch("/api/contacts")
-		.then(data => (data.status !== 200 ? null : data))
-		.then(data => (data ? data.json() : null))
+	fetchGetRequest("api/contacts")
+		.then(data => data.json())
 		.then(data => (data ? dispatch(getContactsAction(data)) : dispatch(getContactsAction({}))))
 		.then(dispatch(loadingAppDoneAction()))
 		.catch(error => console.warn(error));

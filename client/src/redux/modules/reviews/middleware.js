@@ -11,6 +11,7 @@ import {
 } from "./actions";
 import { sleep, fetchPostRequest } from "../../../utils/requests";
 import { loadingAppAction, loadingAppDoneAction } from "../appLoading";
+import { fetchGetRequest } from "../../../utils/requests";
 
 const DEFAULT_REVIEWS = [
 	{
@@ -22,7 +23,7 @@ const DEFAULT_REVIEWS = [
 
 export const fetchReviewsAction = () => dispatch => {
 	dispatch(loadingAppAction());
-	fetch("/api/reviews")
+	fetchGetRequest("api/reviews")
 		.then(data => data.json())
 		.then(data => dispatch(getReviewsAction(data.reviews)))
 		.then(dispatch(loadingAppDoneAction()))
@@ -36,7 +37,7 @@ export const addReviewRequestAction = value => {
 		return dispatch => {
 			dispatch(setSendingStateLoading());
 
-			return fetchPostRequest("/api/reviews", value)
+			return fetchPostRequest("api/reviews", value)
 				.then(data => data.json())
 				.then(data => console.log("done", data) || data)
 				.then(data => sleep(data))

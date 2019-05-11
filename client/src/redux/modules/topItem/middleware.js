@@ -1,6 +1,6 @@
 import { loadingAppDoneAction, loadingAppAction } from "../appLoading";
 import { getTopItemAction } from "./actions";
-// import { myFetch } from "../../utils/requests";
+import { fetchGetRequest } from "../../../utils/requests";
 
 const DEFAULT_TOP_ITEM_VALUE = {
 	name: "Нет данных",
@@ -25,7 +25,7 @@ const DEFAULT_TOP_ITEM_VALUE = {
 
 export const fetchTopItemAction = () => dispatch => {
 	dispatch(loadingAppAction());
-	fetch("/api/topItem")
+	fetchGetRequest("api/topItem")
 		.then(data => data.json())
 		.then(data => dispatch(getTopItemAction(data)))
 		.then(dispatch(loadingAppDoneAction()))

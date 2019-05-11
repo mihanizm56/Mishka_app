@@ -1,3 +1,5 @@
+const urlPath = process.env.NODE_ENV === "development" ? "http://localhost:10000/" : "have no production url";
+
 export const sleep = data => {
 	return new Promise(res =>
 		setTimeout(() => {
@@ -17,5 +19,13 @@ export const fetchPostRequest = (url, data) => {
 		body: JSON.stringify(data),
 	};
 
-	return fetch(url, paramsObject);
+	const resultUrl = urlPath + url;
+
+	return fetch(resultUrl, paramsObject);
+};
+
+export const fetchGetRequest = url => {
+	const resultUrl = urlPath + url;
+
+	return fetch(resultUrl);
 };

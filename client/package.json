@@ -29,7 +29,6 @@
     "lint": "node_modules/.bin/eslint src/",
     "flow": "flow"
   },
-  "proxy": "http://localhost:10000/",
   "browserslist": {
     "development": [
       "last 2 chrome versions",
