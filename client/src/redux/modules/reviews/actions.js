@@ -7,6 +7,7 @@ import {
 	SET_SENDING_STATE_DONE,
 	SET_SUCCESS_SENDING_STATE_DONE,
 	RESET_SUCCESS_SENDING_STATE_DONE,
+	NETWORK_ERROR,
 } from "./constants";
 import { errors } from "../../../constants";
 
@@ -61,6 +62,6 @@ export const getReviewsAction = data => ({
 export const contactsNetworkErrorAction = () => {
 	console.log("test loginNetworkErrorAction");
 	return {
-		type: errors.NETWORK_ERROR,
+		type: NETWORK_ERROR,
 	};
 };

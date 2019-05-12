@@ -75,7 +75,7 @@ export class ModalReviewForm extends Component {
 
 	render() {
 		const { handleSubmit, closeReviewsModal, reviewIsSending, sendingIsSuccess, errorReviews } = this.props;
-
+		console.log("check fail", errorReviews);
 		return (
 			<div className="review-form-layout">
 				<div className="review-form-overlay" onClick={closeReviewsModal} />

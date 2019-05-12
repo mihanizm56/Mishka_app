@@ -6,6 +6,7 @@ import {
 	SAVE_NAME,
 	CLEAR_NAME,
 	CLEAR_ERRORS,
+	NETWORK_ERROR,
 } from "./constants";
 import { loadingAppAction, loadingAppDoneAction } from "../appLoading";
 import { openAuthModalAction, closeAuthModalAction } from "../modalAuth";
@@ -46,7 +47,7 @@ export const clearUserName = () => {
 export const loginNetworkErrorAction = () => {
 	console.log("test loginNetworkErrorAction");
 	return {
-		type: errors.NETWORK_ERROR,
+		type: NETWORK_ERROR,
 	};
 };
 

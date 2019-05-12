@@ -6,3 +6,4 @@ export const CLEAR_NAME = "CLEAR_NAME";
 // export const INVALID_USER_PASSWORD = "auth/wrong-password";
 export const NETWORK_CONNECTION_ERROR = "auth/network-request-failed";
 export const CLEAR_ERRORS = "CLEAR_ERRORS";
+export const NETWORK_ERROR = "NETWORK_ERROR";

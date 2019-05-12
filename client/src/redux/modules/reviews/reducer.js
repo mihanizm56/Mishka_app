@@ -7,6 +7,7 @@ import {
 	SET_SENDING_STATE_DONE,
 	SET_SUCCESS_SENDING_STATE_DONE,
 	RESET_SUCCESS_SENDING_STATE_DONE,
+	NETWORK_ERROR,
 } from "./constants";
 
 import { errors } from "../../../constants";
@@ -37,7 +38,7 @@ const reviewsReducer = (state = initialState, action) => {
 			return { ...state, sendingIsSuccess: true };
 		case GET_REVIEWS:
 			return { ...state, reviewList: action.payload };
-		case errors.NETWORK_ERROR:
+		case NETWORK_ERROR:
 			return { ...state, error: errors.NETWORK_ERROR };
 
 		default:
