@@ -10,7 +10,7 @@ export const MainLayout = props => {
 	// console.log("пропсы в MainLayout", props);
 	return (
 		<Switch>
-			<IndexPageRoute exact path="/" />
+			<IndexPageRoute exact path="/" {...props} />
 			<IndexPageRoute path="/index" {...props} />
 			<OrderPageRoute path="/orderpage" {...props} />
 			<CatalogPageRoute path="/catalog" {...props} />
