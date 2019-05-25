@@ -20,3 +20,4 @@ export * from "./UserLoginBox";
 export * from "./LoadingBox";
 export * from "./SuccessBox";
 export * from "./ErrorBox";
+export * from "./map-box";

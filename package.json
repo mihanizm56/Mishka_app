@@ -2,7 +2,9 @@
   "name": "custom_template",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "mapbox-gl": "^1.0.0"
+  },
   "scripts": {
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "stop": "cd server && npm run stop",

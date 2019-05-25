@@ -1,9 +1,8 @@
 //
 import React, { PureComponent } from "react";
 import MediaQuery from "react-responsive";
-import { SVGIcon, OpenSansText, ImageForPage, VerdanaText } from "../../../../components";
+import { SVGIcon, OpenSansText, ImageForPage, VerdanaText, MapBox } from "../../../../components";
 import { Button } from "../../../atoms/buttons";
-// import {MapContainer} from '../'
 import {
 	BIG_MEDIA_SIZE,
 	MIDDLE_MEDIA_SIZE_FROM,
@@ -97,7 +96,6 @@ export class ContactBox extends PureComponent<propsType> {
 		return (
 			<div className="contact-box-wrapper">
 				<MediaQuery minWidth={BIG_MEDIA_SIZE}>
-					{/* <MapContainer /> */}
 					<div className="zig-zag-second-container zig-zag-second-container--big">
 						<ImageForPage image="zigzag-index" configForImage={configForZigzagImage} />
 					</div>
@@ -125,7 +123,9 @@ export class ContactBox extends PureComponent<propsType> {
 								<Button classname="button-offer-wrapper" text="сделать заказ" />
 							</div>
 						</div>
-						<div className="contact-box__image-imitation" />
+						<div className="contact-box__image-imitation" >
+							<MapBox />
+						</div>
 					</div>
 				</MediaQuery>
 				<MediaQuery minWidth={MIDDLE_MEDIA_SIZE_FROM} maxWidth={MIDDLE_MEDIA_SIZE_TO}>
@@ -147,7 +147,9 @@ export class ContactBox extends PureComponent<propsType> {
 							</div>
 						</div>
 					</div>
-					<div className="contact-box__image-imitation" />
+					<div className="contact-box__image-imitation" >
+						<MapBox />
+					</div>
 					<div className="contacts-button">
 						<Button classname="button-offer-wrapper" text="сделать заказ" />
 					</div>
@@ -173,7 +175,9 @@ export class ContactBox extends PureComponent<propsType> {
 							</div>
 						</div>
 					</div>
-					<div className="contact-box__image-imitation" />
+					<div className="contact-box__image-imitation" >
+						<MapBox />
+					</div>
 					<div className="contacts-button">
 						<Button classname="button-offer-wrapper" text="Напишите нам" />
 					</div>
