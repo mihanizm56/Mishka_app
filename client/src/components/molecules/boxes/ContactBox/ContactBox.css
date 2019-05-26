@@ -39,10 +39,6 @@
     color: red;
 }
 
-.contact-box__image-imitation{
-    border: 1px solid red;
-}
-
 @media (max-width: 767px) { 
     .contact-box-wrapper{
         align-self: center;
@@ -74,7 +70,7 @@
         flex-direction: column;
     } 
 
-    .contact-box__image-imitation{
+    .contact-box__map-wrapper{
         margin-top: 40px;
         height: 457px;
     }
@@ -114,7 +110,7 @@
         width: 93%;
     }    
 
-    .contact-box__image-imitation{
+    .contact-box__map-wrapper{
         height: 457px;
     }
 
@@ -160,7 +156,7 @@
         align-self: center;
     }
 
-    .contact-box__image-imitation{
+    .contact-box__map-wrapper{
         width: 523px;
     }
 

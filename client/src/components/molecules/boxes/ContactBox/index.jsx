@@ -1,8 +1,7 @@
 //
 import React, { PureComponent } from "react";
 import MediaQuery from "react-responsive";
-import { SVGIcon, OpenSansText, ImageForPage, VerdanaText, MapBox } from "../../../../components";
-import { Button } from "../../../atoms/buttons";
+import { SVGIcon, OpenSansText, ImageForPage, VerdanaText, MapBox, Button } from "../../../../components";
 import {
 	BIG_MEDIA_SIZE,
 	MIDDLE_MEDIA_SIZE_FROM,
@@ -123,7 +122,7 @@ export class ContactBox extends PureComponent<propsType> {
 								<Button classname="button-offer-wrapper" text="сделать заказ" />
 							</div>
 						</div>
-						<div className="contact-box__image-imitation" >
+						<div className="contact-box__map-wrapper" >
 							<MapBox />
 						</div>
 					</div>
@@ -147,7 +146,7 @@ export class ContactBox extends PureComponent<propsType> {
 							</div>
 						</div>
 					</div>
-					<div className="contact-box__image-imitation" >
+					<div className="contact-box__map-wrapper" >
 						<MapBox />
 					</div>
 					<div className="contacts-button">
@@ -175,7 +174,7 @@ export class ContactBox extends PureComponent<propsType> {
 							</div>
 						</div>
 					</div>
-					<div className="contact-box__image-imitation" >
+					<div className="contact-box__map-wrapper" >
 						<MapBox />
 					</div>
 					<div className="contacts-button">

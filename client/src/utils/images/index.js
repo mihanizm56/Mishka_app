@@ -59,6 +59,7 @@ import iconZoom from "../../assets/images/icons/icon-zoom.svg";
 /// Icons Special For Interactive Actions
 import iconCross from "../../assets/images/pictures/forSpecialIcons/menu-icon-close.png";
 import iconMenu from "../../assets/images/pictures/forSpecialIcons/menu-icon.png";
+import iconPointerMap from "../../assets/images/icons/icon-map-pointer.svg";
 
 /// Icons Index Page
 import iconFlower from "../../assets/images/icons/icon-flower.svg";
@@ -163,6 +164,8 @@ export const getSmallImage = (name: string) => {
 			return LoaderSuccessIcon;
 		case "icon-error-small":
 			return ErrorIcon;
+		case "icon-pointer-small":
+			return iconPointerMap;
 
 		default:
 			return null;
@@ -252,6 +255,8 @@ export const getMiddleImage = (name: string) => {
 			return LoaderSuccessIcon;
 		case "icon-error-middle":
 			return ErrorIcon;
+		case "icon-pointer-middle":
+			return iconPointerMap;
 
 		default:
 			return null;
@@ -341,6 +346,8 @@ export const getBigImage = (name: string) => {
 			return LoaderSuccessIcon;
 		case "icon-error-big":
 			return ErrorIcon;
+		case "icon-pointer-big":
+			return iconPointerMap;
 
 		default:
 			return null;

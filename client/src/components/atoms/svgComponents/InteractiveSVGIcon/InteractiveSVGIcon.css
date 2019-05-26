@@ -1,23 +1,21 @@
-.interactive-icon-wrapper{
+.interactive-icon-wrapper {
     position: relative;
     transition: .2s;
 }
 
-.interactive-icon-wrapper:hover{
+.interactive-icon-wrapper:hover {
     opacity: 0.5;
 }
 
-.interactive-icon-wrapper:active{
+.interactive-icon-wrapper:active {
     opacity: 0.3;
 }
 
-.interactive-icon-wrapper--no-opacity-change,
-.interactive-icon-wrapper--no-opacity-change:hover,
-.interactive-icon-wrapper--no-opacity-change:active {
+.interactive-icon-wrapper--no-opacity-change, .interactive-icon-wrapper--no-opacity-change:hover, .interactive-icon-wrapper--no-opacity-change:active {
     opacity: 1;
 }
 
-.click-wrapper{
+.click-wrapper {
     position: absolute;
     top: 0px;
     left: 0px;

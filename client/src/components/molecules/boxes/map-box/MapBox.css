@@ -3,3 +3,13 @@
     height: 100%;
     cursor: pointer;
 }
+
+.marker {
+    cursor: pointer;
+}
+
+.pointer-wrapper {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+}

@@ -1,4 +1,7 @@
 import React, { PureComponent, createRef } from "react";
+import ReactDOMServer from "react-dom/server";
+import { InteractiveSVGIcon } from "../../../../components";
+import iconPoint from "../../../../assets/images/pictures/BackgroundForMap/img/map-pointer.png";
 import isEqual from "lodash/isEqual";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl";
 import "./MapBox.css";
@@ -13,6 +16,9 @@ export class MapBox extends PureComponent {
 		mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
 		this.initializeMap(DEFAULT_CONSTANTS);
+		this.map.on("load", () => {
+			this.addTheCustomPoint(DEFAULT_CONSTANTS, "pointer");
+		});
 	}
 
 	componentWillUnmount() {
@@ -24,8 +30,24 @@ export class MapBox extends PureComponent {
 			container: this.mapContainer.current,
 			style: "mapbox://styles/mapbox/streets-v9",
 			center: centerCoords,
-			zoom: 15,
+			zoom: 11,
 		});
+	};
+
+	testClick = () => alert("check");
+
+	addTheCustomPoint = (centerCoords, iconName) => {
+		const pointerWrapper = document.createElement("div");
+		pointerWrapper.classList.add("pointer-wrapper");
+
+		const pointerContainer = document.createElement("div");
+		const pointerIcon = ReactDOMServer.renderToStaticMarkup(<InteractiveSVGIcon icon={iconName} />);
+		pointerContainer.innerHTML = pointerIcon;
+
+		pointerWrapper.appendChild(pointerContainer);
+		pointerContainer.addEventListener("click", this.testClick);
+
+		new mapboxgl.Marker(pointerWrapper).setLngLat(centerCoords).addTo(this.map);
 	};
 
 	removeLayer = () => {
