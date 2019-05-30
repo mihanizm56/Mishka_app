@@ -1,7 +1,7 @@
 import { loadingAppDoneAction, loadingAppAction } from "../appLoading";
 import { resetUserCartAction, getShopItemsAction, addItemToCartAction, getUserCartAction } from "./actions";
 import { GET_SHOP_ITEMS } from "./constants";
-import { myFetch, fetchPostRequest, fetchGetRequest } from "../../../utils/requests";
+import { fetchPostRequest, fetchGetRequest } from "../../../services";
 
 export const fetchShopItemsAction = () => dispatch => {
 	dispatch(loadingAppAction());
