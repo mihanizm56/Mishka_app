@@ -1,3 +1,2 @@
-export * from './api';
-export * from './validation';
-export * from './registration';
+export * from "./api";
+export * from "./registration";

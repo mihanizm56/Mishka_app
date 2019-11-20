@@ -10,7 +10,7 @@
     "express": "^4.16.4"
   },
   "scripts": {
-    "start": "nodemon ./src",
+    "start": "node ./src",
     "lint": "node_modules/.bin/eslint src/",
     "stop": "taskkill /F /IM node.exe"
   },
